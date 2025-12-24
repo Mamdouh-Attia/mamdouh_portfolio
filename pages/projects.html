@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Projects by Mamdouh Ahmed Attia - Flutter mobile apps, ML/AI projects, and systems engineering.">
+    <title>Projects | Mamdouh Ahmed Attia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Theme Initialization - Preventing FOUC -->
+    <script>
+        (function () {
+            const THEME_KEY = 'portfolio-theme';
+            const storedTheme = localStorage.getItem(THEME_KEY);
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', storedTheme || systemTheme);
+        })();
+    </script>
+
+    <link rel="stylesheet" href="../css/design-tokens.css">
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/layouts.css">
+    <link rel="stylesheet" href="../css/rtl.css">
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">M</span>
+                <span>Mamdouh</span>
+            </a>
+
+            <nav class="nav">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="./projects.html" class="nav-link active">Projects</a>
+                <a href="./learning.html" class="nav-link">Learning</a>
+                <a href="./teaching.html" class="nav-link">Teaching</a>
+                <a href="./certificates.html" class="nav-link">Certificates</a>
+                <a href="./about.html" class="nav-link">About</a>
+                <a href="./contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                    </svg>
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" style="display:none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <button class="lang-toggle" aria-label="Toggle language">ع</button>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span class="menu-toggle-icon"><span></span><span></span><span></span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu">
+        <div class="mobile-nav">
+            <a href="../index.html" class="mobile-nav-link">Home</a>
+            <a href="./projects.html" class="mobile-nav-link active">Projects</a>
+            <a href="./learning.html" class="mobile-nav-link">Learning</a>
+            <a href="./teaching.html" class="mobile-nav-link">Teaching</a>
+            <a href="./certificates.html" class="mobile-nav-link">Certificates</a>
+            <a href="./about.html" class="mobile-nav-link">About</a>
+            <a href="./contact.html" class="mobile-nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <main class="main" id="main-content">
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="container">
+                <h1 class="page-title reveal" data-i18n="projects.title">Projects</h1>
+                <p class="page-description reveal" data-i18n="projects.subtitle">Real solutions built for real clients
+                </p>
+            </div>
+        </div>
+
+        <div class="page-content">
+            <div class="container">
+                <!-- Filters -->
+                <div class="filters reveal">
+                    <div class="filter-row">
+                        <div class="search-wrapper">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="m21 21-4.35-4.35" />
+                            </svg>
+                            <input type="text" class="form-input search-input" id="search"
+                                placeholder="Search projects...">
+                        </div>
+
+                        <div class="view-toggle">
+                            <button class="btn btn-icon btn-ghost active" data-view="grid" aria-label="Grid view">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7" />
+                                    <rect x="14" y="3" width="7" height="7" />
+                                    <rect x="14" y="14" width="7" height="7" />
+                                    <rect x="3" y="14" width="7" height="7" />
+                                </svg>
+                            </button>
+                            <button class="btn btn-icon btn-ghost" data-view="list" aria-label="List view">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="8" y1="6" x2="21" y2="6" />
+                                    <line x1="8" y1="12" x2="21" y2="12" />
+                                    <line x1="8" y1="18" x2="21" y2="18" />
+                                    <line x1="3" y1="6" x2="3.01" y2="6" />
+                                    <line x1="3" y1="12" x2="3.01" y2="12" />
+                                    <line x1="3" y1="18" x2="3.01" y2="18" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="category-tabs">
+                        <button class="category-tab active" data-category="all">All</button>
+                        <button class="category-tab" data-category="featured">Featured</button>
+                        <button class="category-tab" data-category="flutter">Flutter</button>
+                        <button class="category-tab" data-category="ml">ML & AI</button>
+                        <button class="category-tab" data-category="systems">Systems</button>
+                        <button class="category-tab" data-category="other">Other</button>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid grid-3" id="projects-container">
+                    <!-- Projects will be injected by JavaScript -->
+                </div>
+
+                <!-- Empty State -->
+                <div class="empty-state hidden" id="empty-state">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.35-4.35" />
+                    </svg>
+                    <h3>No projects found</h3>
+                    <p>Try adjusting your search or filters</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Project Modal -->
+    <div class="modal-backdrop"></div>
+    <div class="modal" id="project-modal">
+        <div class="modal-header">
+            <h2 class="modal-title" id="modal-title">Project Title</h2>
+            <button class="modal-close" onclick="closeModal('project-modal')" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+        </div>
+        <div class="modal-body" id="modal-body">
+            <!-- Modal content will be injected by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-name">Mamdouh Ahmed Attia</h3>
+                    <p class="footer-bio">Mobile Software Engineer specializing in Flutter</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/Mamdouh-Attia" class="social-link" target="_blank"
+                        rel="noopener noreferrer" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mamdouh-atia/" class="social-link" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="mailto:mamdouhattia31@gmail.com" class="social-link" aria-label="Email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2024 Mamdouh Ahmed Attia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/main.js"></script>
+    <script type="module">
+        import { projects, getProjectsByCategory, searchProjects, getProjectBySlug } from '../js/data/projects.js';
+
+        let currentCategory = 'all';
+        let currentView = 'grid';
+        let searchQuery = '';
+
+        function renderProjects(projectList) {
+            const container = document.getElementById('projects-container');
+            const emptyState = document.getElementById('empty-state');
+
+            if (projectList.length === 0) {
+                container.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+
+            container.innerHTML = projectList.map(project => `
+        <div class="card project-card" data-slug="${project.slug}">
+          <div class="card-image ${project.images && project.images.length > 0 ? '' : 'no-image'}">
+            ${project.images && project.images.length > 0 ? `<img src="${project.images[0]}" alt="${project.title}">` : `<div class="project-placeholder">${project.category.toUpperCase()}</div>`}
+          </div>
+          <div class="card-content">
+            <div class="card-meta">
+              ${project.featured ? '<span class="badge badge-primary">Featured</span>' : ''}
+              <span class="badge">${project.category}</span>
+            </div>
+            <h3 class="card-title">${project.title}</h3>
+            <p class="card-description">${project.description}</p>
+            <div class="card-footer">
+              <div class="tags">
+                ${project.tags.slice(0, 2).map(tag => `<span class="badge">${tag}</span>`).join('')}
+              </div>
+              <button class="btn btn-ghost btn-sm" onclick="showProject('${project.slug}')">
+                Explore →
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+            // Update grid class based on view
+            container.className = currentView === 'grid' ? 'projects-grid grid-3' : 'projects-list';
+        }
+
+        function filterProjects() {
+            let filtered = currentCategory === 'all'
+                ? projects
+                : currentCategory === 'featured'
+                    ? projects.filter(p => p.featured)
+                    : getProjectsByCategory(currentCategory);
+
+            if (searchQuery) {
+                filtered = filtered.filter(p =>
+                    p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    p.tags.some(t => t.toLowerCase().includes(searchQuery.toLowerCase()))
+                );
+            }
+
+            renderProjects(filtered);
+        }
+
+        // Category tabs
+        document.querySelectorAll('.category-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                currentCategory = tab.dataset.category;
+                filterProjects();
+            });
+        });
+
+        // View toggle
+        document.querySelectorAll('.view-toggle button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.view-toggle button').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentView = btn.dataset.view;
+                filterProjects();
+            });
+        });
+
+        // Search
+        document.getElementById('search').addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            filterProjects();
+        });
+
+        // Show project modal
+        window.showProject = function (slug) {
+            const project = getProjectBySlug(slug);
+            if (!project) return;
+
+            document.getElementById('modal-title').textContent = project.title;
+            document.getElementById('modal-body').innerHTML = `
+                < div class= "project-gallery skeleton skeleton-image" style = "aspect-ratio: 16/9; margin-bottom: var(--space-6);" ></div >
+
+            <p style="font-size: var(--text-lg); margin-bottom: var(--space-6);">${project.longDescription || project.description}</p>
+        
+        ${project.challenge ? `
+        <div class="project-section">
+          <h4>The Challenge</h4>
+          <p>${project.challenge}</p>
+        </div>
+        ` : ''
+                }
+        
+        ${project.approach ? `
+        <div class="project-section">
+          <h4>My Approach</h4>
+          <p>${project.approach}</p>
+        </div>
+        ` : ''
+                }
+        
+        ${project.solution ? `
+        <div class="project-section">
+          <h4>The Solution</h4>
+          <p>${project.solution}</p>
+        </div>
+        ` : ''
+                }
+
+            < div class= "project-section" >
+          <h4>Tech Stack</h4>
+          <div class="tags" style="margin-top: var(--space-3);">
+            ${project.techStack.map(tech => `<span class="badge badge-primary">${tech}</span>`).join('')}
+          </div>
+        </div >
+
+                <div class="project-links" style="margin-top: var(--space-6); display: flex; gap: var(--space-4);">
+                    ${project.demoUrl ? `<a href="${project.demoUrl}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Live Demo</a>` : ''}
+                    ${project.repoUrl ? `<a href="${project.repoUrl}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Source Code</a>` : ''}
+                </div>
+      `;
+
+            openModal('project-modal');
+        };
+
+        // Check for hash to open specific project
+        if (window.location.hash) {
+            const slug = window.location.hash.substring(1);
+            setTimeout(() => showProject(slug), 100);
+        }
+
+        // Initial render
+        filterProjects();
+    </script>
+
+    <style>
+        .filters {
+            margin-bottom: var(--space-8);
+        }
+
+        .filter-row {
+            display: flex;
+            gap: var(--space-4);
+            margin-bottom: var(--space-4);
+            flex-wrap: wrap;
+        }
+
+        .search-wrapper {
+            flex: 1;
+            min-width: 250px;
+            position: relative;
+        }
+
+        .search-wrapper svg {
+            position: absolute;
+            left: var(--space-4);
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-tertiary);
+        }
+
+        .search-input {
+            padding-left: var(--space-12);
+        }
+
+        .view-toggle {
+            display: flex;
+            gap: var(--space-1);
+        }
+
+        .category-tabs {
+            display: flex;
+            gap: var(--space-2);
+            flex-wrap: wrap;
+        }
+
+        .category-tab {
+            padding: var(--space-2) var(--space-4);
+            background: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-full);
+            color: var(--text-secondary);
+            font-size: var(--text-sm);
+            cursor: pointer;
+            transition: all var(--duration-fast) var(--ease-in-out);
+        }
+
+        .category-tab:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+
+        .category-tab.active {
+            background: var(--color-primary);
+            border-color: var(--color-primary);
+            color: white;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: var(--space-2);
+            margin-bottom: var(--space-2);
+        }
+
+        .project-section {
+            margin-bottom: var(--space-6);
+        }
+
+        .project-section h4 {
+            font-size: var(--text-lg);
+            margin-bottom: var(--space-2);
+            color: var(--color-primary);
+        }
+
+        .projects-list .project-card {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .projects-list .card-image {
+            width: 200px;
+            min-height: 150px;
+            aspect-ratio: auto;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: var(--space-16);
+            color: var(--text-secondary);
+        }
+
+        .empty-state svg {
+            margin-bottom: var(--space-4);
+            opacity: 0.5;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        [dir="rtl"] .search-wrapper svg {
+            left: auto;
+            right: var(--space-4);
+        }
+
+        [dir="rtl"] .search-input {
+            padding-left: var(--space-4);
+            padding-right: var(--space-12);
+        }
+    </style>
+    <script type="module" src="../js/main.js"></script>
+</body>
+
+</html>

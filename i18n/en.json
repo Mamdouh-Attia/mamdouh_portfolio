@@ -1,0 +1,156 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "learning": "Learning",
+    "teaching": "Teaching",
+    "certificates": "Certificates",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Mamdouh Ahmed Attia",
+    "badge": "Mobile Software Engineer — Flutter",
+    "titleHighlight": "Mobile Software Engineer — Flutter",
+    "subtitle": "Turning Your Ideas Into Reality with Engineering Excellence",
+    "description": "Flutter Developer & Computer Engineer focused on building high-performance, maintainable mobile applications that solve real problems.",
+    "cta": {
+      "projects": "View Projects",
+      "contact": "Contact Me",
+      "cv": "Download CV"
+    },
+    "stats": {
+      "projects": "Projects",
+      "experience": "Years Exp.",
+      "clients": "Happy Clients"
+    }
+  },
+  "process": {
+    "title": "How I Turn Your Ideas Into Reality",
+    "steps": {
+      "discovery": {
+        "title": "Discovery",
+        "description": "Understanding your vision, goals, and requirements"
+      },
+      "design": {
+        "title": "Design",
+        "description": "Creating intuitive UI/UX with modern aesthetics"
+      },
+      "development": {
+        "title": "Development",
+        "description": "Building with Flutter, clean architecture, and best practices"
+      },
+      "delivery": {
+        "title": "Delivery",
+        "description": "Testing, refining, and launching your polished product"
+      }
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Real solutions built for real clients",
+    "viewAll": "View All Projects",
+    "categories": {
+      "all": "All",
+      "mobile": "Mobile",
+      "embedded": "Embedded",
+      "ai": "AI/ML"
+    },
+    "search": "Search projects by name, technology, or skills...",
+    "view": "View Details",
+    "demoVideo": "Demo Video",
+    "github": "Source Code",
+    "links": "Links"
+  },
+  "testimonials": {
+    "title": "Client Feedback",
+    "subtitle": "What my clients say about working with me",
+    "rating": "5.0 out of 5.0",
+    "allRatings": "All clients rated 5/5"
+  },
+  "learning": {
+    "title": "Learning Journey",
+    "subtitle": "Continuous growth through courses and certifications"
+  },
+  "teaching": {
+    "title": "Teaching & Volunteering",
+    "subtitle": "Sharing knowledge and giving back to the community"
+  },
+  "certificates": {
+    "title": "Certifications",
+    "subtitle": "Professional validation of my technical skills",
+    "view": "View Certificate"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Get to know me better",
+    "bio": {
+      "intro": "I'm a Flutter Developer and Computer Engineering graduate with hands-on experience building real-world mobile applications across academic projects, hackathons, freelancing, and technical instruction.",
+      "journey": "Throughout my journey, I worked on multiple end-to-end applications, from idea and system design to implementation, testing, and deployment. My background in software engineering fundamentals combined with exposure to AI and machine learning enables me to build mobile solutions that are both scalable and data-aware.",
+      "values": "I value consistency over perfection, continuous learning, and building software that solves real problems. I'm especially interested in mobile roles where clean architecture, product thinking, and long-term code quality matter."
+    },
+    "skills": {
+      "title": "Skills & Expertise"
+    },
+    "experience": {
+      "title": "Experience"
+    },
+    "education": {
+      "title": "Education",
+      "university": "Bachelor of Engineering - Computer Engineering",
+      "school": "Cairo University",
+      "grade": "Very Good with Honors",
+      "description": "Comprehensive computer engineering education with focus on software engineering, algorithms, and mobile development."
+    }
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "viewMore": "View More"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's discuss how I can help you build your next mobile application",
+    "form": {
+      "name": "Your Name *",
+      "namePlaceholder": "John Doe",
+      "email": "Your Email *",
+      "emailPlaceholder": "john@example.com",
+      "subject": "Subject *",
+      "subjectPlaceholder": "Project Inquiry",
+      "message": "Your Message *",
+      "messagePlaceholder": "Tell me about your project...",
+      "submit": "Send Message",
+      "errors": {
+        "name": "Please enter your name",
+        "email": "Please enter a valid email",
+        "subject": "Please enter a subject",
+        "message": "Please enter your message"
+      }
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "location": "Location",
+      "connect": "Connect With Me"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "A summary of my professional journey",
+    "viewFull": "View Full Experience",
+    "items": {
+      "volunteer": {
+        "title": "Freelance Lead Mobile Dev",
+        "desc": "Leading the development of a cross-platform mobile application for community service."
+      },
+      "instructor": {
+        "title": "Technical Instructor",
+        "desc": "Teaching Flutter and Machine Learning to aspiring developers."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Mobile Software Engineer specializing in Flutter",
+    "copyright": "© 2024 Mamdouh Ahmed Attia. All rights reserved."
+  }
+}

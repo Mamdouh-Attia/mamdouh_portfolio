@@ -1,0 +1,343 @@
+/**
+ * RTL (Right-to-Left) Support for Arabic
+ */
+
+[dir="rtl"] {
+    /* Text alignment */
+    text-align: right;
+}
+
+/* Header */
+[dir="rtl"] .header-inner {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .header-actions {
+    flex-direction: row-reverse;
+}
+
+/* Logo */
+[dir="rtl"] .logo {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .hero-inner {
+    text-align: right;
+}
+
+[dir="rtl"] .hero-title {
+    font-size: calc(clamp(2.2rem, 4.5vw, 3.8rem) * 1.05);
+}
+
+@media (min-width: 1024px) {
+    [dir="rtl"] .hero-title {
+        font-size: calc(clamp(3.2rem, 5.5vw, 4.2rem) * 1.05);
+    }
+}
+
+@media (min-width: 1024px) {
+    [dir="rtl"] .hero-inner {
+        flex-direction: row-reverse;
+    }
+}
+
+/* Hero CTAs and Stats alignment will follow direction: rtl naturally with flex-start */
+[dir="rtl"] .hero-ctas {
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    [dir="rtl"] .hero-ctas {
+        justify-content: flex-start;
+    }
+}
+
+[dir="rtl"] .hero-stats {
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    [dir="rtl"] .hero-stat {
+        text-align: right;
+    }
+}
+
+/* Hero image frame rotation */
+[dir="rtl"] .hero-image-frame {
+    transform: rotate(-6deg);
+}
+
+/* Buttons with icons */
+[dir="rtl"] .btn {
+    flex-direction: row-reverse;
+}
+
+/* Cards */
+[dir="rtl"] .card-footer {
+    flex-direction: row-reverse;
+}
+
+/* Tags */
+[dir="rtl"] .tags {
+    justify-content: flex-end;
+}
+
+/* Forms */
+[dir="rtl"] .form-label {
+    text-align: right;
+}
+
+[dir="rtl"] .form-input,
+[dir="rtl"] .form-textarea,
+[dir="rtl"] .form-select {
+    text-align: right;
+}
+
+/* Lists */
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+    padding-left: 0;
+    padding-right: var(--space-6);
+}
+
+/* Modal */
+[dir="rtl"] .modal-header {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .modal-footer {
+    flex-direction: row-reverse;
+}
+
+/* Toast */
+[dir="rtl"] .toast-container {
+    left: var(--space-6);
+    right: auto;
+}
+
+[dir="rtl"] .toast {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .toast-success {
+    border-left: none;
+    border-right: 3px solid var(--color-success);
+}
+
+[dir="rtl"] .toast-error {
+    border-left: none;
+    border-right: 3px solid var(--color-error);
+}
+
+/* Footer */
+[dir="rtl"] .footer-content {
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    [dir="rtl"] .footer-content {
+        flex-direction: row-reverse;
+    }
+}
+
+[dir="rtl"] .footer-social {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .footer-bottom {
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    [dir="rtl"] .footer-bottom {
+        flex-direction: row-reverse;
+    }
+}
+
+[dir="rtl"] .footer-links {
+    flex-direction: row-reverse;
+}
+
+/* Mobile menu */
+[dir="rtl"] .mobile-menu {
+    transform: translateX(100%);
+}
+
+[dir="rtl"] .mobile-menu.active {
+    transform: translateX(0);
+}
+
+/* Hamburger icon animation for RTL */
+[dir="rtl"] .menu-toggle.active .menu-toggle-icon span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+[dir="rtl"] .menu-toggle.active .menu-toggle-icon span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/* Animations */
+[dir="rtl"] .reveal-left {
+    transform: translateX(30px);
+}
+
+[dir="rtl"] .reveal-right {
+    transform: translateX(-30px);
+}
+
+[dir="rtl"] .reveal-left.visible,
+[dir="rtl"] .reveal-right.visible {
+    transform: translateX(0);
+}
+
+/* Slide animations */
+@keyframes slideInLeftRTL {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRightRTL {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+[dir="rtl"] .slide-in-left {
+    animation-name: slideInLeftRTL;
+}
+
+[dir="rtl"] .slide-in-right {
+    animation-name: slideInRightRTL;
+}
+
+/* Badge positioning */
+[dir="rtl"] .badge {
+    flex-direction: row-reverse;
+}
+
+/* Timeline (if used) */
+[dir="rtl"] .timeline-marker {
+    left: auto;
+    right: calc(var(--space-8) * -1 - 6px);
+}
+
+[dir="rtl"] .container {
+    padding-right: var(--space-4);
+}
+
+@media (max-width: 600px) {
+    [dir="rtl"] .container {
+        padding-right: var(--space-5);
+    }
+}
+
+/* Project grid view toggle icons - flip if needed */
+[dir="rtl"] .view-toggle {
+    flex-direction: row-reverse;
+}
+
+/* Search and filter bars */
+[dir="rtl"] .search-bar {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .filter-bar {
+    flex-direction: row-reverse;
+}
+
+/* Tooltip positioning */
+[dir="rtl"] [data-tooltip]::after {
+    left: auto;
+    right: 50%;
+    transform: translateX(50%) translateY(-8px);
+}
+
+[dir="rtl"] [data-tooltip]:hover::after {
+    transform: translateX(50%) translateY(-4px);
+}
+
+/* Viewer counter */
+[dir="rtl"] .viewer-counter {
+    flex-direction: row-reverse;
+}
+
+/* Star rating */
+[dir="rtl"] .star-rating {
+    flex-direction: row-reverse;
+}
+
+/* Icons that should flip */
+[dir="rtl"] .icon-arrow-right {
+    transform: scaleX(-1);
+}
+
+[dir="rtl"] .icon-arrow-left {
+    transform: scaleX(-1);
+}
+
+[dir="rtl"] .icon-chevron-right {
+    transform: scaleX(-1);
+}
+
+[dir="rtl"] .icon-chevron-left {
+    transform: scaleX(-1);
+}
+
+[dir="rtl"] .icon-external-link {
+    transform: scaleX(-1);
+}
+
+/* Maintain symmetry while allowing for mobile clipping fixes */
+[dir="rtl"] .container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+}
+
+@media (min-width: 1024px) {
+    [dir="rtl"] .container {
+        padding-left: var(--space-8);
+        padding-right: var(--space-8);
+    }
+}
+
+@media (max-width: 767px) {
+    [dir="rtl"] .container {
+        padding-right: var(--space-6);
+        padding-left: var(--space-4);
+    }
+}
+
+[dir="rtl"] .about-bio {
+    overflow: visible;
+}
+
+/* Don't flip these icons */
+[dir="rtl"] .icon-check,
+[dir="rtl"] .icon-x,
+[dir="rtl"] .icon-plus,
+[dir="rtl"] .icon-minus,
+[dir="rtl"] .icon-star,
+[dir="rtl"] .icon-sun,
+[dir="rtl"] .icon-moon,
+[dir="rtl"] .icon-github,
+[dir="rtl"] .icon-linkedin,
+[dir="rtl"] .icon-mail {
+    transform: none;
+}

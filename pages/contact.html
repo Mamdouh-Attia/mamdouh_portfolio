@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Mamdouh Ahmed Attia - Mobile Software Engineer specializing in Flutter development.">
+    <title>Contact | Mamdouh Ahmed Attia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Theme Initialization - Preventing FOUC -->
+    <script>
+        (function () {
+            const THEME_KEY = 'portfolio-theme';
+            const storedTheme = localStorage.getItem(THEME_KEY);
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', storedTheme || systemTheme);
+        })();
+    </script>
+
+    <link rel="stylesheet" href="../css/design-tokens.css">
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/layouts.css">
+    <link rel="stylesheet" href="../css/rtl.css">
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><span class="logo-icon">M</span><span>Mamdouh</span></a>
+            <nav class="nav">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="./projects.html" class="nav-link">Projects</a>
+                <a href="./learning.html" class="nav-link">Learning</a>
+                <a href="./teaching.html" class="nav-link">Teaching</a>
+                <a href="./certificates.html" class="nav-link">Certificates</a>
+                <a href="./about.html" class="nav-link">About</a>
+                <a href="./contact.html" class="nav-link active">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                    </svg>
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" style="display:none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <button class="lang-toggle" aria-label="Toggle language">ع</button>
+                <button class="menu-toggle" aria-label="Toggle menu"><span
+                        class="menu-toggle-icon"><span></span><span></span><span></span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="mobile-menu">
+        <div class="mobile-nav">
+            <a href="../index.html" class="mobile-nav-link">Home</a>
+            <a href="./projects.html" class="mobile-nav-link">Projects</a>
+            <a href="./learning.html" class="mobile-nav-link">Learning</a>
+            <a href="./teaching.html" class="mobile-nav-link">Teaching</a>
+            <a href="./certificates.html" class="mobile-nav-link">Certificates</a>
+            <a href="./about.html" class="mobile-nav-link">About</a>
+            <a href="./contact.html" class="mobile-nav-link active">Contact</a>
+        </div>
+    </nav>
+
+    <main class="main" id="main-content">
+        <div class="page-header">
+            <div class="container">
+                <h1 class="page-title reveal" data-i18n="contact.title">Get In Touch</h1>
+                <p class="page-description reveal" data-i18n="contact.subtitle">Let's discuss how I can help you build
+                    your next mobile application</p>
+            </div>
+        </div>
+
+        <div class="page-content">
+            <div class="container">
+                <div class="contact-grid grid-2" style="align-items: start;">
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper reveal">
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label" data-i18n="contact.form.name">Your Name *</label>
+                                <input type="text" id="name" name="name" class="form-input" required
+                                    placeholder="John Doe" data-i18n-placeholder="contact.form.namePlaceholder">
+                                <span class="form-error" data-i18n="contact.form.errors.name">Please enter your
+                                    name</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label" data-i18n="contact.form.email">Your Email
+                                    *</label>
+                                <input type="email" id="email" name="email" class="form-input" required
+                                    placeholder="john@example.com"
+                                    data-i18n-placeholder="contact.form.emailPlaceholder">
+                                <span class="form-error" data-i18n="contact.form.errors.email">Please enter a valid
+                                    email</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label" data-i18n="contact.form.subject">Subject
+                                    *</label>
+                                <input type="text" id="subject" name="subject" class="form-input" required
+                                    placeholder="Project Inquiry"
+                                    data-i18n-placeholder="contact.form.subjectPlaceholder">
+                                <span class="form-error" data-i18n="contact.form.errors.subject">Please enter a
+                                    subject</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label" data-i18n="contact.form.message">Your Message
+                                    *</label>
+                                <textarea id="message" name="message" class="form-textarea" required
+                                    placeholder="Tell me about your project..."
+                                    data-i18n-placeholder="contact.form.messagePlaceholder"></textarea>
+                                <span class="form-error" data-i18n="contact.form.errors.message">Please enter your
+                                    message</span>
+                            </div>
+
+                            <div class="form-group">
+                                <p style="font-size: var(--text-sm); color: var(--text-tertiary);">
+                                    <!-- reCAPTCHA placeholder -->
+                                    🔒 Protected by reCAPTCHA
+                                </p>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13" />
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                                </svg>
+                                <span id="submit-text">Send Message</span>
+                            </button>
+                        </form>
+
+                        <!-- Success State -->
+                        <div class="contact-success hidden" id="contact-success">
+                            <div style="text-align: center; padding: var(--space-8);">
+                                <div style="font-size: 4rem; margin-bottom: var(--space-4);">✅</div>
+                                <h3>Message Sent!</h3>
+                                <p style="color: var(--text-secondary); margin-bottom: var(--space-6);">Thank you for
+                                    reaching out. I'll get back to you as soon as possible.</p>
+                                <button type="button" class="btn btn-secondary" onclick="resetForm()">Send Another
+                                    Message</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info reveal-right">
+                        <div class="contact-card card">
+                            <div class="card-content">
+                                <h3 style="margin-bottom: var(--space-6);">Contact Information</h3>
+
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                            <polyline points="22,6 12,13 2,6" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <span class="contact-label">Email</span>
+                                        <a href="mailto:mamdouhattia31@gmail.com"
+                                            class="contact-value">mamdouhattia31@gmail.com</a>
+                                    </div>
+                                </div>
+
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                            <circle cx="12" cy="10" r="3" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <span class="contact-label">Location</span>
+                                        <span class="contact-value">Damietta, Egypt</span>
+                                    </div>
+                                </div>
+
+                                <div class="divider"></div>
+
+                                <h4 style="margin-bottom: var(--space-4);">Connect With Me</h4>
+
+                                <div class="social-links-large">
+                                    <a href="https://github.com/Mamdouh-Attia" class="social-link-large" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                        </svg>
+                                        <span>GitHub</span>
+                                    </a>
+
+                                    <a href="https://www.linkedin.com/in/mamdouh-atia/" class="social-link-large"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                        </svg>
+                                        <span>LinkedIn</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-name">Mamdouh Ahmed Attia</h3>
+                    <p class="footer-bio">Mobile Software Engineer specializing in Flutter</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/Mamdouh-Attia" class="social-link" target="_blank"
+                        rel="noopener noreferrer" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg></a>
+                    <a href="https://www.linkedin.com/in/mamdouh-atia/" class="social-link" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg></a>
+                    <a href="mailto:mamdouhattia31@gmail.com" class="social-link" aria-label="Email"><svg width="20"
+                            height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2024 Mamdouh Ahmed Attia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast-container"></div>
+
+    <script type="module" src="../js/main.js"></script>
+    <script>
+        const form = document.getElementById('contact-form');
+        const successEl = document.getElementById('contact-success');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Validate
+            const inputs = form.querySelectorAll('[required]');
+            let valid = true;
+
+            inputs.forEach(input => {
+                const error = input.parentNode.querySelector('.form-error');
+                if (!input.value.trim()) {
+                    valid = false;
+                    error.style.display = 'block';
+                    input.classList.add('error');
+                } else if (input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
+                    valid = false;
+                    error.textContent = 'Please enter a valid email';
+                    error.style.display = 'block';
+                    input.classList.add('error');
+                } else {
+                    error.style.display = 'none';
+                    input.classList.remove('error');
+                }
+            });
+
+            if (!valid) return;
+
+            // Simulate submission
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const submitText = document.getElementById('submit-text');
+            submitBtn.disabled = true;
+            submitText.textContent = 'Sending...';
+
+            // Simulate API call
+            await new Promise(resolve => setTimeout(resolve, 1500));
+
+            // Show success
+            form.style.display = 'none';
+            successEl.classList.remove('hidden');
+
+            // Show toast
+            showToast('Message sent successfully!', 'success');
+        });
+
+        function resetForm() {
+            form.reset();
+            form.style.display = 'block';
+            successEl.classList.add('hidden');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const submitText = document.getElementById('submit-text');
+            submitBtn.disabled = false;
+            submitText.textContent = 'Send Message';
+        }
+    </script>
+
+    <style>
+        .contact-grid {
+            gap: var(--space-12);
+        }
+
+        .contact-form {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+        }
+
+        .form-error {
+            display: none;
+        }
+
+        .form-input.error,
+        .form-textarea.error {
+            border-color: var(--color-error);
+        }
+
+        .contact-card {
+            position: sticky;
+            top: 100px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: var(--space-4);
+            margin-bottom: var(--space-4);
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--glass-bg);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--color-primary);
+        }
+
+        .contact-label {
+            display: block;
+            font-size: var(--text-sm);
+            color: var(--text-tertiary);
+            margin-bottom: var(--space-1);
+        }
+
+        .contact-value {
+            font-weight: var(--font-medium);
+            color: var(--text-primary);
+        }
+
+        a.contact-value:hover {
+            color: var(--color-primary);
+        }
+
+        .social-links-large {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+        }
+
+        .social-link-large {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: var(--space-3) var(--space-4);
+            background: var(--glass-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all var(--duration-fast) var(--ease-in-out);
+        }
+
+        .social-link-large:hover {
+            background: var(--color-primary);
+            border-color: var(--color-primary);
+            color: white;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-card {
+                position: static;
+            }
+        }
+    </style>
+</body>
+
+</html>

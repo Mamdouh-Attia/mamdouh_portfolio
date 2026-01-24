@@ -3,10 +3,84 @@
  */
 
 export const projects = [
+    // ========== MOBILE & WEB PROJECTS (Prioritizing Flutter) ==========
+    {
+        id: "volunteen",
+        title: "VolunTeen",
+        slug: "volunteen",
+        category: "mobile",
+        tags: ["Flutter", "Firebase", "AI Chatbot"],
+        techStack: ["Flutter", "Dart", "Firebase", "GPT-3 API", "Provider"],
+        featured: true,
+        status: "completed",
+        date: "2024-01",
+        i18nKey: "projectData.volunteen"
+    },
+    {
+        id: "ecosort",
+        title: "EcoSort",
+        slug: "ecosort",
+        category: "mobile",
+        tags: ["Flutter", "IoT", "BLE"],
+        techStack: ["Flutter", "Dart", "Firebase", "BLE", "IoT"],
+        featured: true,
+        status: "completed",
+        date: "2024-05",
+        i18nKey: "projectData.ecosort"
+    },
+    {
+        id: "epl-reservation",
+        title: "EPL Ticket Reservation",
+        slug: "epl-reservation",
+        category: "mobile",
+        tags: ["Flutter", ".NET Core", "SQL Server"],
+        techStack: ["Flutter Web", "ASP.NET Core", "SQL Server", "Provider"],
+        featured: true,
+        status: "completed",
+        date: "2023-10",
+        i18nKey: "projectData.eplReservation"
+    },
+    {
+        id: "hypermate",
+        title: "HyperMate",
+        slug: "hypermate",
+        category: "mobile",
+        tags: ["Flutter", "IoT", "Health Tech"],
+        techStack: ["Flutter", "Dart", "ESP8266", "Wi-Fi Service"],
+        featured: true,
+        status: "completed",
+        date: "2023-12",
+        i18nKey: "projectData.hypermate"
+    },
+    {
+        id: "tapcash",
+        title: "TapCash FinTech",
+        slug: "tapcash",
+        category: "mobile",
+        tags: ["Flutter", "FinTech", "UI/UX"],
+        techStack: ["Flutter", "Dart", "Cubit", "Data Viz"],
+        featured: false,
+        status: "completed",
+        date: "2023-05",
+        i18nKey: "projectData.tapcash"
+    },
+    {
+        id: "reddit-clone",
+        title: "Reddit Clone",
+        slug: "reddit-clone",
+        category: "mobile",
+        tags: ["Flutter", "MVC-S", "Agile"],
+        techStack: ["Flutter", "Dart", "Provider", "REST APIs"],
+        featured: false,
+        status: "completed",
+        date: "2022-12",
+        i18nKey: "projectData.redditClone"
+    },
+
     // ========== DATA & AI PROJECTS ==========
     {
         id: "us-accidents",
-        title: "US Accidents Analysis", // Fallback
+        title: "US Accidents Analysis",
         slug: "us-accidents",
         category: "data",
         tags: ["PySpark", "Machine Learning", "GCP"],
@@ -51,78 +125,6 @@ export const projects = [
         status: "completed",
         date: "2024-03",
         i18nKey: "projectData.vectorDb"
-    },
-
-    // ========== MOBILE & WEB PROJECTS ==========
-    {
-        id: "volunteen",
-        title: "VolunTeen",
-        slug: "volunteen",
-        category: "mobile",
-        tags: ["Flutter", "Firebase", "AI Chatbot"],
-        techStack: ["Flutter", "Dart", "Firebase", "GPT-3 API", "Provider"],
-        featured: true,
-        status: "completed",
-        date: "2024-01"
-    },
-    {
-        id: "ecosort",
-        title: "EcoSort",
-        slug: "ecosort",
-        category: "mobile",
-        tags: ["Flutter", "IoT", "BLE"],
-        techStack: ["Flutter", "Dart", "Firebase", "BLE", "IoT"],
-        featured: true,
-        status: "completed",
-        date: "2024-05",
-        i18nKey: "projectData.ecosort"
-    },
-    {
-        id: "epl-reservation",
-        title: "EPL Ticket Reservation",
-        slug: "epl-reservation",
-        category: "mobile",
-        tags: ["Flutter", ".NET Core", "SQL Server"],
-        techStack: ["Flutter Web", "ASP.NET Core", "SQL Server", "Provider"],
-        featured: true,
-        status: "completed",
-        date: "2023-10",
-        i18nKey: "projectData.eplReservation"
-    },
-    {
-        id: "tapcash",
-        title: "TapCash FinTech",
-        slug: "tapcash",
-        category: "mobile",
-        tags: ["Flutter", "FinTech", "UI/UX"],
-        techStack: ["Flutter", "Dart", "Cubit", "Data Viz"],
-        featured: false,
-        status: "completed",
-        date: "2023-05",
-        i18nKey: "projectData.tapcash"
-    },
-    {
-        id: "hypermate",
-        title: "HyperMate",
-        slug: "hypermate",
-        category: "mobile",
-        tags: ["Flutter", "IoT", "Health Tech"],
-        techStack: ["Flutter", "Dart", "ESP8266", "Wi-Fi Service"],
-        featured: true,
-        status: "completed",
-        date: "2023-12"
-    },
-    {
-        id: "search-engine",
-        title: "Search Engine",
-        slug: "search-engine",
-        category: "cs",
-        tags: ["Java", "Web Crawling", "Algorithms"],
-        techStack: ["Java", "Apache Tomcat", "Multithreading"],
-        featured: false,
-        status: "completed",
-        date: "2022-04",
-        i18nKey: "projectData.searchEngine"
     },
     {
         id: "library-system",
@@ -209,18 +211,20 @@ export const projects = [
         techStack: ["C", "Linux Process Management"],
         featured: false,
         status: "completed",
-        date: "2022-04"
+        date: "2022-04",
+        i18nKey: "projectData.osScheduler"
     },
     {
-        id: "reddit-clone",
-        title: "Reddit Clone",
-        slug: "reddit-clone",
-        category: "mobile",
-        tags: ["Flutter", "MVC-S", "Agile"],
-        techStack: ["Flutter", "Dart", "Provider", "REST APIs"],
+        id: "search-engine",
+        title: "Search Engine",
+        slug: "search-engine",
+        category: "cs",
+        tags: ["Java", "Web Crawling", "Algorithms"],
+        techStack: ["Java", "Apache Tomcat", "Multithreading"],
         featured: false,
         status: "completed",
-        date: "2022-12"
+        date: "2022-04",
+        i18nKey: "projectData.searchEngine"
     }
 ];
 

@@ -733,3 +733,14 @@
         padding: var(--space-16) 0;
     }
 }
+
+/* ==================== PROJECT LAYOUTS ==================== */
+.projects-list-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.projects-list-vertical .project-card {
+    width: 100%;
+}

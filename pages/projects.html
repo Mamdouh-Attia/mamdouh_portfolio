@@ -245,35 +245,75 @@
             container.innerHTML = projectList.map(project => {
                 const title = project.i18nKey ? window.t(project.i18nKey + '.title', project.title) : project.title;
                 const description = project.i18nKey ? window.t(project.i18nKey + '.overview', project.description) : project.description;
+                const subtitle = project.i18nKey ? window.t(project.i18nKey + '.subtitle', '') : '';
                 const categoryLabel = window.t('projects.categories.' + project.category, project.category);
 
+                if (currentView === 'list') {
+                    // Creative Wide Card for PC
+                    return `
+                    <div class="card project-card wide-card reveal" data-slug="${project.slug}">
+                        <div class="card-image ${project.images && project.images.length > 0 ? '' : 'no-image'}">
+                            ${project.images && project.images.length > 0 ? `<img src="${project.images[0]}" alt="${title}">` : `<div class="project-placeholder">${project.category.toUpperCase()}</div>`}
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                ${project.featured ? '<span class="badge badge-primary">Featured</span>' : ''}
+                                <span class="badge">${categoryLabel}</span>
+                                <span class="badge badge-outline">${project.date || ''}</span>
+                            </div>
+                            <h3 class="card-title">${title}</h3>
+                            <p class="card-subtitle" style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-bottom: var(--space-3);">${subtitle}</p>
+                            <p class="card-description">${description}</p>
+                            
+                            <div class="card-details" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-top: auto;">
+                                <div class="detail-item">
+                                    <strong style="color: var(--text-tertiary); display: block; font-size: 0.7rem; text-transform: uppercase;">Tech Stack</strong>
+                                    <div class="tags" style="margin-top: 5px;">
+                                        ${project.techStack.slice(0, 3).map(tech => `<span class="badge badge-sm">${tech}</span>`).join('')}
+                                    </div>
+                                </div>
+                                <div class="detail-item" style="text-align: right; display: flex; align-items: flex-end; justify-content: flex-end;">
+                                    <button class="btn btn-primary btn-sm" onclick="showProject('${project.slug}')">
+                                        ${window.t('common.viewMore', 'Explore Case Study')} →
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+                }
+
+                // Standard Grid Card
                 return `
-        <div class="card project-card" data-slug="${project.slug}">
-          <div class="card-image ${project.images && project.images.length > 0 ? '' : 'no-image'}">
-            ${project.images && project.images.length > 0 ? `<img src="${project.images[0]}" alt="${title}">` : `<div class="project-placeholder">${project.category.toUpperCase()}</div>`}
-          </div>
-          <div class="card-content">
-            <div class="card-meta">
-              ${project.featured ? '<span class="badge badge-primary">Featured</span>' : ''}
-              <span class="badge">${categoryLabel}</span>
-            </div>
-            <h3 class="card-title">${title}</h3>
-            <p class="card-description">${description}</p>
-            <div class="card-footer">
-              <div class="tags">
-                ${project.tags.slice(0, 2).map(tag => `<span class="badge">${tag}</span>`).join('')}
-              </div>
-              <button class="btn btn-ghost btn-sm" onclick="showProject('${project.slug}')">
-                ${window.t('common.viewMore', 'Explore →')}
-              </button>
-            </div>
-          </div>
-        </div>
-      `;
+                <div class="card project-card reveal" data-slug="${project.slug}">
+                  <div class="card-image ${project.images && project.images.length > 0 ? '' : 'no-image'}">
+                    ${project.images && project.images.length > 0 ? `<img src="${project.images[0]}" alt="${title}">` : `<div class="project-placeholder">${project.category.toUpperCase()}</div>`}
+                  </div>
+                  <div class="card-content">
+                    <div class="card-meta">
+                      ${project.featured ? '<span class="badge badge-primary">Featured</span>' : ''}
+                      <span class="badge">${categoryLabel}</span>
+                    </div>
+                    <h3 class="card-title">${title}</h3>
+                    <p class="card-description">${description}</p>
+                    <div class="card-footer">
+                      <div class="tags">
+                        ${project.techStack.slice(0, 2).map(tag => `<span class="badge">${tag}</span>`).join('')}
+                      </div>
+                      <button class="btn btn-ghost btn-sm" onclick="showProject('${project.slug}')">
+                        ${window.t('common.viewMore', 'Details →')}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                `;
             }).join('');
 
-            // Update grid class based on view
-            container.className = currentView === 'grid' ? 'projects-grid grid-3' : 'projects-list';
+            // Update container class
+            container.className = currentView === 'grid' ? 'projects-grid grid-3' : 'projects-list-vertical';
+
+            // Re-trigger scroll reveals if available
+            if (window.ScrollReveal) window.ScrollReveal().reveal('.reveal');
         }
 
         function filterProjects() {
@@ -284,17 +324,19 @@
                     : getProjectsByCategory(currentCategory);
 
             if (searchQuery) {
-                filtered = filtered.filter(p =>
-                    p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                    p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                    p.tags.some(t => t.toLowerCase().includes(searchQuery.toLowerCase()))
-                );
+                filtered = filtered.filter(p => {
+                    const title = p.i18nKey ? window.t(p.i18nKey + '.title', p.title) : p.title;
+                    const overview = p.i18nKey ? window.t(p.i18nKey + '.overview', p.description) : p.description;
+                    return title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                        overview.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                        p.tags.some(t => t.toLowerCase().includes(searchQuery.toLowerCase()));
+                });
             }
 
             renderProjects(filtered);
         }
 
-        // Category tabs
+        // Category tabs event listeners
         document.querySelectorAll('.category-tab').forEach(tab => {
             tab.addEventListener('click', () => {
                 document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
@@ -304,7 +346,7 @@
             });
         });
 
-        // View toggle
+        // View toggle event listeners
         document.querySelectorAll('.view-toggle button').forEach(btn => {
             btn.addEventListener('click', () => {
                 document.querySelectorAll('.view-toggle button').forEach(b => b.classList.remove('active'));
@@ -314,7 +356,7 @@
             });
         });
 
-        // Search
+        // Search event listener
         document.getElementById('search').addEventListener('input', (e) => {
             searchQuery = e.target.value;
             filterProjects();
@@ -325,67 +367,107 @@
             const project = getProjectBySlug(slug);
             if (!project) return;
 
-            // Translations with fallbacks
-            const title = project.i18nKey ? window.t(project.i18nKey + '.title', project.title) : project.title;
-            const overview = project.i18nKey ? window.t(project.i18nKey + '.overview', project.description) : project.description;
-            const challenge = project.i18nKey ? window.t(project.i18nKey + '.challenge', project.challenge || '') : (project.challenge || '');
-            const approach = project.i18nKey ? window.t(project.i18nKey + '.approach', project.approach || '') : (project.approach || '');
-            const solution = project.i18nKey ? window.t(project.i18nKey + '.solution', project.solution || '') : (project.solution || '');
-            const contributions = project.i18nKey ? window.t(project.i18nKey + '.contributions', project.contributions || []) : (project.contributions || []);
+            // Translations with full key checking
+            const i18n = project.i18nKey;
+            const title = i18n ? window.t(i18n + '.title', project.title) : project.title;
+            const subtitle = i18n ? window.t(i18n + '.subtitle', '') : '';
+            const overview = i18n ? window.t(i18n + '.overview', project.description) : project.description;
+            const challenge = i18n ? window.t(i18n + '.challenge', '') : '';
+            const approach = i18n ? window.t(i18n + '.approach', '') : '';
+            const solution = i18n ? window.t(i18n + '.solution', '') : '';
+            const contributions = i18n ? window.t(i18n + '.contributions', []) : [];
 
             document.getElementById('modal-title').textContent = title;
             document.getElementById('modal-body').innerHTML = `
-                <div class="project-gallery no-image" style="aspect-ratio: 16/9; margin-bottom: var(--space-6); background: var(--glass-bg); display: flex; align-items: center; justify-content: center; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
-                   <span style="font-size: 3rem; opacity: 0.1; font-weight: 800; letter-spacing: 0.2em;">${project.category.toUpperCase()}</span>
-                </div>
+                <div class="modal-split-container">
+                    <!-- LEFT COLUMN: SIDEBAR -->
+                    <aside class="modal-sidebar">
+                        <div class="sidebar-project-media">
+                            ${(project.images && project.images.length > 0) ? `
+                                <div class="project-gallery-mini" style="aspect-ratio: 16/10; border-radius: var(--radius-xl); overflow: hidden; margin-bottom: var(--space-6); border: 1px solid var(--border-color);">
+                                    <img src="${project.images[0]}" alt="${title}" style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                            ` : `<div class="project-placeholder-mini" style="aspect-ratio: 16/10; background: var(--bg-tertiary); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; opacity: 0.1; letter-spacing: 0.1em; margin-bottom: var(--space-6); border: 1px solid var(--border-color);">${project.category.toUpperCase()}</div>`}
+                        </div>
 
-                <p class="project-overview" style="font-size: var(--text-lg); margin-bottom: var(--space-8); color: var(--text-primary); line-height: 1.6;">${overview}</p>
-        
-                <div class="project-details-grid" style="display: grid; gap: var(--space-8); margin-bottom: var(--space-8);">
-                    ${challenge ? `
-                    <div class="project-section">
-                        <h4 style="color: var(--color-primary); margin-bottom: var(--space-3); border-left: 4px solid var(--color-primary); padding-left: var(--space-3);">${window.t('projects.modal.challenge', 'The Challenge')}</h4>
-                        <p>${challenge}</p>
-                    </div>
-                    ` : ''}
-                    
-                    ${approach ? `
-                    <div class="project-section">
-                        <h4 style="color: var(--color-primary); margin-bottom: var(--space-3); border-left: 4px solid var(--color-primary); padding-left: var(--space-3);">${window.t('projects.modal.approach', 'My Approach')}</h4>
-                        <p>${approach}</p>
-                    </div>
-                    ` : ''}
-                    
-                    ${solution ? `
-                    <div class="project-section">
-                        <h4 style="color: var(--color-primary); margin-bottom: var(--space-3); border-left: 4px solid var(--color-primary); padding-left: var(--space-3);">${window.t('projects.modal.solution', 'The Solution')}</h4>
-                        <p>${solution}</p>
-                    </div>
-                    ` : ''}
-                </div>
+                        <div class="sidebar-info-group">
+                            <h4 class="sidebar-group-title">Status & Info</h4>
+                            <div class="sidebar-meta" style="display: flex; flex-direction: column; gap: var(--space-2);">
+                                <span class="badge badge-outline" style="justify-content: flex-start; gap: var(--space-2);">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                    ${project.date || 'Active'}
+                                </span>
+                                <span class="badge badge-outline" style="justify-content: flex-start; gap: var(--space-2);">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                                    ${project.category.charAt(0).toUpperCase() + project.category.slice(1)}
+                                </span>
+                            </div>
+                        </div>
 
-                ${Array.isArray(contributions) && contributions.length > 0 ? `
-                <div class="project-section" style="margin-bottom: var(--space-8); padding: var(--space-6); background: var(--glass-bg); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
-                    <h4 style="margin-bottom: var(--space-4); display: flex; align-items: center; gap: var(--space-2);">
-                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-success);"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                         ${window.t('projects.modal.contributions', 'Key Contributions')}
-                    </h4>
-                    <ul style="list-style: none; display: grid; gap: var(--space-3);">
-                        ${contributions.map(c => `<li style="display: flex; gap: var(--space-3); color: var(--text-secondary);"><span style="color: var(--color-primary);">•</span> ${c}</li>`).join('')}
-                    </ul>
-                </div>
-                ` : ''}
+                        <div class="sidebar-info-group">
+                            <h4 class="sidebar-group-title">${window.t('projects.modal.techStack', 'Building Blocks')}</h4>
+                            <div class="tags">
+                                ${project.techStack.map(tech => `<span class="badge badge-primary">${tech}</span>`).join('')}
+                            </div>
+                        </div>
 
-                <div class="project-section">
-                    <h4 style="margin-bottom: var(--space-3);">${window.t('projects.modal.techStack', 'Tech Stack')}</h4>
-                    <div class="tags">
-                        ${project.techStack.map(tech => `<span class="badge badge-primary">${tech}</span>`).join('')}
-                    </div>
-                </div>
+                        <div class="sidebar-info-group" style="margin-top: auto;">
+                            <h4 class="sidebar-group-title">Links</h4>
+                            <div class="project-actions" style="display: flex; flex-direction: column; gap: var(--space-3);">
+                                ${project.demoUrl ? `<a href="${project.demoUrl}" class="btn btn-primary" target="_blank">${window.t('projects.demoVideo', 'Live Demo')}</a>` : ''}
+                                ${project.repoUrl ? `<a href="${project.repoUrl}" class="btn btn-secondary" target="_blank">${window.t('projects.github', 'GitHub Repo')}</a>` : ''}
+                            </div>
+                        </div>
+                    </aside>
 
-                <div class="project-links" style="margin-top: var(--space-10); pt: var(--space-6); border-top: 1px solid var(--border-color); display: flex; gap: var(--space-4);">
-                    ${project.demoUrl ? `<a href="${project.demoUrl}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">${window.t('projects.demoVideo', 'Live Demo')}</a>` : ''}
-                    ${project.repoUrl ? `<a href="${project.repoUrl}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">${window.t('projects.github', 'Source Code')}</a>` : ''}
+                    <!-- RIGHT COLUMN: MAIN CONTENT -->
+                    <main class="modal-main">
+                        <header class="project-content-header" style="margin-bottom: var(--space-10);">
+                            ${subtitle ? `<p style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; margin-bottom: var(--space-2);">${subtitle}</p>` : ''}
+                            <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: var(--space-4);">${title}</h2>
+                            <p class="project-overview" style="font-size: var(--text-lg); line-height: 1.7; color: var(--text-primary);">${overview}</p>
+                        </header>
+
+                        <div class="story-timeline">
+                            ${challenge ? `
+                                <div class="storytelling-block">
+                                    <div class="timeline-dot"></div>
+                                    <h4 class="section-label">${window.t('projects.modal.challenge', 'The Challenge')}</h4>
+                                    <div class="storytelling-content">${challenge}</div>
+                                </div>
+                            ` : ''}
+
+                            ${approach ? `
+                                <div class="storytelling-block">
+                                    <div class="timeline-dot"></div>
+                                    <h4 class="section-label">${window.t('projects.modal.approach', 'My Approach')}</h4>
+                                    <div class="storytelling-content">${approach}</div>
+                                </div>
+                            ` : ''}
+
+                            ${solution ? `
+                                <div class="storytelling-block">
+                                    <div class="timeline-dot"></div>
+                                    <h4 class="section-label">${window.t('projects.modal.solution', 'The Solution')}</h4>
+                                    <div class="storytelling-content">${solution}</div>
+                                </div>
+                            ` : ''}
+                        </div>
+
+                        ${Array.isArray(contributions) && contributions.length > 0 ? `
+                            <div class="contribution-card" style="margin-top: var(--space-6);">
+                                <h4 class="section-label" style="color: var(--color-success); border: none;">${window.t('projects.modal.contributions', 'My Contribution')}</h4>
+                                <ul class="contribution-list">
+                                    ${contributions.map(c => `
+                                        <li>
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            <span>${c}</span>
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                        ` : ''}
+                    </main>
                 </div>
             `;
 
@@ -463,33 +545,6 @@
             background: var(--color-primary);
             border-color: var(--color-primary);
             color: white;
-        }
-
-        .card-meta {
-            display: flex;
-            gap: var(--space-2);
-            margin-bottom: var(--space-2);
-        }
-
-        .project-section {
-            margin-bottom: var(--space-6);
-        }
-
-        .project-section h4 {
-            font-size: var(--text-lg);
-            margin-bottom: var(--space-2);
-            color: var(--color-primary);
-        }
-
-        .projects-list .project-card {
-            display: flex;
-            flex-direction: row;
-        }
-
-        .projects-list .card-image {
-            width: 200px;
-            min-height: 150px;
-            aspect-ratio: auto;
         }
 
         .empty-state {

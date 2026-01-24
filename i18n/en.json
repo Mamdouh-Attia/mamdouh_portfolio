@@ -67,7 +67,7 @@
       "challenge": "The Challenge",
       "approach": "My Approach",
       "solution": "The Solution",
-      "contributions": "Key Contributions",
+      "contributions": "My Contribution",
       "techStack": "Tech Stack"
     }
   },
@@ -163,88 +163,60 @@
     "copyright": "© 2024 Mamdouh Ahmed Attia. All rights reserved."
   },
   "projectData": {
-    "usAccidents": {
-      "title": "US Accidents Analysis",
-      "subtitle": "Distributed Big Data pipeline analyzing 7.7M accident records",
-      "overview": "An end-to-end Big Data pipeline predicting accident severity and identifying risk factors using distributed computing and cloud orchestration.",
-      "challenge": "Processing and analyzing a massive dataset (7.7M records) efficiently while identifying meaningful patterns in noisy traffic data.",
-      "approach": "Implemented a distributed pipeline on GCP using PySpark and Mage. Designed a custom MapReduce Linear Regression for coefficient calculation and used dbt for star schema modeling.",
-      "solution": "Achieved 84% prediction accuracy using Random Forest after reducing data processing time from 6 hours (Pandas) to 23 minutes (PySpark), with interactive dashboards for EDA insights.",
-      "contributions": [
-        "Designed and implemented MapReduce Linear Regression from scratch",
-        "Led EDA phase: 80+ hours of data cleaning and correlation analysis",
-        "Configured Mage orchestration on GCP for 10+ ETL pipelines",
-        "Selected and tuned the champion Random Forest model (84% accuracy)"
-      ]
-    },
-    "vpredicto": {
-      "title": "vPredicto",
-      "subtitle": "Open-source library for State-of-the-Art Video Frame Prediction",
-      "overview": "A unified Python library implementing cutting-edge VFP models like PredRNN++ and MIM under a single, standardized API.",
-      "challenge": "Implementing complex spatiotemporal memory flows and gradient highway units for deep video prediction networks with high fidelity.",
-      "approach": "Architected a modular system with a unified BaseModel. Implemented PredRNN++ with CausalLSTM cells and Memory In Memory (MIM) for differential tracking.",
-      "solution": "Delivered a high-performance library achieving SSIM: 0.8734 and PSNR: 28.45 dB on MovingMNIST, enabling easy benchmarking of VFP models.",
-      "contributions": [
-        "Designed the core BaseModel architecture and standardized API",
-        "Implemented CausalLSTM and Gradient Highway Units from research papers",
-        "Built efficient data pipelines for MovingMNIST and KTH datasets",
-        "Achieved state-of-the-art results for PredRNN++ and MIM implementations"
-      ]
-    },
-    "phishing": {
-      "title": "Phishing Detection",
-      "subtitle": "Machine Learning system for website security",
-      "overview": "An ML system classifying websites as legitimate or phishing based on 30+ URL and structural features with 96% accuracy.",
-      "challenge": "Effectively distinguishing between sophisticated phishing attempts and real websites while optimizing for low false-positive rates.",
-      "approach": "Extracted 30+ features including HTTPS validity and domain age. Used SMOTE for class balancing and GridSearchCV for hyperparameter tuning.",
-      "solution": "Developed a Random Forest ensemble model achieving 96% accuracy, significantly outperforming baseline logistic regression models.",
-      "contributions": [
-        "Engineered 30+ URL and structural security features",
-        "Implemented SMOTE to handle highly imbalanced phishing datasets",
-        "Optimized Random Forest hyperparameters via GridSearchCV",
-        "Performed comparative analysis of 12 different ML architectures"
-      ]
-    },
-    "vectorDb": {
-      "title": "Vectorized Database",
-      "subtitle": "Similarity search engine built from scratch",
-      "overview": "A custom vector database implementation demonstrating centroid-based clustering and high-speed similarity retrieval.",
-      "challenge": "Implementing efficient similarity search that scales without the overhead of massive pre-built database engines.",
-      "approach": "Used K-Means clustering to partition vectors into centroids. Implemented coarse and fine quantization for accelerated retrieval.",
-      "solution": "A functional similarity engine that partitions large vector spaces and retrieves nearest neighbors using custom serialization for persistence.",
-      "contributions": [
-        "Implemented K-Means clustering for vector partitioning",
-        "Designed coarse-to-fine quantization retrieval logic",
-        "Built custom CSV serialization for cluster persistence",
-        "Developed similarity search scoring using NumPy"
-      ]
-    },
-    "eplReservation": {
-      "title": "EPL Ticket Reservation",
-      "subtitle": "Public-facing booking system and admin dashboard",
-      "overview": "A comprehensive system for English Premier League ticket booking, featuring a Flutter web admin dashboard and a .NET core backend.",
-      "challenge": "Managing concurrent seat reservations and visualizing large datasets of revenue and occupancy in real-time.",
-      "approach": "Built the admin dashboard using Flutter Web with Provider for reactive state management. Integrated fl_chart for revenue visualization.",
-      "solution": "Delivered a polished dashboard with optimistic locking for seat selection and JWT-based security with automatic token refresh.",
-      "contributions": [
-        "Developed 10+ dashboard screens using Flutter Web",
-        "Implemented JWT interceptor with silent auto-refresh logic",
-        "Built custom paginated data tables for 1000+ match records",
-        "Integrated interactive revenue and occupancy charts using fl_chart"
-      ]
+    "volunteen": {
+        "title": "VolunTeen",
+        "subtitle": "AI-Powered Volunteering platform for teenagers",
+        "overview": "A solo-developed Flutter application targeting teenagers with 30-40 screens, featuring AI chatbot integration and a complete management system.",
+        "challenge": "Designing a complex, feature-rich platform that remains engaging and simple enough for a teenage audience while integrating advanced AI capabilities.",
+        "approach": "Adopted an MVC architecture for maintainability. I personally designed the UI/UX from scratch and integrated GPT-3 for a personalized assistant experience.",
+        "solution": "Successfully launched a professional-grade mobile app with sub-second response times and a verified reward system for active volunteers.",
+        "contributions": [
+          "Developed 30-40 screens independently using Flutter/Dart",
+          "Implemented MVC architecture for scalable code structure",
+          "Integrated GPT-3 API for the intelligent volunteering assistant",
+          "Designed a secure reward system using Firebase Cloud Functions"
+        ]
     },
     "ecosort": {
       "title": "EcoSort Smart Recycling",
       "subtitle": "IoT-enabled gamified recycling application",
-      "overview": "A freelance project transforming recycling into a game by connecting users to smart bins via Bluetooth Low Energy (BLE).",
-      "challenge": "Reverse-engineering a proprietary BLE protocol and implementing a secure, anti-fraud QR scanning system for rewards.",
-      "approach": "Used flutter_blue_plus for BLE communication and implemented HMAC-SHA256 signatures for QR validation. Integrated Firebase Custom Claims for RBAC.",
-      "solution": "Enabled the client to deploy 50+ smart bins, tracking thousands of recycling actions with a robust fraud prevention system.",
+      "overview": "An IoT-focused recycling app that connects users to smart bins via Bluetooth Low Energy (BLE) to track and reward eco-friendly actions.",
+      "challenge": "Establishing reliable communication with proprietary smart hardware and preventing fraud in the reward system.",
+      "approach": "I reverse-engineered the bin's BLE protocol to enable direct interaction. For security, I built a signature-based QR validation system.",
+      "solution": "Enabled a network of 50+ smart bins to function seamlessly with a fraud-proof point attribution system.",
       "contributions": [
-        "Reverse-engineered the Blync smart bin BLE protocol",
+        "Reverse-engineered the Blync smart bin BLE communication protocol",
         "Implemented secure QR validation with HMAC-SHA256 signatures",
-        "Built role-based access control using Firebase Custom Claims",
-        "Developed the points calculation algorithm with streak bonuses"
+        "Built the points calculation engine with streak-based bonuses",
+        "Integrated real-time IoT sensor readings into the Flutter UI"
+      ]
+    },
+    "eplReservation": {
+      "title": "EPL Ticket Reservation",
+      "subtitle": "Match ticketing system and admin intelligence dashboard",
+      "overview": "A full-stack reservation system for Premier League matches, featuring a high-performance Flutter web admin panel.",
+      "challenge": "Handling concurrent seat bookings and visualizing complex match occupancy data for administrators.",
+      "approach": "I utilized Provider for reactive state management on the web. I designed custom charts to provide real-time occupancy insights.",
+      "solution": "A robust system with sub-second data synchronization and a secure, JWT-authenticated administration flow.",
+      "contributions": [
+        "Developed the entire Admin Dashboard using Flutter Web",
+        "Implemented a JWT auto-refresh mechanism for seamless security",
+        "Built interactive data visualizations for revenue and occupancy",
+        "Designed the seat-map logic with optimistic state updates"
+      ]
+    },
+    "hypermate": {
+      "title": "HyperMate IoT",
+      "subtitle": "Real-time stress monitoring via ESP8266",
+      "overview": "A solo client project bridging the gap between IoT hardware and mobile health tracking using GSR sensors.",
+      "challenge": "Maintaining stable data streams from microcontrollers via Wi-Fi and providing actionable health insights in real-time.",
+      "approach": "I created a custom Wi-Fi service to communicate with ESP8266 and implemented an AI-driven suggestion engine for user wellness.",
+      "solution": "A fully functional IoT health tracker that interprets physiological data to provide personalized stress-relief recommendations.",
+      "contributions": [
+        "Built the custom Wi-Fi communication bridge for ESP8266",
+        "Developed real-time GSR sensor data visualization widgets",
+        "Integrated a wellness recommendation engine based on stress levels",
+        "Managed the end-to-end solo development for a private client"
       ]
     },
     "tapcash": {
@@ -252,7 +224,7 @@
       "subtitle": "Modern financial management and data visualization",
       "overview": "A polished fintech app prototype demonstrating secure mobile payments, spending insights, and wallet management.",
       "challenge": "Creating a premium UI with complex data visualizations that remains performant on varied mobile hardware.",
-      "approach": "Built a custom widget architecture for financial indicators and used specialized charting libraries for spending insights.",
+      "approach": "I built a custom widget architecture for financial indicators and used specialized charting libraries for spending insights.",
       "solution": "A high-fidelity prototype delivered in a 2-week hackathon, recognized for its exceptional UI/UX by industry judges.",
       "contributions": [
         "Designed the primary financial dashboard and spending 'Insights'",
@@ -261,102 +233,186 @@
         "Presented the solution at Orange Digital Center's Eid Hackathon"
       ]
     },
-    "searchEngine": {
-      "title": "Search Engine Architecture",
-      "subtitle": "Distributed web crawler and TF-IDF ranker",
-      "overview": "A distributed search engine built from scratch, implementing crawling, indexing, and ranked retrieval modules.",
-      "challenge": "Building a high-concurrency web crawler that respects robots.txt and survives unexpected crashes.",
-      "approach": "Implemented a multi-threaded crawler using Java's ExecutorService with HashSet-based deduplication and BFS state persistence.",
-      "solution": "Successfully crawled 50,000+ pages at an average rate of 138 pages per minute with full fault tolerance.",
+    "redditClone": {
+      "title": "Reddit Mobile Clone",
+      "subtitle": "Social media performance at scale",
+      "overview": "A complete Reddit mobile app clone developed as part of a software house environment following Agile methodology.",
+      "challenge": "Building a complex social platform with communities, nested comments, and real-time voting while maintaining high performance.",
+      "approach": "I followed MVC-S architecture and implemented the community creation flow and complex post-rendering logic.",
+      "solution": "A fully functional social ecosystem with live updates, state-driven UI, and comprehensive user settings.",
       "contributions": [
-        "Solo-implemented the 2000+ line multi-threaded crawler module",
-        "Built a robots.txt compliance engine and URL canonicalizer",
-        "Designed BFS queue persistence to disk to survive crashes",
-        "Collaborated on TF-IDF indexing logic and keyword highlighting"
+        "Architected the Community and Subreddit management modules",
+        "Implemented nested comment threading and real-time voting UI",
+        "Developed the rich-text post editor and media upload flow",
+        "Configured Provider-based state management for optimized rebuilds"
+      ]
+    },
+    "usAccidents": {
+      "title": "US Accidents Analysis",
+      "subtitle": "Big Data pipeline for 7.7M traffic records",
+      "overview": "A distributed computing project analyzing massive traffic datasets to predict accident severity and risk factors.",
+      "challenge": "Processing nearly 8 million records on traditional software was impossible; the system required a cloud-native distributed architecture.",
+      "approach": "I designed and implemented a custom MapReduce Linear Regression from scratch and configured the cloud orchestration on GCP.",
+      "solution": "Reduced processing time by 90% (from hours to minutes) and achieved 84% predictive accuracy using Random Forest.",
+      "contributions": [
+        "Designed and implemented MapReduce Linear Regression RDDs manually",
+        "Led the EDA phase: 80+ hours of forensic data cleaning and analysis",
+        "Configured Mage orchestration on GCP for 10+ ETL pipelines",
+        "Optimized Random Forest hyperparameters for peak accuracy"
+      ]
+    },
+    "vpredicto": {
+      "title": "vPredicto",
+      "subtitle": "Open-source Deep Learning library for Video Prediction",
+      "overview": "An open-source Python library implementing state-of-the-art architectures for future frame prediction in video sequences.",
+      "challenge": "Standardizing disparate research models into a single, cohesive API while maintaining high fidelity in spatio-temporal memory.",
+      "approach": "I architected the library's foundation using abstract models and implemented complex GhU (Gradient Highway) units to solve deep training issues.",
+      "solution": "An A+ grade graduation project achieving state-of-the-art SSIM scores and an extensible framework for future researchers.",
+      "contributions": [
+        "Architected the library foundation and unified BaseModel API",
+        "Implemented CausalLSTM and GhU units from research papers",
+        "Designed the differential memory tracking for the MIM model",
+        "Achieved A+ grade and published library on GitHub"
+      ]
+    },
+    "phishing": {
+      "title": "Phishing Detection",
+      "subtitle": "Security-focused ML classifier",
+      "overview": "A machine learning system designed to protect users by identifying phishing websites with 96% accuracy.",
+      "challenge": "Accurately identifying deceptive URLs that mimic real domains while keeping false negatives near zero.",
+      "approach": "I engineered 30+ security features, including HTTPS validity and domain age, and optimized the ensemble model using grid search.",
+      "solution": "A high-precision classifier that successfully identifies complex phishing attempts on imbalanced real-world datasets.",
+      "contributions": [
+        "Engineered 30+ technical features for URL and structure analysis",
+        "Implemented SMOTE algorithms to handle extreme class imbalance",
+        "Optimized the Random Forest ensemble via GridSearchCV",
+        "Evaluated 12 different architectures to find the optimal solution"
+      ]
+    },
+    "vectorDb": {
+      "title": "Vectorized Database",
+      "subtitle": "High-speed similarity search engine",
+      "overview": "A custom vectorized database built to demonstrate the internals of similarity search and coarse-to-fine quantization.",
+      "challenge": "Implementing an efficient search that finds nearest neighbors in high-dimensional space without linear scan overhead.",
+      "approach": "I implemented K-Means for coarse partitioning and coarse quantization retrieval to minimize distance calculations.",
+      "solution": "An optimized engine that clusters vector spaces and retrieves matches with minimal latency using custom persistence.",
+      "contributions": [
+        "Implemented K-Means clustering algorithm for coarse space partitioning",
+        "Designed coarse-to-fine quantization for accelerated similarity search",
+        "Built the custom CSV-based vector storage and persistence module",
+        "Developed the high-performance distance calculation scoring engine"
       ]
     },
     "librarySystem": {
       "title": "Central Library Management",
-      "subtitle": "Enterprise SQL database design and management",
-      "overview": "A complex management system for a city library network with 20+ tables managing branches, vendors, and borrowing.",
-      "challenge": "Designing a normalized relational schema that handles recursive employee hierarchies and complex borrowing transactions.",
-      "approach": "Designed a 3NF schema with 20+ tables. Implemented T-SQL triggers for fine calculations and stored procedures for ACID transactions.",
-      "solution": "A robust database backend ensuring data integrity across library branches with automated fine tracking and inventory management.",
+      "subtitle": "Enterprise SQL database design",
+      "overview": "A complex relational database system for managing city-wide library branches, borrowing, and inventory.",
+      "challenge": "Designing a normalized system that handles thousands of daily transactions and complex employee hierarchies.",
+      "approach": "I architected a 20+ table schema in 3NF and implemented complex T-SQL triggers for automated fine calculations.",
+      "solution": "A robust, transactional system ensuring data integrity and automated management of library assets across multiple branches.",
       "contributions": [
-        "Designed the normalized ER diagram and physical schema (20+ tables)",
-        "Implemented recursive CTEs for managing employee supervisor hierarchies",
-        "Built stored procedures for transactional book borrowing",
-        "Created T-SQL triggers for automated fine calculation"
+        "Designed the full normalized schema and ER diagram (20+ tables)",
+        "Implemented recursive CTEs for employee supervisor mapping",
+        "Developed stored procedures for ACID borrowing transactions",
+        "Created T-SQL triggers for real-time automated fine calculation"
       ]
     },
     "robotExploration": {
       "title": "Multi-Robot Exploration",
-      "subtitle": "Collaborative mapping in unknown environments",
-      "overview": "A swarm robotics simulation using ROS where multiple robots cooperatively map an environment in Gazebo.",
-      "challenge": "Synchronizing partial maps from multiple sensors into a single, cohesive global occupancy grid.",
-      "approach": "Configured ROS multirobot_map_merge and tuned move_base parameters for obstacle inflation and costmap layers.",
-      "solution": "Achieved efficient unknown environment mapping with multiple robots with minimal path overlap and collision-free navigation.",
+      "subtitle": "Collaborative robotic mapping in ROS",
+      "overview": "A swarm robotics project where multiple robots collaboratively explore and map unknown territory in a simulated environment.",
+      "challenge": "Merging disparate maps from multiple robots into a single, cohesive global grid without data corruption.",
+      "approach": "I configured the map-merging nodes and tuned the navigation stack parameters for obstacle inflation and costmap layers.",
+      "solution": "Achieved efficient, overlap-free mapping with collision-proof navigation for up to 4 concurrent robots.",
       "contributions": [
-        "Configured map merging nodes for multi-robot synchronization",
+        "Configured the multi-robot map merging nodes in ROS Noetic",
         "Tuned inflation radius and costmap parameters for MoveBase",
-        "Automated the Linux workspace setup for collaborative development",
-        "Performed Gazebo simulation testing and parameter calibration"
+        "Automated the Linux workspace setup for rapid simulation testing",
+        "Calibrated robot localization sensors in Gazebo environment"
       ]
     },
     "lineFollower": {
       "title": "Embedded CV Line Follower",
-      "subtitle": "Mobile computer vision for autonomous navigation",
-      "overview": "A smart car using an Android phone's camera for computer vision to calculate steering error for autonomous line following.",
-      "challenge": "Processing real-time video frames on mobile at high frame rates while accurately extracting steering angles.",
-      "approach": "Implemented an OpenCV pipeline in C++ via JNI for performance. Used Hough Line Transform with a custom line-merging algorithm.",
-      "solution": "Successfully navigated a complex course with real-time CV processing and PID control on an ESP32 via TCP sockets.",
+      "subtitle": "Computer Vision for autonomous cars",
+      "overview": "A smart navigation project using a mobile camera to drive an autonomous vehicle through steering angle calculation.",
+      "challenge": "Real-time image processing on mobile devices with high frame rates and precise motor control via wireless sockets.",
+      "approach": "I built an OpenCV pipeline in C++ and connected it to the Android UI using JNI for zero-copy high-performance processing.",
+      "solution": "A nimble autonomous car that tracks complex paths in real-time with PID-based steering stabilization.",
       "contributions": [
-        "Built the OpenCV C++ pipeline with Canny edge and Hough transforms",
-        "Designed a custom algorithm to merge fragmented line segments",
-        "Implemented the JNI bridge for zero-copy frame processing",
-        "Integrated TCP communication between Android and ESP32"
+        "Implemented the OpenCV C++ pipeline for Hough Line detection",
+        "Designed the JNI bridge for efficient frame transfer in Android",
+        "Developed the PID controller for steering angle stabilization",
+        "Integrated TCP socket communication for real-time motor commands"
       ]
     },
     "mipsProcessor": {
       "title": "MIPS 5-Stage Processor",
-      "subtitle": "Pipelined CPU architecture in Verilog",
-      "overview": "A complete 5-stage pipelined MIPS CPU featuring hazard detection, data forwarding, and branch prediction.",
-      "challenge": "Resolving data hazards and timing conflicts across 5 pipeline stages while maintaining clock speed.",
-      "approach": "Designed the Decode stage instruction lookup and control logic. Integrated forwarding paths to eliminate stalls.",
-      "solution": "Achieved a CPI of 1.2 at 50 MHz, verified against 25+ MIPS programs including sorting and matrix multiplication.",
+      "subtitle": "CPU architecture and pipelining",
+      "overview": "A hardware-level project implementing a full pipelined MIPS CPU in Verilog, featuring advanced hazard resolution.",
+      "challenge": "Maintaining high clock speeds while solving complex data and control hazards across five pipeline stages.",
+      "approach": "I designed the Decode stage logic and integrated data forwarding paths to eliminate stalling in most instruction sequences.",
+      "solution": "A functional CPU achieving a 1.2 CPI, verified against sorting and mathematical programs on ModelSim.",
       "contributions": [
-        "Designed the complete instruction Decode stage and Register File",
+        "Designed the instruction lookup and Decode stage logic",
         "Generated all 15 core control signals for the execution pipeline",
-        "Debugged 40+ hours of waveform timing in ModelSim",
-        "Implemented EX and MEM data forwarding paths"
+        "Implemented EX and MEM forwarding paths to bypass hazards",
+        "Verified correctness using 40+ hours of ModelSim waveform analysis"
       ]
     },
     "circuitsSolver": {
       "title": "Circuits Solver Engine",
-      "subtitle": "SPICE-inspired simulator using nodal analysis",
-      "overview": "A high-performance C++ circuit simulator using Modified Nodal Analysis (MNA) and the Eigen library.",
-      "challenge": "Efficiently solving large systems of linear equations for arbitrary linear circuits with various sources.",
-      "approach": "Designed a Component hierarchy with virtual MNA stamp methods. Integrated Eigen for sparse and dense matrix solving.",
-      "solution": "A simulator capable of solving a 500-node circuit in 18ms, supporting passive components and dependent sources.",
+      "subtitle": "SPICE-inspired Nodal Analysis simulatorv",
+      "overview": "A powerful C++ engine for solving arbitrary linear circuits using high-performance linear algebra and Modified Nodal Analysis.",
+      "challenge": "Modeling complex components like dependent sources and passive elements in a single, stable matrix system.",
+      "approach": "I designed an object-oriented Component hierarchy with virtual MNA stamping and integrated the Eigen library for speed.",
+      "solution": "A simulator capable of solving 500-node circuits in just 18ms, matching the accuracy of professional tools like LTspice.",
       "contributions": [
         "Solo-implemented the entire 1500+ line C++ simulation engine",
-        "Architected the Component hierarchy and MNA stamping logic",
+        "Designed the Component hierarchy and virtual MNA stamping logic",
         "Integrated the Eigen library for high-speed linear algebra",
-        "Built a custom netlist parser for circuit definitions"
+        "Validated solution accuracy against LTspice benchmarks"
       ]
     },
     "logicSimulator": {
       "title": "Logic Gate Simulator",
-      "subtitle": "GUI-based simulator with Command Pattern undo/redo",
-      "overview": "An interactive digital logic simulator with drag-and-drop gates, topological sorting, and event-driven simulation.",
-      "challenge": "Managing complex application states and providing robust user interaction features like multi-level undo.",
-      "approach": "Implemented the Command Pattern for all user actions. Used topological sorting to ensure correct signal propagation signal order.",
-      "solution": "A stable GUI application supporting multi-input gates, propagation delay simulation, and binary file serialization.",
+      "subtitle": "Interactive GUI for digital circuit design",
+      "overview": "A desktop simulator for designing and testing digital logic circuits with a focus on usability and robust state management.",
+      "challenge": "Enabling complex user interactions like multi-level undo/redo while ensuring correct signal propagation across large gates.",
+      "approach": "I implemented the Command Pattern for all interface actions and orchestrated the system using a central Application Manager.",
+      "solution": "A polished educational tool supporting multi-input gates, propagation delays, and binary file persistence.",
       "contributions": [
-        "Architected the Application Manager and state machine",
-        "Implemented the Command Pattern for undo/redo (12 command types)",
-        "Built the event-driven simulation engine for efficient updates",
-        "Designed custom binary file format for save/load operations"
+        "Architected the central Application Manager and system state engine",
+        "Implemented the Command Pattern for 12 types of undo/redo actions",
+        "Built the event-driven engine for efficient gate simulation",
+        "Designed the custom binary serialization format for project saving"
+      ]
+    },
+    "osScheduler": {
+      "title": "OS Process Scheduler",
+      "subtitle": "Low-level Linux kernel simulation",
+      "overview": "A C-based system modeling the internals of an Operating System's process scheduling and resource management.",
+      "challenge": "Simulating high-concurrency process flows and implementing multiple scheduling algorithms like Round Robin and Priority.",
+      "approach": "I implemented the core clock-driven simulation loop and memory management modules to handle process lifecycles.",
+      "solution": "A robust scheduler capable of calculating performance metrics across simulated process bursts with full architectural visibility.",
+      "contributions": [
+        "Developed the main clock-driven simulation loop in C",
+        "Implemented Round Robin and Priority-based scheduling logic",
+        "Built the process lifecycle and memory management modules",
+        "Designed the performance metric reporting (Turnaround/Wait time)"
+      ]
+    },
+    "searchEngine": {
+      "title": "Search Engine Architecture",
+      "subtitle": "Web crawler and TF-IDF ranker",
+      "overview": "A modular Java search engine featuring high-concurrency crawling and intelligent ranking for web pages.",
+      "challenge": "Managing thousands of concurrent network requests while ensuring the crawler follows robots.txt rules and avoids traps.",
+      "approach": "I solo-implemented the multi-threaded crawler using Java's ExecutorService with a persistent BFS frontier to disk.",
+      "solution": "A fault-tolerant crawler that successfully indexed 50,000+ pages with high throughput and reliable ranked retrieval.",
+      "contributions": [
+        "Implemented the multi-threaded crawler (2000+ lines of Java)",
+        "Built the robots.txt parser and URL canonicalization logic",
+        "Designed the disk-persistent BFS queue for fault tolerance",
+        "Co-developed the TF-IDF ranking and keyword highlighting logic"
       ]
     }
   }

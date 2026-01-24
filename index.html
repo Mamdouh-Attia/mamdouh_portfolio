@@ -560,19 +560,28 @@
       featured.forEach(project => {
         const card = document.createElement('div');
         card.className = 'card';
+
+        // Translations with fallbacks
+        const title = project.i18nKey ? window.t(project.i18nKey + '.title', project.title) : project.title;
+        const description = project.i18nKey ? window.t(project.i18nKey + '.overview', project.description) : project.description;
+        const categoryLabel = window.t('projects.categories.' + project.category, project.category);
+
         card.innerHTML = `
           <div class="card-image ${project.images && project.images.length > 0 ? '' : 'no-image'}">
-            ${project.images && project.images.length > 0 ? `<img src="${project.images[0]}" alt="${project.title}">` : `<div class="project-placeholder">${project.category.toUpperCase()}</div>`}
+            ${project.images && project.images.length > 0 ? `<img src="${project.images[0]}" alt="${title}">` : `<div class="project-placeholder">${project.category.toUpperCase()}</div>`}
           </div>
           <div class="card-content">
-            <h3 class="card-title">${project.title}</h3>
-            <p class="card-description">${project.description}</p>
+            <div class="card-meta">
+               <span class="badge">${categoryLabel}</span>
+            </div>
+            <h3 class="card-title">${title}</h3>
+            <p class="card-description">${description}</p>
             <div class="card-footer">
               <div class="tags">
                 ${project.tags.slice(0, 3).map(tag => `<span class="badge">${tag}</span>`).join('')}
               </div>
               <a href="./pages/projects.html#${project.slug}" class="btn btn-ghost btn-sm">
-                Explore →
+                ${window.t('common.viewMore', 'Explore →')}
               </a>
             </div>
           </div>

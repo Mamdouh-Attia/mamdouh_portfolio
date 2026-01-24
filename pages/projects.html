@@ -242,29 +242,35 @@
 
             emptyState.classList.add('hidden');
 
-            container.innerHTML = projectList.map(project => `
+            container.innerHTML = projectList.map(project => {
+                const title = project.i18nKey ? window.t(project.i18nKey + '.title', project.title) : project.title;
+                const description = project.i18nKey ? window.t(project.i18nKey + '.overview', project.description) : project.description;
+                const categoryLabel = window.t('projects.categories.' + project.category, project.category);
+
+                return `
         <div class="card project-card" data-slug="${project.slug}">
           <div class="card-image ${project.images && project.images.length > 0 ? '' : 'no-image'}">
-            ${project.images && project.images.length > 0 ? `<img src="${project.images[0]}" alt="${project.title}">` : `<div class="project-placeholder">${project.category.toUpperCase()}</div>`}
+            ${project.images && project.images.length > 0 ? `<img src="${project.images[0]}" alt="${title}">` : `<div class="project-placeholder">${project.category.toUpperCase()}</div>`}
           </div>
           <div class="card-content">
             <div class="card-meta">
               ${project.featured ? '<span class="badge badge-primary">Featured</span>' : ''}
-              <span class="badge">${project.category}</span>
+              <span class="badge">${categoryLabel}</span>
             </div>
-            <h3 class="card-title">${project.title}</h3>
-            <p class="card-description">${project.description}</p>
+            <h3 class="card-title">${title}</h3>
+            <p class="card-description">${description}</p>
             <div class="card-footer">
               <div class="tags">
                 ${project.tags.slice(0, 2).map(tag => `<span class="badge">${tag}</span>`).join('')}
               </div>
               <button class="btn btn-ghost btn-sm" onclick="showProject('${project.slug}')">
-                Explore →
+                ${window.t('common.viewMore', 'Explore →')}
               </button>
             </div>
           </div>
         </div>
-      `).join('');
+      `;
+            }).join('');
 
             // Update grid class based on view
             container.className = currentView === 'grid' ? 'projects-grid grid-3' : 'projects-list';
@@ -319,48 +325,69 @@
             const project = getProjectBySlug(slug);
             if (!project) return;
 
-            document.getElementById('modal-title').textContent = project.title;
+            // Translations with fallbacks
+            const title = project.i18nKey ? window.t(project.i18nKey + '.title', project.title) : project.title;
+            const overview = project.i18nKey ? window.t(project.i18nKey + '.overview', project.description) : project.description;
+            const challenge = project.i18nKey ? window.t(project.i18nKey + '.challenge', project.challenge || '') : (project.challenge || '');
+            const approach = project.i18nKey ? window.t(project.i18nKey + '.approach', project.approach || '') : (project.approach || '');
+            const solution = project.i18nKey ? window.t(project.i18nKey + '.solution', project.solution || '') : (project.solution || '');
+            const contributions = project.i18nKey ? window.t(project.i18nKey + '.contributions', project.contributions || []) : (project.contributions || []);
+
+            document.getElementById('modal-title').textContent = title;
             document.getElementById('modal-body').innerHTML = `
-                < div class= "project-gallery skeleton skeleton-image" style = "aspect-ratio: 16/9; margin-bottom: var(--space-6);" ></div >
-
-            <p style="font-size: var(--text-lg); margin-bottom: var(--space-6);">${project.longDescription || project.description}</p>
-        
-        ${project.challenge ? `
-        <div class="project-section">
-          <h4>The Challenge</h4>
-          <p>${project.challenge}</p>
-        </div>
-        ` : ''
-                }
-        
-        ${project.approach ? `
-        <div class="project-section">
-          <h4>My Approach</h4>
-          <p>${project.approach}</p>
-        </div>
-        ` : ''
-                }
-        
-        ${project.solution ? `
-        <div class="project-section">
-          <h4>The Solution</h4>
-          <p>${project.solution}</p>
-        </div>
-        ` : ''
-                }
-
-            < div class= "project-section" >
-          <h4>Tech Stack</h4>
-          <div class="tags" style="margin-top: var(--space-3);">
-            ${project.techStack.map(tech => `<span class="badge badge-primary">${tech}</span>`).join('')}
-          </div>
-        </div >
-
-                <div class="project-links" style="margin-top: var(--space-6); display: flex; gap: var(--space-4);">
-                    ${project.demoUrl ? `<a href="${project.demoUrl}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Live Demo</a>` : ''}
-                    ${project.repoUrl ? `<a href="${project.repoUrl}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Source Code</a>` : ''}
+                <div class="project-gallery no-image" style="aspect-ratio: 16/9; margin-bottom: var(--space-6); background: var(--glass-bg); display: flex; align-items: center; justify-content: center; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                   <span style="font-size: 3rem; opacity: 0.1; font-weight: 800; letter-spacing: 0.2em;">${project.category.toUpperCase()}</span>
                 </div>
-      `;
+
+                <p class="project-overview" style="font-size: var(--text-lg); margin-bottom: var(--space-8); color: var(--text-primary); line-height: 1.6;">${overview}</p>
+        
+                <div class="project-details-grid" style="display: grid; gap: var(--space-8); margin-bottom: var(--space-8);">
+                    ${challenge ? `
+                    <div class="project-section">
+                        <h4 style="color: var(--color-primary); margin-bottom: var(--space-3); border-left: 4px solid var(--color-primary); padding-left: var(--space-3);">${window.t('projects.modal.challenge', 'The Challenge')}</h4>
+                        <p>${challenge}</p>
+                    </div>
+                    ` : ''}
+                    
+                    ${approach ? `
+                    <div class="project-section">
+                        <h4 style="color: var(--color-primary); margin-bottom: var(--space-3); border-left: 4px solid var(--color-primary); padding-left: var(--space-3);">${window.t('projects.modal.approach', 'My Approach')}</h4>
+                        <p>${approach}</p>
+                    </div>
+                    ` : ''}
+                    
+                    ${solution ? `
+                    <div class="project-section">
+                        <h4 style="color: var(--color-primary); margin-bottom: var(--space-3); border-left: 4px solid var(--color-primary); padding-left: var(--space-3);">${window.t('projects.modal.solution', 'The Solution')}</h4>
+                        <p>${solution}</p>
+                    </div>
+                    ` : ''}
+                </div>
+
+                ${Array.isArray(contributions) && contributions.length > 0 ? `
+                <div class="project-section" style="margin-bottom: var(--space-8); padding: var(--space-6); background: var(--glass-bg); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                    <h4 style="margin-bottom: var(--space-4); display: flex; align-items: center; gap: var(--space-2);">
+                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-success);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                         ${window.t('projects.modal.contributions', 'Key Contributions')}
+                    </h4>
+                    <ul style="list-style: none; display: grid; gap: var(--space-3);">
+                        ${contributions.map(c => `<li style="display: flex; gap: var(--space-3); color: var(--text-secondary);"><span style="color: var(--color-primary);">•</span> ${c}</li>`).join('')}
+                    </ul>
+                </div>
+                ` : ''}
+
+                <div class="project-section">
+                    <h4 style="margin-bottom: var(--space-3);">${window.t('projects.modal.techStack', 'Tech Stack')}</h4>
+                    <div class="tags">
+                        ${project.techStack.map(tech => `<span class="badge badge-primary">${tech}</span>`).join('')}
+                    </div>
+                </div>
+
+                <div class="project-links" style="margin-top: var(--space-10); pt: var(--space-6); border-top: 1px solid var(--border-color); display: flex; gap: var(--space-4);">
+                    ${project.demoUrl ? `<a href="${project.demoUrl}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">${window.t('projects.demoVideo', 'Live Demo')}</a>` : ''}
+                    ${project.repoUrl ? `<a href="${project.repoUrl}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">${window.t('projects.github', 'Source Code')}</a>` : ''}
+                </div>
+            `;
 
             openModal('project-modal');
         };

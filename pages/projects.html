@@ -253,9 +253,24 @@
                 const subtitle = project.i18nKey ? window.t(project.i18nKey + '.subtitle', '') : '';
                 const categoryLabel = window.t('projects.categories.' + project.category, project.category);
 
-                const coverImg = (project.media && project.media.find(m => m.type === 'image'))?.src
-                    || (project.images && project.images[0])
-                    || null;
+                // ENHANCED COVER FINDING Logic
+                let coverImg = null;
+                if (project.media && Array.isArray(project.media)) {
+                    // Try to find first image
+                    const imgMedia = project.media.find(m => m.type === 'image');
+                    if (imgMedia) coverImg = imgMedia.src;
+
+                    // Fallback to youtube thumbnail if no image found
+                    if (!coverImg) {
+                        const ytMedia = project.media.find(m => m.type === 'youtube');
+                        if (ytMedia) coverImg = `https://img.youtube.com/vi/${ytMedia.src}/maxresdefault.jpg`;
+                    }
+                }
+
+                // Final fallback to legacy images array
+                if (!coverImg && project.images && project.images.length > 0) {
+                    coverImg = project.images[0];
+                }
 
                 const auraStyle = project.color ? `--aura-color: ${project.color}44;` : '';
 
@@ -417,33 +432,37 @@
             const color = project.color || 'var(--color-primary)';
             const auraColor = project.color ? `${project.color}33` : 'rgba(var(--color-primary-rgb), 0.2)';
 
+            const hasMedia = (project.media && project.media.length > 0) || (project.images && project.images.length > 0);
+
             document.getElementById('modal-title').textContent = title;
             document.getElementById('modal-body').innerHTML = `
-                <div class="modal-split-container" style="--project-color: ${color}; --project-aura: ${auraColor}">
-                    <!-- CINEMA GALLERY BLOCK -->
+                <div class="modal-cinema-wrapper" style="--project-color: ${color}; --project-aura: ${auraColor}">
+                    
+                    <!-- TOP: HORIZONTAL CINEMATIC GALLERY -->
+                    ${hasMedia ? `
                     <div class="modal-cinema-gallery">
                         <div class="media-slider-container">
                             <div class="media-slider" id="modal-media-slider">
                                 ${(project.media && project.media.length > 0) ?
-                    project.media.map((item, index) => `
+                        project.media.map((item, index) => `
                                         <div class="media-slide" data-index="${index}">
                                             ${item.type === 'youtube' ?
-                            `<div class="video-wrapper"><iframe src="https://www.youtube.com/embed/${item.src}?autoplay=0&rel=0" allowfullscreen></iframe></div>` :
-                            `<div class="image-wrapper"><img src="${item.src}" alt="${title} Screen" onclick="zoomImage('${item.src}')" loading="lazy"></div>`
-                        }
+                                `<div class="video-wrapper"><iframe src="https://www.youtube.com/embed/${item.src}?autoplay=0&rel=0" allowfullscreen></iframe></div>` :
+                                `<div class="image-wrapper"><img src="${item.src}" alt="${title} Screen" onclick="zoomImage('${item.src}')" loading="lazy"></div>`
+                            }
                                         </div>
                                     `).join('') :
-                    `<div class="media-slide"><div class="project-placeholder-mini">${project.category.toUpperCase()}</div></div>`
-                }
+                        `<div class="media-slide"><div class="project-placeholder-mini">${project.category.toUpperCase()}</div></div>`
+                    }
                             </div>
                             
                             ${(project.media && project.media.length > 1) ? `
                                 <div class="slider-nav">
                                     <button class="slider-arrow prev" onclick="moveSlider(-1)" aria-label="Previous">
-                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
                                     </button>
                                     <button class="slider-arrow next" onclick="moveSlider(1)" aria-label="Next">
-                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
                                     </button>
                                 </div>
                             ` : ''}
@@ -456,58 +475,66 @@
                                     ${project.media.map((item, index) => `
                                         <div class="thumb-item ${index === 0 ? 'active' : ''}" onclick="goToSlide(${index})" data-index="${index}">
                                             ${item.type === 'youtube' ?
-                        `<div class="thumb-vid-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v14c0 .86.84 1.4 1.58.97l11-7c.73-.46.73-1.48 0-1.94l-11-7c-.74-.43-1.58.11-1.58.97z"/></svg></div>` :
-                        `<img src="${item.src}" alt="Thumb ${index}">`
-                    }
+                            `<div class="thumb-vid-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v14c0 .86.84 1.4 1.58.97l11-7c.73-.46.73-1.48 0-1.94l-11-7c-.74-.43-1.58.11-1.58.97z"/></svg></div>` :
+                            `<img src="${item.src}" alt="Thumb ${index}">`
+                        }
                                         </div>
                                     `).join('')}
                                 </div>
                             </div>
                         ` : ''}
                     </div>
+                    ` : ''}
 
-                    <div class="modal-content-split">
+                    <!-- BOTTOM: 2-COLUMN CONTENT -->
+                    <div class="modal-detail-content">
                         <aside class="modal-sidebar">
                             <div class="sidebar-info-group">
-                                <h4 class="sidebar-group-title">Project Info</h4>
-                                <div class="sidebar-meta" style="display: flex; flex-direction: column; gap: var(--space-3);">
-                                    <span class="badge badge-outline" style="justify-content: flex-start; gap: var(--space-3);">
+                                <h4 class="sidebar-group-title">Project Context</h4>
+                                <div class="sidebar-meta">
+                                    <div class="meta-item">
                                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                                        ${project.date || 'Present'}
-                                    </span>
-                                    <span class="badge badge-outline" style="justify-content: flex-start; gap: var(--space-3);">
+                                        <span>${project.date || 'Present'}</span>
+                                    </div>
+                                    <div class="meta-item">
                                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                                        ${project.category.toUpperCase()}
-                                    </span>
+                                        <span>${project.category.toUpperCase()}</span>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="sidebar-info-group">
-                                <h4 class="sidebar-group-title">Tech Stack</h4>
+                                <h4 class="sidebar-group-title">Technologies</h4>
                                 <div class="tags">
                                     ${(project.techStack || []).map(tech => `<span class="badge badge-primary">${tech}</span>`).join('')}
                                 </div>
                             </div>
 
-                            <div class="sidebar-info-group" style="margin-top: auto;">
-                                <div class="project-actions" style="display: flex; flex-direction: column; gap: var(--space-3);">
-                                    ${project.demoUrl ? `<a href="${project.demoUrl}" class="btn btn-primary" target="_blank">Watch Demo</a>` : ''}
-                                    ${project.repoUrl ? `<a href="${project.repoUrl}" class="btn btn-secondary" target="_blank">Source Code</a>` : ''}
-                                </div>
+                            <div class="sidebar-info-group actions">
+                                ${project.demoUrl ? `<a href="${project.demoUrl}" class="btn btn-primary" target="_blank">View Demo</a>` : ''}
+                                ${project.repoUrl ? `<a href="${project.repoUrl}" class="btn btn-secondary" target="_blank">Source Code</a>` : ''}
                             </div>
                         </aside>
 
-                        <main class="modal-main" style="padding: var(--space-10);">
-                            <header style="margin-bottom: var(--space-10);">
-                                ${subtitle ? `<p style="color: var(--color-primary); font-weight: 700; text-transform: uppercase;">${subtitle}</p>` : ''}
-                                <h2 style="font-size: 2.8rem; font-weight: 800; margin-bottom: var(--space-4);">${title}</h2>
-                                <p style="font-size: 1.15rem; line-height: 1.8; opacity: 0.9;">${overview}</p>
+                        <main class="modal-main">
+                            <header class="modal-main-header">
+                                ${subtitle ? `<p class="project-eyebrow">${subtitle}</p>` : ''}
+                                <h2 class="project-title-large">${title}</h2>
+                                <p class="project-summary">${overview}</p>
                             </header>
 
                             <div class="story-timeline">
-                                ${challenge ? `<div class="storytelling-block"><h4 class="section-label">The Challenge</h4><div>${challenge}</div></div>` : ''}
-                                ${approach ? `<div class="storytelling-block"><h4 class="section-label">My Approach</h4><div>${approach}</div></div>` : ''}
-                                ${solution ? `<div class="storytelling-block"><h4 class="section-label">The Solution</h4><div>${solution}</div></div>` : ''}
+                                ${challenge ? `<div class="storytelling-block"><h4 class="section-label">THE CHALLENGE</h4><div class="story-text">${challenge}</div></div>` : ''}
+                                ${approach ? `<div class="storytelling-block"><h4 class="section-label">MY APPROACH</h4><div class="story-text">${approach}</div></div>` : ''}
+                                ${solution ? `<div class="storytelling-block"><h4 class="section-label">THE SOLUTION</h4><div class="story-text">${solution}</div></div>` : ''}
+                                ${Array.isArray(contributions) && contributions.length > 0 ? `
+                                    <div class="storytelling-block">
+                                        <h4 class="section-label">PERSONAL CONTRIBUTIONS</h4>
+                                        <ul class="contributions-list">
+                                            ${contributions.map(c => `<li>${c}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                ` : ''}
                             </div>
                         </main>
                     </div>
@@ -518,24 +545,38 @@
             const slider = document.getElementById('modal-media-slider');
             const thumbs = document.querySelectorAll('.thumb-item');
 
-            window.moveSlider = (direction) => {
-                const scrollAmount = slider.offsetWidth;
-                slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-            };
+            if (slider) {
+                window.moveSlider = (direction) => {
+                    const scrollAmount = slider.offsetWidth;
+                    slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+                };
 
-            window.goToSlide = (index) => {
-                const scrollAmount = slider.offsetWidth;
-                slider.scrollTo({ left: index * scrollAmount, behavior: 'smooth' });
-            };
+                window.goToSlide = (index) => {
+                    const scrollAmount = slider.offsetWidth;
+                    slider.scrollTo({ left: index * scrollAmount, behavior: 'smooth' });
+                };
 
-            slider.onscroll = () => {
-                const index = Math.round(slider.scrollLeft / slider.offsetWidth);
-                thumbs.forEach((t, i) => t.classList.toggle('active', i === index));
+                slider.onscroll = () => {
+                    const index = Math.round(slider.scrollLeft / slider.offsetWidth);
+                    thumbs.forEach((t, i) => t.classList.toggle('active', i === index));
 
-                // Keep active thumb in view
-                const activeThumb = document.querySelector('.thumb-item.active');
-                if (activeThumb) activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-            };
+                    // Keep active thumb in view
+                    const activeThumb = document.querySelector('.thumb-item.active');
+                    if (activeThumb) activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                };
+            }
+
+            // Aura Effect for Modal
+            const wrapper = document.querySelector('.modal-cinema-wrapper');
+            if (wrapper) {
+                wrapper.onmousemove = (e) => {
+                    const rect = wrapper.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width) * 100;
+                    const y = ((e.clientY - rect.top) / rect.height) * 100;
+                    wrapper.style.setProperty('--aura-x', `${x}%`);
+                    wrapper.style.setProperty('--aura-y', `${y}%`);
+                };
+            }
 
             openModal('project-modal');
         };
@@ -619,55 +660,159 @@
             color: var(--text-secondary);
         }
 
-        /* Cinematic Gallery Extensions */
-        .modal-cinema-gallery {
-            background: #050505;
-            padding: var(--space-4);
+        /* CINEMATIC MODAL OVERHAUL */
+        .modal-cinema-wrapper {
             display: flex;
             flex-direction: column;
-            gap: var(--space-4);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        .modal-cinema-gallery {
+            background: #000;
+            padding: var(--space-8);
+            border-bottom: 1px solid var(--border-color);
         }
 
         .media-slider-container {
             position: relative;
-            background: #000;
+            max-width: 1200px;
+            margin: 0 auto;
             border-radius: var(--radius-xl);
             overflow: hidden;
-            box-shadow: 0 0 50px var(--project-aura);
+            box-shadow: 0 0 60px var(--project-aura);
+        }
+
+        .media-slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+            scrollbar-color: var(--project-color) transparent;
+            cursor: grab;
+            gap: var(--space-4);
+            padding: var(--space-4);
+            align-items: center;
+        }
+
+        .media-slider:active {
+            cursor: grabbing;
+        }
+
+        .media-slider::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .media-slider::-webkit-scrollbar-thumb {
+            background: var(--project-color);
+            border-radius: 10px;
+        }
+
+        .media-slider::-webkit-scrollbar {
+            display: none;
         }
 
         .media-slide {
-            padding: var(--space-6);
-            /* Shrink effect for ambient light */
+            flex: 0 0 auto;
+            scroll-snap-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: radial-gradient(circle at center, var(--project-aura), transparent 80%);
+            height: 50vh;
+            /* Viewport relative height */
+            max-height: 500px;
+            min-height: 300px;
+            width: auto;
+            /* Allow width to shrink/grow based on content aspect ratio */
+            padding: var(--space-2);
+            background: radial-gradient(800px circle at var(--aura-x, 50%) var(--aura-y, 50%), var(--project-aura), transparent 70%);
+            border-radius: var(--radius-lg);
+            transition: transform 0.3s ease;
         }
 
-        .image-wrapper img,
-        .video-wrapper iframe {
-            max-height: 500px;
+        .media-slide:hover {
+            transform: scale(1.02);
+        }
+
+        .image-wrapper,
+        .video-wrapper {
+            height: 100%;
             width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-wrapper img {
+            height: 100%;
+            width: auto;
+            /* Maintain aspect ratio */
+            max-width: none;
+            /* remove 100% constraint to allow natural width within height */
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-2xl);
+            object-fit: contain;
+        }
+
+        .video-wrapper iframe {
+            max-height: 100%;
             max-width: 100%;
             border-radius: var(--radius-lg);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease;
+            box-shadow: var(--shadow-2xl);
+            object-fit: contain;
+            height: 75%;
+            aspect-ratio: 16/9;
         }
 
         .video-wrapper {
             width: 100%;
-            aspect-ratio: 16/9;
-            max-width: 900px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .video-wrapper iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
+            height: 75%;
+            aspect-ratio: 16/9;
+        }
+
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 var(--space-4);
+            pointer-events: none;
+        }
+
+        .slider-arrow {
+            pointer-events: auto;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .slider-arrow:hover {
+            background: var(--project-color);
+            border-color: transparent;
         }
 
         .thumbnail-carousel-wrapper {
+            max-width: 1200px;
+            margin: var(--space-4) auto 0;
             padding: 0 var(--space-2);
         }
 
@@ -675,22 +820,21 @@
             display: flex;
             gap: var(--space-3);
             overflow-x: auto;
-            padding-bottom: var(--space-2);
+            padding: var(--space-2) 0;
             scrollbar-width: thin;
             scrollbar-color: var(--project-color) transparent;
         }
 
         .thumb-item {
-            width: 80px;
-            height: 50px;
-            flex-shrink: 0;
+            flex: 0 0 100px;
+            aspect-ratio: 16/10;
+            background: #222;
             border-radius: var(--radius-md);
             overflow: hidden;
             cursor: pointer;
+            opacity: 0.4;
             border: 2px solid transparent;
-            opacity: 0.5;
             transition: all 0.3s;
-            background: #222;
         }
 
         .thumb-item img {
@@ -714,29 +858,162 @@
             color: var(--project-color);
         }
 
-        .slider-arrow {
-            background: rgba(0, 0, 0, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: white;
-            padding: var(--space-2);
-            border-radius: var(--radius-full);
-            transition: all 0.3s;
-            cursor: pointer;
-            width: 50px;
-            height: 50px;
+        /* DETAIL SECTION (Bottom) */
+        .modal-detail-content {
+            display: flex;
+            flex-direction: column;
+            padding: var(--space-12) var(--space-8);
+            gap: var(--space-12);
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 1024px) {
+            .modal-detail-content {
+                flex-direction: row;
+            }
+
+            .modal-sidebar {
+                flex: 0 0 320px;
+                border-right: 1px solid var(--border-color);
+                padding-right: var(--space-12);
+            }
+
+            .modal-main {
+                flex: 1;
+            }
+        }
+
+        .sidebar-info-group {
+            margin-bottom: var(--space-8);
+        }
+
+        .sidebar-group-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-tertiary);
+            margin-bottom: var(--space-4);
+            font-weight: 700;
+        }
+
+        .sidebar-meta {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+        }
+
+        .meta-item {
             display: flex;
             align-items: center;
-            justify-content: center;
+            gap: var(--space-3);
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 0.95rem;
         }
 
-        .slider-arrow:hover {
-            background: var(--project-color);
-            transform: scale(1.1);
+        .meta-item svg {
+            color: var(--project-color);
         }
 
-        .slider-arrow svg {
-            width: 32px;
-            height: 32px;
+        .sidebar-info-group.actions {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+            margin-top: var(--space-8);
+        }
+
+        .project-eyebrow {
+            color: var(--project-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.85rem;
+            margin-bottom: var(--space-4);
+        }
+
+        .project-title-large {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: var(--space-6);
+            line-height: 1.1;
+        }
+
+        .project-summary {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-12);
+            max-width: 800px;
+        }
+
+        .story-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-10);
+        }
+
+        .storytelling-block {
+            position: relative;
+            padding-left: var(--space-8);
+            border-left: 2px solid var(--project-aura);
+        }
+
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--project-color);
+            margin-bottom: var(--space-3);
+            letter-spacing: 0.1em;
+        }
+
+        .story-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-primary);
+        }
+
+        .contributions-list {
+            padding-left: var(--space-4);
+            margin-top: var(--space-4);
+        }
+
+        .contributions-list li {
+            list-style: disc;
+            margin-bottom: var(--space-2);
+            color: var(--text-secondary);
+        }
+
+        /* LIST VIEW ADAPTATION */
+        .projects-list-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-6);
+        }
+
+        .wide-card {
+            display: flex;
+            height: 320px;
+            overflow: hidden;
+        }
+
+        .wide-card .card-image {
+            flex: 0 0 400px;
+            height: 100%;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .wide-card .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .wide-card .card-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: var(--space-8);
         }
     </style>
 </body>

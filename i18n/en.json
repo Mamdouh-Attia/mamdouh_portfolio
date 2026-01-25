@@ -177,6 +177,20 @@
           "Designed a secure reward system using Firebase Cloud Functions"
         ]
     },
+    "checkit": {
+      "title": "Check-It",
+      "subtitle": "Consumer Rights & Product Verification",
+      "overview": "A specialized mobile tool designed to empower consumers by providing instant access to product verification and reporting mechanisms for counterfeit goods.",
+      "challenge": "Creating a seamless bridge between physical barcodes and digital consumer protection databases while maintaining ease of use for the general public.",
+      "approach": "I implemented a high-speed barcode scanning module and built a multi-step complaint wizard that automatically captures location and product metadata.",
+      "solution": "A production-ready utility that successfully facilitates consumer reporting and helps regulatory bodies track illicit market activity effectively.",
+      "contributions": [
+        "Implemented high-performance barcode scanning using Flutter packages",
+        "Developed a state-driven multi-step reporting wizard",
+        "Built the local storage history and sync logic",
+        "Designed the UI/UX following clean material guidelines"
+      ]
+    },
     "ecosort": {
       "title": "EcoSort Smart Recycling",
       "subtitle": "IoT-enabled gamified recycling application",

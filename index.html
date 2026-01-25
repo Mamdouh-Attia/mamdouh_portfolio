@@ -551,15 +551,33 @@
   <script type="module">
     import { getFeaturedProjects } from './js/data/projects.js';
 
-    document.addEventListener('DOMContentLoaded', () => {
+    function renderFeaturedProjects() {
       const container = document.getElementById('featured-projects');
       if (!container) return;
+      container.innerHTML = ''; // Clear properly
 
       const featured = getFeaturedProjects().slice(0, 6);
 
       featured.forEach(project => {
+        // ENHANCED COVER FINDING Logic
+        let coverImg = null;
+        if (project.media && Array.isArray(project.media)) {
+          const imgMedia = project.media.find(m => m.type === 'image');
+          if (imgMedia) coverImg = imgMedia.src;
+          if (!coverImg) {
+            const ytMedia = project.media.find(m => m.type === 'youtube');
+            if (ytMedia) coverImg = `https://img.youtube.com/vi/${ytMedia.src}/maxresdefault.jpg`;
+          }
+        }
+        if (!coverImg && project.images && project.images.length > 0) {
+          coverImg = project.images[0];
+        }
+
         const card = document.createElement('div');
-        card.className = 'card';
+        card.className = 'card trigger-aura'; // Add aura class
+        // Add minimal inline style for aura color fallback
+        const color = project.color || 'var(--color-primary)';
+        card.style.setProperty('--aura-color', color);
 
         // Translations with fallbacks
         const title = project.i18nKey ? window.t(project.i18nKey + '.title', project.title) : project.title;
@@ -567,8 +585,8 @@
         const categoryLabel = window.t('projects.categories.' + project.category, project.category);
 
         card.innerHTML = `
-          <div class="card-image ${project.images && project.images.length > 0 ? '' : 'no-image'}">
-            ${project.images && project.images.length > 0 ? `<img src="${project.images[0]}" alt="${title}">` : `<div class="project-placeholder">${project.category.toUpperCase()}</div>`}
+          <div class="card-image ${coverImg ? '' : 'no-image'}">
+            ${coverImg ? `<img src="${coverImg}" alt="${title}">` : `<div class="project-placeholder">${project.category.toUpperCase()}</div>`}
           </div>
           <div class="card-content">
             <div class="card-meta">
@@ -578,7 +596,7 @@
             <p class="card-description">${description}</p>
             <div class="card-footer">
               <div class="tags">
-                ${project.tags.slice(0, 3).map(tag => `<span class="badge">${tag}</span>`).join('')}
+                ${(project.tags || []).slice(0, 3).map(tag => `<span class="badge">${tag}</span>`).join('')}
               </div>
               <a href="./pages/projects.html#${project.slug}" class="btn btn-ghost btn-sm">
                 ${window.t('common.viewMore', 'Explore →')}
@@ -586,9 +604,26 @@
             </div>
           </div>
         `;
+
+        // Aura Effect
+        card.onmousemove = (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = ((e.clientX - rect.left) / rect.width) * 100;
+          const y = ((e.clientY - rect.top) / rect.height) * 100;
+          card.style.setProperty('--aura-x', `${x}%`);
+          card.style.setProperty('--aura-y', `${y}%`);
+        };
+
         container.appendChild(card);
       });
-    });
+    }
+
+    // Wait for i18n
+    if (window.i18nReady) {
+      renderFeaturedProjects();
+    } else {
+      document.addEventListener('i18nReady', renderFeaturedProjects);
+    }
   </script>
 
   <style>

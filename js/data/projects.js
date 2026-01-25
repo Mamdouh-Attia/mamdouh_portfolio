@@ -20,13 +20,24 @@ export const projects = [
         youtubeId: "mfJJU8dV7c4",
         media: [
             { type: 'youtube', src: 'mfJJU8dV7c4' },
-            { type: 'image', src: '../assets/projects_media/VolunTeen/VolunTeen cover.png' },
-            { type: 'image', src: '../assets/projects_media/VolunTeen/Home Screen.jpg' },
-            { type: 'image', src: '../assets/projects_media/VolunTeen/Community screen.jpg' },
-            { type: 'image', src: '../assets/projects_media/VolunTeen/Helping Hand screen.jpg' },
-            { type: 'image', src: '../assets/projects_media/VolunTeen/VolunGuideBot (smart chatbot) screen.jpg' },
-            { type: 'image', src: '../assets/projects_media/VolunTeen/Article screen example.jpg' },
-            { type: 'image', src: '../assets/projects_media/VolunTeen/Videos screen.jpg' }
+            { type: 'image', src: '../assets/projects_media/volunteen/cover photo.png' },
+            { type: 'image', src: '../assets/projects_media/volunteen/Home Screen.jpg' },
+            { type: 'image', src: '../assets/projects_media/volunteen/Community screen.jpg' },
+            { type: 'image', src: '../assets/projects_media/volunteen/Helping Hand screen.jpg' },
+            { type: 'image', src: '../assets/projects_media/volunteen/VolunGuideBot (smart chatbot) screen.jpg' },
+            { type: 'image', src: '../assets/projects_media/volunteen/Article screen example.jpg' },
+            { type: 'image', src: '../assets/projects_media/volunteen/Videos screen.jpg' },
+            { type: 'image', src: '../assets/projects_media/volunteen/Announcments screen.jpg' },
+            { type: 'image', src: '../assets/projects_media/volunteen/Contacts dialouge.jpeg' },
+            { type: 'image', src: '../assets/projects_media/volunteen/Donate now screen.jpg' },
+            { type: 'image', src: '../assets/projects_media/volunteen/Feedback screen.jpg' },
+            { type: 'image', src: '../assets/projects_media/volunteen/Help Form screen.jpg' },
+            { type: 'image', src: '../assets/projects_media/volunteen/Helping hand example (Home Economics) screen.jpg' },
+            { type: 'image', src: '../assets/projects_media/volunteen/Home Screen 2.jpg' },
+            { type: 'image', src: '../assets/projects_media/volunteen/Join social media dialouge.jpeg' },
+            { type: 'image', src: '../assets/projects_media/volunteen/Side Drawer.jpg' },
+            { type: 'image', src: '../assets/projects_media/volunteen/Splash Screen.jpg' },
+            { type: 'image', src: '../assets/projects_media/volunteen/Volunteer screen.jpg' }
         ]
     },
     {
@@ -42,12 +53,15 @@ export const projects = [
         i18nKey: "projectData.checkit",
         color: "#2ecc71",
         media: [
-            { type: 'image', src: '../assets/projects_media/Check-It/CheckIt Cover.png' },
-            { type: 'image', src: '../assets/projects_media/Check-It/Home.jpg' },
-            { type: 'image', src: '../assets/projects_media/Check-It/Products grid.jpg' },
-            { type: 'image', src: '../assets/projects_media/Check-It/Product window.jpg' },
-            { type: 'image', src: '../assets/projects_media/Check-It/Product Complaint with validation.jpg' },
-            { type: 'image', src: '../assets/projects_media/Check-It/Complaint status.jpg' }
+            { type: 'image', src: '../assets/projects_media/check-it/CheckIt Cover.png' },
+            { type: 'image', src: '../assets/projects_media/check-it/Home.jpg' },
+            { type: 'image', src: '../assets/projects_media/check-it/Products grid.jpg' },
+            { type: 'image', src: '../assets/projects_media/check-it/Product window.jpg' },
+            { type: 'image', src: '../assets/projects_media/check-it/Product Complaint with validation.jpg' },
+            { type: 'image', src: '../assets/projects_media/check-it/Complaint status.jpg' },
+            { type: 'image', src: '../assets/projects_media/check-it/Splash.jpg' },
+            { type: 'image', src: '../assets/projects_media/check-it/drawer.jpg' },
+            { type: 'image', src: '../assets/projects_media/check-it/Helpdesk idea.jpg' }
         ]
     },
     {
@@ -66,12 +80,22 @@ export const projects = [
         youtubeId: "I7HxB9zB4rE",
         media: [
             { type: 'youtube', src: 'I7HxB9zB4rE' },
-            { type: 'image', src: '../assets/projects_media/HyperMate/HyperMate Cover.png' },
-            { type: 'image', src: '../assets/projects_media/HyperMate/Home Screen.jpeg' },
-            { type: 'image', src: '../assets/projects_media/HyperMate/Measurement screen.png' },
-            { type: 'image', src: '../assets/projects_media/HyperMate/Smart Chatbot screen 2.png' },
-            { type: 'image', src: '../assets/projects_media/HyperMate/Food List Screen 1.jpeg' },
-            { type: 'image', src: '../assets/projects_media/HyperMate/Hardware connections.jpeg' }
+            { type: 'image', src: '../assets/projects_media/hypermate/HyperMate Cover.png' },
+            { type: 'image', src: '../assets/projects_media/hypermate/Home Screen.jpeg' },
+            { type: 'image', src: '../assets/projects_media/hypermate/Measurement screen.png' },
+            { type: 'image', src: '../assets/projects_media/hypermate/Smart Chatbot screen 2.png' },
+            { type: 'image', src: '../assets/projects_media/hypermate/Food List Screen 1.jpeg' },
+            { type: 'image', src: '../assets/projects_media/hypermate/Hardware connections.jpeg' },
+            { type: 'image', src: '../assets/projects_media/hypermate/App logo.jpeg' },
+            { type: 'image', src: '../assets/projects_media/hypermate/Excercise screen 1.jpeg' },
+            { type: 'image', src: '../assets/projects_media/hypermate/Excercise screen 2.jpeg' },
+            { type: 'image', src: '../assets/projects_media/hypermate/Excercise screen 3.jpeg' },
+            { type: 'image', src: '../assets/projects_media/hypermate/Food List Screen 2.jpeg' },
+            { type: 'image', src: '../assets/projects_media/hypermate/Food List Screen 3.jpeg' },
+            { type: 'image', src: '../assets/projects_media/hypermate/Food List Screen 4.jpeg' },
+            { type: 'image', src: '../assets/projects_media/hypermate/Quiz screen.png' },
+            { type: 'image', src: '../assets/projects_media/hypermate/Quiz summary screen.png' },
+            { type: 'image', src: '../assets/projects_media/hypermate/Smart Chatbot screen 1.jpeg' }
         ]
     },
     {
@@ -88,12 +112,16 @@ export const projects = [
         color: "#9b59b6",
         demoUrl: "https://docs.google.com/presentation/d/1IC-2Cvxh4LbfgxtxTxzCyrZzTY8DJjav/edit",
         media: [
-            { type: 'image', src: '../assets/projects_media/TapCash/tapcash.jpg' },
-            { type: 'image', src: '../assets/projects_media/TapCash/home.jpg' },
-            { type: 'image', src: '../assets/projects_media/TapCash/send.jpg' },
-            { type: 'image', src: '../assets/projects_media/TapCash/qr.jpg' },
-            { type: 'image', src: '../assets/projects_media/TapCash/elec_bills.jpg' },
-            { type: 'image', src: '../assets/projects_media/TapCash/children.jpg' }
+            { type: 'image', src: '../assets/projects_media/tapcash/tapcash.jpg' },
+            { type: 'image', src: '../assets/projects_media/tapcash/home.jpg' },
+            { type: 'image', src: '../assets/projects_media/tapcash/send.jpg' },
+            { type: 'image', src: '../assets/projects_media/tapcash/qr.jpg' },
+            { type: 'image', src: '../assets/projects_media/tapcash/elec_bills.jpg' },
+            { type: 'image', src: '../assets/projects_media/tapcash/children.jpg' },
+            { type: 'image', src: '../assets/projects_media/tapcash/auth1.jpg' },
+            { type: 'image', src: '../assets/projects_media/tapcash/auth2.jpg' },
+            { type: 'image', src: '../assets/projects_media/tapcash/auth3.jpg' },
+            { type: 'image', src: '../assets/projects_media/tapcash/notifications.jpg' }
         ]
     },
     {

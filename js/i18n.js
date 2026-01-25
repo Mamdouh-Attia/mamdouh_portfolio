@@ -28,6 +28,10 @@ class I18nManager {
     onReady() {
         this.applyLanguage(this.currentLang);
         this.setupToggles();
+
+        // Signal that i18n is ready
+        window.i18nReady = true;
+        document.dispatchEvent(new CustomEvent('i18nReady'));
     }
 
     getStoredLang() {

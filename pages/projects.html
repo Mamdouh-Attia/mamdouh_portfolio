@@ -142,10 +142,10 @@
                     <div class="category-tabs">
                         <button class="category-tab active" data-category="all">All</button>
                         <button class="category-tab" data-category="featured">Featured</button>
-                        <button class="category-tab" data-category="flutter">Flutter</button>
-                        <button class="category-tab" data-category="ml">ML & AI</button>
-                        <button class="category-tab" data-category="systems">Systems</button>
-                        <button class="category-tab" data-category="other">Other</button>
+                        <button class="category-tab" data-category="mobile">Mobile</button>
+                        <button class="category-tab" data-category="ai">AI & Data</button>
+                        <button class="category-tab" data-category="embedded">Embedded</button>
+                        <button class="category-tab" data-category="cs">Algorithms</button>
                     </div>
                 </div>
 
@@ -168,21 +168,23 @@
     </main>
 
     <!-- Project Modal -->
-    <div class="modal-backdrop"></div>
-    <div class="modal" id="project-modal">
+    <div id="project-modal" class="modal">
         <div class="modal-header">
-            <h2 class="modal-title" id="modal-title">Project Title</h2>
-            <button class="modal-close" onclick="closeModal('project-modal')" aria-label="Close">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18" />
-                    <line x1="6" y1="6" x2="18" y2="18" />
-                </svg>
-            </button>
+            <h3 id="modal-title" class="modal-title"></h3>
+            <button class="modal-close" onclick="closeModal('project-modal')" aria-label="Close modal">&times;</button>
         </div>
-        <div class="modal-body" id="modal-body">
-            <!-- Modal content will be injected by JavaScript -->
+        <div id="modal-body" class="modal-body">
+            <!-- Dynamic Content -->
         </div>
     </div>
+
+    <!-- Lightbox for Image Zooming -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close">&times;</button>
+        <img id="lightbox-img" src="" alt="Zoomed View">
+    </div>
+
+    <div id="modal-backdrop" class="modal-backdrop" onclick="closeModal('project-modal')"></div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -224,15 +226,18 @@
 
     <script type="module" src="../js/main.js"></script>
     <script type="module">
-        import { projects, getProjectsByCategory, searchProjects, getProjectBySlug } from '../js/data/projects.js';
+        import { projects, getProjectsByCategory, getProjectBySlug } from '../js/data/projects.js';
 
         let currentCategory = 'all';
         let currentView = 'grid';
         let searchQuery = '';
 
         function renderProjects(projectList) {
+            console.log('Rendering projects:', projectList.length);
             const container = document.getElementById('projects-container');
             const emptyState = document.getElementById('empty-state');
+
+            if (!container) return;
 
             if (projectList.length === 0) {
                 container.innerHTML = '';
@@ -244,16 +249,21 @@
 
             container.innerHTML = projectList.map(project => {
                 const title = project.i18nKey ? window.t(project.i18nKey + '.title', project.title) : project.title;
-                const description = project.i18nKey ? window.t(project.i18nKey + '.overview', project.description) : project.description;
+                const description = project.i18nKey ? window.t(project.i18nKey + '.overview', "") : (project.description || "");
                 const subtitle = project.i18nKey ? window.t(project.i18nKey + '.subtitle', '') : '';
                 const categoryLabel = window.t('projects.categories.' + project.category, project.category);
 
+                const coverImg = (project.media && project.media.find(m => m.type === 'image'))?.src
+                    || (project.images && project.images[0])
+                    || null;
+
+                const auraStyle = project.color ? `--aura-color: ${project.color}44;` : '';
+
                 if (currentView === 'list') {
-                    // Creative Wide Card for PC
                     return `
-                    <div class="card project-card wide-card reveal" data-slug="${project.slug}">
-                        <div class="card-image ${project.images && project.images.length > 0 ? '' : 'no-image'}">
-                            ${project.images && project.images.length > 0 ? `<img src="${project.images[0]}" alt="${title}">` : `<div class="project-placeholder">${project.category.toUpperCase()}</div>`}
+                    <div class="card project-card wide-card reveal" data-slug="${project.slug}" style="${auraStyle}">
+                        <div class="card-image ${coverImg ? '' : 'no-image'}">
+                            ${coverImg ? `<img src="${coverImg}" alt="${title}">` : `<div class="project-placeholder">${project.category.toUpperCase()}</div>`}
                         </div>
                         <div class="card-content">
                             <div class="card-meta">
@@ -269,25 +279,23 @@
                                 <div class="detail-item">
                                     <strong style="color: var(--text-tertiary); display: block; font-size: 0.7rem; text-transform: uppercase;">Tech Stack</strong>
                                     <div class="tags" style="margin-top: 5px;">
-                                        ${project.techStack.slice(0, 3).map(tech => `<span class="badge badge-sm">${tech}</span>`).join('')}
+                                        ${(project.techStack || []).slice(0, 3).map(tech => `<span class="badge badge-sm">${tech}</span>`).join('')}
                                     </div>
                                 </div>
                                 <div class="detail-item" style="text-align: right; display: flex; align-items: flex-end; justify-content: flex-end;">
                                     <button class="btn btn-primary btn-sm" onclick="showProject('${project.slug}')">
-                                        ${window.t('common.viewMore', 'Explore Case Study')} →
+                                        Explore Case Study →
                                     </button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    `;
+                    </div>`;
                 }
 
-                // Standard Grid Card
                 return `
-                <div class="card project-card reveal" data-slug="${project.slug}">
-                  <div class="card-image ${project.images && project.images.length > 0 ? '' : 'no-image'}">
-                    ${project.images && project.images.length > 0 ? `<img src="${project.images[0]}" alt="${title}">` : `<div class="project-placeholder">${project.category.toUpperCase()}</div>`}
+                <div class="card project-card reveal" data-slug="${project.slug}" style="${auraStyle}">
+                  <div class="card-image ${coverImg ? '' : 'no-image'}">
+                    ${coverImg ? `<img src="${coverImg}" alt="${title}">` : `<div class="project-placeholder">${project.category.toUpperCase()}</div>`}
                   </div>
                   <div class="card-content">
                     <div class="card-meta">
@@ -296,24 +304,38 @@
                     </div>
                     <h3 class="card-title">${title}</h3>
                     <p class="card-description">${description}</p>
-                    <div class="card-footer">
+                    <div class="card-footer" style="margin-top: auto;">
                       <div class="tags">
-                        ${project.techStack.slice(0, 2).map(tag => `<span class="badge">${tag}</span>`).join('')}
+                        ${(project.techStack || []).slice(0, 2).map(tag => `<span class="badge">${tag}</span>`).join('')}
                       </div>
                       <button class="btn btn-ghost btn-sm" onclick="showProject('${project.slug}')">
-                        ${window.t('common.viewMore', 'Details →')}
+                        Details →
                       </button>
                     </div>
                   </div>
-                </div>
-                `;
+                </div>`;
             }).join('');
 
             // Update container class
             container.className = currentView === 'grid' ? 'projects-grid grid-3' : 'projects-list-vertical';
 
-            // Re-trigger scroll reveals if available
-            if (window.ScrollReveal) window.ScrollReveal().reveal('.reveal');
+            // Attach Aura Tracking
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.onmousemove = (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width) * 100;
+                    const y = ((e.clientY - rect.top) / rect.height) * 100;
+                    card.style.setProperty('--aura-x', `${x}%`);
+                    card.style.setProperty('--aura-y', `${y}%`);
+                };
+            });
+
+            // Manually trigger reveal for injected cards
+            setTimeout(() => {
+                container.querySelectorAll('.reveal').forEach((el, i) => {
+                    setTimeout(() => el.classList.add('visible'), i * 100);
+                });
+            }, 50);
         }
 
         function filterProjects() {
@@ -326,9 +348,7 @@
             if (searchQuery) {
                 filtered = filtered.filter(p => {
                     const title = p.i18nKey ? window.t(p.i18nKey + '.title', p.title) : p.title;
-                    const overview = p.i18nKey ? window.t(p.i18nKey + '.overview', p.description) : p.description;
                     return title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                        overview.toLowerCase().includes(searchQuery.toLowerCase()) ||
                         p.tags.some(t => t.toLowerCase().includes(searchQuery.toLowerCase()));
                 });
             }
@@ -336,152 +356,198 @@
             renderProjects(filtered);
         }
 
-        // Category tabs event listeners
-        document.querySelectorAll('.category-tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                currentCategory = tab.dataset.category;
-                filterProjects();
+        function attachFilterListeners() {
+            const categories = document.querySelectorAll('.category-tab');
+            const viewButtons = document.querySelectorAll('.view-toggle button');
+            const searchInput = document.getElementById('search');
+
+            categories.forEach(tab => {
+                tab.onclick = () => {
+                    categories.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    currentCategory = tab.dataset.category;
+                    filterProjects();
+                };
             });
-        });
 
-        // View toggle event listeners
-        document.querySelectorAll('.view-toggle button').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.view-toggle button').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                currentView = btn.dataset.view;
-                filterProjects();
+            viewButtons.forEach(btn => {
+                btn.onclick = () => {
+                    viewButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentView = btn.dataset.view;
+                    filterProjects();
+                };
             });
-        });
 
-        // Search event listener
-        document.getElementById('search').addEventListener('input', (e) => {
-            searchQuery = e.target.value;
-            filterProjects();
-        });
+            if (searchInput) {
+                searchInput.oninput = (e) => {
+                    searchQuery = e.target.value;
+                    filterProjects();
+                };
+            }
+        }
 
-        // Show project modal
+        window.zoomImage = function (src) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+
+        window.closeLightbox = function () {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
         window.showProject = function (slug) {
             const project = getProjectBySlug(slug);
             if (!project) return;
 
-            // Translations with full key checking
             const i18n = project.i18nKey;
             const title = i18n ? window.t(i18n + '.title', project.title) : project.title;
             const subtitle = i18n ? window.t(i18n + '.subtitle', '') : '';
-            const overview = i18n ? window.t(i18n + '.overview', project.description) : project.description;
-            const challenge = i18n ? window.t(i18n + '.challenge', '') : '';
-            const approach = i18n ? window.t(i18n + '.approach', '') : '';
-            const solution = i18n ? window.t(i18n + '.solution', '') : '';
-            const contributions = i18n ? window.t(i18n + '.contributions', []) : [];
+            const overview = i18n ? window.t(i18n + '.overview', "") : (project.description || "");
+            const challenge = i18n ? window.t(i18n + '.challenge', '') : (project.challenge || "");
+            const approach = i18n ? window.t(i18n + '.approach', '') : (project.approach || "");
+            const solution = i18n ? window.t(i18n + '.solution', '') : (project.solution || "");
+            const contributions = i18n ? window.t(i18n + '.contributions', []) : (project.contributions || []);
+
+            const color = project.color || 'var(--color-primary)';
+            const auraColor = project.color ? `${project.color}33` : 'rgba(var(--color-primary-rgb), 0.2)';
 
             document.getElementById('modal-title').textContent = title;
             document.getElementById('modal-body').innerHTML = `
-                <div class="modal-split-container">
-                    <!-- LEFT COLUMN: SIDEBAR -->
-                    <aside class="modal-sidebar">
-                        <div class="sidebar-project-media">
-                            ${(project.images && project.images.length > 0) ? `
-                                <div class="project-gallery-mini" style="aspect-ratio: 16/10; border-radius: var(--radius-xl); overflow: hidden; margin-bottom: var(--space-6); border: 1px solid var(--border-color);">
-                                    <img src="${project.images[0]}" alt="${title}" style="width: 100%; height: 100%; object-fit: cover;">
-                                </div>
-                            ` : `<div class="project-placeholder-mini" style="aspect-ratio: 16/10; background: var(--bg-tertiary); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; opacity: 0.1; letter-spacing: 0.1em; margin-bottom: var(--space-6); border: 1px solid var(--border-color);">${project.category.toUpperCase()}</div>`}
-                        </div>
-
-                        <div class="sidebar-info-group">
-                            <h4 class="sidebar-group-title">Status & Info</h4>
-                            <div class="sidebar-meta" style="display: flex; flex-direction: column; gap: var(--space-2);">
-                                <span class="badge badge-outline" style="justify-content: flex-start; gap: var(--space-2);">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                                    ${project.date || 'Active'}
-                                </span>
-                                <span class="badge badge-outline" style="justify-content: flex-start; gap: var(--space-2);">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                                    ${project.category.charAt(0).toUpperCase() + project.category.slice(1)}
-                                </span>
+                <div class="modal-split-container" style="--project-color: ${color}; --project-aura: ${auraColor}">
+                    <!-- CINEMA GALLERY BLOCK -->
+                    <div class="modal-cinema-gallery">
+                        <div class="media-slider-container">
+                            <div class="media-slider" id="modal-media-slider">
+                                ${(project.media && project.media.length > 0) ?
+                    project.media.map((item, index) => `
+                                        <div class="media-slide" data-index="${index}">
+                                            ${item.type === 'youtube' ?
+                            `<div class="video-wrapper"><iframe src="https://www.youtube.com/embed/${item.src}?autoplay=0&rel=0" allowfullscreen></iframe></div>` :
+                            `<div class="image-wrapper"><img src="${item.src}" alt="${title} Screen" onclick="zoomImage('${item.src}')" loading="lazy"></div>`
+                        }
+                                        </div>
+                                    `).join('') :
+                    `<div class="media-slide"><div class="project-placeholder-mini">${project.category.toUpperCase()}</div></div>`
+                }
                             </div>
-                        </div>
-
-                        <div class="sidebar-info-group">
-                            <h4 class="sidebar-group-title">${window.t('projects.modal.techStack', 'Building Blocks')}</h4>
-                            <div class="tags">
-                                ${project.techStack.map(tech => `<span class="badge badge-primary">${tech}</span>`).join('')}
-                            </div>
-                        </div>
-
-                        <div class="sidebar-info-group" style="margin-top: auto;">
-                            <h4 class="sidebar-group-title">Links</h4>
-                            <div class="project-actions" style="display: flex; flex-direction: column; gap: var(--space-3);">
-                                ${project.demoUrl ? `<a href="${project.demoUrl}" class="btn btn-primary" target="_blank">${window.t('projects.demoVideo', 'Live Demo')}</a>` : ''}
-                                ${project.repoUrl ? `<a href="${project.repoUrl}" class="btn btn-secondary" target="_blank">${window.t('projects.github', 'GitHub Repo')}</a>` : ''}
-                            </div>
-                        </div>
-                    </aside>
-
-                    <!-- RIGHT COLUMN: MAIN CONTENT -->
-                    <main class="modal-main">
-                        <header class="project-content-header" style="margin-bottom: var(--space-10);">
-                            ${subtitle ? `<p style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; margin-bottom: var(--space-2);">${subtitle}</p>` : ''}
-                            <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: var(--space-4);">${title}</h2>
-                            <p class="project-overview" style="font-size: var(--text-lg); line-height: 1.7; color: var(--text-primary);">${overview}</p>
-                        </header>
-
-                        <div class="story-timeline">
-                            ${challenge ? `
-                                <div class="storytelling-block">
-                                    <div class="timeline-dot"></div>
-                                    <h4 class="section-label">${window.t('projects.modal.challenge', 'The Challenge')}</h4>
-                                    <div class="storytelling-content">${challenge}</div>
-                                </div>
-                            ` : ''}
-
-                            ${approach ? `
-                                <div class="storytelling-block">
-                                    <div class="timeline-dot"></div>
-                                    <h4 class="section-label">${window.t('projects.modal.approach', 'My Approach')}</h4>
-                                    <div class="storytelling-content">${approach}</div>
-                                </div>
-                            ` : ''}
-
-                            ${solution ? `
-                                <div class="storytelling-block">
-                                    <div class="timeline-dot"></div>
-                                    <h4 class="section-label">${window.t('projects.modal.solution', 'The Solution')}</h4>
-                                    <div class="storytelling-content">${solution}</div>
+                            
+                            ${(project.media && project.media.length > 1) ? `
+                                <div class="slider-nav">
+                                    <button class="slider-arrow prev" onclick="moveSlider(-1)" aria-label="Previous">
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                                    </button>
+                                    <button class="slider-arrow next" onclick="moveSlider(1)" aria-label="Next">
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                    </button>
                                 </div>
                             ` : ''}
                         </div>
 
-                        ${Array.isArray(contributions) && contributions.length > 0 ? `
-                            <div class="contribution-card" style="margin-top: var(--space-6);">
-                                <h4 class="section-label" style="color: var(--color-success); border: none;">${window.t('projects.modal.contributions', 'My Contribution')}</h4>
-                                <ul class="contribution-list">
-                                    ${contributions.map(c => `
-                                        <li>
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                            <span>${c}</span>
-                                        </li>
+                        <!-- THUMBNAIL CAROUSEL -->
+                        ${(project.media && project.media.length > 1) ? `
+                            <div class="thumbnail-carousel-wrapper">
+                                <div class="thumbnail-carousel" id="thumb-carousel">
+                                    ${project.media.map((item, index) => `
+                                        <div class="thumb-item ${index === 0 ? 'active' : ''}" onclick="goToSlide(${index})" data-index="${index}">
+                                            ${item.type === 'youtube' ?
+                        `<div class="thumb-vid-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v14c0 .86.84 1.4 1.58.97l11-7c.73-.46.73-1.48 0-1.94l-11-7c-.74-.43-1.58.11-1.58.97z"/></svg></div>` :
+                        `<img src="${item.src}" alt="Thumb ${index}">`
+                    }
+                                        </div>
                                     `).join('')}
-                                </ul>
+                                </div>
                             </div>
                         ` : ''}
-                    </main>
+                    </div>
+
+                    <div class="modal-content-split">
+                        <aside class="modal-sidebar">
+                            <div class="sidebar-info-group">
+                                <h4 class="sidebar-group-title">Project Info</h4>
+                                <div class="sidebar-meta" style="display: flex; flex-direction: column; gap: var(--space-3);">
+                                    <span class="badge badge-outline" style="justify-content: flex-start; gap: var(--space-3);">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                        ${project.date || 'Present'}
+                                    </span>
+                                    <span class="badge badge-outline" style="justify-content: flex-start; gap: var(--space-3);">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                                        ${project.category.toUpperCase()}
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="sidebar-info-group">
+                                <h4 class="sidebar-group-title">Tech Stack</h4>
+                                <div class="tags">
+                                    ${(project.techStack || []).map(tech => `<span class="badge badge-primary">${tech}</span>`).join('')}
+                                </div>
+                            </div>
+
+                            <div class="sidebar-info-group" style="margin-top: auto;">
+                                <div class="project-actions" style="display: flex; flex-direction: column; gap: var(--space-3);">
+                                    ${project.demoUrl ? `<a href="${project.demoUrl}" class="btn btn-primary" target="_blank">Watch Demo</a>` : ''}
+                                    ${project.repoUrl ? `<a href="${project.repoUrl}" class="btn btn-secondary" target="_blank">Source Code</a>` : ''}
+                                </div>
+                            </div>
+                        </aside>
+
+                        <main class="modal-main" style="padding: var(--space-10);">
+                            <header style="margin-bottom: var(--space-10);">
+                                ${subtitle ? `<p style="color: var(--color-primary); font-weight: 700; text-transform: uppercase;">${subtitle}</p>` : ''}
+                                <h2 style="font-size: 2.8rem; font-weight: 800; margin-bottom: var(--space-4);">${title}</h2>
+                                <p style="font-size: 1.15rem; line-height: 1.8; opacity: 0.9;">${overview}</p>
+                            </header>
+
+                            <div class="story-timeline">
+                                ${challenge ? `<div class="storytelling-block"><h4 class="section-label">The Challenge</h4><div>${challenge}</div></div>` : ''}
+                                ${approach ? `<div class="storytelling-block"><h4 class="section-label">My Approach</h4><div>${approach}</div></div>` : ''}
+                                ${solution ? `<div class="storytelling-block"><h4 class="section-label">The Solution</h4><div>${solution}</div></div>` : ''}
+                            </div>
+                        </main>
+                    </div>
                 </div>
             `;
+
+            // Slider Logic
+            const slider = document.getElementById('modal-media-slider');
+            const thumbs = document.querySelectorAll('.thumb-item');
+
+            window.moveSlider = (direction) => {
+                const scrollAmount = slider.offsetWidth;
+                slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+            };
+
+            window.goToSlide = (index) => {
+                const scrollAmount = slider.offsetWidth;
+                slider.scrollTo({ left: index * scrollAmount, behavior: 'smooth' });
+            };
+
+            slider.onscroll = () => {
+                const index = Math.round(slider.scrollLeft / slider.offsetWidth);
+                thumbs.forEach((t, i) => t.classList.toggle('active', i === index));
+
+                // Keep active thumb in view
+                const activeThumb = document.querySelector('.thumb-item.active');
+                if (activeThumb) activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            };
 
             openModal('project-modal');
         };
 
-        // Check for hash to open specific project
-        if (window.location.hash) {
-            const slug = window.location.hash.substring(1);
-            setTimeout(() => showProject(slug), 100);
-        }
+        const init = () => {
+            console.log('Initializing projects page...');
+            filterProjects();
+            attachFilterListeners();
+        };
 
-        // Initial render
-        filterProjects();
+        if (window.i18nReady) init();
+        else document.addEventListener('i18nReady', init);
     </script>
 
     <style>
@@ -533,7 +599,7 @@
             color: var(--text-secondary);
             font-size: var(--text-sm);
             cursor: pointer;
-            transition: all var(--duration-fast) var(--ease-in-out);
+            transition: all 0.2s;
         }
 
         .category-tab:hover {
@@ -553,26 +619,126 @@
             color: var(--text-secondary);
         }
 
-        .empty-state svg {
-            margin-bottom: var(--space-4);
+        /* Cinematic Gallery Extensions */
+        .modal-cinema-gallery {
+            background: #050505;
+            padding: var(--space-4);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+        }
+
+        .media-slider-container {
+            position: relative;
+            background: #000;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: 0 0 50px var(--project-aura);
+        }
+
+        .media-slide {
+            padding: var(--space-6);
+            /* Shrink effect for ambient light */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at center, var(--project-aura), transparent 80%);
+        }
+
+        .image-wrapper img,
+        .video-wrapper iframe {
+            max-height: 500px;
+            width: auto;
+            max-width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .video-wrapper {
+            width: 100%;
+            aspect-ratio: 16/9;
+            max-width: 900px;
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .thumbnail-carousel-wrapper {
+            padding: 0 var(--space-2);
+        }
+
+        .thumbnail-carousel {
+            display: flex;
+            gap: var(--space-3);
+            overflow-x: auto;
+            padding-bottom: var(--space-2);
+            scrollbar-width: thin;
+            scrollbar-color: var(--project-color) transparent;
+        }
+
+        .thumb-item {
+            width: 80px;
+            height: 50px;
+            flex-shrink: 0;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
             opacity: 0.5;
+            transition: all 0.3s;
+            background: #222;
         }
 
-        .hidden {
-            display: none;
+        .thumb-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        [dir="rtl"] .search-wrapper svg {
-            left: auto;
-            right: var(--space-4);
+        .thumb-item.active {
+            opacity: 1;
+            border-color: var(--project-color);
+            transform: scale(1.05);
         }
 
-        [dir="rtl"] .search-input {
-            padding-left: var(--space-4);
-            padding-right: var(--space-12);
+        .thumb-vid-icon {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--project-color);
+        }
+
+        .slider-arrow {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: var(--space-2);
+            border-radius: var(--radius-full);
+            transition: all 0.3s;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider-arrow:hover {
+            background: var(--project-color);
+            transform: scale(1.1);
+        }
+
+        .slider-arrow svg {
+            width: 32px;
+            height: 32px;
         }
     </style>
-    <script type="module" src="../js/main.js"></script>
 </body>
 
 </html>

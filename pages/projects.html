@@ -49,6 +49,7 @@
             <nav class="nav">
                 <a href="../index.html" class="nav-link">Home</a>
                 <a href="./projects.html" class="nav-link active">Projects</a>
+                <a href="./experience.html" class="nav-link">Experience</a>
                 <a href="./learning.html" class="nav-link">Learning</a>
                 <a href="./teaching.html" class="nav-link">Teaching</a>
                 <a href="./certificates.html" class="nav-link">Certificates</a>
@@ -82,6 +83,7 @@
         <div class="mobile-nav">
             <a href="../index.html" class="mobile-nav-link">Home</a>
             <a href="./projects.html" class="mobile-nav-link active">Projects</a>
+            <a href="./experience.html" class="mobile-nav-link">Experience</a>
             <a href="./learning.html" class="mobile-nav-link">Learning</a>
             <a href="./teaching.html" class="mobile-nav-link">Teaching</a>
             <a href="./certificates.html" class="mobile-nav-link">Certificates</a>
@@ -308,7 +310,7 @@
                 }
 
                 return `
-                <div class="card project-card reveal" data-slug="${project.slug}" style="${auraStyle}">
+                <div class="card project-card reveal" data-slug="${project.slug}" style="${auraStyle} cursor:pointer;" onclick="showProject('${project.slug}')">
                   <div class="card-image ${coverImg ? '' : 'no-image'}">
                     ${coverImg ? `<img src="${coverImg}" alt="${title}">` : `<div class="project-placeholder">${project.category.toUpperCase()}</div>`}
                   </div>
@@ -323,9 +325,9 @@
                       <div class="tags">
                         ${(project.techStack || []).slice(0, 2).map(tag => `<span class="badge">${tag}</span>`).join('')}
                       </div>
-                      <button class="btn btn-ghost btn-sm" onclick="showProject('${project.slug}')">
+                      <span class="btn btn-ghost btn-sm" style="pointer-events:none;">
                         Details →
-                      </button>
+                      </span>
                     </div>
                   </div>
                 </div>`;

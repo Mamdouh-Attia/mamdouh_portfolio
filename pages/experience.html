@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Career Journey of Mamdouh Ahmed Attia — Flutter Developer, Open Source Contributor, and Educator.">
+    <title>Experience | Mamdouh Ahmed Attia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Theme Init -->
+    <script>
+        (function () {
+            const THEME_KEY = 'portfolio-theme';
+            const storedTheme = localStorage.getItem(THEME_KEY);
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', storedTheme || systemTheme);
+        })();
+    </script>
+
+    <link rel="stylesheet" href="../css/design-tokens.css">
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/layouts.css">
+    <link rel="stylesheet" href="../css/rtl.css">
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+
+    <style>
+        /* ============================
+           EXPERIENCE PAGE STYLES
+        ============================= */
+        body {
+            background: #0d0d0d;
+        }
+
+        /* Aurora blobs behind the content */
+        .exp-aurora {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .exp-aurora .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.06;
+            animation: blobFloat 12s ease-in-out infinite;
+        }
+
+        .exp-aurora .blob-1 {
+            width: 600px;
+            height: 600px;
+            background: #7c3aed;
+            top: -200px;
+            left: -150px;
+            animation-delay: 0s;
+        }
+
+        .exp-aurora .blob-2 {
+            width: 500px;
+            height: 500px;
+            background: #22d3ee;
+            bottom: 10%;
+            right: -100px;
+            animation-delay: -6s;
+        }
+
+        .exp-aurora .blob-3 {
+            width: 400px;
+            height: 400px;
+            background: #3b82f6;
+            top: 50%;
+            left: 40%;
+            animation-delay: -3s;
+        }
+
+        @keyframes blobFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -20px) scale(1.05); }
+            66% { transform: translate(-20px, 30px) scale(0.95); }
+        }
+
+        /* Page wrapper */
+        .exp-page {
+            position: relative;
+            z-index: 1;
+            padding-top: 90px;
+        }
+
+        /* Hero stat bar */
+        .exp-hero {
+            text-align: center;
+            padding: 80px 24px 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .exp-hero-eyebrow {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #22d3ee;
+            margin-bottom: 20px;
+            padding: 6px 16px;
+            border: 1px solid rgba(34, 211, 238, 0.3);
+            border-radius: 100px;
+            background: rgba(34, 211, 238, 0.05);
+        }
+
+        .exp-hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            text-shadow: 0 0 60px rgba(124, 58, 237, 0.2);
+        }
+
+        .exp-hero-title .gradient-word {
+            background: linear-gradient(135deg, #a78bfa, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .exp-hero-desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.55);
+            max-width: 600px;
+            margin: 0 auto 48px;
+            line-height: 1.7;
+        }
+
+        /* Stat bar */
+        .stat-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            border-radius: 16px;
+            padding: 24px 40px;
+            backdrop-filter: blur(20px);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 0 32px;
+            flex: 1;
+            min-width: 140px;
+        }
+
+        .stat-item:not(:last-child) {
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .stat-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #a78bfa, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.45);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-top: 4px;
+        }
+
+        /* ==== TIMELINE ==== */
+        .timeline-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        .timeline-section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.35);
+            margin-bottom: 48px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+
+        /* The glowing vertical line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 14px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: linear-gradient(to bottom,
+                    transparent 0%,
+                    #7c3aed 15%,
+                    #22d3ee 50%,
+                    #7c3aed 85%,
+                    transparent 100%);
+            border-radius: 2px;
+        }
+
+        /* Timeline item */
+        .timeline-entry {
+            position: relative;
+            margin-bottom: 36px;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .timeline-entry.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Node dot */
+        .timeline-node {
+            position: absolute;
+            left: -43px;
+            top: 28px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #0d0d0d;
+            border: 2px solid #7c3aed;
+            z-index: 2;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .timeline-entry:hover .timeline-node {
+            transform: scale(1.3);
+            box-shadow: 0 0 16px rgba(124, 58, 237, 0.7);
+        }
+
+        /* Active node (current role) */
+        .timeline-entry.active .timeline-node {
+            background: #22d3ee;
+            border-color: #22d3ee;
+            box-shadow: 0 0 10px rgba(34, 211, 238, 0.6);
+            animation: nodePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes nodePulse {
+            0%, 100% { box-shadow: 0 0 10px rgba(34, 211, 238, 0.6); }
+            50% { box-shadow: 0 0 24px rgba(34, 211, 238, 0.9), 0 0 40px rgba(34, 211, 238, 0.3); }
+        }
+
+        /* Glass card */
+        .exp-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(124, 58, 237, 0.15);
+            border-radius: 16px;
+            padding: 28px 32px;
+            backdrop-filter: blur(20px);
+            transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: default;
+        }
+
+        .exp-card:hover {
+            border-color: rgba(124, 58, 237, 0.45);
+            background: rgba(255, 255, 255, 0.055);
+            transform: translateX(6px);
+            box-shadow: 0 8px 40px rgba(124, 58, 237, 0.1), -4px 0 20px rgba(124, 58, 237, 0.08);
+        }
+
+        .timeline-entry.active .exp-card {
+            border-color: rgba(34, 211, 238, 0.25);
+        }
+
+        .timeline-entry.active .exp-card:hover {
+            border-color: rgba(34, 211, 238, 0.5);
+            box-shadow: 0 8px 40px rgba(34, 211, 238, 0.1), -4px 0 20px rgba(34, 211, 238, 0.08);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        .card-title-group {
+            flex: 1;
+        }
+
+        .card-role {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .card-org {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .card-badges {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .badge-date {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.06);
+            padding: 4px 12px;
+            border-radius: 100px;
+            white-space: nowrap;
+        }
+
+        .badge-active {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #22d3ee;
+            background: rgba(34, 211, 238, 0.1);
+            border: 1px solid rgba(34, 211, 238, 0.3);
+            padding: 4px 12px;
+            border-radius: 100px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .badge-active::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #22d3ee;
+            animation: activeDot 1.5s ease-in-out infinite;
+        }
+
+        @keyframes activeDot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .card-bullets {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .bullet {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .bullet::before {
+            content: '▸';
+            color: #7c3aed;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .timeline-entry.active .bullet::before {
+            color: #22d3ee;
+        }
+
+        .card-tags {
+            margin-top: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-chip {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 100px;
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.25);
+            color: #a78bfa;
+        }
+
+        .tech-chip.cyan {
+            background: rgba(34, 211, 238, 0.08);
+            border-color: rgba(34, 211, 238, 0.2);
+            color: #22d3ee;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #22d3ee;
+            text-decoration: none;
+            margin-top: 16px;
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(34, 211, 238, 0.25);
+            background: rgba(34, 211, 238, 0.05);
+            transition: all 0.2s ease;
+        }
+
+        .card-link:hover {
+            background: rgba(34, 211, 238, 0.12);
+            border-color: rgba(34, 211, 238, 0.5);
+            color: #22d3ee;
+            transform: translateY(-1px);
+        }
+
+        /* section divider between prof and teaching */
+        .timeline-category-divider {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.3);
+            margin: 48px 0 32px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .timeline-category-divider::before,
+        .timeline-category-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        /* ====== SKILLS CONSTELLATION ====== */
+        .skills-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px 100px;
+        }
+
+        .skills-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .skills-subtitle {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.45);
+            margin-bottom: 40px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 12px;
+        }
+
+        .skill-chip {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 12px 16px;
+            transition: all 0.25s ease;
+            cursor: default;
+        }
+
+        .skill-chip:hover {
+            border-color: rgba(124, 58, 237, 0.4);
+            background: rgba(124, 58, 237, 0.06);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.12);
+        }
+
+        .skill-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .skill-dot.purple { background: #a78bfa; box-shadow: 0 0 6px #a78bfa88; }
+        .skill-dot.cyan   { background: #22d3ee; box-shadow: 0 0 6px #22d3ee88; }
+        .skill-dot.blue   { background: #60a5fa; box-shadow: 0 0 6px #60a5fa88; }
+        .skill-dot.green  { background: #34d399; box-shadow: 0 0 6px #34d39988; }
+
+        .skill-name {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* CTA Download */
+        .exp-cta {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .timeline { padding-left: 36px; }
+            .timeline-node { left: -31px; }
+            .exp-card { padding: 20px; }
+            .card-header { flex-direction: column; }
+            .stat-bar { padding: 18px 20px; }
+            .stat-item { padding: 0 16px; }
+            .stat-value { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Aurora background -->
+    <div class="exp-aurora" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><span class="logo-icon">M</span><span>Mamdouh</span></a>
+            <nav class="nav">
+                <a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a>
+                <a href="./projects.html" class="nav-link" data-i18n="nav.projects">Projects</a>
+                <a href="./experience.html" class="nav-link active">Experience</a>
+                <a href="./learning.html" class="nav-link" data-i18n="nav.learning">Learning</a>
+                <a href="./teaching.html" class="nav-link" data-i18n="nav.teaching">Teaching</a>
+                <a href="./certificates.html" class="nav-link" data-i18n="nav.certificates">Certificates</a>
+                <a href="./about.html" class="nav-link" data-i18n="nav.about">About</a>
+                <a href="./contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5" /><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                    </svg>
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <button class="lang-toggle" aria-label="Toggle language">ع</button>
+                <button class="menu-toggle" aria-label="Toggle menu"><span class="menu-toggle-icon"><span></span><span></span><span></span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu">
+        <div class="mobile-nav">
+            <a href="../index.html" class="mobile-nav-link">Home</a>
+            <a href="./projects.html" class="mobile-nav-link">Projects</a>
+            <a href="./experience.html" class="mobile-nav-link active">Experience</a>
+            <a href="./learning.html" class="mobile-nav-link">Learning</a>
+            <a href="./teaching.html" class="mobile-nav-link">Teaching</a>
+            <a href="./certificates.html" class="mobile-nav-link">Certificates</a>
+            <a href="./about.html" class="mobile-nav-link">About</a>
+            <a href="./contact.html" class="mobile-nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <main class="exp-page" id="main-content">
+
+        <!-- Hero -->
+        <div class="exp-hero">
+            <span class="exp-hero-eyebrow">Career Journey</span>
+            <h1 class="exp-hero-title">Building Things That<br><span class="gradient-word">Actually Matter</span></h1>
+            <p class="exp-hero-desc">3+ years of shipping real Flutter apps — from hackathons to freelance clients to open-source contributions. Here's the full story.</p>
+            <div class="stat-bar">
+                <div class="stat-item">
+                    <div class="stat-value">3+</div>
+                    <div class="stat-label">Years Flutter</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">5+</div>
+                    <div class="stat-label">Apps Delivered</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">80+</div>
+                    <div class="stat-label">Tests Authored</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">35+</div>
+                    <div class="stat-label">Students Taught</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline: Professional -->
+        <section class="timeline-section">
+            <div class="timeline-section-title">Professional Experience</div>
+
+            <div class="timeline" id="timeline">
+
+                <!-- 1: Open Source - Most recent -->
+                <div class="timeline-entry active reveal-left">
+                    <div class="timeline-node"></div>
+                    <div class="exp-card">
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <div class="card-role">Open Source Contributor</div>
+                                <div class="card-org">Itqan Community · mushaf-imad-flutter · Remote</div>
+                            </div>
+                            <div class="card-badges">
+                                <span class="badge-active">Active</span>
+                                <span class="badge-date">Feb 2026 – Present</span>
+                            </div>
+                        </div>
+                        <div class="card-bullets">
+                            <div class="bullet">Integrated <strong>Quran.com API</strong> via <strong>OAuth 2.0</strong>, reducing audio latency by <strong>86%</strong> using custom in-memory caching.</div>
+                            <div class="bullet">Developed a reactive sync system with <strong>Stream Transformers</strong> for real-time verse metadata injection.</div>
+                            <div class="bullet">Engineered a <strong>Hybrid Audio Engine</strong> supporting dynamic fallback between local and cloud sources.</div>
+                            <div class="bullet">Authored <strong>80+ unit & integration tests</strong> with Mocktail covering complex async repository logic.</div>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tech-chip cyan">Dart</span>
+                            <span class="tech-chip cyan">Flutter</span>
+                            <span class="tech-chip">OAuth 2.0</span>
+                            <span class="tech-chip">Streams</span>
+                            <span class="tech-chip">REST API</span>
+                            <span class="tech-chip">Mocktail</span>
+                            <span class="tech-chip">TDD</span>
+                        </div>
+                        <a href="https://github.com/Itqan-community/mushaf-imad-flutter/pull/27" target="_blank" class="card-link">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            View PR #27 on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2: Freelance -->
+                <div class="timeline-entry active reveal-left">
+                    <div class="timeline-node"></div>
+                    <div class="exp-card">
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <div class="card-role">Flutter Developer — Freelance</div>
+                                <div class="card-org">Self-Employed · Remote & Local Clients</div>
+                            </div>
+                            <div class="card-badges">
+                                <span class="badge-active">Active</span>
+                                <span class="badge-date">Sep 2023 – Present</span>
+                            </div>
+                        </div>
+                        <div class="card-bullets">
+                            <div class="bullet">Built a stress-monitoring app (HyperMate) connecting to an <strong>ESP8266 microcontroller</strong> via Wi-Fi with real-time GSR sensor readings and a smart chatbot.</div>
+                            <div class="bullet">Enhanced EcoSort — a recycling IoT client app — adding Firebase auth, push notifications, QR scanning, and <strong>Blync API</strong> integration for hardware sensors.</div>
+                            <div class="bullet">Delivered VolunTeen, a volunteering social platform for a real client with <strong>30–40 responsive screens</strong>, AI chatbot (GPT-3), and WhatsApp integration.</div>
+                            <div class="bullet">Employed <strong>MVC Architecture</strong> with Provider state management across all freelance projects.</div>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tech-chip cyan">Flutter</span>
+                            <span class="tech-chip">Firebase</span>
+                            <span class="tech-chip">IoT / ESP8266</span>
+                            <span class="tech-chip">Provider</span>
+                            <span class="tech-chip">REST APIs</span>
+                            <span class="tech-chip">GPT-3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3: PrimaLab -->
+                <div class="timeline-entry reveal-left">
+                    <div class="timeline-node"></div>
+                    <div class="exp-card">
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <div class="card-role">Flutter Developer</div>
+                                <div class="card-org">PrimaLab · New Damietta, Egypt (Hybrid)</div>
+                            </div>
+                            <div class="card-badges">
+                                <span class="badge-date">Sep 2023 – Jun 2024</span>
+                            </div>
+                        </div>
+                        <div class="card-bullets">
+                            <div class="bullet">Developed 2 client Flutter applications (VolunTeen & Check-It), managing the complete SDLC from requirements to delivery.</div>
+                            <div class="bullet">Implemented barcode scanning, real-time price comparison, and e-commerce style product database in Check-It.</div>
+                            <div class="bullet">Integrated <strong>Firebase services</strong>, GPT-3 API, in-app video player, and third-party packages.</div>
+                            <div class="bullet">Delivered <strong>50+ hours</strong> of hands-on Flutter training covering Dart, OOP, UI, layout, and navigation.</div>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tech-chip cyan">Flutter</span>
+                            <span class="tech-chip">Dart</span>
+                            <span class="tech-chip">Firebase</span>
+                            <span class="tech-chip">MVC</span>
+                            <span class="tech-chip">Provider</span>
+                            <span class="tech-chip">Barcode Scanner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4: Orange Digital Center -->
+                <div class="timeline-entry reveal-left">
+                    <div class="timeline-node"></div>
+                    <div class="exp-card">
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <div class="card-role">Flutter Developer Intern</div>
+                                <div class="card-org">Orange Digital Center Egypt · Cairo (Hybrid)</div>
+                            </div>
+                            <div class="card-badges">
+                                <span class="badge-date">Jun 2023 – Sep 2023</span>
+                            </div>
+                        </div>
+                        <div class="card-bullets">
+                            <div class="bullet">Worked in agile teams on <strong>2 internal mobile apps</strong> and a hackathon E-wallet app, meeting tight sprint deadlines.</div>
+                            <div class="bullet">Translated Figma designs into pixel-perfect Flutter UI using <strong>MVVM architecture</strong> and Bloc Cubit state management.</div>
+                            <div class="bullet">Led community creation module for the Reddit Clone project — 6-member cross-functional team with Scrum methodology.</div>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tech-chip cyan">Flutter</span>
+                            <span class="tech-chip">MVVM</span>
+                            <span class="tech-chip">Bloc / Cubit</span>
+                            <span class="tech-chip">Agile / Scrum</span>
+                            <span class="tech-chip">Figma</span>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1dN2UPmg3Sql1kX3vJuBlea1_P1D4l6dk/view" target="_blank" class="card-link">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            View Internship Certificate
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Teaching section divider -->
+                <div class="timeline-category-divider">Academic &amp; Teaching Roles</div>
+
+                <!-- 5: Maspero -->
+                <div class="timeline-entry reveal-left">
+                    <div class="timeline-node"></div>
+                    <div class="exp-card">
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <div class="card-role">Python Programming Instructor</div>
+                                <div class="card-org">Maspero Academy · Radio &amp; Television Institute</div>
+                            </div>
+                            <div class="card-badges">
+                                <span class="badge-date">Jun 2025</span>
+                            </div>
+                        </div>
+                        <div class="card-bullets">
+                            <div class="bullet">Delivered Python programming fundamentals to CS students, creating hands-on exercises covering data types, control flow, OOP, and problem-solving patterns.</div>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tech-chip">Python</span>
+                            <span class="tech-chip">OOP</span>
+                            <span class="tech-chip">Teaching</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6: DEPI ML -->
+                <div class="timeline-entry reveal-left">
+                    <div class="timeline-node"></div>
+                    <div class="exp-card">
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <div class="card-role">ML Engineer Instructor</div>
+                                <div class="card-org">DEPI Initiative · Ministry of Communications &amp; IT</div>
+                            </div>
+                            <div class="card-badges">
+                                <span class="badge-date">Aug 2024 – Oct 2024</span>
+                            </div>
+                        </div>
+                        <div class="card-bullets">
+                            <div class="bullet">Designed and delivered a comprehensive ML engineering curriculum — math foundations, Python ecosystem (NumPy/Pandas), and model training from scratch.</div>
+                            <div class="bullet">Led a 4-phase end-to-end capstone project lifecycle, culminating in a "sell your product" defense seminar.</div>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tech-chip">Python</span>
+                            <span class="tech-chip">Machine Learning</span>
+                            <span class="tech-chip">NumPy / Pandas</span>
+                            <span class="tech-chip">Curriculum Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7: Flutter Instructor at PrimaLab -->
+                <div class="timeline-entry reveal-left">
+                    <div class="timeline-node"></div>
+                    <div class="exp-card">
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <div class="card-role">Flutter Development Instructor</div>
+                                <div class="card-org">PrimaLab · New Damietta, Egypt</div>
+                            </div>
+                            <div class="card-badges">
+                                <span class="badge-date">Aug 2023 – Feb 2024</span>
+                            </div>
+                        </div>
+                        <div class="card-bullets">
+                            <div class="bullet">Led a complete Flutter Development Diploma from zero to production, designing all course materials and handwritten notes.</div>
+                            <div class="bullet">Guided 35+ students from Dart basics through MVC architecture, state management, and real app deployment.</div>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tech-chip cyan">Flutter</span>
+                            <span class="tech-chip">Dart</span>
+                            <span class="tech-chip">Teaching</span>
+                            <span class="tech-chip">MVC</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /timeline -->
+        </section>
+
+        <!-- Skills section -->
+        <section class="skills-section">
+            <h2 class="skills-title">Technical Ecosystem</h2>
+            <p class="skills-subtitle">Technologies & tools I work with</p>
+            <div class="skills-grid">
+                <div class="skill-chip"><div class="skill-dot cyan"></div><span class="skill-name">Flutter</span></div>
+                <div class="skill-chip"><div class="skill-dot cyan"></div><span class="skill-name">Dart</span></div>
+                <div class="skill-chip"><div class="skill-dot purple"></div><span class="skill-name">Bloc / Cubit</span></div>
+                <div class="skill-chip"><div class="skill-dot purple"></div><span class="skill-name">Provider</span></div>
+                <div class="skill-chip"><div class="skill-dot blue"></div><span class="skill-name">Firebase</span></div>
+                <div class="skill-chip"><div class="skill-dot blue"></div><span class="skill-name">REST APIs</span></div>
+                <div class="skill-chip"><div class="skill-dot cyan"></div><span class="skill-name">OAuth 2.0</span></div>
+                <div class="skill-chip"><div class="skill-dot purple"></div><span class="skill-name">Clean Architecture</span></div>
+                <div class="skill-chip"><div class="skill-dot green"></div><span class="skill-name">TDD / Testing</span></div>
+                <div class="skill-chip"><div class="skill-dot green"></div><span class="skill-name">Mocktail</span></div>
+                <div class="skill-chip"><div class="skill-dot blue"></div><span class="skill-name">Stream Transformers</span></div>
+                <div class="skill-chip"><div class="skill-dot purple"></div><span class="skill-name">MVVM / MVC</span></div>
+                <div class="skill-chip"><div class="skill-dot green"></div><span class="skill-name">Git / GitHub</span></div>
+                <div class="skill-chip"><div class="skill-dot blue"></div><span class="skill-name">Agile / Scrum</span></div>
+                <div class="skill-chip"><div class="skill-dot purple"></div><span class="skill-name">Python</span></div>
+                <div class="skill-chip"><div class="skill-dot cyan"></div><span class="skill-name">IoT / ESP8266</span></div>
+                <div class="skill-chip"><div class="skill-dot blue"></div><span class="skill-name">Figma</span></div>
+                <div class="skill-chip"><div class="skill-dot green"></div><span class="skill-name">Machine Learning</span></div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="exp-cta">
+            <a href="../assets/Mamdouh_Attia_Flutter_Developer.pdf" download class="btn btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download CV
+            </a>
+            <a href="./contact.html" class="btn btn-secondary">Let's Work Together →</a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-name">Mamdouh Ahmed Attia</h3>
+                    <p class="footer-bio">Mobile Software Engineer specializing in Flutter</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/Mamdouh-Attia" class="social-link" target="_blank" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mamdouh-atia/" class="social-link" target="_blank" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="mailto:mamdouhattia31@gmail.com" class="social-link" aria-label="Email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 Mamdouh Ahmed Attia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/main.js"></script>
+    <script>
+        // Scroll reveal for timeline entries
+        document.addEventListener('DOMContentLoaded', () => {
+            const entries = document.querySelectorAll('.timeline-entry');
+            const observer = new IntersectionObserver((obs) => {
+                obs.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            entries.forEach((el, i) => {
+                el.style.transitionDelay = `${i * 80}ms`;
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

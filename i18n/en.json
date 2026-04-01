@@ -489,6 +489,21 @@
         "Built terrain traversal cost calculation using graph algorithms",
         "Created performance analytics for mission success metrics"
       ]
+    },
+    "mushafImad": {
+      "title": "Mushaf-IMAD Flutter",
+      "subtitle": "Open-source Quran audio integration — Itqan Community",
+      "overview": "Contributed to an open-source Quran reader Flutter package by integrating the Quran.com API as a full audio source. The contribution spans OAuth 2.0 authentication, a reactive streaming sync system, a hybrid audio engine, and a comprehensive test suite of 80+ tests using Mocktail.",
+      "challenge": "The existing package had no cloud audio integration. The task required designing a seamless hybrid system that could dynamically fall back between local and cloud sources while maintaining zero-latency verse-to-audio sync.",
+      "approach": "Implemented OAuth 2.0 token management, built a reactive verse metadata injection pipeline using Stream Transformers, and created an in-memory caching layer that reduced API latency by 86%. All logic was driven by TDD with Mocktail for complex async repository testing.",
+      "solution": "A robust hybrid audio engine with single-trip optimizations, a RAM → Local → API timing hierarchy ensuring zero-latency playback sync, and architectural walkthroughs published for long-term community maintainability.",
+      "contributions": [
+        "Integrated Quran.com API via OAuth 2.0 with custom in-memory caching (86% latency reduction)",
+        "Developed reactive sync system with Stream Transformers for real-time verse metadata injection",
+        "Engineered a Hybrid Audio Engine with dynamic fallback between local and cloud sources",
+        "Authored 80+ unit and integration tests using Mocktail for async repository logic",
+        "Published architectural guides and walkthroughs for community maintainability"
+      ]
     }
   }
 }

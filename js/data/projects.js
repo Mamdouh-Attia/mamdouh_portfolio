@@ -148,6 +148,19 @@ export const projects = [
         date: "2022-12",
         i18nKey: "projectData.redditClone"
     },
+    {
+        id: "ecosort",
+        title: "EcoSort Smart Recycling",
+        slug: "ecosort",
+        category: "mobile",
+        tags: ["Flutter", "IoT", "BLE", "Firebase"],
+        techStack: ["Flutter", "Dart", "BLE", "Firebase", "HMAC-SHA256"],
+        featured: true,
+        status: "completed",
+        date: "2024-03",
+        i18nKey: "projectData.ecosort",
+        color: "#10b981"
+    },
 
     // ========== DATA & AI PROJECTS ==========
     {
@@ -297,6 +310,60 @@ export const projects = [
         status: "completed",
         date: "2022-04",
         i18nKey: "projectData.searchEngine"
+    },
+
+    // ========== ADDITIONAL GITHUB PROJECTS ==========
+    {
+        id: "go-dfs",
+        title: "Distributed File System",
+        slug: "go-dfs",
+        category: "cs",
+        tags: ["Go", "Distributed Systems", "Streaming"],
+        techStack: ["Go", "TCP Sockets", "Replication", "MP4 Streaming"],
+        featured: false,
+        status: "completed",
+        date: "2024-06",
+        i18nKey: "projectData.goDfs",
+        githubUrl: "https://github.com/Mamdouh-Attia/Distributed_file_system"
+    },
+    {
+        id: "rsa-chat",
+        title: "RSA Encrypted Chat",
+        slug: "rsa-chat",
+        category: "cs",
+        tags: ["Python", "Cryptography", "Sockets"],
+        techStack: ["Python", "RSA", "TCP Sockets"],
+        featured: false,
+        status: "completed",
+        date: "2023-02",
+        i18nKey: "projectData.rsaChat",
+        githubUrl: "https://github.com/Mamdouh-Attia/RSA_E2E_encryption"
+    },
+    {
+        id: "gamingo",
+        title: "Gamingo Game Engine",
+        slug: "gamingo",
+        category: "cs",
+        tags: ["C++", "Computer Graphics", "Engine"],
+        techStack: ["C++", "OpenGL", "Physics Engine"],
+        featured: false,
+        status: "completed",
+        date: "2023-05",
+        i18nKey: "projectData.gamingo",
+        githubUrl: "https://github.com/Mamdouh-Attia/Gamingo"
+    },
+    {
+        id: "mars-exploration",
+        title: "Mars Exploration Simulation",
+        slug: "mars-exploration",
+        category: "cs",
+        tags: ["C++", "Algorithms", "Data Structures"],
+        techStack: ["C++", "Priority Queues", "Scheduling Algorithms"],
+        featured: false,
+        status: "completed",
+        date: "2021-12",
+        i18nKey: "projectData.marsExploration",
+        githubUrl: "https://github.com/Mamdouh-Attia/DT_MARS-EXPLORE_PROJECT"
     }
 ];
 

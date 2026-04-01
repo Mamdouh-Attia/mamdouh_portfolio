@@ -112,6 +112,13 @@
 
     <!-- Hero Section -->
     <section class="hero">
+      <!-- Aurora Background -->
+      <div class="aurora-bg">
+        <div class="aurora-blob aurora-blob--1"></div>
+        <div class="aurora-blob aurora-blob--2"></div>
+        <div class="aurora-blob aurora-blob--3"></div>
+        <div class="aurora-blob aurora-blob--4"></div>
+      </div>
       <div class="hero-background">
         <div class="hero-gradient hero-gradient-1"></div>
         <div class="hero-gradient hero-gradient-2"></div>
@@ -126,7 +133,8 @@
 
           <h1 class="hero-title">
             <span data-i18n="hero.title">Mamdouh Ahmed</span><br>
-            <span class="hero-title-gradient" data-i18n="hero.titleHighlight">Mobile Software Engineer</span>
+            <span class="hero-title-gradient text-shimmer" data-i18n="hero.titleHighlight">Mobile Software
+              Engineer</span>
           </h1>
 
           <p class="hero-subtitle" data-i18n="hero.subtitle">
@@ -134,7 +142,7 @@
           </p>
 
           <div class="hero-ctas">
-            <a href="./pages/projects.html" class="btn btn-primary btn-lg">
+            <a href="./pages/projects.html" class="btn btn-primary btn-lg magnetic">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
                 <line x1="3" y1="9" x2="21" y2="9" />
@@ -142,7 +150,7 @@
               </svg>
               <span data-i18n="hero.cta.projects">View Projects</span>
             </a>
-            <a href="./pages/contact.html" class="btn btn-secondary btn-lg">
+            <a href="./pages/contact.html" class="btn btn-secondary btn-lg magnetic">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
@@ -176,7 +184,7 @@
         </div>
 
         <div class="hero-image reveal-right">
-          <div class="hero-image-wrapper">
+          <div class="hero-image-wrapper glow-pulse">
             <div class="hero-image-frame"></div>
             <img src="./assets/images/profile.jpg" alt="Mamdouh Ahmed Attia" class="hero-image-photo">
           </div>
@@ -235,39 +243,79 @@
       </div>
     </section>
 
-    <!-- Experience CTA Section -->
+    <!-- Experience Glimpse Section -->
     <section class="section" id="experience-cta" style="background: var(--bg-secondary);">
-      <div class="container text-center">
-        <div class="reveal">
+      <div class="container">
+        <div class="section-header reveal">
           <h2 class="section-title" data-i18n="experience.title">Experience</h2>
-          <p class="section-subtitle" data-i18n="experience.subtitle" style="margin-bottom: var(--space-8);">
-            Explore my professional journey and technical expertise.
-          </p>
-          <div style="display: flex; justify-content: center;">
-            <a href="./pages/about.html#experience" class="btn btn-primary btn-lg">
-              <span data-i18n="experience.viewFull">View My Full Experience</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                class="icon-arrow-right" style="margin-left: var(--space-2);">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
+          <p class="section-subtitle" data-i18n="experience.subtitle">A snapshot of my professional journey</p>
+        </div>
+
+        <div class="experience-glimpse stagger-children">
+          <div class="exp-card reveal">
+            <div class="exp-card-icon" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">💼</div>
+            <div class="exp-card-content">
+              <span class="exp-card-date">2023 — Present</span>
+              <h3>Flutter Developer — Freelance</h3>
+              <p>5+ clients · HyperMate · EcoSort · VolunTeen</p>
+              <div class="exp-card-tags">
+                <span class="tag tag-flutter">Flutter</span>
+                <span class="tag tag-firebase">Firebase</span>
+                <span class="tag tag-iot">IoT / BLE</span>
+              </div>
+            </div>
           </div>
+
+          <div class="exp-card reveal">
+            <div class="exp-card-icon" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">🎓</div>
+            <div class="exp-card-content">
+              <span class="exp-card-date">2023 — 2025</span>
+              <h3>Technical Instructor</h3>
+              <p>Flutter @ Primalab · ML @ DEPI · Python @ Maspero</p>
+              <div class="exp-card-tags">
+                <span class="tag tag-flutter">Flutter</span>
+                <span class="tag tag-python">Python</span>
+                <span class="tag tag-ml">Machine Learning</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-card reveal">
+            <div class="exp-card-icon" style="background: linear-gradient(135deg, #f97316, #eab308);">🚀</div>
+            <div class="exp-card-content">
+              <span class="exp-card-date">Summer 2023</span>
+              <h3>Flutter Developer Intern</h3>
+              <p>Orange Digital Center Egypt · Agile · MVVM · Bloc</p>
+              <div class="exp-card-tags">
+                <span class="tag tag-flutter">Flutter</span>
+                <span class="tag tag-dart">Dart</span>
+                <span class="tag">Bloc</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: var(--space-8);">
+          <a href="./pages/about.html#experience" class="btn btn-primary btn-lg magnetic">
+            <span data-i18n="experience.viewFull">View Full Experience</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              style="margin-left: var(--space-2);">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="section" id="testimonials" style="background: var(--bg-secondary);">
+    <!-- Client Testimonials — Top 3 -->
+    <section class="section" id="testimonials">
       <div class="container">
         <div class="section-header reveal">
           <h2 class="section-title" data-i18n="testimonials.title">Client Feedback</h2>
           <p class="section-subtitle">
             <span class="star-rating">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                class="star">★</span><span class="star">★</span>
             </span>
             <span data-i18n="testimonials.rating">5.0 out of 5.0</span> — <span data-i18n="testimonials.allRatings">All
               clients rated 5/5</span>
@@ -286,73 +334,23 @@
                 <span class="testimonial-name">Sama Wahba</span>
                 <span class="testimonial-project">HyperMate</span>
               </div>
-              <div class="star-rating">
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              <p>"He is highly professional, well-organized, and very committed to deadlines. His attention to detail
-                and strong time management made the whole process smooth and efficient."</p>
-            </div>
-            <div class="testimonial-author">
-              <div class="testimonial-info">
-                <span class="testimonial-name">Happy Client</span>
-                <span class="testimonial-project">VolunTeen</span>
-              </div>
-              <div class="star-rating">
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              <p>"He takes his work seriously, providing clear communication to understand the client's needs and
-                expectations. Willingness to give the best work."</p>
-            </div>
-            <div class="testimonial-author">
-              <div class="testimonial-info">
-                <span class="testimonial-name">Mariam Abdelhamid</span>
-                <span class="testimonial-project">HyperMate</span>
-              </div>
-              <div class="star-rating">
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-              </div>
+              <div class="star-rating"><span class="star">★</span><span class="star">★</span><span
+                  class="star">★</span><span class="star">★</span><span class="star">★</span></div>
             </div>
           </div>
 
           <div class="testimonial-card">
             <div class="testimonial-content">
               <p>"The application was delivered with a highly professional finish. Through our discussions, he helped us
-                identify some useful features to add such as the AI bot included in hypermate."</p>
+                identify some useful features to add such as the AI bot included in HyperMate."</p>
             </div>
             <div class="testimonial-author">
               <div class="testimonial-info">
                 <span class="testimonial-name">Sandra Samir</span>
                 <span class="testimonial-project">HyperMate</span>
               </div>
-              <div class="star-rating">
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-              </div>
+              <div class="star-rating"><span class="star">★</span><span class="star">★</span><span
+                  class="star">★</span><span class="star">★</span><span class="star">★</span></div>
             </div>
           </div>
 
@@ -366,60 +364,88 @@
                 <span class="testimonial-name">Magda Osama</span>
                 <span class="testimonial-project">EcoSort</span>
               </div>
-              <div class="star-rating">
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-              </div>
+              <div class="star-rating"><span class="star">★</span><span class="star">★</span><span
+                  class="star">★</span><span class="star">★</span><span class="star">★</span></div>
             </div>
           </div>
+        </div>
 
-          <div class="testimonial-card">
+        <div class="text-center" style="margin-top: var(--space-6);">
+          <a href="./pages/about.html#testimonials" class="btn btn-secondary" data-i18n="testimonials.viewAll">See All
+            Client Reviews</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Student Feedback Glimpse — Real Reviews -->
+    <section class="section" id="student-feedback" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title" data-i18n="studentFeedback.title">Student Feedback</h2>
+          <p class="section-subtitle">
+            <span class="star-rating"><span class="star">★</span><span class="star">★</span><span
+                class="star">★</span><span class="star">★</span><span class="star">★</span></span>
+            <span>5.0 / 5.0</span> — <span data-i18n="studentFeedback.subtitle">from 35+ students across Flutter, ML
+              &amp; Python tracks</span>
+          </p>
+        </div>
+
+        <div class="testimonials-carousel reveal" style="margin-bottom: var(--space-8);">
+          <div class="testimonial-card student-testimonial">
             <div class="testimonial-content">
-              <p>"He’s professional, dependable, and delivers solid work. I liked how easy he is to work with and how
-                clearly he communicates."</p>
+              <p>"You are very friendly and understanding and able to deliver the information smoothly."</p>
             </div>
             <div class="testimonial-author">
               <div class="testimonial-info">
-                <span class="testimonial-name">Aya Hesham</span>
-                <span class="testimonial-project">EcoSort</span>
+                <span class="testimonial-name">Ahmed Samir Elsherbiny</span>
+                <span class="testimonial-project">DEPI — ML Engineering Track</span>
               </div>
-              <div class="star-rating">
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-              </div>
+              <div class="star-rating"><span class="star">★</span><span class="star">★</span><span
+                  class="star">★</span><span class="star">★</span><span class="star">★</span></div>
             </div>
           </div>
 
-          <div class="testimonial-card">
+          <div class="testimonial-card student-testimonial">
             <div class="testimonial-content">
-              <p>"Sure he is reliable. Great commitment to the project and delivery."</p>
+              <p>"I'd recommend learning with you. You explain clearly, make lessons engaging, and are easy to
+                communicate with. Your teaching style is clear, structured, and easy to follow, making complex topics
+                simple."</p>
             </div>
             <div class="testimonial-author">
               <div class="testimonial-info">
-                <span class="testimonial-name">Happy Client</span>
-                <span class="testimonial-project">Price App</span>
+                <span class="testimonial-name">Happy Student</span>
+                <span class="testimonial-project">DEPI — ML Engineering Track</span>
               </div>
-              <div class="star-rating">
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-              </div>
+              <div class="star-rating"><span class="star">★</span><span class="star">★</span><span
+                  class="star">★</span><span class="star">★</span><span class="star">★</span></div>
             </div>
           </div>
+
+          <div class="testimonial-card student-testimonial">
+            <div class="testimonial-content">
+              <p>"Simplifying things for the learner. A flexible teaching style that makes you able to build things on
+                your own."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="testimonial-info">
+                <span class="testimonial-name">Abdelfatah Mohamed</span>
+                <span class="testimonial-project">Python Programming Basics</span>
+              </div>
+              <div class="star-rating"><span class="star">★</span><span class="star">★</span><span
+                  class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="./pages/teaching.html#student-feedback" class="btn btn-secondary"
+            data-i18n="studentFeedback.viewAll">View All Student Feedback</a>
         </div>
       </div>
     </section>
 
     <!-- Section Previews -->
-    <section class="section" id="more-sections">
+    <section class="section" id="more-sections" style="background: var(--bg-secondary);">
       <div class="container">
         <div class="grid-3 stagger-children">
           <!-- Learning Preview -->

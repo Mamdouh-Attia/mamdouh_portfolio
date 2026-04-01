@@ -116,6 +116,11 @@
     "learnMore": "Learn More",
     "viewMore": "View More"
   },
+  "studentFeedback": {
+    "title": "Student Feedback",
+    "subtitle": "What my students say about my teaching",
+    "viewAll": "View Full Feedback"
+  },
   "contact": {
     "title": "Get In Touch",
     "subtitle": "Let's discuss how I can help you build your next mobile application",
@@ -427,6 +432,62 @@
         "Built the robots.txt parser and URL canonicalization logic",
         "Designed the disk-persistent BFS queue for fault tolerance",
         "Co-developed the TF-IDF ranking and keyword highlighting logic"
+      ]
+    },
+    "goDfs": {
+      "title": "Distributed File System",
+      "subtitle": "Fault-tolerant DFS with MP4 streaming",
+      "overview": "A distributed file system built in Go supporting file replication, fault tolerance, and MP4 video streaming across multiple nodes.",
+      "challenge": "Building a reliable file system that maintains data integrity during node failures and supports real-time media streaming.",
+      "approach": "Implemented TCP-based node communication with heartbeat monitoring, chunk-based file transfer, and custom replication protocols.",
+      "solution": "A high-concurrency distributed storage system that gracefully handles node failures and streams video content in real-time.",
+      "contributions": [
+        "Designed the distributed architecture with master/data node topology",
+        "Implemented TCP socket communication and heartbeat monitoring",
+        "Built chunk-based file transfer with configurable replication factor",
+        "Added MP4 streaming support for real-time video playback"
+      ]
+    },
+    "rsaChat": {
+      "title": "RSA Encrypted Chat",
+      "subtitle": "End-to-end encrypted messaging",
+      "overview": "A secure messaging application implementing RSA encryption from scratch using Python sockets for truly private communication.",
+      "challenge": "Implementing RSA key generation, encryption, and decryption from mathematical primitives without relying on cryptography libraries.",
+      "approach": "Built the entire RSA pipeline from scratch: prime generation, modular exponentiation, key pair creation, and socket-based message exchange.",
+      "solution": "A functional E2E encrypted chat system demonstrating deep understanding of public-key cryptography fundamentals.",
+      "contributions": [
+        "Implemented RSA key generation with prime number testing",
+        "Built modular exponentiation for efficient encryption/decryption",
+        "Designed the TCP socket-based message exchange protocol",
+        "Created the full encrypt-transmit-decrypt pipeline"
+      ]
+    },
+    "gamingo": {
+      "title": "Gamingo Game Engine",
+      "subtitle": "Custom 3D game engine in C++",
+      "overview": "A custom-built 3D game engine implementing core graphics rendering, physics simulation, and entity management from scratch.",
+      "challenge": "Building a performant rendering pipeline and physics system that work together seamlessly for real-time 3D applications.",
+      "approach": "Designed modular engine components: renderer, physics engine, entity-component system, and input manager with clean separation of concerns.",
+      "solution": "A functional game engine capable of rendering 3D scenes with basic physics, collision detection, and entity management.",
+      "contributions": [
+        "Built the core rendering pipeline with OpenGL",
+        "Implemented basic physics simulation and collision detection",
+        "Designed the entity-component system for game object management",
+        "Created the game loop with fixed timestep for consistent physics"
+      ]
+    },
+    "marsExploration": {
+      "title": "Mars Exploration Simulation",
+      "subtitle": "Mission scheduling with advanced data structures",
+      "overview": "A complex simulation of Mars rover missions, optimizing resource allocation and mission scheduling using advanced data structures.",
+      "challenge": "Efficiently scheduling concurrent rover missions with varying priorities, resource constraints, and terrain obstacles.",
+      "approach": "Used priority queues, balanced BSTs, and custom scheduling algorithms to optimize mission throughput and resource utilization.",
+      "solution": "A simulation engine that efficiently manages multiple concurrent Mars missions with optimal resource allocation.",
+      "contributions": [
+        "Designed the mission scheduling algorithm with priority management",
+        "Implemented balanced BST for efficient mission lookup and insertion",
+        "Built terrain traversal cost calculation using graph algorithms",
+        "Created performance analytics for mission success metrics"
       ]
     }
   }

@@ -8,15 +8,16 @@
 :root {
   /* ==================== COLORS ==================== */
   
-  /* Brand Colors */
-  --color-primary: #6A0DAD;
-  --color-primary-light: #8B2FC9;
-  --color-primary-dark: #4A0080;
-  --color-primary-rgb: 106, 13, 173;
+  /* Brand Colors (Celestial Architect) */
+  --color-primary: #7C3AED;
+  --color-primary-light: #9061F9;
+  --color-primary-dark: #6D28D9;
+  --color-primary-rgb: 124, 58, 237;
   
-  --color-secondary: #0A2540;
-  --color-secondary-light: #1A3A5C;
-  --color-secondary-dark: #051525;
+  --color-secondary: #22D3EE;
+  --color-secondary-light: #67E8F9;
+  --color-secondary-dark: #0891B2;
+  --color-secondary-rgb: 34, 211, 238;
   
   --color-accent: #000000;
   
@@ -31,10 +32,10 @@
   --color-star-empty: #374151;
   
   /* ==================== DARK THEME (Default) ==================== */
-  --bg-primary: #0D0D0D;
-  --bg-secondary: #1A1A1A;
-  --bg-tertiary: #252525;
-  --bg-elevated: #2D2D2D;
+  --bg-primary: #0E0E0E;
+  --bg-secondary: #161616;
+  --bg-tertiary: #1E1E1E;
+  --bg-elevated: #252525;
   
   --text-primary: #FFFFFF;
   --text-secondary: #A0A0A0;

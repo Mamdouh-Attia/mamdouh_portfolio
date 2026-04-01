@@ -6,7 +6,15 @@
     "teaching": "Teaching",
     "certificates": "Certificates",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "experience": "Experience"
+  },
+  "accessibility": {
+    "skipToContent": "Skip to main content",
+    "themeToggle": "Toggle theme",
+    "langToggle": "Toggle language",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
   },
   "hero": {
     "title": "Mamdouh Ahmed Attia",
@@ -164,7 +172,7 @@
     }
   },
   "footer": {
-    "tagline": "Mobile Software Engineer specializing in Flutter",
+    "bio": "Mobile Software Engineer specializing in Flutter",
     "copyright": "© 2024 Mamdouh Ahmed Attia. All rights reserved."
   },
   "projectData": {
@@ -253,17 +261,18 @@
       ]
     },
     "redditClone": {
-      "title": "Reddit Mobile Clone",
-      "subtitle": "Social media performance at scale",
-      "overview": "A complete Reddit mobile app clone developed as part of a software house environment following Agile methodology.",
-      "challenge": "Building a complex social platform with communities, nested comments, and real-time voting while maintaining high performance.",
-      "approach": "I followed MVC-S architecture and implemented the community creation flow and complex post-rendering logic.",
-      "solution": "A fully functional social ecosystem with live updates, state-driven UI, and comprehensive user settings.",
+      "title": "Reddix — Reddit Clone",
+      "subtitle": "Full-featured social platform built in a team sprint",
+      "overview": "A complete Reddit mobile app clone developed as part of a software house team sprint following Agile methodology with MVC-S architecture. Implemented the community management, settings, and authentication modules end-to-end.",
+      "challenge": "Delivering a production-grade social platform with community management, user settings, and auth flows in a team environment while following MVC-S architecture and avoiding state management conflicts across feature modules.",
+      "approach": "Owned three major modules independently: Community Creation (full CRUD flow, typed community forms, rules dialog), User Settings (account settings, email management, blocking/permissions), and Authentication (forgot password, username recovery, reset email confirmation).",
+      "solution": "A fully functional social ecosystem with live community creation, left/right drawer navigation, comprehensive account settings, and end-to-end auth recovery flows — demoed in a public YouTube Short.",
       "contributions": [
-        "Architected the Community and Subreddit management modules",
-        "Implemented nested comment threading and real-time voting UI",
-        "Developed the rich-text post editor and media upload flow",
-        "Configured Provider-based state management for optimized rebuilds"
+        "Built the complete Community Creation flow: form validation, community type selection, rules dialog",
+        "Implemented left drawer with dynamic community list and right drawer with user actions",
+        "Developed full Settings & Account Settings modules (email, password, privacy, permissions)",
+        "Built Auth recovery flows: forgot password, username recovery, reset email confirmation",
+        "Configured Provider-based state management with MVC-S for zero cross-module conflicts"
       ]
     },
     "usAccidents": {

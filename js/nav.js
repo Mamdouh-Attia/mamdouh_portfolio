@@ -15,6 +15,17 @@ const NAV_LINKS = [
     { href: 'contact.html',     key: 'nav.contact',      label: 'Contact' },
 ];
 
+function buildAurora() {
+    return `
+    <div class="aurora-bg">
+        <div class="aurora-blob aurora-blob--1"></div>
+        <div class="aurora-blob aurora-blob--2"></div>
+        <div class="aurora-blob aurora-blob--3"></div>
+        <div class="aurora-blob aurora-blob--4"></div>
+    </div>
+    `;
+}
+
 function resolveRelativePath(href) {
     // Determine if we're in /pages/ subfolder
     const inPages = window.location.pathname.includes('/pages/');
@@ -122,9 +133,13 @@ export function initSharedNav() {
     const headerSlot = document.getElementById('site-header');
     const footerSlot = document.getElementById('site-footer');
 
+    // Inject Aurora background if not already present
+    if (!document.querySelector('.aurora-bg')) {
+        document.body.insertAdjacentHTML('afterbegin', buildAurora());
+    }
+
     if (headerSlot) {
         headerSlot.outerHTML = buildHeader();
-        // Re-init mobile menu toggle since DOM was replaced
         initMobileMenu();
     }
     if (footerSlot) {

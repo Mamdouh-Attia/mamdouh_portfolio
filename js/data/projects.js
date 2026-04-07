@@ -3,6 +3,28 @@
  */
 
 export const projects = [
+    // ========== FEATURED OPEN SOURCE (Prioritized) ==========
+    {
+        id: "mushaf-imad",
+        title: "Mushaf-IMAD Flutter",
+        slug: "mushaf-imad",
+        category: "mobile",
+        tags: ["Flutter", "Open Source", "Quran.com API"],
+        techStack: ["Dart", "Flutter", "OAuth 2.0", "Streams", "Mocktail", "REST API"],
+        featured: true,
+        status: "completed",
+        date: "2026-03",
+        i18nKey: "projectData.mushafImad",
+        color: "#22d3ee",
+        githubUrl: "https://github.com/Itqan-community/mushaf-imad-flutter/pull/27",
+        demoUrl: "https://youtu.be/9gmvBFF5HQA",
+        youtubeId: "9gmvBFF5HQA",
+        media: [
+            { type: 'youtube', src: '9gmvBFF5HQA' },
+            { type: 'image', src: '../assets/projects_media/mushaf-imad-flutter/Thumpnail.png' }
+        ]
+    },
+
     // ========== MOBILE & WEB PROJECTS (Prioritizing Flutter) ==========
     {
         id: "volunteen",
@@ -184,25 +206,6 @@ export const projects = [
         i18nKey: "projectData.ecosort",
         color: "#10b981"
     },
-    // ========== OPEN SOURCE ==========
-    {
-        id: "mushaf-imad",
-        title: "Mushaf-IMAD Flutter",
-        slug: "mushaf-imad",
-        category: "mobile",
-        tags: ["Flutter", "Open Source", "Quran.com API"],
-        techStack: ["Dart", "Flutter", "OAuth 2.0", "Streams", "Mocktail", "REST API"],
-        featured: true,
-        status: "completed",
-        date: "2026-03",
-        i18nKey: "projectData.mushafImad",
-        color: "#22d3ee",
-        githubUrl: "https://github.com/Itqan-community/mushaf-imad-flutter/pull/27",
-        media: [
-            { type: 'image', src: '../assets/projects_media/mushaf-imad/cover.png' }
-        ]
-    },
-
     // ========== DATA & AI PROJECTS ==========
 
     {

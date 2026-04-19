@@ -4,16 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mamdouh Ahmed Attia's teaching experience - Flutter and ML instruction.">
+    <meta name="description" content="Mamdouh Ahmed Attia — Teaching & Volunteering: Flutter, ML, and Python instruction across PrimaLab, DEPI, and Maspero Academy.">
     <title>Teaching | Mamdouh Ahmed Attia</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Theme Initialization - Preventing FOUC -->
+    <!-- Theme Init -->
     <script>
         (function () {
             const THEME_KEY = 'portfolio-theme';
@@ -32,366 +30,475 @@
 
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+
+    <style>
+        /* ============================
+           TEACHING PAGE — ROSE PALETTE
+        ============================= */
+        :root {
+            --t-rose: #f43f5e;
+            --t-rose-soft: #fb7185;
+            --t-magenta: #d946ef;
+            --t-rose-dim: rgba(244, 63, 94, 0.15);
+            --t-rose-border: rgba(244, 63, 94, 0.25);
+        }
+
+        body { background: #0d0d0d; }
+
+        /* Aurora */
+        .t-aurora { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+        .t-aurora .blob { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.07; animation: blobFloat 14s ease-in-out infinite; }
+        .t-aurora .b1 { width: 600px; height: 600px; background: #f43f5e; top: -180px; right: -100px; animation-delay: 0s; }
+        .t-aurora .b2 { width: 500px; height: 500px; background: #d946ef; bottom: 5%; left: -120px; animation-delay: -7s; }
+        .t-aurora .b3 { width: 350px; height: 350px; background: #7c3aed; top: 40%; right: 30%; animation-delay: -3.5s; }
+
+        @keyframes blobFloat {
+            0%, 100% { transform: translate(0,0) scale(1); }
+            33% { transform: translate(25px,-18px) scale(1.04); }
+            66% { transform: translate(-18px,25px) scale(0.96); }
+        }
+
+        .t-page { position: relative; z-index: 1; padding-top: 90px; }
+
+        /* Hero */
+        .t-hero { text-align: center; padding: 72px 24px 56px; max-width: 900px; margin: 0 auto; }
+        .t-eyebrow {
+            display: inline-block; font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 700;
+            letter-spacing: 0.15em; text-transform: uppercase; color: var(--t-rose);
+            padding: 6px 18px; border: 1px solid var(--t-rose-border); border-radius: 100px;
+            background: var(--t-rose-dim); margin-bottom: 24px;
+        }
+        .t-title {
+            font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem);
+            font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 20px;
+        }
+        .t-title .g { background: linear-gradient(135deg, #f43f5e, #d946ef); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .t-desc { font-family: 'Inter', sans-serif; font-size: 1.05rem; color: rgba(255,255,255,0.5); max-width: 560px; margin: 0 auto 48px; line-height: 1.7; }
+
+        /* Stat Bar */
+        .t-stats {
+            display: flex; justify-content: center; flex-wrap: wrap; gap: 0;
+            background: rgba(255,255,255,0.03); border: 1px solid var(--t-rose-border);
+            border-radius: 16px; padding: 22px 40px; backdrop-filter: blur(20px);
+            max-width: 680px; margin: 0 auto;
+        }
+        .t-stat { text-align: center; padding: 0 28px; flex: 1; min-width: 120px; }
+        .t-stat:not(:last-child) { border-right: 1px solid rgba(255,255,255,0.07); }
+        .t-stat-val { font-family: 'Space Grotesk', sans-serif; font-size: 1.9rem; font-weight: 700; background: linear-gradient(135deg, #f43f5e, #d946ef); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .t-stat-lbl { font-family: 'Inter', sans-serif; font-size: 0.72rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+
+        /* Section Header */
+        .t-section { max-width: 960px; margin: 0 auto; padding: 0 24px 72px; }
+        .t-section-label {
+            font-family: 'Space Grotesk', sans-serif; font-size: 0.78rem; font-weight: 700;
+            letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.3);
+            margin-bottom: 36px; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        /* Teaching Card */
+        .t-card {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(244,63,94,0.12);
+            border-radius: 18px; padding: 28px 32px; backdrop-filter: blur(20px);
+            margin-bottom: 20px; display: flex; gap: 28px; align-items: flex-start;
+            transition: border-color 0.3s, background 0.3s, transform 0.3s, box-shadow 0.3s;
+            opacity: 0; transform: translateX(-20px);
+        }
+        .t-card.visible { opacity: 1; transform: translateX(0); }
+        .t-card:hover {
+            border-color: rgba(244,63,94,0.4); background: rgba(244,63,94,0.04);
+            transform: translateX(6px);
+            box-shadow: 0 8px 40px rgba(244,63,94,0.08), -4px 0 20px rgba(244,63,94,0.06);
+        }
+
+        /* Icon Circle */
+        .t-icon-circle {
+            width: 56px; height: 56px; border-radius: 16px; flex-shrink: 0;
+            background: var(--t-rose-dim); border: 1px solid var(--t-rose-border);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .t-icon-circle svg { color: var(--t-rose); }
+
+        .t-card-body { flex: 1; min-width: 0; }
+        .t-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 10px; }
+        .t-role { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; color: #fff; }
+        .t-org { font-family: 'Inter', sans-serif; font-size: 0.88rem; color: rgba(255,255,255,0.45); margin-top: 3px; }
+        .t-badge-date {
+            font-family: 'Inter', sans-serif; font-size: 0.7rem; color: rgba(255,255,255,0.4);
+            background: rgba(255,255,255,0.06); padding: 4px 12px; border-radius: 100px; white-space: nowrap; flex-shrink: 0;
+        }
+        .t-desc-text {
+            font-family: 'Inter', sans-serif; font-size: 0.88rem; color: rgba(255,255,255,0.58);
+            line-height: 1.65; margin: 10px 0 14px;
+        }
+        .t-bullets { display: flex; flex-direction: column; gap: 7px; margin-bottom: 14px; }
+        .t-bullet {
+            display: flex; gap: 10px; font-family: 'Inter', sans-serif;
+            font-size: 0.84rem; color: rgba(255,255,255,0.58); line-height: 1.55;
+        }
+        .t-bullet::before { content: '▸'; color: var(--t-rose); flex-shrink: 0; margin-top: 1px; }
+        .t-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+        .t-chip {
+            font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600;
+            padding: 4px 12px; border-radius: 100px;
+            background: var(--t-rose-dim); border: 1px solid var(--t-rose-border); color: var(--t-rose-soft);
+        }
+        .t-chip.alt {
+            background: rgba(217,70,239,0.1); border-color: rgba(217,70,239,0.25); color: #e879f9;
+        }
+
+        /* Volunteer card accent */
+        .t-card.volunteer { border-color: rgba(217,70,239,0.12); }
+        .t-card.volunteer:hover { border-color: rgba(217,70,239,0.4); background: rgba(217,70,239,0.04); box-shadow: 0 8px 40px rgba(217,70,239,0.08), -4px 0 20px rgba(217,70,239,0.06); }
+        .t-card.volunteer .t-icon-circle { background: rgba(217,70,239,0.1); border-color: rgba(217,70,239,0.25); }
+        .t-card.volunteer .t-icon-circle svg { color: #e879f9; }
+
+        /* Testimonials */
+        .t-testimonials-grid {
+            display: grid; grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        @media (min-width: 640px) { .t-testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .t-testimonials-grid { grid-template-columns: repeat(3, 1fr); } }
+
+        .t-quote-card {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(244,63,94,0.12);
+            border-radius: 16px; padding: 24px; backdrop-filter: blur(20px);
+            display: flex; flex-direction: column; justify-content: space-between;
+            transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            opacity: 0; transform: translateY(16px);
+        }
+        .t-quote-card.visible { opacity: 1; transform: translateY(0); }
+        .t-quote-card:hover { border-color: rgba(244,63,94,0.35); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(244,63,94,0.08); }
+
+        .t-quote-mark { font-size: 3.5rem; line-height: 0.8; color: var(--t-rose); opacity: 0.35; margin-bottom: 12px; font-family: Georgia, serif; }
+        .t-quote-text { font-family: 'Inter', sans-serif; font-size: 0.88rem; font-style: italic; color: rgba(255,255,255,0.6); line-height: 1.7; flex: 1; }
+        .t-quote-footer { margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: flex-end; }
+        .t-quote-name { font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 700; color: #fff; }
+        .t-quote-track { font-family: 'Inter', sans-serif; font-size: 0.72rem; color: var(--t-rose); margin-top: 2px; }
+        .t-quote-stars { color: #fbbf24; font-size: 0.7rem; letter-spacing: 1px; }
+
+        /* Rating Banner */
+        .t-rating-banner {
+            display: inline-flex; align-items: center; gap: 12px;
+            background: rgba(244,63,94,0.06); border: 1px solid var(--t-rose-border);
+            border-radius: 100px; padding: 8px 20px; margin-bottom: 32px;
+            font-family: 'Inter', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.6);
+        }
+        .t-rating-banner .stars { color: #fbbf24; font-size: 0.9rem; }
+
+        @media (max-width: 640px) {
+            .t-card { flex-direction: column; gap: 16px; padding: 20px; }
+            .t-stats { padding: 16px 20px; }
+            .t-stat { padding: 0 14px; }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Header Anchor -->
     <div id="site-header"></div>
 
-    <main class="main page-enter" id="main-content">
-        <div class="page-header">
-            <div class="container">
-                <h1 class="page-title reveal" data-i18n="teaching.title">Teaching & Volunteering</h1>
-                <p class="page-description reveal" data-i18n="teaching.subtitle">Sharing knowledge and giving back to
-                    the community</p>
-            </div>
-        </div>
+    <!-- Aurora -->
+    <div class="t-aurora">
+        <div class="blob b1"></div>
+        <div class="blob b2"></div>
+        <div class="blob b3"></div>
+    </div>
 
-        <div class="page-content">
-            <div class="container">
-                <div class="teaching-grid">
-                    <!-- Flutter Instructor -->
-                    <div class="teaching-card card reveal">
-                        <div class="card-content">
-                            <div class="teaching-header">
-                                <div class="teaching-icon">📱</div>
-                                <div>
-                                    <h3>Flutter Development Diploma</h3>
-                                    <p class="teaching-org">Primalab</p>
-                                    <span class="badge">Aug 2023 - Feb 2024</span>
-                                </div>
-                            </div>
+    <main class="t-page page-enter" id="main-content">
 
-                            <p style="margin: var(--space-4) 0;">
-                                Delivered a comprehensive Flutter Development Diploma, guiding students from zero
-                                programming experience through Dart fundamentals to Flutter UI development.
-                            </p>
-
-                            <div class="teaching-topics">
-                                <h4>Topics Covered</h4>
-                                <div class="tags">
-                                    <span class="badge">Dart Programming</span>
-                                    <span class="badge">OOP Concepts</span>
-                                    <span class="badge">Async Programming</span>
-                                    <span class="badge">Flutter Basics</span>
-                                    <span class="badge">UI/UX</span>
-                                    <span class="badge">Navigation</span>
-                                    <span class="badge">State Management</span>
-                                    <span class="badge">MVC Architecture</span>
-                                </div>
-                            </div>
-
-                            <div class="teaching-highlights">
-                                <h4>Highlights</h4>
-                                <ul>
-                                    <li>Designed all educational materials from scratch</li>
-                                    <li>Created handwritten notes and custom exercises</li>
-                                    <li>Supervised complete Dart console-based projects</li>
-                                    <li>Provided structured technical feedback</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ML Instructor -->
-                    <div class="teaching-card card reveal">
-                        <div class="card-content">
-                            <div class="teaching-header">
-                                <div class="teaching-icon">🤖</div>
-                                <div>
-                                    <h3>Machine Learning Engineering Track</h3>
-                                    <p class="teaching-org">DEPI Initiative - Ministry of Communications</p>
-                                    <span class="badge">Aug 2024 - Oct 2024</span>
-                                </div>
-                            </div>
-
-                            <p style="margin: var(--space-4) 0;">
-                                Delivered hands-on ML training sessions for aspiring engineers, covering mathematical
-                                foundations and practical ML concepts.
-                            </p>
-
-                            <div class="teaching-topics">
-                                <h4>Topics Covered</h4>
-                                <div class="tags">
-                                    <span class="badge">Statistics</span>
-                                    <span class="badge">Probability</span>
-                                    <span class="badge">Linear Algebra</span>
-                                    <span class="badge">Python</span>
-                                    <span class="badge">NumPy</span>
-                                    <span class="badge">Pandas</span>
-                                    <span class="badge">ML Fundamentals</span>
-                                    <span class="badge">Model Training</span>
-                                </div>
-                            </div>
-
-                            <div class="teaching-highlights">
-                                <h4>Highlights</h4>
-                                <ul>
-                                    <li>Designed curriculum from fundamentals to advanced concepts</li>
-                                    <li>Created practical exercises and real-world projects</li>
-                                    <li>Guided students through hands-on ML implementations</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Python Instructor -->
-                    <div class="teaching-card card reveal">
-                        <div class="card-content">
-                            <div class="teaching-header">
-                                <div class="teaching-icon">🐍</div>
-                                <div>
-                                    <h3>Programming Fundamentals (Python)</h3>
-                                    <p class="teaching-org">Maspero Academy - Radio and Television Institute</p>
-                                    <span class="badge">Jun 2025</span>
-                                </div>
-                            </div>
-
-                            <p style="margin: var(--space-4) 0;">
-                                Delivered Python programming basics course to CS students, focusing on practical skills
-                                and problem-solving.
-                            </p>
-
-                            <div class="teaching-topics">
-                                <h4>Topics Covered</h4>
-                                <div class="tags">
-                                    <span class="badge">Python Basics</span>
-                                    <span class="badge">Data Types</span>
-                                    <span class="badge">Control Flow</span>
-                                    <span class="badge">Functions</span>
-                                    <span class="badge">OOP</span>
-                                    <span class="badge">Problem Solving</span>
-                                </div>
-                            </div>
-
-                            <div class="teaching-highlights">
-                                <h4>Highlights</h4>
-                                <ul>
-                                    <li>Created engaging coding exercises</li>
-                                    <li>Focused on practical programming skills</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Volunteering -->
-                    <div class="teaching-card card reveal">
-                        <div class="card-content">
-                            <div class="teaching-header">
-                                <div class="teaching-icon">❤️</div>
-                                <div>
-                                    <h3>IT Skills Training (Volunteer)</h3>
-                                    <p class="teaching-org">Damietta Orphanage Staff</p>
-                                    <span class="badge">2021 - 2022</span>
-                                </div>
-                            </div>
-
-                            <p style="margin: var(--space-4) 0;">
-                                Volunteered to teach essential computer skills to orphanage staff members.
-                            </p>
-
-                            <div class="teaching-topics">
-                                <h4>Courses Taught</h4>
-                                <div class="tags">
-                                    <span class="badge">Windows Fundamentals</span>
-                                    <span class="badge">Microsoft Word</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Hero -->
+        <div class="t-hero">
+            <span class="t-eyebrow">Education & Community</span>
+            <h1 class="t-title">Shaping the Next<br><span class="g">Generation of Builders</span></h1>
+            <p class="t-desc">From hands-on Flutter diplomas to government ML initiatives — I've taught 35+ students across 4 tracks and love every minute of it.</p>
+            <div class="t-stats">
+                <div class="t-stat">
+                    <div class="t-stat-val">35+</div>
+                    <div class="t-stat-lbl">Students Taught</div>
+                </div>
+                <div class="t-stat">
+                    <div class="t-stat-val">4</div>
+                    <div class="t-stat-lbl">Courses Delivered</div>
+                </div>
+                <div class="t-stat">
+                    <div class="t-stat-val">5/5</div>
+                    <div class="t-stat-lbl">Avg. Rating</div>
+                </div>
+                <div class="t-stat">
+                    <div class="t-stat-val">50+</div>
+                    <div class="t-stat-lbl">Teaching Hours</div>
                 </div>
             </div>
         </div>
 
-        <!-- Student Testimonials Section -->
-        <div class="page-content"
-            style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); margin-top: var(--space-12);">
-            <div class="container">
-                <div class="section-header reveal" style="text-align: center; padding-top: var(--space-12);">
-                    <h2 class="section-title" data-i18n="studentFeedback.title">Student Feedback</h2>
-                    <p class="section-subtitle" data-i18n="studentFeedback.subtitle">What my students say about learning
-                        with me</p>
-                    <div
-                        style="display: flex; justify-content: center; gap: var(--space-2); margin-top: var(--space-2); flex-wrap: wrap;">
-                        <span style="color: #fbbf24; font-size: 1.2rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                        <span style="color: var(--text-secondary);">4.9 / 5.0 avg — 35+ students</span>
-                    </div>
+        <!-- Teaching Roles -->
+        <section class="t-section">
+            <div class="t-section-label">Teaching Experience</div>
+
+            <!-- Flutter Diploma -->
+            <div class="t-card reveal-left">
+                <div class="t-icon-circle">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
                 </div>
-
-                <div class="testimonials-carousel reveal" style="padding-bottom: var(--space-12);">
-
-                    <!-- Real feedback from survey responses -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"Very friendly and understanding, and able to deliver the information smoothly. Surely I would recommend learning with Mamdouh — very friendly and understanding, with a close and helpful teaching style."</p>
+                <div class="t-card-body">
+                    <div class="t-card-top">
+                        <div>
+                            <div class="t-role">Flutter Development Diploma</div>
+                            <div class="t-org">PrimaLab · New Damietta, Egypt</div>
                         </div>
-                        <div class="testimonial-author">
-                            <div class="testimonial-info">
-                                <span class="testimonial-name">Ahmed Samir Elsherbiny</span>
-                                <span class="testimonial-project">DEPI — ML Engineering Track</span>
-                            </div>
-                            <div class="star-rating">
-                                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-                            </div>
-                        </div>
+                        <span class="t-badge-date">Aug 2023 – Feb 2024</span>
                     </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"Yes, I'd recommend learning with you. You explain clearly, make lessons engaging, and are easy to communicate with. Your teaching style is clear, structured, and easy to follow — making complex topics simple."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="testimonial-info">
-                                <span class="testimonial-name">Habiba Mostafa Faramawi</span>
-                                <span class="testimonial-project">DEPI — ML Engineering Track</span>
-                            </div>
-                            <div class="star-rating">
-                                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-                            </div>
-                        </div>
+                    <p class="t-desc-text">Delivered a complete Flutter Development Diploma, guiding students from zero programming experience through Dart fundamentals to producing real MVC-based Flutter applications.</p>
+                    <div class="t-bullets">
+                        <div class="t-bullet">Designed all course materials, handwritten notes, and practical exercises from scratch</div>
+                        <div class="t-bullet">Supervised complete Dart console-based projects and full Flutter apps</div>
+                        <div class="t-bullet">Delivered 50+ hours of structured instruction with personalized technical feedback</div>
                     </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"محاضر ممتاز — An excellent instructor. The teaching approach is pure concepts, building a solid understanding from the ground up."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="testimonial-info">
-                                <span class="testimonial-name">أحمد عبد الكريم</span>
-                                <span class="testimonial-project">Python Programming</span>
-                            </div>
-                            <div class="star-rating">
-                                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-                            </div>
-                        </div>
+                    <div class="t-tags">
+                        <span class="t-chip">Dart</span>
+                        <span class="t-chip">OOP</span>
+                        <span class="t-chip">Async Programming</span>
+                        <span class="t-chip">Flutter UI</span>
+                        <span class="t-chip">Navigation</span>
+                        <span class="t-chip">State Management</span>
+                        <span class="t-chip">MVC Architecture</span>
                     </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"What I love most is the ability to simplify things for the learner. The teaching style is flexible — adapting to how students actually learn, not just how the content is written."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="testimonial-info">
-                                <span class="testimonial-name">Abdelfatah Mohamed Abdelfatah</span>
-                                <span class="testimonial-project">Python Programming</span>
-                            </div>
-                            <div class="star-rating">
-                                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"Yes, the explanation is very clear and easy to understand — the concepts are broken down in a way that makes even complex topics accessible."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="testimonial-info">
-                                <span class="testimonial-name">Anton Rizk Ghobrial</span>
-                                <span class="testimonial-project">Python Programming</span>
-                            </div>
-                            <div class="star-rating">
-                                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"الشرح واضح ومبسط جداً، وبيفضل يسأل علينا ويتابع مستوى الفهم باستمرار — The explanation is very clear and simple, and he always checks in to track understanding."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="testimonial-info">
-                                <span class="testimonial-name">محمد</span>
-                                <span class="testimonial-project">Java Programming</span>
-                            </div>
-                            <div class="star-rating">
-                                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-        </div>
+
+            <!-- DEPI ML -->
+            <div class="t-card reveal-left" style="transition-delay:0.1s;">
+                <div class="t-icon-circle">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M20.188 10.934C21.125 11.36 21.75 12 21.75 12s-2.25 4.5-9.75 4.5S2.25 12 2.25 12s.625-.64 1.562-1.066"></path>
+                        <path d="M12 8.25a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5z"></path>
+                        <path d="M12 2.25v2.25M12 19.5v2.25M4.52 4.52l1.59 1.59M17.89 17.89l1.59 1.59M2.25 12H4.5M19.5 12h2.25M4.52 19.48l1.59-1.59M17.89 6.11l1.59-1.59"></path>
+                    </svg>
+                </div>
+                <div class="t-card-body">
+                    <div class="t-card-top">
+                        <div>
+                            <div class="t-role">ML Engineering Track Instructor</div>
+                            <div class="t-org">DEPI Initiative · Ministry of Communications & IT, Egypt</div>
+                        </div>
+                        <span class="t-badge-date">Aug 2024 – Oct 2024</span>
+                    </div>
+                    <p class="t-desc-text">Designed and delivered a comprehensive Machine Learning engineering curriculum under the government's Digital Egypt Pioneers Initiative, covering both mathematical foundations and practical implementation.</p>
+                    <div class="t-bullets">
+                        <div class="t-bullet">Built a curriculum covering Statistics, Linear Algebra, Python ecosystem (NumPy/Pandas), and model training pipelines</div>
+                        <div class="t-bullet">Led a 4-phase end-to-end capstone project lifecycle culminating in a "sell your product" defense seminar</div>
+                        <div class="t-bullet">Created practical exercises grounded in real-world ML datasets and challenges</div>
+                    </div>
+                    <div class="t-tags">
+                        <span class="t-chip">Python</span>
+                        <span class="t-chip">Statistics</span>
+                        <span class="t-chip">Linear Algebra</span>
+                        <span class="t-chip">NumPy / Pandas</span>
+                        <span class="t-chip">ML Fundamentals</span>
+                        <span class="t-chip">Model Training</span>
+                        <span class="t-chip alt">Curriculum Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Maspero Python -->
+            <div class="t-card reveal-left" style="transition-delay:0.15s;">
+                <div class="t-icon-circle">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M8 9l3 3-3 3"></path>
+                        <line x1="13" y1="15" x2="16" y2="15"></line>
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    </svg>
+                </div>
+                <div class="t-card-body">
+                    <div class="t-card-top">
+                        <div>
+                            <div class="t-role">Python Programming Instructor</div>
+                            <div class="t-org">Maspero Academy · Radio & Television Institute, Egypt</div>
+                        </div>
+                        <span class="t-badge-date">Jun 2025</span>
+                    </div>
+                    <p class="t-desc-text">Delivered a focused Python programming fundamentals course to CS students, creating engaging exercises covering data types, control flow, functions, OOP, and problem-solving patterns.</p>
+                    <div class="t-bullets">
+                        <div class="t-bullet">Focused on bridging theoretical concepts with real coding problems</div>
+                        <div class="t-bullet">Created engaging, hands-on exercises tailored to beginner-level learners</div>
+                    </div>
+                    <div class="t-tags">
+                        <span class="t-chip">Python Basics</span>
+                        <span class="t-chip">Data Types</span>
+                        <span class="t-chip">Control Flow</span>
+                        <span class="t-chip">Functions</span>
+                        <span class="t-chip">OOP</span>
+                        <span class="t-chip">Problem Solving</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Volunteer -->
+            <div class="t-card volunteer reveal-left" style="transition-delay:0.2s;">
+                <div class="t-icon-circle">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                </div>
+                <div class="t-card-body">
+                    <div class="t-card-top">
+                        <div>
+                            <div class="t-role">IT Skills Training — Volunteer</div>
+                            <div class="t-org">Damietta Orphanage Staff · Community Service</div>
+                        </div>
+                        <span class="t-badge-date">2021 – 2022</span>
+                    </div>
+                    <p class="t-desc-text">Volunteered to teach essential computer literacy and IT skills to orphanage staff members, helping empower them with practical technology tools for their daily work.</p>
+                    <div class="t-tags">
+                        <span class="t-chip alt">Windows Fundamentals</span>
+                        <span class="t-chip alt">Microsoft Word</span>
+                        <span class="t-chip alt">Volunteering</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Testimonials -->
+        <section class="t-section" id="student-feedback">
+            <div class="t-section-label">Student Feedback</div>
+
+            <div class="t-rating-banner">
+                <span class="stars">★★★★★</span>
+                <span>4.9 / 5.0 average — from 35+ students across Flutter, ML & Python tracks</span>
+            </div>
+
+            <div class="t-testimonials-grid">
+
+                <div class="t-quote-card reveal">
+                    <div>
+                        <div class="t-quote-mark">"</div>
+                        <p class="t-quote-text">Very friendly and understanding, and able to deliver the information smoothly. Surely I would recommend — a very close and helpful teaching style.</p>
+                    </div>
+                    <div class="t-quote-footer">
+                        <div>
+                            <div class="t-quote-name">Ahmed Samir Elsherbiny</div>
+                            <div class="t-quote-track">DEPI — ML Engineering Track</div>
+                        </div>
+                        <div class="t-quote-stars">★★★★★</div>
+                    </div>
+                </div>
+
+                <div class="t-quote-card reveal" style="transition-delay:0.05s;">
+                    <div>
+                        <div class="t-quote-mark">"</div>
+                        <p class="t-quote-text">I'd recommend learning with you. You explain clearly, make lessons engaging, and are easy to communicate with. Your teaching style is clear, structured and easy to follow — making complex topics simple.</p>
+                    </div>
+                    <div class="t-quote-footer">
+                        <div>
+                            <div class="t-quote-name">DEPI ML Track Graduate</div>
+                            <div class="t-quote-track">DEPI — ML Engineering Track</div>
+                        </div>
+                        <div class="t-quote-stars">★★★★★</div>
+                    </div>
+                </div>
+
+                <div class="t-quote-card reveal" style="transition-delay:0.1s;">
+                    <div>
+                        <div class="t-quote-mark">"</div>
+                        <p class="t-quote-text">محاضر ممتاز — An excellent instructor. The teaching approach is pure concepts, building a solid understanding from the ground up. وضع الثقة في الطالب وتحفيزه لتعلم أكثر.</p>
+                    </div>
+                    <div class="t-quote-footer">
+                        <div>
+                            <div class="t-quote-name">أحمد</div>
+                            <div class="t-quote-track">Python Programming</div>
+                        </div>
+                        <div class="t-quote-stars">★★★★★</div>
+                    </div>
+                </div>
+
+                <div class="t-quote-card reveal" style="transition-delay:0.15s;">
+                    <div>
+                        <div class="t-quote-mark">"</div>
+                        <p class="t-quote-text">What I love most is the ability to simplify things for the learner. The teaching style is flexible — adapting to how students actually learn, not just how the content is written.</p>
+                    </div>
+                    <div class="t-quote-footer">
+                        <div>
+                            <div class="t-quote-name">Abdelfatah Mohamed Abdelfatah</div>
+                            <div class="t-quote-track">Python Programming</div>
+                        </div>
+                        <div class="t-quote-stars">★★★★★</div>
+                    </div>
+                </div>
+
+                <div class="t-quote-card reveal" style="transition-delay:0.2s;">
+                    <div>
+                        <div class="t-quote-mark">"</div>
+                        <p class="t-quote-text">The explanation is very clear and easy to understand — concepts are broken down in a way that makes even complex topics accessible to beginners.</p>
+                    </div>
+                    <div class="t-quote-footer">
+                        <div>
+                            <div class="t-quote-name">Python Graduate</div>
+                            <div class="t-quote-track">Python Programming</div>
+                        </div>
+                        <div class="t-quote-stars">★★★★★</div>
+                    </div>
+                </div>
+
+                <div class="t-quote-card reveal" style="transition-delay:0.25s;">
+                    <div>
+                        <div class="t-quote-mark">"</div>
+                        <p class="t-quote-text">الشرح واضح ومبسط جداً وبيفضل يسأل علينا ويتابع مستوى الفهم باستمرار — الشرح واضح وفيه إلمام بجميع مواضيع المادة، وقطعًا راح أرشح الأستاذ ممدوح لغيري.</p>
+                    </div>
+                    <div class="t-quote-footer">
+                        <div>
+                            <div class="t-quote-name">محمد</div>
+                            <div class="t-quote-track">Java Programming</div>
+                        </div>
+                        <div class="t-quote-stars">★★★★★</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer Anchor -->
     <div id="site-footer"></div>
-
     <script type="module" src="../js/main.js"></script>
 
-    <style>
-        .teaching-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--space-6);
-        }
+    <script>
+        // Reveal cards on intersection
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.style.opacity = '1';
+                    e.target.style.transform = 'translateX(0)';
+                    cardObserver.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.t-card').forEach(el => cardObserver.observe(el));
 
-        @media (min-width: 768px) {
-            .teaching-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+        const quoteObserver = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.style.opacity = '1';
+                    e.target.style.transform = 'translateY(0)';
+                    quoteObserver.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.t-quote-card').forEach(el => quoteObserver.observe(el));
 
-        .teaching-card .card-content {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .teaching-header {
-            display: flex;
-            gap: var(--space-4);
-            align-items: flex-start;
-            margin-bottom: var(--space-2);
-        }
-
-        .teaching-icon {
-            font-size: 2.5rem;
-            flex-shrink: 0;
-        }
-
-        .teaching-org {
-            color: var(--text-secondary);
-            margin-bottom: var(--space-2);
-        }
-
-        .teaching-topics,
-        .teaching-highlights {
-            margin-top: var(--space-4);
-        }
-
-        .teaching-topics h4,
-        .teaching-highlights h4 {
-            font-size: var(--text-sm);
-            color: var(--color-primary);
-            margin-bottom: var(--space-2);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .teaching-highlights ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .teaching-highlights li {
-            position: relative;
-            padding-left: var(--space-5);
-            margin-bottom: var(--space-2);
-            color: var(--text-secondary);
-            font-size: var(--text-sm);
-        }
-
-        .teaching-highlights li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--color-success);
-        }
-    </style>
+        // Safety net: show all after 1.5s
+        setTimeout(() => {
+            document.querySelectorAll('.t-card, .t-quote-card').forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = el.classList.contains('t-card') ? 'translateX(0)' : 'translateY(0)';
+            });
+        }, 1500);
+    </script>
 </body>
 
 </html>

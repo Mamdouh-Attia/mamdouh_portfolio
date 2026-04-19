@@ -4,16 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mamdouh Ahmed Attia's learning journey - courses and skills acquired.">
+    <meta name="description" content="Mamdouh Ahmed Attia's learning journey — university education, ML specializations, and professional programs.">
     <title>Learning | Mamdouh Ahmed Attia</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Theme Initialization - Preventing FOUC -->
+    <!-- Theme Init -->
     <script>
         (function () {
             const THEME_KEY = 'portfolio-theme';
@@ -32,270 +30,295 @@
 
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+
+    <style>
+        /* ============================
+           LEARNING PAGE — AMBER PALETTE
+        ============================= */
+        body { background: #0d0d0d; }
+
+        /* Aurora — warm amber tones */
+        .l-aurora { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+        .l-aurora .blob { position: absolute; border-radius: 50%; filter: blur(130px); opacity: 0.07; animation: blobFloat 13s ease-in-out infinite; }
+        .l-aurora .b1 { width: 650px; height: 650px; background: #f59e0b; top: -200px; left: -150px; animation-delay: 0s; }
+        .l-aurora .b2 { width: 480px; height: 480px; background: #3b82f6; bottom: 8%; right: -80px; animation-delay: -6.5s; }
+        .l-aurora .b3 { width: 380px; height: 380px; background: #f97316; top: 45%; left: 38%; animation-delay: -3s; }
+
+        @keyframes blobFloat {
+            0%, 100% { transform: translate(0,0) scale(1); }
+            33% { transform: translate(28px,-20px) scale(1.04); }
+            66% { transform: translate(-20px,28px) scale(0.96); }
+        }
+
+        .l-page { position: relative; z-index: 1; padding-top: 90px; }
+
+        /* Hero */
+        .l-hero { text-align: center; padding: 72px 24px 56px; max-width: 900px; margin: 0 auto; }
+        .l-eyebrow {
+            display: inline-block; font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 700;
+            letter-spacing: 0.15em; text-transform: uppercase; color: #f59e0b;
+            padding: 6px 18px; border: 1px solid rgba(245,158,11,0.3); border-radius: 100px;
+            background: rgba(245,158,11,0.08); margin-bottom: 24px;
+        }
+        .l-title {
+            font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem);
+            font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 20px;
+        }
+        .l-title .g { background: linear-gradient(135deg, #f59e0b, #f97316); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .l-desc { font-family: 'Inter', sans-serif; font-size: 1.05rem; color: rgba(255,255,255,0.5); max-width: 560px; margin: 0 auto 48px; line-height: 1.7; }
+
+        /* Stat Bar */
+        .l-stats {
+            display: flex; justify-content: center; flex-wrap: wrap; gap: 0;
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(245,158,11,0.2);
+            border-radius: 16px; padding: 22px 40px; backdrop-filter: blur(20px);
+            max-width: 680px; margin: 0 auto;
+        }
+        .l-stat { text-align: center; padding: 0 28px; flex: 1; min-width: 120px; }
+        .l-stat:not(:last-child) { border-right: 1px solid rgba(255,255,255,0.07); }
+        .l-stat-val { font-family: 'Space Grotesk', sans-serif; font-size: 1.9rem; font-weight: 700; background: linear-gradient(135deg, #f59e0b, #f97316); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .l-stat-lbl { font-family: 'Inter', sans-serif; font-size: 0.72rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+
+        /* Section */
+        .l-section { max-width: 960px; margin: 0 auto; padding: 0 24px 80px; }
+        .l-section-label {
+            font-family: 'Space Grotesk', sans-serif; font-size: 0.78rem; font-weight: 700;
+            letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.3);
+            margin-bottom: 36px; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        /* Course Card — "Open Book" feel with left colored spine */
+        .l-card {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(245,158,11,0.12);
+            border-radius: 18px; padding: 0; backdrop-filter: blur(20px);
+            margin-bottom: 20px; display: flex; overflow: hidden;
+            transition: border-color 0.3s, background 0.3s, transform 0.4s ease, box-shadow 0.3s, opacity 0.4s ease;
+            opacity: 0; transform: translateX(-24px);
+        }
+        /* fallback — show cards immediately if JS doesn't run */
+        .no-js .l-card { opacity: 1; transform: none; }
+        .l-card.visible { opacity: 1; transform: translateX(0); }
+        .l-card:hover {
+            border-color: rgba(245,158,11,0.4); background: rgba(245,158,11,0.03);
+            transform: translateX(6px);
+            box-shadow: 0 8px 40px rgba(245,158,11,0.08), -4px 0 20px rgba(245,158,11,0.06);
+        }
+
+        /* Colored spine / bookmark */
+        .l-card-spine {
+            width: 5px; flex-shrink: 0;
+            background: linear-gradient(to bottom, #f59e0b, #f97316);
+        }
+        .l-card-spine.blue { background: linear-gradient(to bottom, #3b82f6, #60a5fa); }
+        .l-card-spine.orange { background: linear-gradient(to bottom, #f97316, #fb923c); }
+        .l-card-spine.red { background: linear-gradient(to bottom, #ef4444, #f87171); }
+
+        .l-card-inner { padding: 26px 30px; flex: 1; }
+        .l-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 10px; }
+
+        .l-category-tag {
+            display: inline-block; font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 700;
+            letter-spacing: 0.1em; text-transform: uppercase; color: #0d0d0d;
+            background: #f59e0b; padding: 3px 10px; border-radius: 100px;
+        }
+        .l-category-tag.blue { background: #3b82f6; }
+        .l-category-tag.orange { background: #f97316; }
+        .l-category-tag.red { background: #ef4444; }
+
+        .l-badge-date {
+            font-family: 'Inter', sans-serif; font-size: 0.7rem; color: rgba(255,255,255,0.4);
+            background: rgba(255,255,255,0.06); padding: 4px 12px; border-radius: 100px; white-space: nowrap; flex-shrink: 0;
+        }
+
+        .l-role { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; color: #fff; margin: 8px 0 4px; }
+        .l-org { font-family: 'Inter', sans-serif; font-size: 0.88rem; color: rgba(255,255,255,0.45); }
+        .l-desc-text { font-family: 'Inter', sans-serif; font-size: 0.88rem; color: rgba(255,255,255,0.58); line-height: 1.65; margin: 12px 0; }
+
+        .l-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+        .l-chip {
+            font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600;
+            padding: 4px 12px; border-radius: 100px;
+            background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); color: #fbbf24;
+        }
+        .l-chip.blue { background: rgba(59,130,246,0.08); border-color: rgba(59,130,246,0.2); color: #93c5fd; }
+        .l-chip.red { background: rgba(239,68,68,0.08); border-color: rgba(239,68,68,0.2); color: #fca5a5; }
+
+        .l-verify-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600;
+            color: #f59e0b; text-decoration: none; margin-top: 14px;
+            padding: 6px 16px; border-radius: 8px;
+            border: 1px solid rgba(245,158,11,0.25); background: rgba(245,158,11,0.05);
+            transition: all 0.2s;
+        }
+        .l-verify-btn:hover { background: rgba(245,158,11,0.12); border-color: rgba(245,158,11,0.5); transform: translateY(-1px); }
+
+        @media (max-width: 600px) {
+            .l-stats { padding: 16px 20px; }
+            .l-stat { padding: 0 14px; }
+            .l-card-inner { padding: 20px; }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Header Anchor -->
     <div id="site-header"></div>
 
-    <main class="main page-enter" id="main-content">
-        <div class="page-header">
-            <div class="container">
-                <h1 class="page-title reveal" data-i18n="learning.title">Learning Journey</h1>
-                <p class="page-description reveal" data-i18n="learning.subtitle">Continuous growth through courses and
-                    certifications</p>
-            </div>
-        </div>
+    <!-- Aurora -->
+    <div class="l-aurora">
+        <div class="blob b1"></div>
+        <div class="blob b2"></div>
+        <div class="blob b3"></div>
+    </div>
 
-        <div class="page-content">
-            <div class="container">
-                <div class="learning-timeline">
-                    <!-- University -->
-                    <div class="learning-item reveal">
-                        <div class="learning-year">2019-2024</div>
-                        <div class="learning-card card highlight">
-                            <div class="card-content">
-                                <div class="learning-header">
-                                    <div class="learning-icon">🎓</div>
-                                    <div>
-                                        <h3 data-i18n="about.education.university">Bachelor of Engineering - Computer
-                                            Engineering</h3>
-                                        <p class="learning-provider" data-i18n="about.education.school">Cairo University
-                                        </p>
-                                    </div>
-                                </div>
-                                <p data-i18n="about.education.description">Comprehensive computer engineering education
-                                    with focus on software engineering,
-                                    algorithms, computer architecture, and AI/ML. Graduated with Very Good with Honors.
-                                </p>
-                                <div class="learning-skills">
-                                    <div class="tags">
-                                        <span class="badge badge-primary">Software Engineering</span>
-                                        <span class="badge badge-primary">Data Structures</span>
-                                        <span class="badge badge-primary">Algorithms</span>
-                                        <span class="badge">Computer Architecture</span>
-                                        <span class="badge">Operating Systems</span>
-                                        <span class="badge">Databases</span>
-                                        <span class="badge">Networks</span>
-                                        <span class="badge">AI/ML</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <main class="l-page page-enter" id="main-content">
 
-                    <!-- ML Specialization -->
-                    <div class="learning-item reveal">
-                        <div class="learning-year">2024</div>
-                        <div class="learning-card card">
-                            <div class="card-content">
-                                <div class="learning-header">
-                                    <div class="learning-icon">🎓</div>
-                                    <div>
-                                        <h3>Machine Learning Specialization</h3>
-                                        <p class="learning-provider">Coursera (Andrew Ng)</p>
-                                    </div>
-                                </div>
-                                <p>Comprehensive ML program covering supervised learning, unsupervised learning,
-                                    recommender systems, and reinforcement learning.</p>
-                                <div class="learning-skills">
-                                    <div class="tags">
-                                        <span class="badge">Supervised Learning</span>
-                                        <span class="badge">Neural Networks</span>
-                                        <span class="badge">Recommender Systems</span>
-                                        <span class="badge">Reinforcement Learning</span>
-                                    </div>
-                                </div>
-                                <a href="https://www.coursera.org/account/accomplishments/specialization/5SMDXZU9BLUW"
-                                    target="_blank" class="btn btn-ghost btn-sm" style="margin-top: var(--space-4);"
-                                    data-i18n="certificates.view">View Certificate</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- Orange Digital Center -->
-                    <div class="learning-item reveal">
-                        <div class="learning-year">2023</div>
-                        <div class="learning-card card">
-                            <div class="card-content">
-                                <div class="learning-header">
-                                    <div class="learning-icon">📱</div>
-                                    <div>
-                                        <h3>Flutter Development Internship</h3>
-                                        <p class="learning-provider">Orange Digital Center</p>
-                                    </div>
-                                </div>
-                                <p>Intensive hands-on learning in Agile environment, working on real mobile applications
-                                    with professional teams.</p>
-                                <div class="learning-skills">
-                                    <div class="tags">
-                                        <span class="badge">Flutter</span>
-                                        <span class="badge">Bloc/Cubit</span>
-                                        <span class="badge">Agile/Scrum</span>
-                                        <span class="badge">UI/UX Implementation</span>
-                                    </div>
-                                </div>
-                                <a href="https://drive.google.com/file/d/1dN2UPmg3Sql1kX3vJuBlea1_P1D4l6dk/view"
-                                    target="_blank" class="btn btn-ghost btn-sm" style="margin-top: var(--space-4);"
-                                    data-i18n="certificates.view">View Certificate</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Dart Course -->
-                    <div class="learning-item reveal">
-                        <div class="learning-year">2022</div>
-                        <div class="learning-card card">
-                            <div class="card-content">
-                                <div class="learning-header">
-                                    <div class="learning-icon">🎯</div>
-                                    <div>
-                                        <h3>The Complete Dart Learning Guide</h3>
-                                        <p class="learning-provider">Udemy</p>
-                                    </div>
-                                </div>
-                                <p>Comprehensive Dart programming course covering language fundamentals, OOP, async
-                                    programming, and null safety.</p>
-                                <div class="learning-skills">
-                                    <div class="tags">
-                                        <span class="badge">Dart</span>
-                                        <span class="badge">OOP</span>
-                                        <span class="badge">Async/Await</span>
-                                        <span class="badge">Null Safety</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- HCIA-AI -->
-                    <div class="learning-item reveal">
-                        <div class="learning-year">2021</div>
-                        <div class="learning-card card">
-                            <div class="card-content">
-                                <div class="learning-header">
-                                    <div class="learning-icon">🤖</div>
-                                    <div>
-                                        <h3>Huawei HCIA-AI</h3>
-                                        <p class="learning-provider">Huawei</p>
-                                    </div>
-                                </div>
-                                <p>Certified in Huawei's Artificial Intelligence curriculum covering deep learning, NLP,
-                                    and computer vision fundamentals.</p>
-                                <div class="learning-skills">
-                                    <div class="tags">
-                                        <span class="badge">Deep Learning</span>
-                                        <span class="badge">NLP</span>
-                                        <span class="badge">Computer Vision</span>
-                                        <span class="badge">TensorFlow</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- NTI Training -->
-                    <div class="learning-item reveal">
-                        <div class="learning-year">2021</div>
-                        <div class="learning-card card">
-                            <div class="card-content">
-                                <div class="learning-header">
-                                    <div class="learning-icon">🧠</div>
-                                    <div>
-                                        <h3>AI Fundamentals Training</h3>
-                                        <p class="learning-provider">National Telecommunication Institute (NTI)</p>
-                                    </div>
-                                </div>
-                                <p>4-week training on AI fundamentals, Machine Learning & Deep Learning overview, plus
-                                    soft skills development.</p>
-                                <div class="learning-skills">
-                                    <div class="tags">
-                                        <span class="badge">AI Fundamentals</span>
-                                        <span class="badge">ML Overview</span>
-                                        <span class="badge">DL Overview</span>
-                                        <span class="badge">Soft Skills</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Hero -->
+        <div class="l-hero">
+            <span class="l-eyebrow">Knowledge Acquisition</span>
+            <h1 class="l-title">Learning Never<br><span class="g">Stops Here</span></h1>
+            <p class="l-desc">From a Computer Engineering degree to cutting-edge ML specializations — a chronicle of continuous evolution through academic rigor and personal drive.</p>
+            <div class="l-stats">
+                <div class="l-stat">
+                    <div class="l-stat-val">5+</div>
+                    <div class="l-stat-lbl">Years of Study</div>
+                </div>
+                <div class="l-stat">
+                    <div class="l-stat-val">4</div>
+                    <div class="l-stat-lbl">Programs</div>
+                </div>
+                <div class="l-stat">
+                    <div class="l-stat-val">A+</div>
+                    <div class="l-stat-lbl">Graduation</div>
+                </div>
+                <div class="l-stat">
+                    <div class="l-stat-val">5</div>
+                    <div class="l-stat-lbl">Skill Areas</div>
                 </div>
             </div>
         </div>
+
+        <!-- Learning Journey -->
+        <section class="l-section">
+            <div class="l-section-label">Academic & Professional Programs</div>
+
+            <!-- Cairo University -->
+            <div class="l-card reveal-left">
+                <div class="l-card-spine"></div>
+                <div class="l-card-inner">
+                    <div class="l-card-top">
+                        <span class="l-category-tag">Core Foundation</span>
+                        <span class="l-badge-date">2019 — 2024</span>
+                    </div>
+                    <div class="l-role">Bachelor of Engineering — Computer Engineering</div>
+                    <div class="l-org">Cairo University · Faculty of Engineering</div>
+                    <p class="l-desc-text">Comprehensive computer engineering education centered on software architecture, distributed systems, algorithms, and advanced system design. Graduated with <strong style="color:#f59e0b;">Very Good with Honors</strong>. Built a strong foundation in both hardware low-level systems and high-level software engineering.</p>
+                    <div class="l-tags">
+                        <span class="l-chip">Algorithms & DS</span>
+                        <span class="l-chip">Software Engineering</span>
+                        <span class="l-chip">AI / ML</span>
+                        <span class="l-chip">Distributed Systems</span>
+                        <span class="l-chip">Computer Networks</span>
+                        <span class="l-chip">OS & Compilers</span>
+                        <span class="l-chip">Embedded Systems</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coursera ML Specialization -->
+            <div class="l-card reveal-left" style="transition-delay:0.1s;">
+                <div class="l-card-spine blue"></div>
+                <div class="l-card-inner">
+                    <div class="l-card-top">
+                        <span class="l-category-tag blue">Deep Learning</span>
+                        <span class="l-badge-date">2024</span>
+                    </div>
+                    <div class="l-role">Machine Learning Specialization</div>
+                    <div class="l-org">Coursera · DeepLearning.AI · Andrew Ng</div>
+                    <p class="l-desc-text">Comprehensive ML program covering supervised learning, neural networks, unsupervised clustering, recommender systems, and reinforcement learning with hands-on Python labs and TensorFlow projects.</p>
+                    <div class="l-tags">
+                        <span class="l-chip blue">Neural Networks</span>
+                        <span class="l-chip blue">Supervised Learning</span>
+                        <span class="l-chip blue">TensorFlow</span>
+                        <span class="l-chip blue">Recommender Systems</span>
+                        <span class="l-chip blue">Reinforcement Learning</span>
+                    </div>
+                    <a href="https://www.coursera.org/account/accomplishments/specialization/5SMDXZU9BLUW" target="_blank" class="l-verify-btn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        Verify Certificate
+                    </a>
+                </div>
+            </div>
+
+            <!-- Orange Digital Center -->
+            <div class="l-card reveal-left" style="transition-delay:0.15s;">
+                <div class="l-card-spine orange"></div>
+                <div class="l-card-inner">
+                    <div class="l-card-top">
+                        <span class="l-category-tag orange">Enterprise Mobile</span>
+                        <span class="l-badge-date">2023</span>
+                    </div>
+                    <div class="l-role">Flutter Intensive Program</div>
+                    <div class="l-org">Orange Digital Center Egypt · Cairo</div>
+                    <p class="l-desc-text">Advanced enterprise-grade Flutter development program focusing on state management (Bloc/Cubit), CI/CD workflows, MVVM architecture, and pixel-perfect production UI implementation in a real Agile team environment.</p>
+                    <div class="l-tags">
+                        <span class="l-chip orange">Flutter</span>
+                        <span class="l-chip orange">Bloc / Cubit</span>
+                        <span class="l-chip orange">MVVM</span>
+                        <span class="l-chip orange">Agile / Scrum</span>
+                        <span class="l-chip orange">Production UI</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HCIA-AI Huawei -->
+            <div class="l-card reveal-left" style="transition-delay:0.2s;">
+                <div class="l-card-spine red"></div>
+                <div class="l-card-inner">
+                    <div class="l-card-top">
+                        <span class="l-category-tag red">Professional Cert</span>
+                        <span class="l-badge-date">2021</span>
+                    </div>
+                    <div class="l-role">HCIA-AI Certification</div>
+                    <div class="l-org">Huawei Technologies · Artificial Intelligence Track</div>
+                    <p class="l-desc-text">Deep dive into AI foundations, Huawei's computer vision ecosystem, natural language processing implementation, and deep learning model deployment pipelines within the Huawei Cloud infrastructure.</p>
+                    <div class="l-tags">
+                        <span class="l-chip red">AI Foundations</span>
+                        <span class="l-chip red">Deep Learning</span>
+                        <span class="l-chip red">Computer Vision</span>
+                        <span class="l-chip red">NLP</span>
+                        <span class="l-chip red">Huawei Cloud</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer Anchor -->
     <div id="site-footer"></div>
-
     <script type="module" src="../js/main.js"></script>
 
-    <style>
-        .learning-timeline {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    <script>
+        // Reveal cards on intersection
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.style.opacity = '1';
+                    e.target.style.transform = 'translateX(0)';
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.l-card').forEach(el => observer.observe(el));
 
-        .learning-item {
-            display: grid;
-            grid-template-columns: 100px 1fr;
-            gap: var(--space-6);
-            margin-bottom: var(--space-6);
-        }
-
-        @media (max-width: 600px) {
-            .learning-item {
-                grid-template-columns: 1fr;
-                gap: var(--space-2);
-            }
-        }
-
-        .learning-year {
-            font-size: var(--text-lg);
-            font-weight: var(--font-bold);
-            color: var(--color-primary);
-            text-align: right;
-            padding-top: var(--space-6);
-        }
-
-        @media (max-width: 600px) {
-            .learning-year {
-                text-align: left;
-                padding-top: 0;
-            }
-        }
-
-        .learning-header {
-            display: flex;
-            gap: var(--space-4);
-            align-items: flex-start;
-            margin-bottom: var(--space-3);
-        }
-
-        .learning-icon {
-            font-size: 2rem;
-            flex-shrink: 0;
-        }
-
-        .learning-header h3 {
-            margin-bottom: var(--space-1);
-        }
-
-        .learning-provider {
-            color: var(--text-secondary);
-            font-size: var(--text-sm);
-        }
-
-        .learning-skills {
-            margin-top: var(--space-4);
-        }
-
-        .learning-card.highlight {
-            border-color: var(--color-primary);
-            background: rgba(var(--color-primary-rgb), 0.05);
-        }
-    </style>
+        // Safety net: show all cards after 1.5s in case observer fails
+        setTimeout(() => {
+            document.querySelectorAll('.l-card').forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateX(0)';
+            });
+        }, 1500);
+    </script>
 </body>
 
 </html>

@@ -38,9 +38,20 @@
         /* ============================
            EXPERIENCE PAGE STYLES
         ============================= */
-        body {
-            background: #0d0d0d;
-        }
+        body { background: #0d0d0d; }
+
+        [data-theme="light"] body { background: #fafafa; }
+        [data-theme="light"] .exp-aurora .blob { opacity: 0.04; }
+        [data-theme="light"] .exp-hero-title { color: #111; }
+        [data-theme="light"] .exp-hero-desc { color: rgba(0,0,0,0.55); }
+        [data-theme="light"] .exp-card { background: rgba(255,255,255,0.85); border-color: rgba(124,58,237,0.15); box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        [data-theme="light"] .card-role { color: #111; }
+        [data-theme="light"] .card-company { color: rgba(0,0,0,0.5); }
+        [data-theme="light"] .card-desc { color: rgba(0,0,0,0.62); }
+        [data-theme="light"] .card-meta-item { color: rgba(0,0,0,0.5); }
+        [data-theme="light"] .timeline-section-title { color: rgba(0,0,0,0.3); border-color: rgba(0,0,0,0.06); }
+        [data-theme="light"] .stat-bar { background: rgba(255,255,255,0.7); }
+        [data-theme="light"] .stat-label { color: rgba(0,0,0,0.4); }
 
         /* Aurora blobs behind the content */
         .exp-aurora {
@@ -579,25 +590,25 @@
 
         <!-- Hero -->
         <div class="exp-hero">
-            <span class="exp-hero-eyebrow">Career Journey</span>
-            <h1 class="exp-hero-title">Building Things That<br><span class="gradient-word">Actually Matter</span></h1>
-            <p class="exp-hero-desc">3+ years of shipping real Flutter apps — from hackathons to freelance clients to open-source contributions. Here's the full story.</p>
+            <span class="exp-hero-eyebrow" data-i18n="experience.eyebrow">Career Journey</span>
+            <h1 class="exp-hero-title" data-i18n="experience.heroTitle">Building Things That<br><span class="gradient-word">Actually Matter</span></h1>
+            <p class="exp-hero-desc" data-i18n="experience.heroDesc">3+ years of delivering real mobile apps — from hackathons to freelance clients and open-source contributions. Here's the full story.</p>
             <div class="stat-bar">
                 <div class="stat-item">
                     <div class="stat-value">3+</div>
-                    <div class="stat-label">Years Flutter</div>
+                    <div class="stat-label" data-i18n="experience.stats.mobile">Years Mobile</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-value">5+</div>
-                    <div class="stat-label">Apps Delivered</div>
+                    <div class="stat-label" data-i18n="experience.stats.apps">Apps Delivered</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-value">80+</div>
-                    <div class="stat-label">Tests Authored</div>
+                    <div class="stat-value">2+</div>
+                    <div class="stat-label" data-i18n="experience.stats.instructor">Years as Instructor</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-value">35+</div>
-                    <div class="stat-label">Students Taught</div>
+                    <div class="stat-label" data-i18n="experience.stats.students">Students Taught</div>
                 </div>
             </div>
         </div>

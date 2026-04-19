@@ -310,7 +310,7 @@
                         </div>
 
                         <div class="ct-card">
-                            <div class="ct-quote">"Working with him was super professional. He handled the entire Firebase system implementation with great expertise."</div>
+                            <div class="ct-quote">"Working with him was super professional."</div>
                             <div class="ct-footer">
                                 <div class="ct-info">
                                     <span class="ct-name">Magda Osama</span>
@@ -354,7 +354,7 @@
                         </div>
 
                         <div class="ct-card">
-                            <div class="ct-quote">"Sure he is reliable. Strong commitment and professionalism throughout the project."</div>
+                            <div class="ct-quote">"Sure he is reliable. Commitment."</div>
                             <div class="ct-footer">
                                 <div class="ct-info">
                                     <span class="ct-name">A Happy Client</span>
@@ -476,6 +476,20 @@
             color: var(--text-secondary);
             font-weight: var(--font-medium);
             margin-bottom: var(--space-2);
+        }
+
+        /* RTL overrides for timeline */
+        [dir="rtl"] .timeline {
+            padding-left: 0;
+            padding-right: var(--space-8);
+        }
+        [dir="rtl"] .timeline::before {
+            left: auto;
+            right: 0;
+        }
+        [dir="rtl"] .timeline-marker {
+            left: auto;
+            right: calc(var(--space-8) * -1 - 6px);
         }
 
         @media (min-width: 768px) {

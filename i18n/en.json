@@ -34,7 +34,8 @@
     }
   },
   "process": {
-    "title": "Celestial Methodology",
+    "label": "My Approach",
+    "title": "How I Turn Your Ideas Into Reality",
     "subtitle": "A precision-engineered approach to digital craftsmanship",
     "steps": {
       "discovery": {
@@ -97,7 +98,12 @@
   "certificates": {
     "title": "Certifications",
     "subtitle": "Professional validation of my technical skills",
-    "view": "View Certificate"
+    "view": "View Certificate",
+    "stats": {
+      "certifications": "Certifications",
+      "issuers": "Issuers",
+      "verifiable": "Verifiable"
+    }
   },
   "about": {
     "title": "About Me",
@@ -188,8 +194,119 @@
     }
   },
   "footer": {
-    "bio": "Mobile Software Engineer specializing in Flutter",
-    "copyright": "© 2024 Mamdouh Ahmed Attia. All rights reserved."
+    "bio": "Mobile Software Engineer & Technical Instructor",
+    "copyright": "\u00a9 2026 Mamdouh Ahmed Attia. All rights reserved."
+  },
+  "page": {
+    "teaching": { "title": "Teaching | Mamdouh Ahmed Attia" },
+    "learning": { "title": "Learning | Mamdouh Ahmed Attia" },
+    "certificates": { "title": "Certificates | Mamdouh Ahmed Attia" },
+    "experience": { "title": "Experience | Mamdouh Ahmed Attia" }
+  },
+  "experience": {
+    "eyebrow": "Career Journey",
+    "heroTitle": "Building Things That Actually Matter",
+    "heroDesc": "3+ years of delivering real mobile apps — from hackathons to freelance clients and open-source contributions.",
+    "stats": {
+      "mobile": "Years Mobile",
+      "apps": "Apps Delivered",
+      "instructor": "Years as Instructor",
+      "students": "Students Taught"
+    },
+    "title": "Experience",
+    "subtitle": "A summary of my professional journey",
+    "viewFull": "View Full Experience"
+  },
+  "learning": {
+    "eyebrow": "Knowledge Acquisition",
+    "heroTitle": "Learning Never Stops Here",
+    "heroDesc": "From a Computer Engineering degree to cutting-edge ML specializations — a chronicle of continuous evolution.",
+    "stats": {
+      "years": "Years of Study",
+      "programs": "Programs",
+      "graduation": "Graduation Project",
+      "skills": "Skill Areas"
+    },
+    "sectionLabel": "Academic & Professional Programs",
+    "verifyBtn": "Verify Certificate",
+    "nti": {
+      "tag": "AI Training",
+      "role": "AI Trainee — HCIA-AI Track",
+      "org": "NTI · National Telecom Institute · Huawei HCIA-AI",
+      "desc": "120-hour intensive AI training at the National Telecom Institute covering Python data science, ML/DL fundamentals, and a Covid detector capstone project.",
+      "trainingCert": "Training Certificate",
+      "hciaCert": "HCIA-AI Certificate"
+    },
+    "cairo": {
+      "tag": "Core Foundation",
+      "role": "Bachelor of Engineering — Computer Engineering",
+      "org": "Cairo University · Faculty of Engineering",
+      "desc": "Comprehensive computer engineering education. Graduated with Very Good with Honors."
+    },
+    "coursera": {
+      "tag": "Deep Learning",
+      "role": "Machine Learning Specialization",
+      "desc": "Comprehensive ML program covering supervised learning, neural networks, unsupervised clustering, recommender systems, and reinforcement learning."
+    },
+    "orange": {
+      "tag": "Enterprise Mobile",
+      "role": "Flutter Intensive Program",
+      "org": "Orange Digital Center Egypt · Cairo",
+      "desc": "Advanced enterprise Flutter program: Bloc/Cubit state management, MVVM architecture, and pixel-perfect production UI in an Agile team."
+    },
+    "title": "Learning Journey",
+    "subtitle": "Continuous growth through courses and certifications"
+  },
+  "teaching": {
+    "eyebrow": "Education & Community",
+    "heroTitle": "Shaping the Next Generation of Builders",
+    "heroDesc": "From hands-on Flutter diplomas to government ML initiatives — taught 35+ students across 4+ tracks.",
+    "stats": {
+      "students": "Students Taught",
+      "courses": "Courses Delivered",
+      "rating": "Avg. Rating",
+      "hours": "Teaching Hours"
+    },
+    "sectionLabel": "Teaching Experience",
+    "feedbackLabel": "Student Feedback",
+    "ratingBanner": "4.9 / 5.0 average — from 35+ students across Flutter, ML, Java & Python tracks",
+    "testimonial": {
+      "anonymous": {
+        "depi": "A DEPI ML Track Graduate",
+        "python": "A Python Programming Graduate"
+      }
+    },
+    "maspero": {
+      "role": "Python Programming Instructor",
+      "org": "Maspero Academy · Radio & Television Institute, Egypt",
+      "desc": "Delivered Python programming fundamentals to CS students covering data types, control flow, functions, OOP and problem-solving patterns.",
+      "b1": "Focused on bridging theoretical concepts with real coding problems",
+      "b2": "Created hands-on exercises tailored to beginner-level learners",
+      "sample": "Sample: Python Collections (Lists, Sets, Dicts)"
+    },
+    "depi": {
+      "role": "ML Engineering Track Instructor",
+      "org": "DEPI Initiative · Ministry of Communications & IT, Egypt",
+      "desc": "Delivered a comprehensive ML engineering curriculum under DEPI. Integrated own notes, labs, and led a 1-month phased capstone project through to defense.",
+      "b1": "Covered Statistics, Linear Algebra, NumPy/Pandas, and model training with custom labs",
+      "b2": "Designed a 1-month phased capstone project framework, monitored teams to product-defense seminar",
+      "b3": "Integrated personalized feedback loops and motivation throughout the track"
+    },
+    "primaLab": {
+      "role": "Flutter Development Diploma — Level 1",
+      "org": "PrimaLab · New Damietta, Egypt",
+      "desc": "Delivered Flutter Level 1 — from zero programming background through Dart to real Flutter applications across 28+ sessions.",
+      "b1": "Designed all materials, notes, and 10+ assignments across 28+ sessions from scratch",
+      "b2": "Supervised a capstone project: Dart shopping system with cart management and checkout",
+      "b3": "Scope: Dart OOP & async, Flutter widgets & layouts, stateful/stateless, navigation"
+    },
+    "volunteer": {
+      "role": "IT Skills Training — Volunteer",
+      "org": "Damietta Orphanage Staff · Community Service",
+      "desc": "Volunteered to teach IT skills to orphanage staff, helping them with practical technology tools."
+    },
+    "title": "Teaching & Volunteering",
+    "subtitle": "Sharing knowledge and giving back to the community"
   },
   "projectData": {
     "volunteen": {

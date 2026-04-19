@@ -7,7 +7,7 @@
 const NAV_LINKS = [
     { href: 'index.html',       key: 'nav.home',         label: 'Home' },
     { href: 'projects.html',    key: 'nav.projects',     label: 'Projects' },
-    { href: 'experience.html',  key: null,               label: 'Experience' },
+    { href: 'experience.html',  key: 'nav.experience',   label: 'Experience' },
     { href: 'learning.html',    key: 'nav.learning',     label: 'Learning' },
     { href: 'teaching.html',    key: 'nav.teaching',     label: 'Teaching' },
     { href: 'certificates.html',key: 'nav.certificates', label: 'Certificates' },
@@ -98,11 +98,15 @@ function buildFooter() {
             <div class="footer-content">
                 <div class="footer-info">
                     <h3 class="footer-name">Mamdouh Ahmed Attia</h3>
-                    <p class="footer-bio" data-i18n="footer.bio">Mobile Software Engineer specializing in Flutter</p>
+                    <p class="footer-bio" data-i18n="footer.bio">Mobile Software Engineer &amp; Technical Instructor</p>
                 </div>
                 <div class="footer-links">
+                    <a href="${resolveRelativePath('index.html')}" class="footer-link" data-i18n="nav.home">Home</a>
                     <a href="${resolveRelativePath('projects.html')}" class="footer-link" data-i18n="nav.projects">Projects</a>
-                    <a href="${resolveRelativePath('experience.html')}" class="footer-link">Experience</a>
+                    <a href="${resolveRelativePath('experience.html')}" class="footer-link" data-i18n="nav.experience">Experience</a>
+                    <a href="${resolveRelativePath('learning.html')}" class="footer-link" data-i18n="nav.learning">Learning</a>
+                    <a href="${resolveRelativePath('teaching.html')}" class="footer-link" data-i18n="nav.teaching">Teaching</a>
+                    <a href="${resolveRelativePath('certificates.html')}" class="footer-link" data-i18n="nav.certificates">Certificates</a>
                     <a href="${resolveRelativePath('about.html')}" class="footer-link" data-i18n="nav.about">About</a>
                     <a href="${resolveRelativePath('contact.html')}" class="footer-link" data-i18n="nav.contact">Contact</a>
                 </div>
@@ -119,7 +123,7 @@ function buildFooter() {
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="footer-copyright" data-i18n="footer.copyright">© 2024 Mamdouh Ahmed Attia. All rights reserved.</p>
+                <p class="footer-copyright" data-i18n="footer.copyright">&copy; 2026 Mamdouh Ahmed Attia. All rights reserved.</p>
                 <div class="viewer-counter">
                     <span class="viewer-counter-dot"></span>
                     <span><span class="viewer-count">0</span> views</span>

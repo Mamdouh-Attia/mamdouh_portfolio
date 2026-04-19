@@ -15,7 +15,7 @@
     content="I turn your ideas into reality — from concept to polished Flutter applications">
   <meta property="og:type" content="website">
 
-  <title>Mamdouh Ahmed Attia | Mobile Software Engineer - Flutter</title>
+  <title>Mamdouh Ahmed Attia | Mobile Software Engineer</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,6 +39,7 @@
   <link rel="stylesheet" href="./css/globals.css">
   <link rel="stylesheet" href="./css/components.css">
   <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/home-redesign.css">
   <link rel="stylesheet" href="./css/layouts.css">
   <link rel="stylesheet" href="./css/rtl.css">
 
@@ -47,7 +48,6 @@
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
 </head>
 
-<body>
 <body>
   <!-- Header Anchor -->
   <div id="site-header"></div>
@@ -130,34 +130,72 @@
       </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="section" id="process">
+    <!-- Process Section (Enhanced) -->
+    <section class="process-section" id="process">
       <div class="container">
         <div class="section-header reveal">
-          <h2 class="section-title" data-i18n="process.title">How I Turn Your Ideas Into Reality</h2>
+          <span class="section-label" data-i18n="process.label">Our Methodology</span>
+          <h2 class="section-title title-gradient-primary" data-i18n="process.title">How I Turn Your Ideas Into Reality
+          </h2>
+          <p class="section-subtitle" data-i18n="process.subtitle">A precision-engineered approach to digital
+            craftsmanship</p>
         </div>
 
-        <div class="process-grid stagger-children">
-          <div class="process-step">
-            <div class="process-icon">🎯</div>
-            <h3 data-i18n="process.steps.discovery.title">Discovery</h3>
-            <p data-i18n="process.steps.discovery.description">Understanding your vision, goals, and requirements</p>
+        <div class="process-architect-flow reveal">
+          <!-- Step 1: Blueprint -->
+          <div class="arch-step reveal">
+            <div class="arch-number">01</div>
+            <div class="arch-card hifi-card">
+              <h3 data-i18n="process.steps.discovery.title">Discovery & Strategy</h3>
+              <p data-i18n="process.steps.discovery.description">Deep exploration of project goals to extract core
+                requirements and define a technical roadmap.</p>
+              <div class="arch-tags">
+                <span>Analysis</span>
+                <span>Roadmap</span>
+              </div>
+            </div>
           </div>
-          <div class="process-step">
-            <div class="process-icon">📐</div>
-            <h3 data-i18n="process.steps.design.title">Design</h3>
-            <p data-i18n="process.steps.design.description">Creating intuitive UI/UX with modern aesthetics</p>
+
+          <!-- Step 2: Foundation -->
+          <div class="arch-step reveal" style="transition-delay: 0.1s;">
+            <div class="arch-number">02</div>
+            <div class="arch-card hifi-card border-glow-primary">
+              <h3 data-i18n="process.steps.design.title">Design & Architecture</h3>
+              <p data-i18n="process.steps.design.description">Structural precision. Balancing aesthetic wonder with
+                absolute functional utility and system integrity.</p>
+              <div class="arch-tags">
+                <span>UI/UX</span>
+                <span>Systems</span>
+              </div>
+            </div>
           </div>
-          <div class="process-step">
-            <div class="process-icon">💻</div>
-            <h3 data-i18n="process.steps.development.title">Development</h3>
-            <p data-i18n="process.steps.development.description">Building with Flutter, clean architecture, and best
-              practices</p>
+
+          <!-- Step 3: Construction -->
+          <div class="arch-step reveal" style="transition-delay: 0.2s;">
+            <div class="arch-number">03</div>
+            <div class="arch-card hifi-card">
+              <h3 data-i18n="process.steps.development.title">Deployment & Execution</h3>
+              <p data-i18n="process.steps.development.description">Writing high-performance, maintainable code ensuring
+                platforms are as reliable as they are beautiful.</p>
+              <div class="arch-tags">
+                <span>Flutter</span>
+                <span>Security</span>
+              </div>
+            </div>
           </div>
-          <div class="process-step">
-            <div class="process-icon">🚀</div>
-            <h3 data-i18n="process.steps.delivery.title">Delivery</h3>
-            <p data-i18n="process.steps.delivery.description">Testing, refining, and launching your polished product</p>
+
+          <!-- Step 4: Orbital -->
+          <div class="arch-step reveal" style="transition-delay: 0.3s;">
+            <div class="arch-number">04</div>
+            <div class="arch-card hifi-card">
+              <h3 data-i18n="process.steps.delivery.title">Launch & Support</h3>
+              <p data-i18n="process.steps.delivery.description">Continuous optimization and maintenance to ensure the
+                system evolves with user needs.</p>
+              <div class="arch-tags">
+                <span>Post-Live</span>
+                <span>Optimization</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -181,118 +219,96 @@
       </div>
     </section>
 
-    <!-- Experience Glimpse Section — Aurora Glassmorphic -->
-    <section id="experience-cta" style="
-        background: #0d0d0d;
-        position: relative;
-        overflow: hidden;
-        padding: var(--space-20) 0;
-    ">
-      <!-- Aurora blobs -->
-      <div style="position:absolute;top:-80px;left:-100px;width:500px;height:500px;
-          background:radial-gradient(circle,rgba(124,58,237,0.12) 0%,transparent 70%);
-          border-radius:50%;pointer-events:none;"></div>
-      <div style="position:absolute;bottom:-60px;right:-80px;width:450px;height:450px;
-          background:radial-gradient(circle,rgba(34,211,238,0.10) 0%,transparent 70%);
-          border-radius:50%;pointer-events:none;"></div>
+    <!-- Experience Section (High-Fidelity) -->
+    <section class="experience-section" id="experience-cta">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Technical Background</span>
+          <h2 class="section-title title-gradient-primary">Architecting the Future</h2>
+          <p class="section-subtitle">A heritage of engineering excellence and digital precision</p>
+        </div>
 
-      <div class="container" style="position:relative;z-index:1;">
-        <div class="section-header reveal" style="margin-bottom:var(--space-12);">
-          <div style="display:inline-flex;align-items:center;gap:var(--space-2);
-              background:rgba(124,58,237,0.12);border:1px solid rgba(124,58,237,0.25);
-              border-radius:999px;padding:6px 16px;margin-bottom:var(--space-4);">
-            <span style="width:8px;height:8px;background:#22d3ee;border-radius:50%;
-                box-shadow:0 0 8px rgba(34,211,238,0.8);animation:pulse 2s infinite;"></span>
-            <span style="font-size:0.75rem;font-weight:600;color:#22d3ee;letter-spacing:0.1em;text-transform:uppercase;">Career Journey</span>
+        <div class="hifi-exp-card reveal">
+          <div class="hifi-exp-glow"></div>
+          <div class="hifi-exp-header">
+            <div class="hifi-exp-info">
+              <h3 class="hifi-exp-role" data-i18n="experience.active.role">Open Source Contributor</h3>
+              <span class="hifi-exp-company" data-i18n="experience.active.company">Itqan Community · Mushaf-IMAD</span>
+            </div>
+            <span class="hifi-exp-date">2026 — <span data-i18n="common.present">Present</span></span>
           </div>
-          <h2 class="section-title" style="background:linear-gradient(135deg,#fff 30%,rgba(124,58,237,0.8));
-              -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
-            Professional Experience
-          </h2>
-          <p class="section-subtitle" style="color:rgba(255,255,255,0.6);">
-            From intern to open-source contributor — a snapshot of the journey
+          <p class="hifi-exp-desc" data-i18n="experience.active.description">
+            Leading technical implementation for high-fidelity Quranic applications, focusing on architectural integrity
+            and mobile performance.
           </p>
+          <div class="hifi-exp-stats">
+            <div class="hifi-stat">
+              <span class="stat-value">Active</span>
+              <span class="stat-label">Status</span>
+            </div>
+            <div class="hifi-stat">
+              <span class="stat-value">Core</span>
+              <span class="stat-label">Architecture</span>
+            </div>
+          </div>
         </div>
 
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-6);">
-
-          <!-- Card 1 — Active -->
-          <div class="reveal" style="
-              background:rgba(124,58,237,0.08);
-              border:1px solid rgba(124,58,237,0.25);
-              border-radius:16px;
-              padding:var(--space-6);
-              backdrop-filter:blur(20px);
-              position:relative;
-              transition:transform 0.3s ease,box-shadow 0.3s ease;
-          " onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(124,58,237,0.2)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:var(--space-3);">
-              <div style="font-size:1.5rem;">☁️</div>
-              <span style="font-size:0.7rem;font-weight:700;color:#22d3ee;background:rgba(34,211,238,0.12);
-                  border:1px solid rgba(34,211,238,0.3);border-radius:999px;padding:3px 10px;
-                  animation:pulse 2s infinite;">● ACTIVE</span>
+        <div class="hifi-exp-card reveal" style="transition-delay: 0.1s;">
+          <div class="hifi-exp-glow"
+            style="background: radial-gradient(circle at center, rgba(34, 211, 238, 0.15), transparent);"></div>
+          <div class="hifi-exp-header">
+            <div class="hifi-exp-info">
+              <h3 class="hifi-exp-role" data-i18n="experience.instructor.role">Technical Instructor</h3>
+              <span class="hifi-exp-company" data-i18n="experience.instructor.company">PrimaLab · DEPI · Maspero</span>
             </div>
-            <div style="font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:4px;">Feb 2026 — Present</div>
-            <h3 style="font-size:1rem;font-weight:700;color:#fff;margin-bottom:4px;">Open Source Contributor</h3>
-            <p style="font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:var(--space-4);">Itqan Community · Mushaf-IMAD Flutter</p>
-            <div style="display:flex;flex-wrap:wrap;gap:6px;">
-              <span style="font-size:0.7rem;background:rgba(124,58,237,0.2);color:#a78bfa;border-radius:6px;padding:3px 8px;">Flutter</span>
-              <span style="font-size:0.7rem;background:rgba(34,211,238,0.12);color:#22d3ee;border-radius:6px;padding:3px 8px;">OAuth 2.0</span>
-              <span style="font-size:0.7rem;background:rgba(124,58,237,0.2);color:#a78bfa;border-radius:6px;padding:3px 8px;">Mocktail</span>
+            <span class="hifi-exp-date">2023 — 2025</span>
+          </div>
+          <p class="hifi-exp-desc" data-i18n="experience.instructor.description">
+            Empowering students through advanced Flutter development, Python programming, and Machine Learning
+            workshops.
+          </p>
+          <div class="hifi-exp-stats">
+            <div class="hifi-stat">
+              <span class="stat-value">35+</span>
+              <span class="stat-label">Students</span>
+            </div>
+            <div class="hifi-stat">
+              <span class="stat-value">3+</span>
+              <span class="stat-label">Tracks</span>
             </div>
           </div>
-
-          <!-- Card 2 — Teaching -->
-          <div class="reveal" style="
-              background:rgba(34,211,238,0.06);
-              border:1px solid rgba(34,211,238,0.2);
-              border-radius:16px;
-              padding:var(--space-6);
-              backdrop-filter:blur(20px);
-              transition:transform 0.3s ease,box-shadow 0.3s ease;
-          " onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(34,211,238,0.15)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-            <div style="font-size:1.5rem;margin-bottom:var(--space-3);">🎓</div>
-            <div style="font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:4px;">2023 — 2025</div>
-            <h3 style="font-size:1rem;font-weight:700;color:#fff;margin-bottom:4px;">Technical Instructor</h3>
-            <p style="font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:var(--space-4);">PrimaLab · DEPI Initiative · Maspero Academy</p>
-            <div style="display:flex;flex-wrap:wrap;gap:6px;">
-              <span style="font-size:0.7rem;background:rgba(34,211,238,0.12);color:#22d3ee;border-radius:6px;padding:3px 8px;">Flutter</span>
-              <span style="font-size:0.7rem;background:rgba(124,58,237,0.2);color:#a78bfa;border-radius:6px;padding:3px 8px;">Python</span>
-              <span style="font-size:0.7rem;background:rgba(34,211,238,0.12);color:#22d3ee;border-radius:6px;padding:3px 8px;">ML</span>
-            </div>
-          </div>
-
-          <!-- Card 3 — Freelance -->
-          <div class="reveal" style="
-              background:rgba(99,102,241,0.06);
-              border:1px solid rgba(99,102,241,0.2);
-              border-radius:16px;
-              padding:var(--space-6);
-              backdrop-filter:blur(20px);
-              transition:transform 0.3s ease,box-shadow 0.3s ease;
-          " onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(99,102,241,0.15)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-            <div style="font-size:1.5rem;margin-bottom:var(--space-3);">💼</div>
-            <div style="font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:4px;">2023 — Present</div>
-            <h3 style="font-size:1rem;font-weight:700;color:#fff;margin-bottom:4px;">Flutter Developer · Freelance</h3>
-            <p style="font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:var(--space-4);">5+ clients · HyperMate · EcoSort · VolunTeen</p>
-            <div style="display:flex;flex-wrap:wrap;gap:6px;">
-              <span style="font-size:0.7rem;background:rgba(124,58,237,0.2);color:#a78bfa;border-radius:6px;padding:3px 8px;">Flutter</span>
-              <span style="font-size:0.7rem;background:rgba(34,211,238,0.12);color:#22d3ee;border-radius:6px;padding:3px 8px;">Firebase</span>
-              <span style="font-size:0.7rem;background:rgba(124,58,237,0.2);color:#a78bfa;border-radius:6px;padding:3px 8px;">IoT / BLE</span>
-            </div>
-          </div>
-
         </div>
 
-        <div class="text-center" style="margin-top:var(--space-10);">
-          <a href="./pages/experience.html" class="btn btn-primary btn-lg magnetic" style="
-              background:linear-gradient(135deg,rgba(124,58,237,0.9),rgba(34,211,238,0.7));
-              border:none;
-          ">
-            <span>View Full Career Journey</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left:8px;">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
+        <div class="hifi-exp-card reveal" style="transition-delay: 0.2s;">
+          <div class="hifi-exp-glow"
+            style="background: radial-gradient(circle at center, rgba(168, 85, 247, 0.15), transparent);"></div>
+          <div class="hifi-exp-header">
+            <div class="hifi-exp-info">
+              <h3 class="hifi-exp-role" data-i18n="experience.freelance.role">Flutter Developer · Freelance</h3>
+              <span class="hifi-exp-company" data-i18n="experience.freelance.company">HyperMate · EcoSort ·
+                VolunTeen</span>
+            </div>
+            <span class="hifi-exp-date">2023 — <span data-i18n="common.present">Present</span></span>
+          </div>
+          <p class="hifi-exp-desc" data-i18n="experience.freelance.description">
+            Delivering high-performance mobile solutions for diverse clients, specializing in complex state management
+            and IoT integration.
+          </p>
+          <div class="hifi-exp-stats">
+            <div class="hifi-stat">
+              <span class="stat-value">5+</span>
+              <span class="stat-label">Deliveries</span>
+            </div>
+            <div class="hifi-stat">
+              <span class="stat-value">5/5</span>
+              <span class="stat-label">Rating</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: var(--space-12);">
+          <a href="./pages/experience.html" class="btn btn-primary btn-lg magnetic">
+            <span>Explore Complete Career Dossier</span>
           </a>
         </div>
       </div>
@@ -439,29 +455,67 @@
     <!-- Section Previews -->
     <section class="section" id="more-sections" style="background: var(--bg-secondary);">
       <div class="container">
-        <div class="grid-3 stagger-children">
-          <!-- Learning Preview -->
-          <a href="./pages/learning.html" class="preview-card card reveal">
-            <div class="preview-icon">📚</div>
-            <h3 data-i18n="learning.title">Learning Journey</h3>
-            <p data-i18n="learning.subtitle">Continuous growth through courses and certifications</p>
-            <span class="btn-link" data-i18n="common.learnMore">Learn More →</span>
+        <div class="section-header reveal">
+          <span class="section-label">Knowledge & Growth</span>
+          <h2 class="section-title title-gradient-primary">Beyond the Code</h2>
+          <p class="section-subtitle">Exploring the auxiliary pillars of my professional journey</p>
+        </div>
+
+        <div class="bento-grid stagger-children">
+          <!-- Learning Journey (Large) -->
+          <a href="./pages/learning.html" class="bento-item large reveal">
+            <div class="bento-glow"></div>
+            <span class="bento-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+            </span>
+            <div class="bento-content">
+              <h3 class="bento-title" data-i18n="learning.title">Learning Journey</h3>
+              <p class="bento-subtitle" data-i18n="learning.subtitle">A chronicle of continuous evolution through
+                academic rigor and certifications.</p>
+              <span class="bento-link" data-i18n="common.learnMore">Explore Journey</span>
+            </div>
           </a>
 
-          <!-- Teaching Preview -->
-          <a href="./pages/teaching.html" class="preview-card card reveal">
-            <div class="preview-icon">👨‍🏫</div>
-            <h3 data-i18n="teaching.title">Teaching Experience</h3>
-            <p data-i18n="teaching.subtitle">Sharing knowledge and empowering the next generation</p>
-            <span class="btn-link" data-i18n="common.learnMore">Learn More →</span>
+          <!-- Teaching Experience -->
+          <a href="./pages/teaching.html" class="bento-item reveal" style="transition-delay: 0.1s;">
+            <div class="bento-glow"
+              style="background: radial-gradient(circle at center, rgba(34, 211, 238, 0.1), transparent 70%);"></div>
+            <span class="bento-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </span>
+            <div class="bento-content">
+              <h3 class="bento-title" data-i18n="teaching.title">Teaching</h3>
+              <p class="bento-subtitle" data-i18n="teaching.subtitle">Empowering future developers through mentorship
+                and technical workshops.</p>
+              <span class="bento-link" data-i18n="common.learnMore">View Profile</span>
+            </div>
           </a>
 
-          <!-- Certificates Preview -->
-          <a href="./pages/certificates.html" class="preview-card card reveal">
-            <div class="preview-icon">🏆</div>
-            <h3 data-i18n="certificates.title">Certificates</h3>
-            <p data-i18n="certificates.subtitle">Professional certifications and achievements</p>
-            <span class="btn-link" data-i18n="common.learnMore">Learn More →</span>
+          <!-- Certificates -->
+          <a href="./pages/certificates.html" class="bento-item reveal" style="transition-delay: 0.2s;">
+            <div class="bento-glow"
+              style="background: radial-gradient(circle at center, rgba(168, 85, 247, 0.1), transparent 70%);"></div>
+            <span class="bento-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+            </span>
+            <div class="bento-content">
+              <h3 class="bento-title" data-i18n="certificates.title">Certificates</h3>
+              <p class="bento-subtitle" data-i18n="certificates.subtitle">Documented proof of technical mastery and
+                industry standards.</p>
+              <span class="bento-link" data-i18n="common.learnMore">See All Credits</span>
+            </div>
           </a>
         </div>
       </div>

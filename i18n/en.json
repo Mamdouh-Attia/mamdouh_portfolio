@@ -18,8 +18,8 @@
   },
   "hero": {
     "title": "Mamdouh Ahmed Attia",
-    "badge": "Mobile Software Engineer — Flutter",
-    "titleHighlight": "Mobile Software Engineer — Flutter",
+    "badge": "Mobile Software Engineer",
+    "titleHighlight": "Mobile Software Engineer",
     "subtitle": "Turning Your Ideas Into Reality with Engineering Excellence",
     "description": "Flutter Developer & Computer Engineer focused on building high-performance, maintainable mobile applications that solve real problems.",
     "cta": {
@@ -34,7 +34,8 @@
     }
   },
   "process": {
-    "title": "How I Turn Your Ideas Into Reality",
+    "title": "Celestial Methodology",
+    "subtitle": "A precision-engineered approach to digital craftsmanship",
     "steps": {
       "discovery": {
         "title": "Discovery",
@@ -112,12 +113,27 @@
     "experience": {
       "title": "Experience"
     },
+    "stats": {
+      "projects": "Projects Built",
+      "experience": "Years Exp.",
+      "clients": "Global Clients"
+    },
+    "expertise": {
+      "architecture": "Celestial Architecture",
+      "implementation": "High-Fidelity Implementation",
+      "innovation": "Future-Proof Innovation"
+    },
+    "architecture": {
+      "blueprint": "Technical Blueprints",
+      "foundations": "Solid Foundations",
+      "orbit": "Orbital Deployment"
+    },
     "education": {
-      "title": "Education",
+      "title": "Academic Foundation",
       "university": "Bachelor of Engineering - Computer Engineering",
       "school": "Cairo University",
       "grade": "Very Good with Honors",
-      "description": "Comprehensive computer engineering education with focus on software engineering, algorithms, and mobile development."
+      "description": "Comprehensive computer engineering education centered on software engineering, algorithms, and high-performance mobile systems."
     }
   },
   "common": {
@@ -181,25 +197,27 @@
         "subtitle": "AI-Powered Volunteering platform for teenagers",
         "overview": "A solo-developed Flutter application targeting teenagers with 30-40 screens, featuring AI chatbot integration and a complete management system.",
         "challenge": "Designing a complex, feature-rich platform that remains engaging and simple enough for a teenage audience while integrating advanced AI capabilities.",
-        "approach": "Adopted an MVC architecture for maintainability. I personally designed the UI/UX from scratch and integrated GPT-3 for a personalized assistant experience.",
+        "approach": "Adopted an MVC architecture for maintainability. I personally implemented the UI/UX my client provided and integrated GPT-3 for a personalized assistant experience.",
         "solution": "Successfully launched a professional-grade mobile app with sub-second response times and a verified reward system for active volunteers.",
         "contributions": [
           "Developed 30-40 screens independently using Flutter/Dart",
           "Implemented MVC architecture for scalable code structure",
           "Integrated GPT-3 API for the intelligent volunteering assistant",
-          "Designed a secure reward system using Firebase Cloud Functions"
+          "Added different ways of awareness providing ranging between (Articles, Videos and AI Assistant)",
+          "Added Real people's support with their contact method.",
+          "Added Example UIs for a community, helping categories, certification system, announcements, and more!"
         ]
     },
     "checkit": {
       "title": "Check-It",
       "subtitle": "Consumer Rights & Product Verification",
-      "overview": "A specialized mobile tool designed to empower consumers by providing instant access to product verification and reporting mechanisms for counterfeit goods.",
+      "overview": "A specialized mobile tool [Prototype] designed to empower consumers by providing instant access to product verification and reporting mechanisms for over-expensive goods.",
       "challenge": "Creating a seamless bridge between physical barcodes and digital consumer protection databases while maintaining ease of use for the general public.",
-      "approach": "I implemented a high-speed barcode scanning module and built a multi-step complaint wizard that automatically captures location and product metadata.",
+      "approach": "I implemented a high-speed barcode scanning module and built a multi-step complaint wizard to enable the user to file a complient with the product details, location and receit evidence of over-pricing.",
       "solution": "A production-ready utility that successfully facilitates consumer reporting and helps regulatory bodies track illicit market activity effectively.",
       "contributions": [
         "Implemented high-performance barcode scanning using Flutter packages",
-        "Developed a state-driven multi-step reporting wizard",
+        "Developed a state-driven multi-step reporting wizard, with the ability to track the complaint status",
         "Built the local storage history and sync logic",
         "Designed the UI/UX following clean material guidelines"
       ]
@@ -216,20 +234,6 @@
         "Implemented secure QR validation with HMAC-SHA256 signatures",
         "Built the points calculation engine with streak-based bonuses",
         "Integrated real-time IoT sensor readings into the Flutter UI"
-      ]
-    },
-    "eplReservation": {
-      "title": "EPL Ticket Reservation",
-      "subtitle": "Match ticketing system and admin intelligence dashboard",
-      "overview": "A full-stack reservation system for Premier League matches, featuring a high-performance Flutter web admin panel.",
-      "challenge": "Handling concurrent seat bookings and visualizing complex match occupancy data for administrators.",
-      "approach": "I utilized Provider for reactive state management on the web. I designed custom charts to provide real-time occupancy insights.",
-      "solution": "A robust system with sub-second data synchronization and a secure, JWT-authenticated administration flow.",
-      "contributions": [
-        "Developed the entire Admin Dashboard using Flutter Web",
-        "Implemented a JWT auto-refresh mechanism for seamless security",
-        "Built interactive data visualizations for revenue and occupancy",
-        "Designed the seat-map logic with optimistic state updates"
       ]
     },
     "hypermate": {
@@ -275,6 +279,20 @@
         "Configured Provider-based state management with MVC-S for zero cross-module conflicts"
       ]
     },
+        "eplReservation": {
+      "title": "EPL Ticket Reservation",
+      "subtitle": "Match ticketing system and admin intelligence dashboard",
+      "overview": "A full-stack reservation system for Premier League matches, featuring a high-performance Flutter web admin panel.",
+      "challenge": "Handling concurrent seat bookings and visualizing complex match occupancy data for administrators.",
+      "approach": "I utilized Provider for reactive state management on the web. I designed custom charts to provide real-time occupancy insights.",
+      "solution": "A robust system with sub-second data synchronization and a secure, JWT-authenticated administration flow.",
+      "contributions": [
+        "Developed the entire Admin Dashboard using Flutter Web",
+        "Implemented a JWT auto-refresh mechanism for seamless security",
+        "Built interactive data visualizations for revenue and occupancy",
+        "Designed the seat-map logic with optimistic state updates"
+      ]
+    },
     "usAccidents": {
       "title": "US Accidents Analysis",
       "subtitle": "Big Data pipeline for 7.7M traffic records",
@@ -316,49 +334,7 @@
         "Optimized the Random Forest ensemble via GridSearchCV",
         "Evaluated 12 different architectures to find the optimal solution"
       ]
-    },
-    "vectorDb": {
-      "title": "Vectorized Database",
-      "subtitle": "High-speed similarity search engine",
-      "overview": "A custom vectorized database built to demonstrate the internals of similarity search and coarse-to-fine quantization.",
-      "challenge": "Implementing an efficient search that finds nearest neighbors in high-dimensional space without linear scan overhead.",
-      "approach": "I implemented K-Means for coarse partitioning and coarse quantization retrieval to minimize distance calculations.",
-      "solution": "An optimized engine that clusters vector spaces and retrieves matches with minimal latency using custom persistence.",
-      "contributions": [
-        "Implemented K-Means clustering algorithm for coarse space partitioning",
-        "Designed coarse-to-fine quantization for accelerated similarity search",
-        "Built the custom CSV-based vector storage and persistence module",
-        "Developed the high-performance distance calculation scoring engine"
-      ]
-    },
-    "librarySystem": {
-      "title": "Central Library Management",
-      "subtitle": "Enterprise SQL database design",
-      "overview": "A complex relational database system for managing city-wide library branches, borrowing, and inventory.",
-      "challenge": "Designing a normalized system that handles thousands of daily transactions and complex employee hierarchies.",
-      "approach": "I architected a 20+ table schema in 3NF and implemented complex T-SQL triggers for automated fine calculations.",
-      "solution": "A robust, transactional system ensuring data integrity and automated management of library assets across multiple branches.",
-      "contributions": [
-        "Designed the full normalized schema and ER diagram (20+ tables)",
-        "Implemented recursive CTEs for employee supervisor mapping",
-        "Developed stored procedures for ACID borrowing transactions",
-        "Created T-SQL triggers for real-time automated fine calculation"
-      ]
-    },
-    "robotExploration": {
-      "title": "Multi-Robot Exploration",
-      "subtitle": "Collaborative robotic mapping in ROS",
-      "overview": "A swarm robotics project where multiple robots collaboratively explore and map unknown territory in a simulated environment.",
-      "challenge": "Merging disparate maps from multiple robots into a single, cohesive global grid without data corruption.",
-      "approach": "I configured the map-merging nodes and tuned the navigation stack parameters for obstacle inflation and costmap layers.",
-      "solution": "Achieved efficient, overlap-free mapping with collision-proof navigation for up to 4 concurrent robots.",
-      "contributions": [
-        "Configured the multi-robot map merging nodes in ROS Noetic",
-        "Tuned inflation radius and costmap parameters for MoveBase",
-        "Automated the Linux workspace setup for rapid simulation testing",
-        "Calibrated robot localization sensors in Gazebo environment"
-      ]
-    },
+    },  
     "lineFollower": {
       "title": "Embedded CV Line Follower",
       "subtitle": "Computer Vision for autonomous cars",

@@ -53,6 +53,7 @@ function buildNavLinks(mobile = false) {
 }
 
 function buildHeader() {
+    const inPages = window.location.pathname.includes('/pages/');
     return `
     <a href="#main-content" class="skip-link" data-i18n="accessibility.skipToContent">Skip to main content</a>
 
@@ -60,7 +61,7 @@ function buildHeader() {
         <div class="header-inner">
             <a href="${resolveRelativePath('index.html')}" class="logo">
                 <span class="logo-icon">M</span>
-                <span>Mamdouh</span>
+                <span>Mamdouh Attia</span>
             </a>
             <nav class="nav">
                 ${buildNavLinks(false)}

@@ -277,6 +277,96 @@
                     </div>
                 </section>
 
+                <!-- Client Testimonials -->
+                <section class="about-testimonials reveal" id="testimonials" style="margin-bottom: var(--space-16);">
+                    <h2 class="section-title text-center" style="margin-bottom: var(--space-4);">What My Clients Say</h2>
+                    <p class="section-subtitle text-center" style="margin-bottom: var(--space-10);">
+                        <span class="star-rating"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></span>
+                        &nbsp;5.0 / 5.0 — All clients rated 5 out of 5
+                    </p>
+
+                    <div class="client-testimonials-grid">
+
+                        <div class="ct-card">
+                            <div class="ct-quote">"I liked how practical and focused you are, and how working with you always felt organized and goal-oriented. Your organization, clarity, and support really make working together easy and enjoyable."</div>
+                            <div class="ct-footer">
+                                <div class="ct-info">
+                                    <span class="ct-name">Sama Wahba</span>
+                                    <span class="ct-project">HyperMate — IoT Stress Monitor</span>
+                                </div>
+                                <div class="ct-stars">★★★★★</div>
+                            </div>
+                        </div>
+
+                        <div class="ct-card">
+                            <div class="ct-quote">"The application was delivered with a highly professional finish. Through our discussions, he helped us identify some useful features to add such as the AI bot included in HyperMate."</div>
+                            <div class="ct-footer">
+                                <div class="ct-info">
+                                    <span class="ct-name">Sandra Samir</span>
+                                    <span class="ct-project">HyperMate — IoT Stress Monitor</span>
+                                </div>
+                                <div class="ct-stars">★★★★★</div>
+                            </div>
+                        </div>
+
+                        <div class="ct-card">
+                            <div class="ct-quote">"Working with him was super professional. He handled the entire Firebase system implementation with great expertise."</div>
+                            <div class="ct-footer">
+                                <div class="ct-info">
+                                    <span class="ct-name">Magda Osama</span>
+                                    <span class="ct-project">EcoSort — Smart Recycling App</span>
+                                </div>
+                                <div class="ct-stars">★★★★★</div>
+                            </div>
+                        </div>
+
+                        <div class="ct-card">
+                            <div class="ct-quote">"Yes. He's professional, dependable, and delivers solid work. I liked how easy you are to work with and how clearly you communicate. Everything was good overall."</div>
+                            <div class="ct-footer">
+                                <div class="ct-info">
+                                    <span class="ct-name">Aya Hesham</span>
+                                    <span class="ct-project">EcoSort — Smart Recycling App</span>
+                                </div>
+                                <div class="ct-stars">★★★★★</div>
+                            </div>
+                        </div>
+
+                        <div class="ct-card">
+                            <div class="ct-quote">"He is highly professional, well-organized, and very committed to deadlines. His attention to detail and strong time management made the whole process smooth and efficient, and the quality of his work was excellent."</div>
+                            <div class="ct-footer">
+                                <div class="ct-info">
+                                    <span class="ct-name">A Satisfied Client</span>
+                                    <span class="ct-project">VolunTeen — Volunteering Platform</span>
+                                </div>
+                                <div class="ct-stars">★★★★★</div>
+                            </div>
+                        </div>
+
+                        <div class="ct-card">
+                            <div class="ct-quote">"He takes his work seriously, providing clear communication to understand the client's needs and expectations. He is willing to make changes and edits according to the client's preferences while making sure that everything in the development process is outstanding."</div>
+                            <div class="ct-footer">
+                                <div class="ct-info">
+                                    <span class="ct-name">Mariam Abdelhamid</span>
+                                    <span class="ct-project">HyperMate — IoT Stress Monitor</span>
+                                </div>
+                                <div class="ct-stars">★★★★★</div>
+                            </div>
+                        </div>
+
+                        <div class="ct-card">
+                            <div class="ct-quote">"Sure he is reliable. Strong commitment and professionalism throughout the project."</div>
+                            <div class="ct-footer">
+                                <div class="ct-info">
+                                    <span class="ct-name">A Happy Client</span>
+                                    <span class="ct-project">Price App</span>
+                                </div>
+                                <div class="ct-stars">★★★★★</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
                 <!-- Education -->
                 <section class="about-education reveal">
                     <h2 class="section-title text-center" style="margin-bottom: var(--space-8);"
@@ -393,8 +483,84 @@
                 order: -1;
             }
         }
-    </style>
 
+        /* ── Client Testimonials (about.html) ── */
+        .client-testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-5);
+        }
+
+        @media (min-width: 640px) {
+            .client-testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (min-width: 1024px) {
+            .client-testimonials-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .ct-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            padding: var(--space-6);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+        }
+
+        .ct-card:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-5px);
+            box-shadow: 0 16px 40px rgba(124, 58, 237, 0.1);
+        }
+
+        .ct-quote {
+            font-style: italic;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: var(--text-sm);
+            flex: 1;
+            margin-bottom: var(--space-5);
+        }
+
+        .ct-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid var(--border-color);
+            padding-top: var(--space-4);
+            gap: var(--space-3);
+        }
+
+        .ct-name {
+            display: block;
+            font-weight: var(--font-semibold);
+            color: var(--text-primary);
+            font-size: var(--text-sm);
+        }
+
+        .ct-project {
+            display: block;
+            font-size: var(--text-xs);
+            color: var(--color-primary);
+            margin-top: 2px;
+        }
+
+        .ct-stars {
+            color: #fbbf24;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        /* section subtitle in about */
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: var(--text-lg);
+        }
     </style>
 </body>
 

@@ -9,8 +9,8 @@ export const projects = [
         title: "Mushaf-IMAD Flutter",
         slug: "mushaf-imad",
         category: "mobile",
-        tags: ["Flutter", "Open Source", "Quran.com API"],
-        techStack: ["Dart", "Flutter", "OAuth 2.0", "Streams", "Mocktail", "REST API"],
+        tags: ["Flutter", "Open Source", "Integration"],
+        techStack: ["Dart", "Flutter", "OAuth 2.0", "Streams", "REST API", "Clean Architecture", "Dependency Injection"],
         featured: true,
         status: "completed",
         date: "2026-03",
@@ -32,7 +32,7 @@ export const projects = [
         slug: "volunteen",
         category: "mobile",
         tags: ["Flutter", "Firebase", "AI Chatbot"],
-        techStack: ["Flutter", "Dart", "Firebase", "GPT-3.5", "Provider"],
+        techStack: ["Flutter", "Dart", "Firebase", "GPT-3.5", "Provider", "In-App Video Player", "Freelance", "MVC"],
         featured: true,
         status: "completed",
         date: "2024-01",
@@ -60,30 +60,6 @@ export const projects = [
             { type: 'image', src: '../assets/projects_media/volunteen/Side Drawer.jpg' },
             { type: 'image', src: '../assets/projects_media/volunteen/Splash Screen.jpg' },
             { type: 'image', src: '../assets/projects_media/volunteen/Volunteer screen.jpg' }
-        ]
-    },
-    {
-        id: "checkit",
-        title: "Check-It",
-        slug: "checkit",
-        category: "mobile",
-        tags: ["Flutter", "Consumer Rights", "Scanner"],
-        techStack: ["Flutter", "Dart", "Provider", "Barcode Scanner", "Shared Prefs"],
-        featured: true,
-        status: "completed",
-        date: "2024-05",
-        i18nKey: "projectData.checkit",
-        color: "#2ecc71",
-        media: [
-            { type: 'image', src: '../assets/projects_media/check-it/CheckIt Cover.png' },
-            { type: 'image', src: '../assets/projects_media/check-it/Home.jpg' },
-            { type: 'image', src: '../assets/projects_media/check-it/Products grid.jpg' },
-            { type: 'image', src: '../assets/projects_media/check-it/Product window.jpg' },
-            { type: 'image', src: '../assets/projects_media/check-it/Product Complaint with validation.jpg' },
-            { type: 'image', src: '../assets/projects_media/check-it/Complaint status.jpg' },
-            { type: 'image', src: '../assets/projects_media/check-it/Splash.jpg' },
-            { type: 'image', src: '../assets/projects_media/check-it/drawer.jpg' },
-            { type: 'image', src: '../assets/projects_media/check-it/Helpdesk idea.jpg' }
         ]
     },
     {
@@ -121,42 +97,28 @@ export const projects = [
         ]
     },
     {
-        id: "tapcash",
-        title: "TapCash FinTech",
-        slug: "tapcash",
+        id: "checkit",
+        title: "Check-It",
+        slug: "checkit",
         category: "mobile",
-        tags: ["Flutter", "FinTech", "UI/UX"],
-        techStack: ["Flutter", "Dart", "Cubit", "Data Viz", "Provider"],
-        featured: false,
-        status: "completed",
-        date: "2023-05",
-        i18nKey: "projectData.tapcash",
-        color: "#9b59b6",
-        demoUrl: "https://docs.google.com/presentation/d/1IC-2Cvxh4LbfgxtxTxzCyrZzTY8DJjav/edit",
-        media: [
-            { type: 'image', src: '../assets/projects_media/tapcash/tapcash.jpg' },
-            { type: 'image', src: '../assets/projects_media/tapcash/home.jpg' },
-            { type: 'image', src: '../assets/projects_media/tapcash/send.jpg' },
-            { type: 'image', src: '../assets/projects_media/tapcash/qr.jpg' },
-            { type: 'image', src: '../assets/projects_media/tapcash/elec_bills.jpg' },
-            { type: 'image', src: '../assets/projects_media/tapcash/children.jpg' },
-            { type: 'image', src: '../assets/projects_media/tapcash/auth1.jpg' },
-            { type: 'image', src: '../assets/projects_media/tapcash/auth2.jpg' },
-            { type: 'image', src: '../assets/projects_media/tapcash/auth3.jpg' },
-            { type: 'image', src: '../assets/projects_media/tapcash/notifications.jpg' }
-        ]
-    },
-    {
-        id: "epl-reservation",
-        title: "EPL Ticket Reservation",
-        slug: "epl-reservation",
-        category: "mobile",
-        tags: ["Flutter", ".NET Core", "SQL Server"],
-        techStack: ["Flutter Web", "ASP.NET Core", "SQL Server", "Provider"],
+        tags: ["Flutter", "Consumer Rights", "Scanner", "Prototype"],
+        techStack: ["Flutter", "Dart", "Provider", "Barcode Scanner", "Shared Preferences local storage", "JSON", "UI/UX"],
         featured: true,
         status: "completed",
-        date: "2023-10",
-        i18nKey: "projectData.eplReservation"
+        date: "2024-05",
+        i18nKey: "projectData.checkit",
+        color: "#2ecc71",
+        media: [
+            { type: 'image', src: '../assets/projects_media/check-it/CheckIt Cover.png' },
+            { type: 'image', src: '../assets/projects_media/check-it/Home.jpg' },
+            { type: 'image', src: '../assets/projects_media/check-it/Products grid.jpg' },
+            { type: 'image', src: '../assets/projects_media/check-it/Product window.jpg' },
+            { type: 'image', src: '../assets/projects_media/check-it/Product Complaint with validation.jpg' },
+            { type: 'image', src: '../assets/projects_media/check-it/Complaint status.jpg' },
+            { type: 'image', src: '../assets/projects_media/check-it/Splash.jpg' },
+            { type: 'image', src: '../assets/projects_media/check-it/drawer.jpg' },
+            { type: 'image', src: '../assets/projects_media/check-it/Helpdesk idea.jpg' }
+        ]
     },
     {
         id: "reddit-clone",
@@ -193,6 +155,35 @@ export const projects = [
             { type: 'image', src: '../assets/projects_media/reddix_my_contributions/username_reset_received_mail_on_gmail.png' }
         ]
     },
+
+    {
+        id: "tapcash",
+        title: "TapCash FinTech",
+        slug: "tapcash",
+        category: "mobile",
+        tags: ["Flutter", "FinTech", "UI/UX"],
+        techStack: ["Flutter", "Dart", "Cubit", "Data Viz", "Provider"],
+        featured: true,
+        status: "completed",
+        date: "2023-05",
+        i18nKey: "projectData.tapcash",
+        color: "#9b59b6",
+        demoUrl: "https://docs.google.com/presentation/d/1IC-2Cvxh4LbfgxtxTxzCyrZzTY8DJjav/edit",
+        media: [
+            { type: 'image', src: '../assets/projects_media/tapcash/tapcash.jpg' },
+            { type: 'image', src: '../assets/projects_media/tapcash/home.jpg' },
+            { type: 'image', src: '../assets/projects_media/tapcash/send.jpg' },
+            { type: 'image', src: '../assets/projects_media/tapcash/qr.jpg' },
+            { type: 'image', src: '../assets/projects_media/tapcash/elec_bills.jpg' },
+            { type: 'image', src: '../assets/projects_media/tapcash/children.jpg' },
+            { type: 'image', src: '../assets/projects_media/tapcash/auth1.jpg' },
+            { type: 'image', src: '../assets/projects_media/tapcash/auth2.jpg' },
+            { type: 'image', src: '../assets/projects_media/tapcash/auth3.jpg' },
+            { type: 'image', src: '../assets/projects_media/tapcash/notifications.jpg' }
+        ]
+    },
+
+
     {
         id: "ecosort",
         title: "EcoSort Smart Recycling",
@@ -206,6 +197,19 @@ export const projects = [
         i18nKey: "projectData.ecosort",
         color: "#10b981"
     },
+    {
+        id: "epl-reservation",
+        title: "EPL Ticket Reservation",
+        slug: "epl-reservation",
+        category: "mobile",
+        tags: ["Flutter", ".NET Core", "SQL Server"],
+        techStack: ["Flutter Web", "ASP.NET Core", "SQL Server", "Provider"],
+        featured: false,
+        status: "completed",
+        date: "2023-10",
+        i18nKey: "projectData.eplReservation"
+    },
+
     // ========== DATA & AI PROJECTS ==========
 
     {
@@ -244,44 +248,9 @@ export const projects = [
         date: "2024-05",
         i18nKey: "projectData.phishing"
     },
-    {
-        id: "vector-db",
-        title: "Vectorized Database",
-        slug: "vector-db",
-        category: "data",
-        tags: ["Databases", "Algorithms", "Python"],
-        techStack: ["Python", "NumPy", "K-Means"],
-        featured: false,
-        status: "completed",
-        date: "2024-03",
-        i18nKey: "projectData.vectorDb"
-    },
-    {
-        id: "library-system",
-        title: "Central Library System",
-        slug: "library-system",
-        category: "data",
-        tags: ["SQL Server", "Database Design"],
-        techStack: ["SQL Server", "T-SQL", "Relational Mapping"],
-        featured: false,
-        status: "completed",
-        date: "2022-05",
-        i18nKey: "projectData.librarySystem"
-    },
 
     // ========== EMBEDDED & ROBOTICS PROJECTS ==========
-    {
-        id: "robot-exploration",
-        title: "Multi-Robot Exploration",
-        slug: "robot-exploration",
-        category: "embedded",
-        tags: ["ROS", "Python", "Robotics"],
-        techStack: ["ROS Noetic", "Gazebo", "Python", "Linux"],
-        featured: true,
-        status: "completed",
-        date: "2023-11",
-        i18nKey: "projectData.robotExploration"
-    },
+
     {
         id: "line-follower",
         title: "Embedded CV Line Follower",

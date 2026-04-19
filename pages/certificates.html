@@ -4,16 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mamdouh Ahmed Attia's professional certifications and achievements.">
+    <meta name="description" content="Mamdouh Ahmed Attia's professional certifications — ML Specialization, HCIA-AI, Flutter internship, and more.">
     <title>Certificates | Mamdouh Ahmed Attia</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Theme Initialization - Preventing FOUC -->
+    <!-- Theme Init -->
     <script>
         (function () {
             const THEME_KEY = 'portfolio-theme';
@@ -32,211 +30,337 @@
 
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+
+    <style>
+        /* ============================
+           CERTIFICATES — EMERALD PALETTE
+        ============================= */
+        body { background: #0d0d0d; }
+
+        /* Aurora — emerald tones */
+        .c-aurora { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+        .c-aurora .blob { position: absolute; border-radius: 50%; filter: blur(130px); opacity: 0.065; animation: blobFloat 15s ease-in-out infinite; }
+        .c-aurora .b1 { width: 600px; height: 600px; background: #10b981; top: -180px; right: -100px; animation-delay: 0s; }
+        .c-aurora .b2 { width: 500px; height: 500px; background: #0ea5e9; bottom: 6%; left: -120px; animation-delay: -7.5s; }
+        .c-aurora .b3 { width: 360px; height: 360px; background: #d97706; top: 42%; left: 36%; animation-delay: -3.5s; }
+
+        @keyframes blobFloat {
+            0%, 100% { transform: translate(0,0) scale(1); }
+            33% { transform: translate(22px,-16px) scale(1.03); }
+            66% { transform: translate(-16px,22px) scale(0.97); }
+        }
+
+        .c-page { position: relative; z-index: 1; padding-top: 90px; }
+
+        /* Hero */
+        .c-hero { text-align: center; padding: 72px 24px 56px; max-width: 900px; margin: 0 auto; }
+        .c-eyebrow {
+            display: inline-block; font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 700;
+            letter-spacing: 0.15em; text-transform: uppercase; color: #10b981;
+            padding: 6px 18px; border: 1px solid rgba(16,185,129,0.3); border-radius: 100px;
+            background: rgba(16,185,129,0.07); margin-bottom: 24px;
+        }
+        .c-title {
+            font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem);
+            font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 20px;
+        }
+        .c-title .g { background: linear-gradient(135deg, #10b981, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .c-desc { font-family: 'Inter', sans-serif; font-size: 1.05rem; color: rgba(255,255,255,0.5); max-width: 560px; margin: 0 auto 48px; line-height: 1.7; }
+
+        /* Stat Bar */
+        .c-stats {
+            display: flex; justify-content: center; flex-wrap: wrap; gap: 0;
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(16,185,129,0.2);
+            border-radius: 16px; padding: 22px 40px; backdrop-filter: blur(20px);
+            max-width: 600px; margin: 0 auto;
+        }
+        .c-stat { text-align: center; padding: 0 28px; flex: 1; min-width: 110px; }
+        .c-stat:not(:last-child) { border-right: 1px solid rgba(255,255,255,0.07); }
+        .c-stat-val { font-family: 'Space Grotesk', sans-serif; font-size: 1.9rem; font-weight: 700; background: linear-gradient(135deg, #10b981, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .c-stat-lbl { font-family: 'Inter', sans-serif; font-size: 0.72rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+
+        /* Section */
+        .c-section { max-width: 960px; margin: 0 auto; padding: 0 24px 80px; }
+        .c-section-label {
+            font-family: 'Space Grotesk', sans-serif; font-size: 0.78rem; font-weight: 700;
+            letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.3);
+            margin-bottom: 36px; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        /* Cert Cards Grid */
+        .c-grid {
+            display: grid; grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        @media (min-width: 640px) { .c-grid { grid-template-columns: repeat(2, 1fr); } }
+
+        /* Certificate Card — "Achievement Badge" feel */
+        .c-card {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(16,185,129,0.13);
+            border-radius: 20px; padding: 28px; backdrop-filter: blur(20px);
+            position: relative; overflow: hidden;
+            transition: border-color 0.3s, background 0.3s, transform 0.4s ease, box-shadow 0.3s, opacity 0.4s ease;
+            opacity: 0; transform: translateY(24px);
+        }
+        .c-card.visible { opacity: 1; transform: translateY(0); }
+        .c-card:hover {
+            border-color: rgba(16,185,129,0.4); background: rgba(16,185,129,0.04);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(16,185,129,0.1), 0 0 0 1px rgba(16,185,129,0.1);
+        }
+
+        /* Corner glow accent */
+        .c-card::before {
+            content: ''; position: absolute; top: 0; right: 0;
+            width: 120px; height: 120px;
+            background: radial-gradient(circle at top right, rgba(16,185,129,0.12), transparent 70%);
+            border-radius: 0 20px 0 100%;
+        }
+
+        /* Ribbon badge */
+        .c-ribbon {
+            position: absolute; top: 18px; right: 18px;
+            font-family: 'Inter', sans-serif; font-size: 0.62rem; font-weight: 700;
+            letter-spacing: 0.1em; text-transform: uppercase;
+            padding: 4px 10px; border-radius: 100px;
+            background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3);
+            color: #34d399;
+        }
+        .c-ribbon.blue { background: rgba(14,165,233,0.12); border-color: rgba(14,165,233,0.3); color: #38bdf8; }
+        .c-ribbon.amber { background: rgba(217,119,6,0.12); border-color: rgba(217,119,6,0.3); color: #fbbf24; }
+        .c-ribbon.orange { background: rgba(249,115,22,0.12); border-color: rgba(249,115,22,0.3); color: #fb923c; }
+
+        /* Issuer Icon Area */
+        .c-issuer-row { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+        .c-issuer-icon {
+            width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
+            background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .c-issuer-icon svg { color: #34d399; }
+        .c-issuer-icon.blue { background: rgba(14,165,233,0.1); border-color: rgba(14,165,233,0.2); }
+        .c-issuer-icon.blue svg { color: #38bdf8; }
+        .c-issuer-icon.amber { background: rgba(217,119,6,0.1); border-color: rgba(217,119,6,0.2); }
+        .c-issuer-icon.amber svg { color: #fbbf24; }
+        .c-issuer-icon.orange { background: rgba(249,115,22,0.1); border-color: rgba(249,115,22,0.2); }
+        .c-issuer-icon.orange svg { color: #fb923c; }
+
+        .c-issuer-name { font-family: 'Inter', sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.4); }
+        .c-badge-date { font-family: 'Inter', sans-serif; font-size: 0.68rem; color: #34d399; font-weight: 600; margin-top: 2px; }
+        .c-badge-date.blue { color: #38bdf8; }
+        .c-badge-date.amber { color: #fbbf24; }
+        .c-badge-date.orange { color: #fb923c; }
+
+        .c-name { font-family: 'Space Grotesk', sans-serif; font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 8px; line-height: 1.3; }
+        .c-desc-text { font-family: 'Inter', sans-serif; font-size: 0.84rem; color: rgba(255,255,255,0.5); line-height: 1.6; margin-bottom: 14px; }
+        .c-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+        .c-chip {
+            font-family: 'Inter', sans-serif; font-size: 0.67rem; font-weight: 600;
+            padding: 3px 10px; border-radius: 100px;
+            background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.18); color: #6ee7b7;
+        }
+        .c-chip.blue { background: rgba(14,165,233,0.08); border-color: rgba(14,165,233,0.18); color: #7dd3fc; }
+        .c-chip.amber { background: rgba(217,119,6,0.08); border-color: rgba(217,119,6,0.18); color: #fde68a; }
+        .c-chip.orange { background: rgba(249,115,22,0.08); border-color: rgba(249,115,22,0.18); color: #fed7aa; }
+
+        .c-verify-btn {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600;
+            color: #34d399; text-decoration: none; width: 100%;
+            padding: 9px; border-radius: 10px;
+            border: 1px solid rgba(16,185,129,0.25); background: rgba(16,185,129,0.05);
+            transition: all 0.2s;
+        }
+        .c-verify-btn:hover { background: rgba(16,185,129,0.12); border-color: rgba(16,185,129,0.5); transform: translateY(-1px); color: #6ee7b7; }
+        .c-verify-btn.blue { color: #38bdf8; border-color: rgba(14,165,233,0.25); background: rgba(14,165,233,0.05); }
+        .c-verify-btn.blue:hover { background: rgba(14,165,233,0.12); border-color: rgba(14,165,233,0.5); color: #7dd3fc; }
+        .c-verify-btn.orange { color: #fb923c; border-color: rgba(249,115,22,0.25); background: rgba(249,115,22,0.05); }
+        .c-verify-btn.orange:hover { background: rgba(249,115,22,0.12); border-color: rgba(249,115,22,0.5); color: #fed7aa; }
+
+        @media (max-width: 600px) {
+            .c-stats { padding: 16px 20px; }
+            .c-stat { padding: 0 14px; }
+            .c-card { padding: 20px; }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Header Anchor -->
     <div id="site-header"></div>
 
-    <main class="main page-enter" id="main-content">
-        <div class="page-header">
-            <div class="container">
-                <h1 class="page-title reveal" data-i18n="certificates.title">Certifications</h1>
-                <p class="page-description reveal" data-i18n="certificates.subtitle">Professional validation of my
-                    technical skills</p>
-            </div>
-        </div>
+    <!-- Aurora -->
+    <div class="c-aurora">
+        <div class="blob b1"></div>
+        <div class="blob b2"></div>
+        <div class="blob b3"></div>
+    </div>
 
-        <div class="page-content">
-            <div class="container">
-                <div class="certificates-grid grid-3">
-                    <!-- ML Specialization -->
-                    <div class="certificate-card card reveal">
-                        <div class="certificate-image">
-                            <div class="certificate-placeholder">
-                                <span>🎓</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Machine Learning Specialization</h3>
-                            <p class="certificate-issuer">Coursera (Stanford Online)</p>
-                            <p class="certificate-date">2024</p>
-                            <a href="https://www.coursera.org/account/accomplishments/specialization/5SMDXZU9BLUW"
-                                target="_blank" class="btn btn-primary btn-sm"
-                                style="width: 100%; margin-top: var(--space-4);">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                    <polyline points="15 3 21 3 21 9" />
-                                    <line x1="10" y1="14" x2="21" y2="3" />
-                                </svg>
-                                View Certificate
-                            </a>
-                        </div>
-                    </div>
+    <main class="c-page page-enter" id="main-content">
 
-                    <!-- HCIA-AI -->
-                    <div class="certificate-card card reveal">
-                        <div class="certificate-image">
-                            <div class="certificate-placeholder">
-                                <span>🤖</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Huawei HCIA-AI</h3>
-                            <p class="certificate-issuer">Huawei</p>
-                            <p class="certificate-date">2023</p>
-                            <div class="btn btn-secondary btn-sm disabled"
-                                style="width: 100%; margin-top: var(--space-4);">
-                                Certification Verified
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ODC Certificate -->
-                    <div class="certificate-card card reveal">
-                        <div class="certificate-image">
-                            <div class="certificate-placeholder">
-                                <span>📱</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Flutter Developer Internship</h3>
-                            <p class="certificate-issuer">Orange Digital Center</p>
-                            <p class="certificate-date">2023</p>
-                            <a href="https://drive.google.com/file/d/1dN2UPmg3Sql1kX3vJuBlea1_P1D4l6dk/view"
-                                target="_blank" class="btn btn-primary btn-sm"
-                                style="width: 100%; margin-top: var(--space-4);">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                    <polyline points="15 3 21 3 21 9" />
-                                    <line x1="10" y1="14" x2="21" y2="3" />
-                                </svg>
-                                View Certificate
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Dart Course -->
-                    <div class="certificate-card card reveal">
-                        <div class="certificate-image">
-                            <div class="certificate-placeholder">
-                                <span>🎯</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Complete Dart Learning Guide</h3>
-                            <p class="certificate-issuer">Udemy</p>
-                            <p class="certificate-date">2022</p>
-                            <div class="btn btn-secondary btn-sm disabled"
-                                style="width: 100%; margin-top: var(--space-4);">
-                                Completed
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Unsupervised Learning -->
-                    <div class="certificate-card card reveal">
-                        <div class="certificate-image">
-                            <div class="certificate-placeholder">
-                                <span>📊</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Unsupervised Learning & Recommenders</h3>
-                            <p class="certificate-issuer">Coursera (Stanford)</p>
-                            <p class="certificate-date">2024</p>
-                            <div class="btn btn-secondary btn-sm disabled"
-                                style="width: 100%; margin-top: var(--space-4);">
-                                Part of ML Specialization
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Supervised Learning -->
-                    <div class="certificate-card card reveal">
-                        <div class="certificate-image">
-                            <div class="certificate-placeholder">
-                                <span>📈</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Supervised Machine Learning</h3>
-                            <p class="certificate-issuer">Coursera (Stanford)</p>
-                            <p class="certificate-date">2024</p>
-                            <div class="btn btn-secondary btn-sm disabled"
-                                style="width: 100%; margin-top: var(--space-4);">
-                                Part of ML Specialization
-                            </div>
-                        </div>
-                    </div>
+        <!-- Hero -->
+        <div class="c-hero">
+            <span class="c-eyebrow">Credentials</span>
+            <h1 class="c-title">Verified Technical<br><span class="g">Mastery</span></h1>
+            <p class="c-desc">Professional certifications and industry credentials that validate my technical precision, continuous learning, and commitment to engineering excellence.</p>
+            <div class="c-stats">
+                <div class="c-stat">
+                    <div class="c-stat-val">4</div>
+                    <div class="c-stat-lbl">Certifications</div>
+                </div>
+                <div class="c-stat">
+                    <div class="c-stat-val">3</div>
+                    <div class="c-stat-lbl">Issuers</div>
+                </div>
+                <div class="c-stat">
+                    <div class="c-stat-val">100%</div>
+                    <div class="c-stat-lbl">Verifiable</div>
                 </div>
             </div>
         </div>
+
+        <!-- Certificates Grid -->
+        <section class="c-section">
+            <div class="c-section-label">Professional Certifications</div>
+            <div class="c-grid">
+
+                <!-- ML Specialization -->
+                <div class="c-card reveal">
+                    <span class="c-ribbon">Professional</span>
+                    <div class="c-issuer-row">
+                        <div class="c-issuer-icon blue">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="c-issuer-name">Coursera · Stanford Online · DeepLearning.AI</div>
+                            <div class="c-badge-date blue">2024 · Verifiable</div>
+                        </div>
+                    </div>
+                    <div class="c-name">Machine Learning Specialization</div>
+                    <p class="c-desc-text">Advanced certification covering supervised learning, neural networks, unsupervised learning, recommender systems, and reinforcement learning with real Python labs.</p>
+                    <div class="c-tags">
+                        <span class="c-chip blue">ML</span>
+                        <span class="c-chip blue">Neural Networks</span>
+                        <span class="c-chip blue">TensorFlow</span>
+                        <span class="c-chip blue">Python</span>
+                    </div>
+                    <a href="https://www.coursera.org/account/accomplishments/specialization/5SMDXZU9BLUW" target="_blank" class="c-verify-btn blue">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        Verify on Coursera
+                    </a>
+                </div>
+
+                <!-- HCIA-AI -->
+                <div class="c-card reveal" style="transition-delay:0.1s;">
+                    <span class="c-ribbon">Certified</span>
+                    <div class="c-issuer-row">
+                        <div class="c-issuer-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="c-issuer-name">Huawei Technologies</div>
+                            <div class="c-badge-date">2023 · Certified</div>
+                        </div>
+                    </div>
+                    <div class="c-name">HCIA-AI Certification</div>
+                    <p class="c-desc-text">Certified Professional Associate in Artificial Intelligence. Deep dive into AI foundations, computer vision, NLP, and deep learning model deployment within Huawei Cloud ecosystem.</p>
+                    <div class="c-tags">
+                        <span class="c-chip">AI</span>
+                        <span class="c-chip">Deep Learning</span>
+                        <span class="c-chip">Computer Vision</span>
+                        <span class="c-chip">NLP</span>
+                    </div>
+                </div>
+
+                <!-- Orange Digital Center -->
+                <div class="c-card reveal" style="transition-delay:0.15s;">
+                    <span class="c-ribbon orange">Industry</span>
+                    <div class="c-issuer-row">
+                        <div class="c-issuer-icon orange">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="c-issuer-name">Orange Digital Center Egypt</div>
+                            <div class="c-badge-date orange">2023 · Industry Certificate</div>
+                        </div>
+                    </div>
+                    <div class="c-name">Flutter Developer Internship</div>
+                    <p class="c-desc-text">Professional industry training in Flutter development, Bloc state management, MVVM architecture, and Agile project delivery within a real enterprise team.</p>
+                    <div class="c-tags">
+                        <span class="c-chip orange">Flutter</span>
+                        <span class="c-chip orange">Bloc</span>
+                        <span class="c-chip orange">Agile</span>
+                        <span class="c-chip orange">MVVM</span>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1dN2UPmg3Sql1kX3vJuBlea1_P1D4l6dk/view" target="_blank" class="c-verify-btn orange">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        View Document
+                    </a>
+                </div>
+
+                <!-- Dart Guide -->
+                <div class="c-card reveal" style="transition-delay:0.2s;">
+                    <span class="c-ribbon amber">Technical</span>
+                    <div class="c-issuer-row">
+                        <div class="c-issuer-icon amber">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="c-issuer-name">Udemy · Professional Track</div>
+                            <div class="c-badge-date amber">2022 · Completed</div>
+                        </div>
+                    </div>
+                    <div class="c-name">The Complete Dart Guide</div>
+                    <p class="c-desc-text">Comprehensive mastery of the Dart programming language — covering fundamentals, OOP principles, asynchronous patterns (Future/Stream), and production-ready code architecture.</p>
+                    <div class="c-tags">
+                        <span class="c-chip amber">Dart</span>
+                        <span class="c-chip amber">OOP</span>
+                        <span class="c-chip amber">Async / Streams</span>
+                        <span class="c-chip amber">Clean Code</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
-    <!-- Certificate Modal -->
-    <div class="modal-backdrop"></div>
-    <div class="modal" id="certificate-modal">
-        <div class="modal-header">
-            <h2 class="modal-title" id="cert-modal-title">Certificate</h2>
-            <button class="modal-close" onclick="closeModal('certificate-modal')" aria-label="Close">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18" />
-                    <line x1="6" y1="6" x2="18" y2="18" />
-                </svg>
-            </button>
-        </div>
-        <div class="modal-body" id="cert-modal-body">
-            <!-- Certificate image will show here -->
-        </div>
-    </div>
-
-    <!-- Footer Anchor -->
     <div id="site-footer"></div>
-
     <script type="module" src="../js/main.js"></script>
 
-    <style>
-        .certificates-grid {
-            gap: var(--space-6);
-        }
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.style.opacity = '1';
+                    e.target.style.transform = 'translateY(0)';
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.c-card').forEach(el => observer.observe(el));
 
-        .certificate-card {
-            text-align: center;
-        }
-
-        .certificate-image {
-            background: var(--bg-tertiary);
-            aspect-ratio: 4/3;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .certificate-placeholder {
-            font-size: 4rem;
-        }
-
-        .certificate-issuer {
-            color: var(--text-secondary);
-            font-size: var(--text-sm);
-            margin-bottom: var(--space-1);
-        }
-
-        .certificate-date {
-            color: var(--text-tertiary);
-            font-size: var(--text-sm);
-        }
-
-        .btn.disabled {
-            opacity: 0.7;
-            cursor: default;
-            pointer-events: none;
-        }
-    </style>
-    <script type="module" src="../js/main.js"></script>
+        // Safety net: show all cards after 1.5s in case observer fails
+        setTimeout(() => {
+            document.querySelectorAll('.c-card').forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            });
+        }, 1500);
+    </script>
 </body>
 
 </html>

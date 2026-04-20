@@ -164,9 +164,9 @@
 
 /* ==================== LIGHT THEME ==================== */
 [data-theme="light"] {
-  --bg-primary: #FFFFFF;
-  --bg-secondary: #F5F5F5;
-  --bg-tertiary: #EBEBEB;
+  --bg-primary: #F7F7F8;
+  --bg-secondary: #EEEEEF;
+  --bg-tertiary: #E5E5E6;
   --bg-elevated: #FFFFFF;
   
   --text-primary: #0A2540;

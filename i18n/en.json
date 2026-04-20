@@ -85,7 +85,8 @@
     "title": "Client Feedback",
     "subtitle": "What my clients say about working with me",
     "rating": "5.0 out of 5.0",
-    "allRatings": "All clients rated 5/5"
+    "allRatings": "All clients rated 5/5",
+    "viewAll": "See All Client Reviews"
   },
   "learning": {
     "title": "Learning Journey",

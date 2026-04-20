@@ -144,12 +144,42 @@
   },
   "common": {
     "learnMore": "Learn More",
-    "viewMore": "View More"
+    "viewMore": "View More",
+    "present": "Present"
   },
   "studentFeedback": {
     "title": "Student Feedback",
     "subtitle": "What my students say about my teaching",
     "viewAll": "View Full Feedback"
+  },
+  "services": {
+    "label": "What I Offer",
+    "title": "Services Built Around Your Goals",
+    "subtitle": "From idea to live product \u2014 end-to-end or targeted support exactly where you need it",
+    "app": {
+      "title": "Full Mobile App Development",
+      "desc": "End-to-end Flutter app delivery \u2014 architecture design, UI/UX implementation, Firebase backend, and Play Store / App Store release."
+    },
+    "bugs": {
+      "title": "Bug Fixes & Performance Upgrades",
+      "desc": "Diagnosing and resolving crashes, UI glitches, state issues, and slow performance in existing Flutter applications."
+    },
+    "feature": {
+      "title": "Feature Addition to Existing Apps",
+      "desc": "Extending your current Flutter codebase with new features \u2014 UI screens, API integrations, notifications, payments, and more."
+    },
+    "tutoring": {
+      "title": "Personalized Technical Tutoring",
+      "desc": "1-on-1 or group sessions in Flutter, Dart, Python, Machine Learning \u2014 adapted to your level and delivered with real projects."
+    },
+    "architecture": {
+      "title": "App Architecture Consulting",
+      "desc": "Helping teams choose and implement the right architecture \u2014 Clean Architecture, MVVM, Bloc/Cubit \u2014 for long-term maintainability."
+    },
+    "ai": {
+      "title": "AI & ML Integration",
+      "desc": "Embedding intelligent features into your app \u2014 GPT chatbots, ML model inference, recommendation logic, and data-driven UX."
+    }
   },
   "contact": {
     "title": "Get In Touch",
@@ -212,6 +242,24 @@
       "apps": "Apps Delivered",
       "instructor": "Years as Instructor",
       "students": "Students Taught"
+    },
+    "sectionLabel": "Technical Background",
+    "homeTitle": "Architecting the Future",
+    "homeSubtitle": "A heritage of engineering excellence and digital precision",
+    "active": {
+      "role": "Open Source Contributor",
+      "company": "Itqan Community \u00b7 Mushaf-IMAD",
+      "description": "Leading technical implementation for high-fidelity Quranic applications, focusing on architectural integrity and mobile performance."
+    },
+    "instructor": {
+      "role": "Technical Instructor",
+      "company": "PrimaLab \u00b7 DEPI \u00b7 Maspero",
+      "description": "Empowering students through Flutter development, Python programming, and Machine Learning workshops."
+    },
+    "freelance": {
+      "role": "Flutter Developer \u00b7 Freelance",
+      "company": "HyperMate \u00b7 EcoSort \u00b7 VolunTeen",
+      "description": "Delivering high-performance mobile solutions for diverse clients, specializing in complex state management and IoT integration."
     },
     "title": "Experience",
     "subtitle": "A summary of my professional journey",

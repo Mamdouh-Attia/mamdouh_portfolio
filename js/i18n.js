@@ -80,6 +80,9 @@ class I18nManager {
         } catch {
             // localStorage not available
         }
+
+        // Notify dynamic content (e.g. JS-rendered cards) to re-render
+        document.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
     }
 
     applyLanguage(lang) {

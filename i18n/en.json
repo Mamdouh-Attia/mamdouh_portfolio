@@ -89,10 +89,93 @@
     "viewAll": "See All Client Reviews"
   },
   "learning": {
+    "eyebrow": "Knowledge Acquisition",
+    "heroTitle": "Learning Never Stops Here",
+    "heroDesc": "From a Computer Engineering degree to cutting-edge ML specializations — a chronicle of continuous evolution.",
+    "stats": {
+      "years": "Years of Study",
+      "programs": "Programs",
+      "graduation": "Graduation Project",
+      "skills": "Skill Areas"
+    },
+    "sectionLabel": "Academic & Professional Programs",
+    "verifyBtn": "Verify Certificate",
+    "nti": {
+      "tag": "AI Training",
+      "role": "AI Trainee — HCIA-AI Track",
+      "org": "NTI · National Telecom Institute · Huawei HCIA-AI",
+      "desc": "120-hour intensive AI training at the National Telecom Institute covering Python data science, ML/DL fundamentals, and a Covid detector capstone project.",
+      "trainingCert": "Training Certificate",
+      "hciaCert": "HCIA-AI Certificate"
+    },
+    "cairo": {
+      "tag": "Core Foundation",
+      "role": "Bachelor of Engineering — Computer Engineering",
+      "org": "Cairo University · Faculty of Engineering",
+      "desc": "Comprehensive computer engineering education. Graduated with Very Good with Honors."
+    },
+    "coursera": {
+      "tag": "Deep Learning",
+      "role": "Machine Learning Specialization",
+      "desc": "Comprehensive ML program covering supervised learning, neural networks, unsupervised clustering, recommender systems, and reinforcement learning."
+    },
+    "orange": {
+      "tag": "Enterprise Mobile",
+      "role": "Flutter Intensive Program",
+      "org": "Orange Digital Center Egypt · Cairo",
+      "desc": "Advanced enterprise Flutter program: Bloc/Cubit state management, MVVM architecture, and pixel-perfect production UI in an Agile team."
+    },
     "title": "Learning Journey",
     "subtitle": "Continuous growth through courses and certifications"
   },
   "teaching": {
+    "eyebrow": "Education & Community",
+    "heroTitle": "Shaping the Next Generation of Builders",
+    "heroDesc": "From hands-on Flutter diplomas to government ML initiatives — taught 35+ students across 4+ tracks.",
+    "stats": {
+      "students": "Students Taught",
+      "courses": "Courses Delivered",
+      "rating": "Avg. Rating",
+      "hours": "Teaching Hours"
+    },
+    "sectionLabel": "Teaching Experience",
+    "feedbackLabel": "Student Feedback",
+    "ratingBanner": "4.9 / 5.0 average — from 35+ students across Flutter, ML, Java & Python tracks",
+    "testimonial": {
+      "anonymous": {
+        "depi": "A DEPI ML Track Graduate",
+        "python": "A Python Programming Graduate"
+      }
+    },
+    "maspero": {
+      "role": "Python Programming Instructor",
+      "org": "Maspero Academy · Radio & Television Institute, Egypt",
+      "desc": "Delivered Python programming fundamentals to CS students covering data types, control flow, functions, OOP and problem-solving patterns.",
+      "b1": "Focused on bridging theoretical concepts with real coding problems",
+      "b2": "Created hands-on exercises tailored to beginner-level learners",
+      "sample": "Sample: Python Collections (Lists, Sets, Dicts)"
+    },
+    "depi": {
+      "role": "ML Engineering Track Instructor",
+      "org": "DEPI Initiative · Ministry of Communications & IT, Egypt",
+      "desc": "Delivered a comprehensive ML engineering curriculum under DEPI. Integrated own notes, labs, and led a 1-month phased capstone project through to defense.",
+      "b1": "Covered Statistics, Linear Algebra, NumPy/Pandas, and model training with custom labs",
+      "b2": "Designed a 1-month phased capstone project framework, monitored teams to product-defense seminar",
+      "b3": "Integrated personalized feedback loops and motivation throughout the track"
+    },
+    "primaLab": {
+      "role": "Flutter Development Diploma — Level 1",
+      "org": "PrimaLab · New Damietta, Egypt",
+      "desc": "Delivered Flutter Level 1 — from zero programming background through Dart to real Flutter applications across 28+ sessions.",
+      "b1": "Designed all materials, notes, and 10+ assignments across 28+ sessions from scratch",
+      "b2": "Supervised a capstone project: Dart shopping system with cart management and checkout",
+      "b3": "Scope: Dart OOP & async, Flutter widgets & layouts, stateful/stateless, navigation"
+    },
+    "volunteer": {
+      "role": "IT Skills Training — Volunteer",
+      "org": "Damietta Orphanage Staff · Community Service",
+      "desc": "Volunteered to teach IT skills to orphanage staff, helping them with practical technology tools."
+    },
     "title": "Teaching & Volunteering",
     "subtitle": "Sharing knowledge and giving back to the community"
   },
@@ -115,7 +198,14 @@
       "values": "I value consistency over perfection, continuous learning, and building software that solves real problems. I'm especially interested in mobile roles where clean architecture, product thinking, and long-term code quality matter."
     },
     "skills": {
-      "title": "Skills & Expertise"
+      "title": "Skills & Expertise",
+      "categories": {
+        "mobile": "📱 Mobile Development",
+        "backend": "🔥 Backend & Services",
+        "ai": "🤖 AI & Machine Learning",
+        "languages": "💻 Programming Languages",
+        "tools": "🛠️ Tools & Practices"
+      }
     },
     "experience": {
       "title": "Experience"
@@ -141,6 +231,49 @@
       "school": "Cairo University",
       "grade": "Very Good with Honors",
       "description": "Comprehensive computer engineering education centered on software engineering, algorithms, and high-performance mobile systems."
+    },
+    "timeline": {
+      "os": {
+        "role": "Open Source Flutter Contributor",
+        "org": "Itqan Community — Mushaf-IMAD Flutter",
+        "desc": "Integrated the Quran.com Audio API via OAuth 2.0. Built a hybrid audio engine with in-memory caching (86% latency reduction), reactive Stream Transformers, and 80+ Mocktail tests.",
+        "link": "View PR #27 on GitHub →"
+      },
+      "python": {
+        "role": "Python Programming Instructor",
+        "org": "Maspero Academy — Radio & Television Institute",
+        "desc": "Delivered Python programming fundamentals to CS students, creating engaging exercises covering data types, control flow, OOP, and problem-solving patterns."
+      },
+      "it": {
+        "role": "IT Support Specialist",
+        "org": "Future of Egypt (Military Service)",
+        "desc": "Provided technical support for hardware, software, and networking. Diagnosed and resolved complex system issues while building strong client-communication and problem-solving skills."
+      },
+      "ml": {
+        "role": "Machine Learning Engineer Instructor",
+        "org": "DEPI Initiative — Ministry of Communications & IT",
+        "desc": "Designed and delivered a comprehensive ML engineering curriculum for aspiring engineers. Covered mathematics foundations, Python ecosystem (NumPy/Pandas), model training, and end-to-end project lifecycle including a capstone defense seminar."
+      },
+      "freelance": {
+        "role": "Flutter Developer — Freelance",
+        "org": "Self-Employed (Remote & Local Clients)",
+        "desc": "Delivered end-to-end Flutter applications for 5+ clients, spanning IoT health monitoring (HyperMate), smart recycling IoT (EcoSort), and social volunteering platforms (VolunTeen). Managed full project lifecycle: requirements, architecture, implementation, testing, and delivery."
+      },
+      "primalab": {
+        "role": "Flutter Development Instructor",
+        "org": "Primalab",
+        "desc": "Led a complete Flutter Development Diploma from zero to production. Designed all course materials, handwritten notes, and practical exercises. Guided students from Dart basics through MVC architecture, state management, and real app deployment."
+      },
+      "orange": {
+        "role": "Flutter Developer Intern",
+        "org": "Orange Digital Center Egypt",
+        "desc": "Built production Flutter features in an Agile team. Translated Figma designs into pixel-perfect, responsive Flutter UIs using MVVM architecture and the Bloc state management pattern. Led the Reddit Clone project's community module.",
+        "link": "View Internship Certificate"
+      }
+    },
+    "testimonials": {
+      "title": "What My Clients Say",
+      "subtitle": "5.0 / 5.0 — All clients rated 5 out of 5"
     }
   },
   "common": {
@@ -156,10 +289,10 @@
   "services": {
     "label": "What I Offer",
     "title": "Services Built Around Your Goals",
-    "subtitle": "From idea to live product \u2014 end-to-end or targeted support exactly where you need it",
+    "subtitle": "From idea to live product — end-to-end or targeted support exactly where you need it",
     "app": {
       "title": "Full Mobile App Development",
-      "desc": "End-to-end Flutter app delivery \u2014 architecture design, UI/UX implementation, Firebase backend, and Play Store / App Store release."
+      "desc": "End-to-end Flutter app delivery — architecture design, UI/UX implementation, Firebase backend, and Play Store / App Store release."
     },
     "bugs": {
       "title": "Bug Fixes & Performance Upgrades",
@@ -167,19 +300,19 @@
     },
     "feature": {
       "title": "Feature Addition to Existing Apps",
-      "desc": "Extending your current Flutter codebase with new features \u2014 UI screens, API integrations, notifications, payments, and more."
+      "desc": "Extending your current Flutter codebase with new features — UI screens, API integrations, notifications, payments, and more."
     },
     "tutoring": {
       "title": "Personalized Technical Tutoring",
-      "desc": "1-on-1 or group sessions in Flutter, Dart, Python, Machine Learning, or any Computer Engineering/Science topic \u2014 adapted to your level and delivered with real projects."
+      "desc": "1-on-1 or group sessions in Flutter, Dart, Python, Machine Learning, or any Computer Engineering/Science topic — adapted to your level and delivered with real projects."
     },
     "architecture": {
       "title": "App Architecture Consulting",
-      "desc": "Helping teams choose and implement the right architecture \u2014 Clean Architecture, MVVM, Bloc/Cubit \u2014 for long-term maintainability."
+      "desc": "Helping teams choose and implement the right architecture — Clean Architecture, MVVM, Bloc/Cubit — for long-term maintainability."
     },
     "ai": {
       "title": "AI, ML & Hardware Integrations",
-      "desc": "Embedding intelligent features into your app \u2014 GPT chatbots, ML model inference, recommendation logic, IoT/hardware integrations, and data-driven UX."
+      "desc": "Embedding intelligent features into your app — GPT chatbots, ML model inference, recommendation logic, IoT/hardware integrations, and data-driven UX."
     }
   },
   "contact": {
@@ -211,18 +344,26 @@
   },
   "footer": {
     "bio": "Mobile Software Engineer & Technical Instructor",
-    "copyright": "\u00a9 2026 Mamdouh Ahmed Attia. All rights reserved."
+    "copyright": "© 2026 Mamdouh Ahmed Attia. All rights reserved."
   },
   "page": {
-    "teaching": { "title": "Teaching | Mamdouh Ahmed Attia" },
-    "learning": { "title": "Learning | Mamdouh Ahmed Attia" },
-    "certificates": { "title": "Certificates | Mamdouh Ahmed Attia" },
-    "experience": { "title": "Experience | Mamdouh Ahmed Attia" }
+    "teaching": {
+      "title": "Teaching | Mamdouh Ahmed Attia"
+    },
+    "learning": {
+      "title": "Learning | Mamdouh Ahmed Attia"
+    },
+    "certificates": {
+      "title": "Certificates | Mamdouh Ahmed Attia"
+    },
+    "experience": {
+      "title": "Experience | Mamdouh Ahmed Attia"
+    }
   },
   "experience": {
     "eyebrow": "Career Journey",
     "heroTitle": "Building Things That Actually Matter",
-    "heroDesc": "3+ years of delivering real mobile apps \u2014 from hackathons to freelance clients and open-source contributions.",
+    "heroDesc": "3+ years of delivering real mobile apps — from hackathons to freelance clients and open-source contributions.",
     "stats": {
       "mobile": "Years Mobile",
       "apps": "Apps Delivered",
@@ -234,113 +375,94 @@
     "homeSubtitle": "A heritage of engineering excellence and digital precision",
     "active": {
       "role": "Open Source Contributor",
-      "company": "Itqan Community \u00b7 Mushaf-IMAD",
+      "company": "Itqan Community · Mushaf-IMAD",
       "description": "Leading technical implementation for high-fidelity Quranic applications, focusing on architectural integrity and mobile performance."
     },
     "instructor": {
       "role": "Technical Instructor",
-      "company": "PrimaLab \u00b7 DEPI \u00b7 Maspero",
+      "company": "PrimaLab · DEPI · Maspero",
       "description": "Empowering students through mobile development, Python programming, and Machine Learning workshops."
     },
     "freelance": {
-      "role": "Mobile App Developer \u00b7 Freelance",
-      "company": "HyperMate \u00b7 EcoSort \u00b7 VolunTeen",
+      "role": "Mobile App Developer · Freelance",
+      "company": "HyperMate · EcoSort · VolunTeen",
       "description": "Delivering high-performance mobile solutions for diverse clients, specializing in complex state management and IoT integration."
     },
     "title": "Experience",
     "subtitle": "A summary of my professional journey",
-    "viewFull": "View Full Experience"
-  },
-  "learning": {
-    "eyebrow": "Knowledge Acquisition",
-    "heroTitle": "Learning Never Stops Here",
-    "heroDesc": "From a Computer Engineering degree to cutting-edge ML specializations \u2014 a chronicle of continuous evolution.",
-    "stats": {
-      "years": "Years of Study",
-      "programs": "Programs",
-      "graduation": "Graduation Project",
-      "skills": "Skill Areas"
-    },
-    "sectionLabel": "Academic & Professional Programs",
-    "verifyBtn": "Verify Certificate",
-    "nti": {
-      "tag": "AI Training",
-      "role": "AI Trainee \u2014 HCIA-AI Track",
-      "org": "NTI \u00b7 National Telecom Institute \u00b7 Huawei HCIA-AI",
-      "desc": "120-hour intensive AI training at the National Telecom Institute covering Python data science, ML/DL fundamentals, and a Covid detector capstone project.",
-      "trainingCert": "Training Certificate",
-      "hciaCert": "HCIA-AI Certificate"
-    },
-    "cairo": {
-      "tag": "Core Foundation",
-      "role": "Bachelor of Engineering \u2014 Computer Engineering",
-      "org": "Cairo University \u00b7 Faculty of Engineering",
-      "desc": "Comprehensive computer engineering education. Graduated with Very Good with Honors."
-    },
-    "coursera": {
-      "tag": "Deep Learning",
-      "role": "Machine Learning Specialization",
-      "desc": "Comprehensive ML program covering supervised learning, neural networks, unsupervised clustering, recommender systems, and reinforcement learning."
-    },
-    "orange": {
-      "tag": "Enterprise Mobile",
-      "role": "Flutter Intensive Program",
-      "org": "Orange Digital Center Egypt \u00b7 Cairo",
-      "desc": "Advanced enterprise Flutter program: Bloc/Cubit state management, MVVM architecture, and pixel-perfect production UI in an Agile team."
-    },
-    "title": "Learning Journey",
-    "subtitle": "Continuous growth through courses and certifications"
-  },
-  "teaching": {
-    "eyebrow": "Education & Community",
-    "heroTitle": "Shaping the Next Generation of Builders",
-    "heroDesc": "From hands-on Flutter diplomas to government ML initiatives \u2014 taught 35+ students across 4+ tracks.",
-    "stats": {
-      "students": "Students Taught",
-      "courses": "Courses Delivered",
-      "rating": "Avg. Rating",
-      "hours": "Teaching Hours"
-    },
-    "sectionLabel": "Teaching Experience",
-    "feedbackLabel": "Student Feedback",
-    "ratingBanner": "4.9 / 5.0 average \u2014 from 35+ students across Flutter, ML, Java & Python tracks",
-    "testimonial": {
-      "anonymous": {
-        "depi": "A DEPI ML Track Graduate",
-        "python": "A Python Programming Graduate"
+    "viewFull": "View Full Experience",
+    "timeline": {
+      "title": "Professional Experience",
+      "teachingDivider": "Academic & Teaching Roles",
+      "badges": {
+        "accomplishment": "Accomplishment",
+        "active": "Active"
+      },
+      "os": {
+        "role": "Open Source Contributor",
+        "org": "Itqan Community · mushaf-imad-flutter · Remote",
+        "bullets": [
+          "Integrated <strong>Quran.com API</strong> via <strong>OAuth 2.0</strong>, reducing audio latency by <strong>86%</strong> using custom in-memory caching.",
+          "Developed a reactive sync system with <strong>Stream Transformers</strong> for real-time verse metadata injection.",
+          "Engineered a <strong>Hybrid Audio Engine</strong> supporting dynamic fallback between local and cloud sources.",
+          "Authored <strong>80+ unit & integration tests</strong> with Mocktail covering complex async repository logic."
+        ]
+      },
+      "freelance": {
+        "role": "Flutter Developer — Freelance",
+        "org": "Self-Employed · Remote & Local Clients",
+        "bullets": [
+          "Built a stress-monitoring app (HyperMate) connecting to an <strong>ESP8266 microcontroller</strong> via Wi-Fi with real-time GSR sensor readings and a smart chatbot.",
+          "Enhanced EcoSort — a recycling IoT client app — adding Firebase auth, push notifications, QR scanning, and <strong>Blync API</strong> integration for hardware sensors.",
+          "Delivered VolunTeen, a volunteering social platform for a real client with <strong>30–40 responsive screens</strong>, AI chatbot (GPT-3), and WhatsApp integration.",
+          "Employed <strong>MVC Architecture</strong> with Provider state management across all freelance projects."
+        ]
+      },
+      "primalab": {
+        "role": "Flutter Developer",
+        "org": "PrimaLab · New Damietta, Egypt (Hybrid)",
+        "bullets": [
+          "Developed 2 client Flutter applications (VolunTeen & Check-It), managing the complete SDLC from requirements to delivery.",
+          "Implemented barcode scanning, real-time price comparison, and e-commerce style product database in Check-It.",
+          "Integrated <strong>Firebase services</strong>, GPT-3 API, in-app video player, and third-party packages.",
+          "Delivered <strong>50+ hours</strong> of hands-on Flutter training covering Dart, OOP, UI, layout, and navigation."
+        ]
+      },
+      "orange": {
+        "role": "Flutter Developer Intern",
+        "org": "Orange Digital Center Egypt · Cairo (Hybrid)",
+        "bullets": [
+          "Worked in agile teams on <strong>2 internal mobile apps</strong> and a hackathon E-wallet app, meeting tight sprint deadlines.",
+          "Translated Figma designs into pixel-perfect Flutter UI using <strong>MVVM architecture</strong> and Bloc Cubit state management.",
+          "Led community creation module for the Reddit Clone project — 6-member cross-functional team with Scrum methodology."
+        ]
+      },
+      "python": {
+        "org": "Maspero Academy · Radio & Television Institute",
+        "bullets": [
+          "Delivered Python programming fundamentals to CS students, creating hands-on exercises covering data types, control flow, OOP, and problem-solving patterns."
+        ]
+      },
+      "ml": {
+        "role": "ML Engineer Instructor",
+        "org": "DEPI Initiative · Ministry of Communications & IT",
+        "bullets": [
+          "Designed and delivered a comprehensive ML engineering curriculum — math foundations, Python ecosystem (NumPy/Pandas), and model training from scratch.",
+          "Led a 4-phase end-to-end capstone project lifecycle, culminating in a \"sell your product\" defense seminar."
+        ]
+      },
+      "primalabInstructor": {
+        "org": "PrimaLab · New Damietta, Egypt",
+        "bullets": [
+          "Led a complete Flutter Development Diploma from zero to production, designing all course materials and handwritten notes.",
+          "Guided 35+ students from Dart basics through MVC architecture, state management, and real app deployment."
+        ]
       }
     },
-    "maspero": {
-      "role": "Python Programming Instructor",
-      "org": "Maspero Academy \u00b7 Radio & Television Institute, Egypt",
-      "desc": "Delivered Python programming fundamentals to CS students covering data types, control flow, functions, OOP and problem-solving patterns.",
-      "b1": "Focused on bridging theoretical concepts with real coding problems",
-      "b2": "Created hands-on exercises tailored to beginner-level learners",
-      "sample": "Sample: Python Collections (Lists, Sets, Dicts)"
-    },
-    "depi": {
-      "role": "ML Engineering Track Instructor",
-      "org": "DEPI Initiative \u00b7 Ministry of Communications & IT, Egypt",
-      "desc": "Delivered a comprehensive ML engineering curriculum under DEPI. Integrated own notes, labs, and led a 1-month phased capstone project through to defense.",
-      "b1": "Covered Statistics, Linear Algebra, NumPy/Pandas, and model training with custom labs",
-      "b2": "Designed a 1-month phased capstone project framework, monitored teams to product-defense seminar",
-      "b3": "Integrated personalized feedback loops and motivation throughout the track"
-    },
-    "primaLab": {
-      "role": "Flutter Development Diploma \u2014 Level 1",
-      "org": "PrimaLab \u00b7 New Damietta, Egypt",
-      "desc": "Delivered Flutter Level 1 \u2014 from zero programming background through Dart to real Flutter applications across 28+ sessions.",
-      "b1": "Designed all materials, notes, and 10+ assignments across 28+ sessions from scratch",
-      "b2": "Supervised a capstone project: Dart shopping system with cart management and checkout",
-      "b3": "Scope: Dart OOP & async, Flutter widgets & layouts, stateful/stateless, navigation"
-    },
-    "volunteer": {
-      "role": "IT Skills Training \u2014 Volunteer",
-      "org": "Damietta Orphanage Staff \u00b7 Community Service",
-      "desc": "Volunteered to teach IT skills to orphanage staff, helping them with practical technology tools."
-    },
-    "title": "Teaching & Volunteering",
-    "subtitle": "Sharing knowledge and giving back to the community"
+    "skills": {
+      "title": "Technical Ecosystem",
+      "subtitle": "Technologies & tools I work with"
+    }
   },
   "projectData": {
     "volunteen": {
@@ -374,7 +496,7 @@
       ]
     },
     "ecosort": {
-      "title": "EcoSort \u2014 Feature Contribution",
+      "title": "EcoSort — Feature Contribution",
       "subtitle": "Feature contribution to a smart recycling app",
       "overview": "Contributed new features to an existing client Flutter app: added Firebase authentication, push notifications, Blync API hardware integration for real-time sensor data, and a QR-based point reward system for recycling activities.",
       "challenge": "Integrating a third-party IoT hardware API seamlessly into an existing codebase while building a reliable points system that ties sensor events to user actions.",
@@ -416,12 +538,12 @@
       ]
     },
     "redditClone": {
-      "title": "Reddix \u2014 Reddit Clone",
+      "title": "Reddix — Reddit Clone",
       "subtitle": "Full-featured social platform built in a team sprint",
       "overview": "A complete Reddit mobile app clone developed as part of a software house team sprint following Agile methodology with MVC-S architecture. Owned the community management, settings, and authentication modules end-to-end.",
       "challenge": "Delivering a production-grade social platform with community management, user settings, and auth flows in a team environment while following MVC-S architecture and avoiding state management conflicts across feature modules.",
       "approach": "Owned three major modules independently: Community Creation (full CRUD flow, typed community forms, rules dialog), User Settings (account settings, email management, blocking/permissions), and Authentication (forgot password, username recovery, reset email confirmation).",
-      "solution": "A fully functional social ecosystem with live community creation, left/right drawer navigation, comprehensive account settings, and end-to-end auth recovery flows \u2014 demoed in a public YouTube Short.",
+      "solution": "A fully functional social ecosystem with live community creation, left/right drawer navigation, comprehensive account settings, and end-to-end auth recovery flows — demoed in a public YouTube Short.",
       "contributions": [
         "Built the complete Community Creation flow: form validation, community type selection, rules dialog",
         "Implemented left drawer with dynamic community list and right drawer with user actions",
@@ -433,7 +555,7 @@
     "usAccidents": {
       "title": "US Accidents Analysis",
       "subtitle": "Big Data & ML analysis of 7.7M traffic records",
-      "overview": "A team project (2 members) analyzing the US Accidents dataset (7.7 million records, 49 columns) using PySpark on GCP. My role focused on the EDA and machine learning contribution \u2014 uncovering accident patterns, predicting severity, and building custom MapReduce algorithms.",
+      "overview": "A team project (2 members) analyzing the US Accidents dataset (7.7 million records, 49 columns) using PySpark on GCP. My role focused on the EDA and machine learning contribution — uncovering accident patterns, predicting severity, and building custom MapReduce algorithms.",
       "challenge": "Processing nearly 8 million records required distributed computing. The dataset had severe class imbalance and weak correlations for duration prediction, requiring careful feature analysis and model selection.",
       "approach": "Led the EDA phase with comprehensive data cleaning and exploration. Implemented custom MapReduce versions of Linear Regression and Logistic Regression from scratch. Trained and optimized ensemble models for severity classification.",
       "solution": "Logistic Regression and Random Forest achieved ~84% accuracy and F1-score ~0.77 for severity classification. Identified key insights: peak accident times (8-10 AM, 3-6 PM rush hours), high-risk areas (Miami highest accidents), and weather impacts (Light Blowing Snow highest average severity).",
@@ -447,24 +569,24 @@
     },
     "vpredicto": {
       "title": "Predicto",
-      "subtitle": "Graduation Project \u2014 Open-source Video Frame Prediction library",
-      "overview": "As team leader of Graduation Project Team 18, led the development of Predicto \u2014 an open-source Python library (PyTorch + Tkinter) that makes Video Frame Prediction (VFP) accessible to both non-experts and ML specialists. The library provides a desktop GUI for drag-and-drop video input, model selection, prediction, and visualization, alongside a clean API for expert use.",
+      "subtitle": "Graduation Project — Open-source Video Frame Prediction library",
+      "overview": "As team leader of Graduation Project Team 18, led the development of Predicto — an open-source Python library (PyTorch + Tkinter) that makes Video Frame Prediction (VFP) accessible to both non-experts and ML specialists. The library provides a desktop GUI for drag-and-drop video input, model selection, prediction, and visualization, alongside a clean API for expert use.",
       "challenge": "Unifying disparate research architectures (SimVP, PredNet, ConvLSTM, PredRNN++) into a single cohesive API while building a cross-platform desktop GUI and resolving weeks of dimension-mismatch bugs in ConvLSTM-based models.",
-      "approach": "Owned full design and implementation of the Desktop App (GUI): splash screen, main screen with side menu, video frame display, playback controls, file handling, model processing, and visualization modules. Implemented SimVP (CNN Encoder-Translator-Decoder with TPU optimization and checkpointing for 5\u00d7 speedup) and PredNet (Predictive Coding Network with ConvLSTM, resolving weeks of dimension-mismatch debugging).",
+      "approach": "Owned full design and implementation of the Desktop App (GUI): splash screen, main screen with side menu, video frame display, playback controls, file handling, model processing, and visualization modules. Implemented SimVP (CNN Encoder-Translator-Decoder with TPU optimization and checkpointing for 5× speedup) and PredNet (Predictive Coding Network with ConvLSTM, resolving weeks of dimension-mismatch debugging).",
       "solution": "A functional, benchmarked open-source library supporting multiple models with state-of-the-art SSIM scores. Awarded A+ grade. Documented in the team book and published as an extensible tool bridging research and practical applications in autonomous driving, robotics, and video.",
       "contributions": [
         "Led team of 4: organized learning roadmap (Coursera ML/DL, PyTorch), Trello boards, deadlines, meeting docs",
-        "Designed and fully implemented the Desktop App GUI \u2014 7 modules including splash, side menu, playback, visualization",
-        "Implemented SimVP model: CNN Encoder-Translator-Decoder with TPU optimization and checkpointing (5\u00d7 speedup)",
+        "Designed and fully implemented the Desktop App GUI — 7 modules including splash, side menu, playback, visualization",
+        "Implemented SimVP model: CNN Encoder-Translator-Decoder with TPU optimization and checkpointing (5× speedup)",
         "Implemented PredNet: Predictive Coding Network with ConvLSTM, resolved weeks of dimension-mismatch debugging",
         "Maintained a daily devlog, authored multiple book chapters, and integrated all models into the desktop app"
       ]
     },
     "phishing": {
       "title": "Phishing Detection",
-      "subtitle": "ML-based web phishing classifier \u2014 team project",
+      "subtitle": "ML-based web phishing classifier — team project",
       "overview": "A team machine learning project tackling phishing detection using a balanced Kaggle dataset of web page features. Conducted thorough EDA, preprocessing, and trained multiple classifiers to achieve state-of-the-art accuracy.",
-      "challenge": "Phishing attacks are highly sophisticated \u2014 97% of security experts fail to identify them. The dataset required careful feature selection with web_traffic showing significant outliers and many low-correlation features needing removal.",
+      "challenge": "Phishing attacks are highly sophisticated — 97% of security experts fail to identify them. The dataset required careful feature selection with web_traffic showing significant outliers and many low-correlation features needing removal.",
       "approach": "Conducted EDA (histograms, correlation matrices, box plots). Preprocessed by scaling, fixing negatives, and dropping features with correlation < 0.1. Trained and cross-validated multiple models including Random Forest, SVM, AdaBoost, and compared against baselines.",
       "solution": "Top-performing models: Random Forest (96.8%), SVM with tuning (96.7%), AdaBoost (96.8%). F1-scores ~0.97, precision/recall ~0.96-0.97, significantly outperforming baselines like ZeroR (49%) and Logistic Regression (95%).",
       "contributions": [
@@ -491,7 +613,7 @@
     },
     "mipsProcessor": {
       "title": "MIPS 5-Stage Processor",
-      "subtitle": "Lead Processor Architect \u2014 Decode & Integration",
+      "subtitle": "Lead Processor Architect — Decode & Integration",
       "overview": "A hardware-level team project implementing a full pipelined MIPS CPU in Verilog with 5 pipeline stages, advanced hazard resolution via forwarding, and top-level integration. My role was Lead Processor Architect for the Decode stage and system integration.",
       "challenge": "Synchronizing 5 pipeline stages through robust intermediate buffers while resolving data and control hazards without excessive stalling across all instruction types.",
       "approach": "Designed the top-level integration (MIPS_phase_3.v) syncing all 5 stages, implemented the instruction decoder (Decode2.v) mapping the ISA to internal control signals, and integrated the Forwarding and Hazard Detection units.",
@@ -506,7 +628,7 @@
     },
     "logicSimulator": {
       "title": "Logic Gate Simulator",
-      "subtitle": "Interactive GUI for digital circuit design \u2014 team of 4",
+      "subtitle": "Interactive GUI for digital circuit design — team of 4",
       "overview": "A Windows desktop application in C++ using CMU Graphics library for designing and simulating digital logic circuits, developed as a 4-person team. Features include drag-and-drop gate placement, real-time simulation, truth table generation, save/load, undo/redo, copy/cut/paste, and switch toggling.",
       "challenge": "Building a robust event-driven architecture separating input handling, application logic, and rendering while supporting complex interactions like multi-level undo/redo that don't corrupt circuit state.",
       "approach": "Implemented the core getUserAction() for precise input handling across design/simulation modes, and ExecuteAction() in ApplicationManager as a central command dispatcher using the Strategy Pattern. Used file I/O for circuit persistence.",
@@ -535,7 +657,7 @@
       ]
     },
     "searchEngine": {
-      "title": "Search Engine \u2014 Web Crawler",
+      "title": "Search Engine — Web Crawler",
       "subtitle": "Multithreaded Java web crawler module",
       "overview": "Contributed the core Web Crawler backend module of a full Java search engine. The crawler serves as the entry point for the entire pipeline, feeding indexed pages to the ranking and retrieval layers.",
       "challenge": "Managing thousands of concurrent network requests while ensuring ethical crawling (robots.txt compliance), URL deduplication, and fault-tolerant resumption across interruptions.",
@@ -552,7 +674,7 @@
     "goDfs": {
       "title": "Distributed File System",
       "subtitle": "Fault-tolerant DFS with hybrid gRPC + TCP protocol",
-      "overview": "A high-performance, fault-tolerant distributed file system (Go-DFS) designed for large-scale video storage using a Master-Worker (Tracker-Keeper) architecture. Deliberately chose a hybrid protocol: gRPC for control-plane reliability and raw TCP for high-speed data transfers \u2014 demonstrating deliberate architectural thinking.",
+      "overview": "A high-performance, fault-tolerant distributed file system (Go-DFS) designed for large-scale video storage using a Master-Worker (Tracker-Keeper) architecture. Deliberately chose a hybrid protocol: gRPC for control-plane reliability and raw TCP for high-speed data transfers — demonstrating deliberate architectural thinking.",
       "challenge": "Building a resilient distributed system that maintains data integrity during node failures, enforces replication across nodes, and supports high-throughput MP4 streaming without sacrificing management reliability.",
       "approach": "Implemented the gRPC + Protocol Buffers control plane for heartbeat monitoring with timeout mechanisms, and raw TCP sockets for the high-speed data plane. Built the Master's auto-replication engine, Data Keeper self-scanning/registration, and the upload/download pipeline with multi-stage Master-Client handshake.",
       "solution": "A concurrent, resilient distributed file system with auto failure detection, seamless data recovery, enforced replication factor of 3, and real-time MP4 video streaming.",
@@ -568,7 +690,7 @@
       "title": "RSA Encrypted Chat",
       "subtitle": "End-to-end encrypted messaging from scratch",
       "overview": "A secure messaging application implementing RSA encryption from mathematical primitives using Python sockets for truly private communication.",
-      "challenge": "Implementing RSA key generation, encryption, and decryption from scratch without relying on cryptography libraries \u2014 using only prime generation and modular exponentiation.",
+      "challenge": "Implementing RSA key generation, encryption, and decryption from scratch without relying on cryptography libraries — using only prime generation and modular exponentiation.",
       "approach": "Built the entire RSA pipeline: prime generation, modular exponentiation, key pair creation, and socket-based message exchange.",
       "solution": "A functional E2E encrypted chat system demonstrating deep understanding of public-key cryptography fundamentals.",
       "contributions": [
@@ -581,7 +703,7 @@
     "gamingo": {
       "title": "Gamingo Game Engine",
       "subtitle": "Custom 3D game engine in C++ & OpenGL",
-      "overview": "Core engine developer for Gamingo \u2014 a custom 3D game engine built from scratch using C++ and OpenGL, and its flagship title 'Drive Me Home'. Designed fundamental graphics pipeline components and implemented the game's visual and state logic.",
+      "overview": "Core engine developer for Gamingo — a custom 3D game engine built from scratch using C++ and OpenGL, and its flagship title 'Drive Me Home'. Designed fundamental graphics pipeline components and implemented the game's visual and state logic.",
       "challenge": "Building a performant OpenGL rendering pipeline, collision detection system, and complex game state machine that work cohesively for real-time 3D gameplay across Past, Present, and Future narrative levels.",
       "approach": "Designed Shader, Texture, and Material classes with GLSL for custom programmable shading. Implemented TexStorage2D for efficient texture memory. Engineered AABB/Sphere collision detection and the state machine for Menu, Level-Up, and Game-Over transitions. Authored post-processing shaders (Sepia, Inversion, CRT, night-time filter).",
       "solution": "A playable 3D game engine capable of rendering asset-heavy scenes at high frame rates, with cohesive team integration, visual post-processing per level, and robust game state management.",
@@ -598,11 +720,11 @@
       "title": "Mars Exploration Simulation",
       "subtitle": "Event-driven mission scheduling with custom data structures",
       "overview": "An event-driven simulation system in C++ optimizing mission scheduling and resource management for a Mars exploration station. Models complex interactions between Emergency, Mountainous, and Polar mission types and a fleet of rovers with distinct states.",
-      "challenge": "Efficiently scheduling concurrent rover missions with varying priorities while managing rover state transitions, maintenance cycles, and real-time event logging \u2014 without relying on STL containers.",
+      "challenge": "Efficiently scheduling concurrent rover missions with varying priorities while managing rover state transitions, maintenance cycles, and real-time event logging — without relying on STL containers.",
       "approach": "Built generic LinkedQueue and PriorityQueue data structures from scratch for maximum memory control. Designed a multi-variable priority equation dynamically balancing mission urgency and formulation time. Authored the Rover class hierarchy with state-transition and post-mission deallocation logic.",
       "solution": "A robust simulation engine handling multiple concurrent Mars missions with optimal resource allocation, real-time event dashboard, automated reporting, and verified edge-case handling.",
       "contributions": [
-        "Implemented generic LinkedQueue and PriorityQueue from scratch \u2014 no STL, full memory control",
+        "Implemented generic LinkedQueue and PriorityQueue from scratch — no STL, full memory control",
         "Designed the core mission priority equation: weighted multi-variable formula balancing urgency and formulation time",
         "Authored complete Rover class hierarchy: availability, execution, and maintenance state transitions",
         "Built the automated reporting system outputting mission statistics and completion metrics",
@@ -612,11 +734,11 @@
     },
     "mushafImad": {
       "title": "Mushaf-IMAD Flutter",
-      "subtitle": "Open-source Quran audio integration \u2014 Itqan Community",
+      "subtitle": "Open-source Quran audio integration — Itqan Community",
       "overview": "Contributed to an open-source Quran reader Flutter package by integrating the Quran.com API as a full audio source. The contribution spans OAuth 2.0 authentication, a reactive streaming sync system, a hybrid audio engine, and a comprehensive test suite of 80+ tests using Mocktail.",
       "challenge": "The existing package had no cloud audio integration. Designing a seamless hybrid system that dynamically falls back between local and cloud sources while maintaining zero-latency verse-to-audio sync.",
       "approach": "Implemented OAuth 2.0 token management, built a reactive verse metadata injection pipeline using Stream Transformers, and created an in-memory caching layer that reduced API latency by 86%. All logic was driven by TDD with Mocktail.",
-      "solution": "A robust hybrid audio engine with a RAM \u2192 Local \u2192 API timing hierarchy ensuring zero-latency playback sync, and architectural walkthroughs published for long-term community maintainability.",
+      "solution": "A robust hybrid audio engine with a RAM → Local → API timing hierarchy ensuring zero-latency playback sync, and architectural walkthroughs published for long-term community maintainability.",
       "contributions": [
         "Integrated Quran.com API via OAuth 2.0 with custom in-memory caching (86% latency reduction)",
         "Developed reactive sync system with Stream Transformers for real-time verse metadata injection",

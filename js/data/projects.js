@@ -359,8 +359,29 @@ export function getFeaturedProjects() {
 export function getProjectsByCategory(category) {
     if (category === 'all') return projects;
     if (category === 'mobile' || category === 'flutter') return projects.filter(p => p.category === 'mobile');
-    if (category === 'ai' || category === 'ml') return projects.filter(p => p.category === 'ai');
-    if (category === 'embedded' || category === 'systems') return projects.filter(p => p.category === 'embedded');
+    
+    // Custom tech stack/tag filters
+    if (category === 'hardware' || category === 'embedded') {
+        return projects.filter(p => p.category === 'embedded' || 
+            (p.tags && p.tags.some(t => t.toLowerCase() === 'embedded' || t.toLowerCase() === 'hardware' || t.toLowerCase() === 'iot')));
+    }
+    if (category === 'cpp') {
+        return projects.filter(p => 
+            (p.techStack && p.techStack.some(t => t.toLowerCase() === 'c++' || t.toLowerCase() === 'cpp')) ||
+            (p.tags && p.tags.some(t => t.toLowerCase() === 'c++' || t.toLowerCase() === 'cpp')));
+    }
+    if (category === 'dart') {
+        return projects.filter(p => 
+            (p.techStack && p.techStack.some(t => t.toLowerCase() === 'dart' || t.toLowerCase() === 'flutter')) ||
+            (p.tags && p.tags.some(t => t.toLowerCase() === 'dart' || t.toLowerCase() === 'flutter')));
+    }
+    if (category === 'java') {
+        return projects.filter(p => 
+            (p.techStack && p.techStack.some(t => t.toLowerCase() === 'java')) ||
+            (p.tags && p.tags.some(t => t.toLowerCase() === 'java')));
+    }
+    
+    // Fallback for direct category match
     return projects.filter(p => p.category === category);
 }
 

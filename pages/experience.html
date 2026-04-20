@@ -42,16 +42,94 @@
 
         [data-theme="light"] body { background: #fafafa; }
         [data-theme="light"] .exp-aurora .blob { opacity: 0.04; }
+
+        /* Hero */
         [data-theme="light"] .exp-hero-title { color: #111; }
         [data-theme="light"] .exp-hero-desc { color: rgba(0,0,0,0.55); }
-        [data-theme="light"] .exp-card { background: rgba(255,255,255,0.85); border-color: rgba(124,58,237,0.15); box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
-        [data-theme="light"] .card-role { color: #111; }
-        [data-theme="light"] .card-company { color: rgba(0,0,0,0.5); }
-        [data-theme="light"] .card-desc { color: rgba(0,0,0,0.62); }
-        [data-theme="light"] .card-meta-item { color: rgba(0,0,0,0.5); }
-        [data-theme="light"] .timeline-section-title { color: rgba(0,0,0,0.3); border-color: rgba(0,0,0,0.06); }
-        [data-theme="light"] .stat-bar { background: rgba(255,255,255,0.7); }
-        [data-theme="light"] .stat-label { color: rgba(0,0,0,0.4); }
+
+        /* Stat bar */
+        [data-theme="light"] .stat-bar {
+            background: rgba(255,255,255,0.85);
+            border-color: rgba(124,58,237,0.15);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+        [data-theme="light"] .stat-label { color: rgba(0,0,0,0.5); }
+        [data-theme="light"] .stat-item:not(:last-child) { border-color: rgba(0,0,0,0.1); }
+
+        /* Cards */
+        [data-theme="light"] .exp-card {
+            background: #ffffff;
+            border-color: rgba(124,58,237,0.18);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+        }
+        [data-theme="light"] .exp-card:hover {
+            background: #faf8ff;
+            border-color: rgba(124,58,237,0.38);
+            box-shadow: 0 8px 40px rgba(124,58,237,0.1), -4px 0 20px rgba(124,58,237,0.06);
+        }
+        [data-theme="light"] .timeline-entry.active .exp-card {
+            border-color: rgba(34,211,238,0.28);
+        }
+        [data-theme="light"] .timeline-entry.active .exp-card:hover {
+            border-color: rgba(34,211,238,0.5);
+        }
+
+        /* Card text */
+        [data-theme="light"] .card-role { color: #111827; }
+        [data-theme="light"] .card-org  { color: rgba(0,0,0,0.52); }
+        [data-theme="light"] .card-company { color: rgba(0,0,0,0.52); }
+        [data-theme="light"] .bullet    { color: rgba(0,0,0,0.65); }
+        [data-theme="light"] .card-desc { color: rgba(0,0,0,0.65); }
+        [data-theme="light"] .card-meta-item { color: rgba(0,0,0,0.45); }
+
+        /* Badges */
+        [data-theme="light"] .badge-date {
+            color: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.05);
+        }
+
+        /* Timeline */
+        [data-theme="light"] .timeline-section-title {
+            color: rgba(0,0,0,0.35);
+            border-color: rgba(0,0,0,0.08);
+        }
+        [data-theme="light"] .timeline::before {
+            background: linear-gradient(to bottom,
+                transparent 0%,
+                #7c3aed 15%,
+                #22d3ee 50%,
+                #7c3aed 85%,
+                transparent 100%);
+        }
+        [data-theme="light"] .timeline-node {
+            background: #ffffff;
+            border-color: #7c3aed;
+        }
+        [data-theme="light"] .timeline-entry.active .timeline-node {
+            background: #22d3ee;
+        }
+        [data-theme="light"] .timeline-category-divider {
+            color: rgba(0,0,0,0.35);
+        }
+        [data-theme="light"] .timeline-category-divider::before,
+        [data-theme="light"] .timeline-category-divider::after {
+            background: rgba(0,0,0,0.1);
+        }
+
+        /* Skills section */
+        [data-theme="light"] .skills-title    { color: #111827; }
+        [data-theme="light"] .skills-subtitle { color: rgba(0,0,0,0.5); }
+        [data-theme="light"] .skill-chip {
+            background: #ffffff;
+            border-color: rgba(0,0,0,0.1);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+        [data-theme="light"] .skill-chip:hover {
+            border-color: rgba(124,58,237,0.35);
+            background: #faf8ff;
+            box-shadow: 0 4px 16px rgba(124,58,237,0.1);
+        }
+        [data-theme="light"] .skill-name { color: rgba(0,0,0,0.75); }
 
         /* Aurora blobs behind the content */
         .exp-aurora {
@@ -431,7 +509,7 @@
             font-size: 0.88rem;
             line-height: 1.6;
             color: rgba(255, 255, 255, 0.6);
-            text-align: left;
+            text-align: justify;
         }
 
         .bullet::before {
@@ -637,7 +715,7 @@
 
         <!-- Timeline: Professional -->
         <section class="timeline-section">
-            <div class="timeline-section-title">Professional Experience</div>
+            <div class="timeline-section-title" data-i18n="experience.timeline.title">Professional Experience</div>
 
             <div class="timeline" id="timeline">
 
@@ -647,19 +725,19 @@
                     <div class="exp-card">
                         <div class="card-header">
                             <div class="card-title-group">
-                                <div class="card-role">Open Source Contributor</div>
-                                <div class="card-org">Itqan Community · mushaf-imad-flutter · Remote</div>
+                                <div class="card-role" data-i18n="experience.timeline.os.role">Open Source Contributor</div>
+                                <div class="card-org" data-i18n="experience.timeline.os.org">Itqan Community · mushaf-imad-flutter · Remote</div>
                             </div>
                             <div class="card-badges">
-                                <span class="badge-accomplishment">Accomplishment</span>
+                                <span class="badge-accomplishment" data-i18n="experience.timeline.badges.accomplishment">Accomplishment</span>
                                 <span class="badge-date">Feb 2026 – Mar 2026</span>
                             </div>
                         </div>
                         <div class="card-bullets">
-                            <div class="bullet">Integrated <strong>Quran.com API</strong> via <strong>OAuth 2.0</strong>, reducing audio latency by <strong>86%</strong> using custom in-memory caching.</div>
-                            <div class="bullet">Developed a reactive sync system with <strong>Stream Transformers</strong> for real-time verse metadata injection.</div>
-                            <div class="bullet">Engineered a <strong>Hybrid Audio Engine</strong> supporting dynamic fallback between local and cloud sources.</div>
-                            <div class="bullet">Authored <strong>80+ unit & integration tests</strong> with Mocktail covering complex async repository logic.</div>
+                            <div class="bullet" data-i18n="experience.timeline.os.bullets.0">Integrated <strong>Quran.com API</strong> via <strong>OAuth 2.0</strong>, reducing audio latency by <strong>86%</strong> using custom in-memory caching.</div>
+                            <div class="bullet" data-i18n="experience.timeline.os.bullets.1">Developed a reactive sync system with <strong>Stream Transformers</strong> for real-time verse metadata injection.</div>
+                            <div class="bullet" data-i18n="experience.timeline.os.bullets.2">Engineered a <strong>Hybrid Audio Engine</strong> supporting dynamic fallback between local and cloud sources.</div>
+                            <div class="bullet" data-i18n="experience.timeline.os.bullets.3">Authored <strong>80+ unit & integration tests</strong> with Mocktail covering complex async repository logic.</div>
                         </div>
                         <div class="card-tags">
                             <span class="tech-chip cyan">Dart</span>
@@ -672,7 +750,7 @@
                         </div>
                         <a href="https://github.com/Itqan-community/mushaf-imad-flutter/pull/27" target="_blank" class="card-link">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                            View PR #27 on GitHub
+                            <span data-i18n="about.timeline.os.link">View PR #27 on GitHub</span>
                         </a>
                     </div>
                 </div>
@@ -683,19 +761,19 @@
                     <div class="exp-card">
                         <div class="card-header">
                             <div class="card-title-group">
-                                <div class="card-role">Flutter Developer — Freelance</div>
-                                <div class="card-org">Self-Employed · Remote & Local Clients</div>
+                                <div class="card-role" data-i18n="experience.timeline.freelance.role">Flutter Developer — Freelance</div>
+                                <div class="card-org" data-i18n="experience.timeline.freelance.org">Self-Employed · Remote & Local Clients</div>
                             </div>
                             <div class="card-badges">
-                                <span class="badge-active">Active</span>
+                                <span class="badge-active" data-i18n="experience.timeline.badges.active">Active</span>
                                 <span class="badge-date">Sep 2023 – Present</span>
                             </div>
                         </div>
                         <div class="card-bullets">
-                            <div class="bullet">Built a stress-monitoring app (HyperMate) connecting to an <strong>ESP8266 microcontroller</strong> via Wi-Fi with real-time GSR sensor readings and a smart chatbot.</div>
-                            <div class="bullet">Enhanced EcoSort — a recycling IoT client app — adding Firebase auth, push notifications, QR scanning, and <strong>Blync API</strong> integration for hardware sensors.</div>
-                            <div class="bullet">Delivered VolunTeen, a volunteering social platform for a real client with <strong>30–40 responsive screens</strong>, AI chatbot (GPT-3), and WhatsApp integration.</div>
-                            <div class="bullet">Employed <strong>MVC Architecture</strong> with Provider state management across all freelance projects.</div>
+                            <div class="bullet" data-i18n="experience.timeline.freelance.bullets.0">Built a stress-monitoring app (HyperMate) connecting to an <strong>ESP8266 microcontroller</strong> via Wi-Fi with real-time GSR sensor readings and a smart chatbot.</div>
+                            <div class="bullet" data-i18n="experience.timeline.freelance.bullets.1">Enhanced EcoSort — a recycling IoT client app — adding Firebase auth, push notifications, QR scanning, and <strong>Blync API</strong> integration for hardware sensors.</div>
+                            <div class="bullet" data-i18n="experience.timeline.freelance.bullets.2">Delivered VolunTeen, a volunteering social platform for a real client with <strong>30–40 responsive screens</strong>, AI chatbot (GPT-3), and WhatsApp integration.</div>
+                            <div class="bullet" data-i18n="experience.timeline.freelance.bullets.3">Employed <strong>MVC Architecture</strong> with Provider state management across all freelance projects.</div>
                         </div>
                         <div class="card-tags">
                             <span class="tech-chip cyan">Flutter</span>
@@ -714,18 +792,18 @@
                     <div class="exp-card">
                         <div class="card-header">
                             <div class="card-title-group">
-                                <div class="card-role">Flutter Developer</div>
-                                <div class="card-org">PrimaLab · New Damietta, Egypt (Hybrid)</div>
+                                <div class="card-role" data-i18n="experience.timeline.primalab.role">Flutter Developer</div>
+                                <div class="card-org" data-i18n="experience.timeline.primalab.org">PrimaLab · New Damietta, Egypt (Hybrid)</div>
                             </div>
                             <div class="card-badges">
                                 <span class="badge-date">Sep 2023 – Jun 2024</span>
                             </div>
                         </div>
                         <div class="card-bullets">
-                            <div class="bullet">Developed 2 client Flutter applications (VolunTeen & Check-It), managing the complete SDLC from requirements to delivery.</div>
-                            <div class="bullet">Implemented barcode scanning, real-time price comparison, and e-commerce style product database in Check-It.</div>
-                            <div class="bullet">Integrated <strong>Firebase services</strong>, GPT-3 API, in-app video player, and third-party packages.</div>
-                            <div class="bullet">Delivered <strong>50+ hours</strong> of hands-on Flutter training covering Dart, OOP, UI, layout, and navigation.</div>
+                            <div class="bullet" data-i18n="experience.timeline.primalab.bullets.0">Developed 2 client Flutter applications (VolunTeen & Check-It), managing the complete SDLC from requirements to delivery.</div>
+                            <div class="bullet" data-i18n="experience.timeline.primalab.bullets.1">Implemented barcode scanning, real-time price comparison, and e-commerce style product database in Check-It.</div>
+                            <div class="bullet" data-i18n="experience.timeline.primalab.bullets.2">Integrated <strong>Firebase services</strong>, GPT-3 API, in-app video player, and third-party packages.</div>
+                            <div class="bullet" data-i18n="experience.timeline.primalab.bullets.3">Delivered <strong>50+ hours</strong> of hands-on Flutter training covering Dart, OOP, UI, layout, and navigation.</div>
                         </div>
                         <div class="card-tags">
                             <span class="tech-chip cyan">Flutter</span>
@@ -744,17 +822,17 @@
                     <div class="exp-card">
                         <div class="card-header">
                             <div class="card-title-group">
-                                <div class="card-role">Flutter Developer Intern</div>
-                                <div class="card-org">Orange Digital Center Egypt · Cairo (Hybrid)</div>
+                                <div class="card-role" data-i18n="experience.timeline.orange.role">Flutter Developer Intern</div>
+                                <div class="card-org" data-i18n="experience.timeline.orange.org">Orange Digital Center Egypt · Cairo (Hybrid)</div>
                             </div>
                             <div class="card-badges">
                                 <span class="badge-date">Jun 2023 – Sep 2023</span>
                             </div>
                         </div>
                         <div class="card-bullets">
-                            <div class="bullet">Worked in agile teams on <strong>2 internal mobile apps</strong> and a hackathon E-wallet app, meeting tight sprint deadlines.</div>
-                            <div class="bullet">Translated Figma designs into pixel-perfect Flutter UI using <strong>MVVM architecture</strong> and Bloc Cubit state management.</div>
-                            <div class="bullet">Led community creation module for the Reddit Clone project — 6-member cross-functional team with Scrum methodology.</div>
+                            <div class="bullet" data-i18n="experience.timeline.orange.bullets.0">Worked in agile teams on <strong>2 internal mobile apps</strong> and a hackathon E-wallet app, meeting tight sprint deadlines.</div>
+                            <div class="bullet" data-i18n="experience.timeline.orange.bullets.1">Translated Figma designs into pixel-perfect Flutter UI using <strong>MVVM architecture</strong> and Bloc Cubit state management.</div>
+                            <div class="bullet" data-i18n="experience.timeline.orange.bullets.2">Led community creation module for the Reddit Clone project — 6-member cross-functional team with Scrum methodology.</div>
                         </div>
                         <div class="card-tags">
                             <span class="tech-chip cyan">Flutter</span>
@@ -765,13 +843,13 @@
                         </div>
                         <a href="https://drive.google.com/file/d/1dN2UPmg3Sql1kX3vJuBlea1_P1D4l6dk/view" target="_blank" class="card-link">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                            View Internship Certificate
+                            <span data-i18n="about.timeline.orange.link">View Internship Certificate</span>
                         </a>
                     </div>
                 </div>
 
                 <!-- Teaching section divider -->
-                <div class="timeline-category-divider">Academic &amp; Teaching Roles</div>
+                <div class="timeline-category-divider" data-i18n="experience.timeline.teachingDivider">Academic &amp; Teaching Roles</div>
 
                 <!-- 5: Maspero -->
                 <div class="timeline-entry reveal-left">
@@ -780,14 +858,14 @@
                         <div class="card-header">
                             <div class="card-title-group">
                                 <div class="card-role">Python Programming Instructor</div>
-                                <div class="card-org">Maspero Academy · Radio &amp; Television Institute</div>
+                                <div class="card-org" data-i18n="experience.timeline.python.org">Maspero Academy · Radio &amp; Television Institute</div>
                             </div>
                             <div class="card-badges">
                                 <span class="badge-date">Jun 2025</span>
                             </div>
                         </div>
                         <div class="card-bullets">
-                            <div class="bullet">Delivered Python programming fundamentals to CS students, creating hands-on exercises covering data types, control flow, OOP, and problem-solving patterns.</div>
+                            <div class="bullet" data-i18n="experience.timeline.python.bullets.0">Delivered Python programming fundamentals to CS students, creating hands-on exercises covering data types, control flow, OOP, and problem-solving patterns.</div>
                         </div>
                         <div class="card-tags">
                             <span class="tech-chip">Python</span>
@@ -803,16 +881,16 @@
                     <div class="exp-card">
                         <div class="card-header">
                             <div class="card-title-group">
-                                <div class="card-role">ML Engineer Instructor</div>
-                                <div class="card-org">DEPI Initiative · Ministry of Communications &amp; IT</div>
+                                <div class="card-role" data-i18n="experience.timeline.ml.role">ML Engineer Instructor</div>
+                                <div class="card-org" data-i18n="experience.timeline.ml.org">DEPI Initiative · Ministry of Communications &amp; IT</div>
                             </div>
                             <div class="card-badges">
                                 <span class="badge-date">Aug 2024 – Oct 2024</span>
                             </div>
                         </div>
                         <div class="card-bullets">
-                            <div class="bullet">Designed and delivered a comprehensive ML engineering curriculum — math foundations, Python ecosystem (NumPy/Pandas), and model training from scratch.</div>
-                            <div class="bullet">Led a 4-phase end-to-end capstone project lifecycle, culminating in a "sell your product" defense seminar.</div>
+                            <div class="bullet" data-i18n="experience.timeline.ml.bullets.0">Designed and delivered a comprehensive ML engineering curriculum — math foundations, Python ecosystem (NumPy/Pandas), and model training from scratch.</div>
+                            <div class="bullet" data-i18n="experience.timeline.ml.bullets.1">Led a 4-phase end-to-end capstone project lifecycle, culminating in a "sell your product" defense seminar.</div>
                         </div>
                         <div class="card-tags">
                             <span class="tech-chip">Python</span>
@@ -829,16 +907,16 @@
                     <div class="exp-card">
                         <div class="card-header">
                             <div class="card-title-group">
-                                <div class="card-role">Flutter Development Instructor</div>
-                                <div class="card-org">PrimaLab · New Damietta, Egypt</div>
+                                <div class="card-role" data-i18n="experience.timeline.primalab.role">Flutter Development Instructor</div>
+                                <div class="card-org" data-i18n="experience.timeline.primalabInstructor.org">PrimaLab · New Damietta, Egypt</div>
                             </div>
                             <div class="card-badges">
                                 <span class="badge-date">Aug 2023 – Feb 2024</span>
                             </div>
                         </div>
                         <div class="card-bullets">
-                            <div class="bullet">Led a complete Flutter Development Diploma from zero to production, designing all course materials and handwritten notes.</div>
-                            <div class="bullet">Guided 35+ students from Dart basics through MVC architecture, state management, and real app deployment.</div>
+                            <div class="bullet" data-i18n="experience.timeline.primalabInstructor.bullets.0">Led a complete Flutter Development Diploma from zero to production, designing all course materials and handwritten notes.</div>
+                            <div class="bullet" data-i18n="experience.timeline.primalabInstructor.bullets.1">Guided 35+ students from Dart basics through MVC architecture, state management, and real app deployment.</div>
                         </div>
                         <div class="card-tags">
                             <span class="tech-chip cyan">Flutter</span>
@@ -854,8 +932,8 @@
 
         <!-- Skills section -->
         <section class="skills-section">
-            <h2 class="skills-title">Technical Ecosystem</h2>
-            <p class="skills-subtitle">Technologies & tools I work with</p>
+            <h2 class="skills-title" data-i18n="experience.skills.title">Technical Ecosystem</h2>
+            <p class="skills-subtitle" data-i18n="experience.skills.subtitle">Technologies & tools I work with</p>
             <div class="skills-grid">
                 <div class="skill-chip"><div class="skill-dot cyan"></div><span class="skill-name">Flutter</span></div>
                 <div class="skill-chip"><div class="skill-dot cyan"></div><span class="skill-name">Dart</span></div>

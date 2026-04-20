@@ -9,7 +9,7 @@ export const projects = [
         title: "Mushaf-IMAD Flutter",
         slug: "mushaf-imad",
         category: "mobile",
-        tags: ["Flutter", "Open Source", "Integration"],
+        tags: ["Flutter", "Open Source", "Dart", "Integration"],
         techStack: ["Dart", "Flutter", "OAuth 2.0", "Streams", "REST API", "Clean Architecture", "Dependency Injection"],
         featured: true,
         status: "completed",
@@ -25,13 +25,13 @@ export const projects = [
         ]
     },
 
-    // ========== MOBILE & WEB PROJECTS (Prioritizing Flutter) ==========
+    // ========== MOBILE & WEB PROJECTS ==========
     {
         id: "volunteen",
         title: "VolunTeen",
         slug: "volunteen",
         category: "mobile",
-        tags: ["Flutter", "Firebase", "AI Chatbot"],
+        tags: ["Flutter", "Firebase", "AI Chatbot", "Dart"],
         techStack: ["Flutter", "Dart", "Firebase", "GPT-3.5", "Provider", "In-App Video Player", "Freelance", "MVC"],
         featured: true,
         status: "completed",
@@ -67,7 +67,7 @@ export const projects = [
         title: "HyperMate",
         slug: "hypermate",
         category: "mobile",
-        tags: ["Flutter", "IoT", "Health Tech"],
+        tags: ["Flutter", "IoT", "Health Tech", "Dart"],
         techStack: ["Flutter", "Dart", "ESP8266", "Wi-Fi Service", "GSR Sensors"],
         featured: true,
         status: "completed",
@@ -101,8 +101,8 @@ export const projects = [
         title: "Check-It",
         slug: "checkit",
         category: "mobile",
-        tags: ["Flutter", "Consumer Rights", "Scanner", "Prototype"],
-        techStack: ["Flutter", "Dart", "Provider", "Barcode Scanner", "Shared Preferences local storage", "JSON", "UI/UX"],
+        tags: ["Flutter", "Consumer Rights", "Scanner", "Dart"],
+        techStack: ["Flutter", "Dart", "Provider", "Barcode Scanner", "Shared Preferences", "JSON"],
         featured: true,
         status: "completed",
         date: "2024-05",
@@ -125,7 +125,7 @@ export const projects = [
         title: "Reddix",
         slug: "reddit-clone",
         category: "mobile",
-        tags: ["Flutter", "MVC-S", "Agile"],
+        tags: ["Flutter", "MVC-S", "Agile", "Dart"],
         techStack: ["Flutter", "Dart", "Provider", "REST APIs"],
         featured: true,
         status: "completed",
@@ -155,13 +155,12 @@ export const projects = [
             { type: 'image', src: '../assets/projects_media/reddix_my_contributions/username_reset_received_mail_on_gmail.png' }
         ]
     },
-
     {
         id: "tapcash",
         title: "TapCash FinTech",
         slug: "tapcash",
         category: "mobile",
-        tags: ["Flutter", "FinTech", "UI/UX"],
+        tags: ["Flutter", "FinTech", "UI/UX", "Dart"],
         techStack: ["Flutter", "Dart", "Cubit", "Data Viz", "Provider"],
         featured: true,
         status: "completed",
@@ -182,43 +181,28 @@ export const projects = [
             { type: 'image', src: '../assets/projects_media/tapcash/notifications.jpg' }
         ]
     },
-
-
     {
         id: "ecosort",
-        title: "EcoSort Smart Recycling",
+        title: "EcoSort — Feature Contribution",
         slug: "ecosort",
         category: "mobile",
-        tags: ["Flutter", "IoT", "BLE", "Firebase"],
-        techStack: ["Flutter", "Dart", "BLE", "Firebase", "HMAC-SHA256"],
+        tags: ["Flutter", "Firebase", "IoT", "REST API", "Dart"],
+        techStack: ["Flutter", "Dart", "Firebase", "Blync REST API", "QR Scanner", "Push Notifications"],
         featured: true,
         status: "completed",
-        date: "2024-03",
+        date: "2024-05",
         i18nKey: "projectData.ecosort",
         color: "#10b981"
     },
-    {
-        id: "epl-reservation",
-        title: "EPL Ticket Reservation",
-        slug: "epl-reservation",
-        category: "mobile",
-        tags: ["Flutter", ".NET Core", "SQL Server"],
-        techStack: ["Flutter Web", "ASP.NET Core", "SQL Server", "Provider"],
-        featured: false,
-        status: "completed",
-        date: "2023-10",
-        i18nKey: "projectData.eplReservation"
-    },
 
     // ========== DATA & AI PROJECTS ==========
-
     {
         id: "us-accidents",
         title: "US Accidents Analysis",
         slug: "us-accidents",
         category: "data",
-        tags: ["PySpark", "Machine Learning", "GCP"],
-        techStack: ["PySpark", "MapReduce", "Mage", "Terraform", "GCP"],
+        tags: ["PySpark", "Machine Learning", "Big Data"],
+        techStack: ["Python", "PySpark", "MapReduce", "Scikit-Learn", "Pandas", "GCP"],
         featured: true,
         status: "completed",
         date: "2024-01",
@@ -226,11 +210,11 @@ export const projects = [
     },
     {
         id: "vpredicto",
-        title: "vPredicto",
+        title: "Predicto",
         slug: "vpredicto",
         category: "ai",
-        tags: ["PyTorch", "Video Prediction", "OpenCV"],
-        techStack: ["Python", "PyTorch", "OpenCV", "Docker"],
+        tags: ["PyTorch", "Deep Learning", "Python", "Computer Vision"],
+        techStack: ["Python", "PyTorch", "Tkinter", "OpenCV", "SimVP", "PredNet", "ConvLSTM"],
         featured: true,
         status: "completed",
         date: "2024-07",
@@ -241,8 +225,8 @@ export const projects = [
         title: "Phishing Detection",
         slug: "phishing-detection",
         category: "ai",
-        tags: ["Machine Learning", "Scikit-Learn"],
-        techStack: ["Python", "Scikit-Learn", "Pandas", "NumPy"],
+        tags: ["Machine Learning", "Scikit-Learn", "Cybersecurity"],
+        techStack: ["Python", "Scikit-Learn", "Pandas", "NumPy", "Random Forest", "SVM", "AdaBoost"],
         featured: false,
         status: "completed",
         date: "2024-05",
@@ -250,17 +234,16 @@ export const projects = [
     },
 
     // ========== EMBEDDED & ROBOTICS PROJECTS ==========
-
     {
         id: "line-follower",
-        title: "Embedded CV Line Follower",
+        title: "Maze-Solver Robot App",
         slug: "line-follower",
         category: "embedded",
-        tags: ["Android", "OpenCV", "ESP32"],
-        techStack: ["Android (Java)", "OpenCV", "C++", "JNI"],
+        tags: ["Android", "OpenCV", "ESP32", "C++", "Hardware"],
+        techStack: ["Android (Java)", "OpenCV", "C++", "JNI", "ESP32", "TCP Sockets"],
         featured: false,
         status: "completed",
-        date: "2022-05",
+        date: "2023-05",
         i18nKey: "projectData.lineFollower"
     },
     {
@@ -268,34 +251,23 @@ export const projects = [
         title: "MIPS 5-Stage Processor",
         slug: "mips-processor",
         category: "embedded",
-        tags: ["Verilog", "Architecture", "FPGA"],
+        tags: ["Verilog", "Architecture", "FPGA", "Hardware"],
         techStack: ["Verilog", "ModelSim", "Computer Architecture"],
         featured: false,
         status: "completed",
         date: "2022-12",
-        i18nKey: "projectData.mipsProcessor"
+        i18nKey: "projectData.mipsProcessor",
+        githubUrl: "https://github.com/Mamdouh-Attia/MIPS_Processor"
     },
 
     // ========== CS & ALGORITHMS PROJECTS ==========
-    {
-        id: "circuits-solver",
-        title: "Circuits Solver Engine",
-        slug: "circuits-solver",
-        category: "cs",
-        tags: ["C++", "Linear Algebra", "Simulation"],
-        techStack: ["C++", "Eigen Library", "MNA Algorithms"],
-        featured: true,
-        status: "completed",
-        date: "2023-03",
-        i18nKey: "projectData.circuitsSolver"
-    },
     {
         id: "logic-simulator",
         title: "Logic Gate Simulator",
         slug: "logic-simulator",
         category: "cs",
         tags: ["C++", "OOP", "Design Patterns"],
-        techStack: ["C++", "CMU Graphics", "Command Pattern"],
+        techStack: ["C++", "CMU Graphics", "Command Pattern", "Strategy Pattern"],
         featured: false,
         status: "completed",
         date: "2021-04",
@@ -303,11 +275,11 @@ export const projects = [
     },
     {
         id: "os-scheduler",
-        title: "OS Scheduler",
+        title: "OS Process Scheduler",
         slug: "os-scheduler",
         category: "cs",
         tags: ["C", "Operating Systems", "Linux"],
-        techStack: ["C", "Linux Process Management"],
+        techStack: ["C", "Linux System Calls", "IPC Message Queues", "Buddy Allocator"],
         featured: false,
         status: "completed",
         date: "2022-04",
@@ -315,25 +287,23 @@ export const projects = [
     },
     {
         id: "search-engine",
-        title: "Search Engine Architecture",
+        title: "Search Engine — Web Crawler",
         slug: "search-engine",
         category: "cs",
         tags: ["Java", "Web Crawling", "Algorithms"],
-        techStack: ["Java", "Apache Tomcat", "Multithreading"],
+        techStack: ["Java", "Apache Tomcat", "Multithreading", "MongoDB", "ExecutorService"],
         featured: false,
         status: "completed",
         date: "2022-04",
         i18nKey: "projectData.searchEngine"
     },
-
-    // ========== ADDITIONAL GITHUB PROJECTS ==========
     {
         id: "go-dfs",
         title: "Distributed File System",
         slug: "go-dfs",
         category: "cs",
-        tags: ["Go", "Distributed Systems", "Streaming"],
-        techStack: ["Go", "TCP Sockets", "Replication", "MP4 Streaming"],
+        tags: ["Go", "Distributed Systems", "gRPC", "Streaming"],
+        techStack: ["Go", "gRPC", "Protocol Buffers", "TCP Sockets", "Replication"],
         featured: false,
         status: "completed",
         date: "2024-06",
@@ -358,8 +328,8 @@ export const projects = [
         title: "Gamingo Game Engine",
         slug: "gamingo",
         category: "cs",
-        tags: ["C++", "Computer Graphics", "Engine"],
-        techStack: ["C++", "OpenGL", "Physics Engine"],
+        tags: ["C++", "Computer Graphics", "OpenGL", "Engine"],
+        techStack: ["C++", "OpenGL", "GLSL", "GLM", "GLAD", "TinyObjLoader"],
         featured: false,
         status: "completed",
         date: "2023-05",
@@ -372,7 +342,7 @@ export const projects = [
         slug: "mars-exploration",
         category: "cs",
         tags: ["C++", "Algorithms", "Data Structures"],
-        techStack: ["C++", "Priority Queues", "Scheduling Algorithms"],
+        techStack: ["C++", "Priority Queues", "Linked Queues", "Scheduling Algorithms"],
         featured: false,
         status: "completed",
         date: "2021-12",
@@ -388,7 +358,6 @@ export function getFeaturedProjects() {
 
 export function getProjectsByCategory(category) {
     if (category === 'all') return projects;
-    // Special mapping for common categories
     if (category === 'mobile' || category === 'flutter') return projects.filter(p => p.category === 'mobile');
     if (category === 'ai' || category === 'ml') return projects.filter(p => p.category === 'ai');
     if (category === 'embedded' || category === 'systems') return projects.filter(p => p.category === 'embedded');
@@ -402,7 +371,6 @@ export function getProjectBySlug(slug) {
 export function searchProjects(query) {
     const lowercaseQuery = query.toLowerCase();
     return projects.filter(p => {
-        // Build dynamic values for search based on current language
         const title = p.i18nKey ? window.t(p.i18nKey + '.title') : p.title;
         const description = p.i18nKey ? window.t(p.i18nKey + '.overview') : (p.description || "");
 

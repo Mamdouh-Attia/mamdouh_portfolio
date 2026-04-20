@@ -48,7 +48,7 @@
       },
       "development": {
         "title": "Development",
-        "description": "Building with Flutter, clean architecture, and best practices"
+        "description": "Building with clean architecture and engineering best practices"
       },
       "delivery": {
         "title": "Delivery",
@@ -171,15 +171,15 @@
     },
     "tutoring": {
       "title": "Personalized Technical Tutoring",
-      "desc": "1-on-1 or group sessions in Flutter, Dart, Python, Machine Learning \u2014 adapted to your level and delivered with real projects."
+      "desc": "1-on-1 or group sessions in Flutter, Dart, Python, Machine Learning, or any Computer Engineering/Science topic \u2014 adapted to your level and delivered with real projects."
     },
     "architecture": {
       "title": "App Architecture Consulting",
       "desc": "Helping teams choose and implement the right architecture \u2014 Clean Architecture, MVVM, Bloc/Cubit \u2014 for long-term maintainability."
     },
     "ai": {
-      "title": "AI & ML Integration",
-      "desc": "Embedding intelligent features into your app \u2014 GPT chatbots, ML model inference, recommendation logic, and data-driven UX."
+      "title": "AI, ML & Hardware Integrations",
+      "desc": "Embedding intelligent features into your app \u2014 GPT chatbots, ML model inference, recommendation logic, IoT/hardware integrations, and data-driven UX."
     }
   },
   "contact": {
@@ -209,21 +209,6 @@
       "connect": "Connect With Me"
     }
   },
-  "experience": {
-    "title": "Experience",
-    "subtitle": "A summary of my professional journey",
-    "viewFull": "View Full Experience",
-    "items": {
-      "volunteer": {
-        "title": "Freelance Lead Mobile Dev",
-        "desc": "Leading the development of a cross-platform mobile application for community service."
-      },
-      "instructor": {
-        "title": "Technical Instructor",
-        "desc": "Teaching Flutter and Machine Learning to aspiring developers."
-      }
-    }
-  },
   "footer": {
     "bio": "Mobile Software Engineer & Technical Instructor",
     "copyright": "\u00a9 2026 Mamdouh Ahmed Attia. All rights reserved."
@@ -237,7 +222,7 @@
   "experience": {
     "eyebrow": "Career Journey",
     "heroTitle": "Building Things That Actually Matter",
-    "heroDesc": "3+ years of delivering real mobile apps — from hackathons to freelance clients and open-source contributions.",
+    "heroDesc": "3+ years of delivering real mobile apps \u2014 from hackathons to freelance clients and open-source contributions.",
     "stats": {
       "mobile": "Years Mobile",
       "apps": "Apps Delivered",
@@ -255,10 +240,10 @@
     "instructor": {
       "role": "Technical Instructor",
       "company": "PrimaLab \u00b7 DEPI \u00b7 Maspero",
-      "description": "Empowering students through Flutter development, Python programming, and Machine Learning workshops."
+      "description": "Empowering students through mobile development, Python programming, and Machine Learning workshops."
     },
     "freelance": {
-      "role": "Flutter Developer \u00b7 Freelance",
+      "role": "Mobile App Developer \u00b7 Freelance",
       "company": "HyperMate \u00b7 EcoSort \u00b7 VolunTeen",
       "description": "Delivering high-performance mobile solutions for diverse clients, specializing in complex state management and IoT integration."
     },
@@ -269,7 +254,7 @@
   "learning": {
     "eyebrow": "Knowledge Acquisition",
     "heroTitle": "Learning Never Stops Here",
-    "heroDesc": "From a Computer Engineering degree to cutting-edge ML specializations — a chronicle of continuous evolution.",
+    "heroDesc": "From a Computer Engineering degree to cutting-edge ML specializations \u2014 a chronicle of continuous evolution.",
     "stats": {
       "years": "Years of Study",
       "programs": "Programs",
@@ -280,16 +265,16 @@
     "verifyBtn": "Verify Certificate",
     "nti": {
       "tag": "AI Training",
-      "role": "AI Trainee — HCIA-AI Track",
-      "org": "NTI · National Telecom Institute · Huawei HCIA-AI",
+      "role": "AI Trainee \u2014 HCIA-AI Track",
+      "org": "NTI \u00b7 National Telecom Institute \u00b7 Huawei HCIA-AI",
       "desc": "120-hour intensive AI training at the National Telecom Institute covering Python data science, ML/DL fundamentals, and a Covid detector capstone project.",
       "trainingCert": "Training Certificate",
       "hciaCert": "HCIA-AI Certificate"
     },
     "cairo": {
       "tag": "Core Foundation",
-      "role": "Bachelor of Engineering — Computer Engineering",
-      "org": "Cairo University · Faculty of Engineering",
+      "role": "Bachelor of Engineering \u2014 Computer Engineering",
+      "org": "Cairo University \u00b7 Faculty of Engineering",
       "desc": "Comprehensive computer engineering education. Graduated with Very Good with Honors."
     },
     "coursera": {
@@ -300,7 +285,7 @@
     "orange": {
       "tag": "Enterprise Mobile",
       "role": "Flutter Intensive Program",
-      "org": "Orange Digital Center Egypt · Cairo",
+      "org": "Orange Digital Center Egypt \u00b7 Cairo",
       "desc": "Advanced enterprise Flutter program: Bloc/Cubit state management, MVVM architecture, and pixel-perfect production UI in an Agile team."
     },
     "title": "Learning Journey",
@@ -309,7 +294,7 @@
   "teaching": {
     "eyebrow": "Education & Community",
     "heroTitle": "Shaping the Next Generation of Builders",
-    "heroDesc": "From hands-on Flutter diplomas to government ML initiatives — taught 35+ students across 4+ tracks.",
+    "heroDesc": "From hands-on Flutter diplomas to government ML initiatives \u2014 taught 35+ students across 4+ tracks.",
     "stats": {
       "students": "Students Taught",
       "courses": "Courses Delivered",
@@ -318,7 +303,7 @@
     },
     "sectionLabel": "Teaching Experience",
     "feedbackLabel": "Student Feedback",
-    "ratingBanner": "4.9 / 5.0 average — from 35+ students across Flutter, ML, Java & Python tracks",
+    "ratingBanner": "4.9 / 5.0 average \u2014 from 35+ students across Flutter, ML, Java & Python tracks",
     "testimonial": {
       "anonymous": {
         "depi": "A DEPI ML Track Graduate",
@@ -327,7 +312,7 @@
     },
     "maspero": {
       "role": "Python Programming Instructor",
-      "org": "Maspero Academy · Radio & Television Institute, Egypt",
+      "org": "Maspero Academy \u00b7 Radio & Television Institute, Egypt",
       "desc": "Delivered Python programming fundamentals to CS students covering data types, control flow, functions, OOP and problem-solving patterns.",
       "b1": "Focused on bridging theoretical concepts with real coding problems",
       "b2": "Created hands-on exercises tailored to beginner-level learners",
@@ -335,23 +320,23 @@
     },
     "depi": {
       "role": "ML Engineering Track Instructor",
-      "org": "DEPI Initiative · Ministry of Communications & IT, Egypt",
+      "org": "DEPI Initiative \u00b7 Ministry of Communications & IT, Egypt",
       "desc": "Delivered a comprehensive ML engineering curriculum under DEPI. Integrated own notes, labs, and led a 1-month phased capstone project through to defense.",
       "b1": "Covered Statistics, Linear Algebra, NumPy/Pandas, and model training with custom labs",
       "b2": "Designed a 1-month phased capstone project framework, monitored teams to product-defense seminar",
       "b3": "Integrated personalized feedback loops and motivation throughout the track"
     },
     "primaLab": {
-      "role": "Flutter Development Diploma — Level 1",
-      "org": "PrimaLab · New Damietta, Egypt",
-      "desc": "Delivered Flutter Level 1 — from zero programming background through Dart to real Flutter applications across 28+ sessions.",
+      "role": "Flutter Development Diploma \u2014 Level 1",
+      "org": "PrimaLab \u00b7 New Damietta, Egypt",
+      "desc": "Delivered Flutter Level 1 \u2014 from zero programming background through Dart to real Flutter applications across 28+ sessions.",
       "b1": "Designed all materials, notes, and 10+ assignments across 28+ sessions from scratch",
       "b2": "Supervised a capstone project: Dart shopping system with cart management and checkout",
       "b3": "Scope: Dart OOP & async, Flutter widgets & layouts, stateful/stateless, navigation"
     },
     "volunteer": {
-      "role": "IT Skills Training — Volunteer",
-      "org": "Damietta Orphanage Staff · Community Service",
+      "role": "IT Skills Training \u2014 Volunteer",
+      "org": "Damietta Orphanage Staff \u00b7 Community Service",
       "desc": "Volunteered to teach IT skills to orphanage staff, helping them with practical technology tools."
     },
     "title": "Teaching & Volunteering",
@@ -359,61 +344,61 @@
   },
   "projectData": {
     "volunteen": {
-        "title": "VolunTeen",
-        "subtitle": "AI-Powered Volunteering platform for teenagers",
-        "overview": "A solo-developed Flutter application targeting teenagers with 30-40 screens, featuring AI chatbot integration and a complete management system.",
-        "challenge": "Designing a complex, feature-rich platform that remains engaging and simple enough for a teenage audience while integrating advanced AI capabilities.",
-        "approach": "Adopted an MVC architecture for maintainability. I personally implemented the UI/UX my client provided and integrated GPT-3 for a personalized assistant experience.",
-        "solution": "Successfully launched a professional-grade mobile app with sub-second response times and a verified reward system for active volunteers.",
-        "contributions": [
-          "Developed 30-40 screens independently using Flutter/Dart",
-          "Implemented MVC architecture for scalable code structure",
-          "Integrated GPT-3 API for the intelligent volunteering assistant",
-          "Added different ways of awareness providing ranging between (Articles, Videos and AI Assistant)",
-          "Added Real people's support with their contact method.",
-          "Added Example UIs for a community, helping categories, certification system, announcements, and more!"
-        ]
+      "title": "VolunTeen",
+      "subtitle": "AI-Powered Volunteering platform for teenagers",
+      "overview": "A solo-developed Flutter application targeting teenagers with 30-40 screens, featuring AI chatbot integration and a complete volunteering management system.",
+      "challenge": "Designing a complex, feature-rich platform that remains engaging and simple enough for a teenage audience while integrating advanced AI capabilities.",
+      "approach": "Adopted an MVC architecture for maintainability. Implemented the full UI/UX provided by the client and integrated GPT-3 for a personalized assistant experience.",
+      "solution": "Successfully launched a professional-grade mobile app with a verified reward system for active volunteers and multiple awareness channels.",
+      "contributions": [
+        "Developed 30-40 screens independently using Flutter/Dart",
+        "Implemented MVC architecture for scalable code structure",
+        "Integrated GPT-3 API for the intelligent volunteering assistant",
+        "Added awareness channels: Articles, Videos, and AI Assistant",
+        "Real people's support contacts and a community screen",
+        "Certification system, announcements, helping categories, and donation flow"
+      ]
     },
     "checkit": {
       "title": "Check-It",
-      "subtitle": "Consumer Rights & Product Verification",
-      "overview": "A specialized mobile tool [Prototype] designed to empower consumers by providing instant access to product verification and reporting mechanisms for over-expensive goods.",
-      "challenge": "Creating a seamless bridge between physical barcodes and digital consumer protection databases while maintaining ease of use for the general public.",
-      "approach": "I implemented a high-speed barcode scanning module and built a multi-step complaint wizard to enable the user to file a complient with the product details, location and receit evidence of over-pricing.",
-      "solution": "A production-ready utility that successfully facilitates consumer reporting and helps regulatory bodies track illicit market activity effectively.",
+      "subtitle": "Consumer Rights & Product Verification Prototype",
+      "overview": "A specialized mobile prototype designed to empower consumers by providing instant product verification and a reporting mechanism for over-priced goods.",
+      "challenge": "Creating a seamless bridge between physical barcodes and consumer protection databases while keeping the flow simple enough for the general public.",
+      "approach": "Implemented a high-speed barcode scanning module and built a multi-step complaint wizard enabling users to file a complaint with product details, location, and receipt evidence.",
+      "solution": "A production-ready utility prototype that facilitates consumer reporting and helps track illicit market pricing activity effectively.",
       "contributions": [
         "Implemented high-performance barcode scanning using Flutter packages",
-        "Developed a state-driven multi-step reporting wizard, with the ability to track the complaint status",
-        "Built the local storage history and sync logic",
+        "Developed a state-driven multi-step reporting wizard with complaint tracking",
+        "Built local storage history and sync logic",
         "Designed the UI/UX following clean material guidelines"
       ]
     },
     "ecosort": {
-      "title": "EcoSort Smart Recycling",
-      "subtitle": "IoT-enabled gamified recycling application",
-      "overview": "An IoT-focused recycling app that connects users to smart bins via Bluetooth Low Energy (BLE) to track and reward eco-friendly actions.",
-      "challenge": "Establishing reliable communication with proprietary smart hardware and preventing fraud in the reward system.",
-      "approach": "I reverse-engineered the bin's BLE protocol to enable direct interaction. For security, I built a signature-based QR validation system.",
-      "solution": "Enabled a network of 50+ smart bins to function seamlessly with a fraud-proof point attribution system.",
+      "title": "EcoSort \u2014 Feature Contribution",
+      "subtitle": "Feature contribution to a smart recycling app",
+      "overview": "Contributed new features to an existing client Flutter app: added Firebase authentication, push notifications, Blync API hardware integration for real-time sensor data, and a QR-based point reward system for recycling activities.",
+      "challenge": "Integrating a third-party IoT hardware API seamlessly into an existing codebase while building a reliable points system that ties sensor events to user actions.",
+      "approach": "Read and integrated the Blync REST API documentation to connect 3 hardware sensors in recycle bins. Used a QR scanning package to implement the recycling reward flow, and wired Firebase for auth and push notifications.",
+      "solution": "A set of well-integrated features that extended the existing app with real-time hardware connectivity and an engaging recycling reward mechanism.",
       "contributions": [
-        "Reverse-engineered the Blync smart bin BLE communication protocol",
-        "Implemented secure QR validation with HMAC-SHA256 signatures",
-        "Built the points calculation engine with streak-based bonuses",
-        "Integrated real-time IoT sensor readings into the Flutter UI"
+        "Added Firebase authentication and push notifications to the existing app",
+        "Integrated Blync REST API to connect 3 real-time hardware sensors in recycle bins",
+        "Implemented QR code scanning to scan for reward points on recycling activities",
+        "Built the point calculation and reward tracking logic"
       ]
     },
     "hypermate": {
       "title": "HyperMate IoT",
       "subtitle": "Real-time stress monitoring via ESP8266",
-      "overview": "A solo client project bridging the gap between IoT hardware and mobile health tracking using GSR sensors.",
+      "overview": "A solo client project bridging IoT hardware and mobile health tracking using GSR sensors connected to an ESP8266 microcontroller.",
       "challenge": "Maintaining stable data streams from microcontrollers via Wi-Fi and providing actionable health insights in real-time.",
-      "approach": "I created a custom Wi-Fi service to communicate with ESP8266 and implemented an AI-driven suggestion engine for user wellness.",
+      "approach": "Created a custom Wi-Fi service to communicate with the ESP8266 and implemented an AI-driven suggestion engine for user wellness recommendations.",
       "solution": "A fully functional IoT health tracker that interprets physiological data to provide personalized stress-relief recommendations.",
       "contributions": [
         "Built the custom Wi-Fi communication bridge for ESP8266",
         "Developed real-time GSR sensor data visualization widgets",
         "Integrated a wellness recommendation engine based on stress levels",
-        "Managed the end-to-end solo development for a private client"
+        "Managed end-to-end solo development for a private client"
       ]
     },
     "tapcash": {
@@ -421,22 +406,22 @@
       "subtitle": "Modern financial management and data visualization",
       "overview": "A polished fintech app prototype demonstrating secure mobile payments, spending insights, and wallet management.",
       "challenge": "Creating a premium UI with complex data visualizations that remains performant on varied mobile hardware.",
-      "approach": "I built a custom widget architecture for financial indicators and used specialized charting libraries for spending insights.",
+      "approach": "Built a custom widget architecture for financial indicators and used specialized charting libraries for spending insights.",
       "solution": "A high-fidelity prototype delivered in a 2-week hackathon, recognized for its exceptional UI/UX by industry judges.",
       "contributions": [
-        "Designed the primary financial dashboard and spending 'Insights'",
+        "Designed the primary financial dashboard and spending Insights section",
         "Implemented custom bottom navigation and reusable card widgets",
         "Built reactive UI components for balance tracking",
         "Presented the solution at Orange Digital Center's Eid Hackathon"
       ]
     },
     "redditClone": {
-      "title": "Reddix — Reddit Clone",
+      "title": "Reddix \u2014 Reddit Clone",
       "subtitle": "Full-featured social platform built in a team sprint",
-      "overview": "A complete Reddit mobile app clone developed as part of a software house team sprint following Agile methodology with MVC-S architecture. Implemented the community management, settings, and authentication modules end-to-end.",
+      "overview": "A complete Reddit mobile app clone developed as part of a software house team sprint following Agile methodology with MVC-S architecture. Owned the community management, settings, and authentication modules end-to-end.",
       "challenge": "Delivering a production-grade social platform with community management, user settings, and auth flows in a team environment while following MVC-S architecture and avoiding state management conflicts across feature modules.",
       "approach": "Owned three major modules independently: Community Creation (full CRUD flow, typed community forms, rules dialog), User Settings (account settings, email management, blocking/permissions), and Authentication (forgot password, username recovery, reset email confirmation).",
-      "solution": "A fully functional social ecosystem with live community creation, left/right drawer navigation, comprehensive account settings, and end-to-end auth recovery flows — demoed in a public YouTube Short.",
+      "solution": "A fully functional social ecosystem with live community creation, left/right drawer navigation, comprehensive account settings, and end-to-end auth recovery flows \u2014 demoed in a public YouTube Short.",
       "contributions": [
         "Built the complete Community Creation flow: form validation, community type selection, rules dialog",
         "Implemented left drawer with dynamic community list and right drawer with user actions",
@@ -445,214 +430,198 @@
         "Configured Provider-based state management with MVC-S for zero cross-module conflicts"
       ]
     },
-        "eplReservation": {
-      "title": "EPL Ticket Reservation",
-      "subtitle": "Match ticketing system and admin intelligence dashboard",
-      "overview": "A full-stack reservation system for Premier League matches, featuring a high-performance Flutter web admin panel.",
-      "challenge": "Handling concurrent seat bookings and visualizing complex match occupancy data for administrators.",
-      "approach": "I utilized Provider for reactive state management on the web. I designed custom charts to provide real-time occupancy insights.",
-      "solution": "A robust system with sub-second data synchronization and a secure, JWT-authenticated administration flow.",
-      "contributions": [
-        "Developed the entire Admin Dashboard using Flutter Web",
-        "Implemented a JWT auto-refresh mechanism for seamless security",
-        "Built interactive data visualizations for revenue and occupancy",
-        "Designed the seat-map logic with optimistic state updates"
-      ]
-    },
     "usAccidents": {
       "title": "US Accidents Analysis",
-      "subtitle": "Big Data pipeline for 7.7M traffic records",
-      "overview": "A distributed computing project analyzing massive traffic datasets to predict accident severity and risk factors.",
-      "challenge": "Processing nearly 8 million records on traditional software was impossible; the system required a cloud-native distributed architecture.",
-      "approach": "I designed and implemented a custom MapReduce Linear Regression from scratch and configured the cloud orchestration on GCP.",
-      "solution": "Reduced processing time by 90% (from hours to minutes) and achieved 84% predictive accuracy using Random Forest.",
+      "subtitle": "Big Data & ML analysis of 7.7M traffic records",
+      "overview": "A team project (2 members) analyzing the US Accidents dataset (7.7 million records, 49 columns) using PySpark on GCP. My role focused on the EDA and machine learning contribution \u2014 uncovering accident patterns, predicting severity, and building custom MapReduce algorithms.",
+      "challenge": "Processing nearly 8 million records required distributed computing. The dataset had severe class imbalance and weak correlations for duration prediction, requiring careful feature analysis and model selection.",
+      "approach": "Led the EDA phase with comprehensive data cleaning and exploration. Implemented custom MapReduce versions of Linear Regression and Logistic Regression from scratch. Trained and optimized ensemble models for severity classification.",
+      "solution": "Logistic Regression and Random Forest achieved ~84% accuracy and F1-score ~0.77 for severity classification. Identified key insights: peak accident times (8-10 AM, 3-6 PM rush hours), high-risk areas (Miami highest accidents), and weather impacts (Light Blowing Snow highest average severity).",
       "contributions": [
-        "Designed and implemented MapReduce Linear Regression RDDs manually",
-        "Led the EDA phase: 80+ hours of forensic data cleaning and analysis",
-        "Configured Mage orchestration on GCP for 10+ ETL pipelines",
-        "Optimized Random Forest hyperparameters for peak accuracy"
+        "Led the EDA phase: comprehensive data cleaning, histograms, correlation matrices, geospatial visualizations",
+        "Implemented custom MapReduce Linear Regression and Logistic Regression from scratch using PySpark RDDs",
+        "Trained and hyperparameter-tuned Random Forest model achieving ~84% accuracy, F1 ~0.77",
+        "Applied K-Means clustering of accident locations for geographic risk analysis",
+        "Identified key risk patterns: rush-hour peaks, weather severity correlations, high-risk cities"
       ]
     },
     "vpredicto": {
-      "title": "vPredicto",
-      "subtitle": "Open-source Deep Learning library for Video Prediction",
-      "overview": "An open-source Python library implementing state-of-the-art architectures for future frame prediction in video sequences.",
-      "challenge": "Standardizing disparate research models into a single, cohesive API while maintaining high fidelity in spatio-temporal memory.",
-      "approach": "I architected the library's foundation using abstract models and implemented complex GhU (Gradient Highway) units to solve deep training issues.",
-      "solution": "An A+ grade graduation project achieving state-of-the-art SSIM scores and an extensible framework for future researchers.",
+      "title": "Predicto",
+      "subtitle": "Graduation Project \u2014 Open-source Video Frame Prediction library",
+      "overview": "As team leader of Graduation Project Team 18, led the development of Predicto \u2014 an open-source Python library (PyTorch + Tkinter) that makes Video Frame Prediction (VFP) accessible to both non-experts and ML specialists. The library provides a desktop GUI for drag-and-drop video input, model selection, prediction, and visualization, alongside a clean API for expert use.",
+      "challenge": "Unifying disparate research architectures (SimVP, PredNet, ConvLSTM, PredRNN++) into a single cohesive API while building a cross-platform desktop GUI and resolving weeks of dimension-mismatch bugs in ConvLSTM-based models.",
+      "approach": "Owned full design and implementation of the Desktop App (GUI): splash screen, main screen with side menu, video frame display, playback controls, file handling, model processing, and visualization modules. Implemented SimVP (CNN Encoder-Translator-Decoder with TPU optimization and checkpointing for 5\u00d7 speedup) and PredNet (Predictive Coding Network with ConvLSTM, resolving weeks of dimension-mismatch debugging).",
+      "solution": "A functional, benchmarked open-source library supporting multiple models with state-of-the-art SSIM scores. Awarded A+ grade. Documented in the team book and published as an extensible tool bridging research and practical applications in autonomous driving, robotics, and video.",
       "contributions": [
-        "Architected the library foundation and unified BaseModel API",
-        "Implemented CausalLSTM and GhU units from research papers",
-        "Designed the differential memory tracking for the MIM model",
-        "Achieved A+ grade and published library on GitHub"
+        "Led team of 4: organized learning roadmap (Coursera ML/DL, PyTorch), Trello boards, deadlines, meeting docs",
+        "Designed and fully implemented the Desktop App GUI \u2014 7 modules including splash, side menu, playback, visualization",
+        "Implemented SimVP model: CNN Encoder-Translator-Decoder with TPU optimization and checkpointing (5\u00d7 speedup)",
+        "Implemented PredNet: Predictive Coding Network with ConvLSTM, resolved weeks of dimension-mismatch debugging",
+        "Maintained a daily devlog, authored multiple book chapters, and integrated all models into the desktop app"
       ]
     },
     "phishing": {
       "title": "Phishing Detection",
-      "subtitle": "Security-focused ML classifier",
-      "overview": "A machine learning system designed to protect users by identifying phishing websites with 96% accuracy.",
-      "challenge": "Accurately identifying deceptive URLs that mimic real domains while keeping false negatives near zero.",
-      "approach": "I engineered 30+ security features, including HTTPS validity and domain age, and optimized the ensemble model using grid search.",
-      "solution": "A high-precision classifier that successfully identifies complex phishing attempts on imbalanced real-world datasets.",
+      "subtitle": "ML-based web phishing classifier \u2014 team project",
+      "overview": "A team machine learning project tackling phishing detection using a balanced Kaggle dataset of web page features. Conducted thorough EDA, preprocessing, and trained multiple classifiers to achieve state-of-the-art accuracy.",
+      "challenge": "Phishing attacks are highly sophisticated \u2014 97% of security experts fail to identify them. The dataset required careful feature selection with web_traffic showing significant outliers and many low-correlation features needing removal.",
+      "approach": "Conducted EDA (histograms, correlation matrices, box plots). Preprocessed by scaling, fixing negatives, and dropping features with correlation < 0.1. Trained and cross-validated multiple models including Random Forest, SVM, AdaBoost, and compared against baselines.",
+      "solution": "Top-performing models: Random Forest (96.8%), SVM with tuning (96.7%), AdaBoost (96.8%). F1-scores ~0.97, precision/recall ~0.96-0.97, significantly outperforming baselines like ZeroR (49%) and Logistic Regression (95%).",
       "contributions": [
-        "Engineered 30+ technical features for URL and structure analysis",
-        "Implemented SMOTE algorithms to handle extreme class imbalance",
-        "Optimized the Random Forest ensemble via GridSearchCV",
-        "Evaluated 12 different architectures to find the optimal solution"
+        "Conducted EDA: histograms, correlation matrices, box plots (key: google_index at 0.73 correlation)",
+        "Preprocessed data: scaling, fixing negatives, dropping low-correlation features",
+        "Trained and evaluated Random Forest, SVM, AdaBoost, Logistic Regression via cross-validation",
+        "Applied hyperparameter tuning (RandomizedSearchCV) for optimal model performance",
+        "Comparative evaluation of 5+ classifiers and documented findings"
       ]
-    },  
+    },
     "lineFollower": {
-      "title": "Embedded CV Line Follower",
-      "subtitle": "Computer Vision for autonomous cars",
-      "overview": "A smart navigation project using a mobile camera to drive an autonomous vehicle through steering angle calculation.",
-      "challenge": "Real-time image processing on mobile devices with high frame rates and precise motor control via wireless sockets.",
-      "approach": "I built an OpenCV pipeline in C++ and connected it to the Android UI using JNI for zero-copy high-performance processing.",
-      "solution": "A nimble autonomous car that tracks complex paths in real-time with PID-based steering stabilization.",
+      "title": "Maze-Solver Robot App",
+      "subtitle": "Native Android app for autonomous robot navigation",
+      "overview": "A native Android app powering a Maze-Solver Robot with real-time computer vision via OpenCV for line following and maze navigation modes, communicating wirelessly with an ESP32 microcontroller to control robot speed and actions.",
+      "challenge": "Processing camera frames in real-time on mobile hardware using native C++ while maintaining non-blocking UI and reliable wireless communication with the robot.",
+      "approach": "Built C++ native modules via JNI for high-performance OpenCV processing (car detection, corner/line detection, adaptive thresholding, distance calculations). Used threading for non-blocking UI and HTTP POST requests to ESP32 endpoints for motor control.",
+      "solution": "A real-time robot control app supporting both maze navigation (corner detection, debounce signals) and line following (adaptive lines, first-detection handling) with PID-based motor control.",
       "contributions": [
-        "Implemented the OpenCV C++ pipeline for Hough Line detection",
-        "Designed the JNI bridge for efficient frame transfer in Android",
-        "Developed the PID controller for steering angle stabilization",
-        "Integrated TCP socket communication for real-time motor commands"
+        "Implemented C++ native modules via JNI: car detection, corner/line detection, adaptive thresholding, distance calculations",
+        "Built UI with PID constant controls (kd, kv, ki), mode toggle, start/capture/demo buttons",
+        "Implemented ESP32 connectivity and HTTP POST commands to /maxminspeed, /linefollowerminspeed endpoints",
+        "Added threading for non-blocking UI, camera permissions, and screen-wake logic"
       ]
     },
     "mipsProcessor": {
       "title": "MIPS 5-Stage Processor",
-      "subtitle": "CPU architecture and pipelining",
-      "overview": "A hardware-level project implementing a full pipelined MIPS CPU in Verilog, featuring advanced hazard resolution.",
-      "challenge": "Maintaining high clock speeds while solving complex data and control hazards across five pipeline stages.",
-      "approach": "I designed the Decode stage logic and integrated data forwarding paths to eliminate stalling in most instruction sequences.",
-      "solution": "A functional CPU achieving a 1.2 CPI, verified against sorting and mathematical programs on ModelSim.",
+      "subtitle": "Lead Processor Architect \u2014 Decode & Integration",
+      "overview": "A hardware-level team project implementing a full pipelined MIPS CPU in Verilog with 5 pipeline stages, advanced hazard resolution via forwarding, and top-level integration. My role was Lead Processor Architect for the Decode stage and system integration.",
+      "challenge": "Synchronizing 5 pipeline stages through robust intermediate buffers while resolving data and control hazards without excessive stalling across all instruction types.",
+      "approach": "Designed the top-level integration (MIPS_phase_3.v) syncing all 5 stages, implemented the instruction decoder (Decode2.v) mapping the ISA to internal control signals, and integrated the Forwarding and Hazard Detection units.",
+      "solution": "A functional pipelined CPU verified against sorting and mathematical programs on ModelSim, achieving correct execution across all implemented MIPS instructions.",
       "contributions": [
-        "Designed the instruction lookup and Decode stage logic",
+        "Designed top-level integration (MIPS_phase_3.v) synchronizing all 5 stages via intermediate buffers",
+        "Implemented the Decode stage (Decode2.v): instruction lookup mapping ISA to ALU, MEM, and STACK control signals",
         "Generated all 15 core control signals for the execution pipeline",
-        "Implemented EX and MEM forwarding paths to bypass hazards",
-        "Verified correctness using 40+ hours of ModelSim waveform analysis"
-      ]
-    },
-    "circuitsSolver": {
-      "title": "Circuits Solver Engine",
-      "subtitle": "SPICE-inspired Nodal Analysis simulatorv",
-      "overview": "A powerful C++ engine for solving arbitrary linear circuits using high-performance linear algebra and Modified Nodal Analysis.",
-      "challenge": "Modeling complex components like dependent sources and passive elements in a single, stable matrix system.",
-      "approach": "I designed an object-oriented Component hierarchy with virtual MNA stamping and integrated the Eigen library for speed.",
-      "solution": "A simulator capable of solving 500-node circuits in just 18ms, matching the accuracy of professional tools like LTspice.",
-      "contributions": [
-        "Solo-implemented the entire 1500+ line C++ simulation engine",
-        "Designed the Component hierarchy and virtual MNA stamping logic",
-        "Integrated the Eigen library for high-speed linear algebra",
-        "Validated solution accuracy against LTspice benchmarks"
+        "Integrated and verified Forwarding and Hazard Detection units for single-cycle dependency handling",
+        "Verified correctness using ModelSim waveform analysis across multiple test programs"
       ]
     },
     "logicSimulator": {
       "title": "Logic Gate Simulator",
-      "subtitle": "Interactive GUI for digital circuit design",
-      "overview": "A desktop simulator for designing and testing digital logic circuits with a focus on usability and robust state management.",
-      "challenge": "Enabling complex user interactions like multi-level undo/redo while ensuring correct signal propagation across large gates.",
-      "approach": "I implemented the Command Pattern for all interface actions and orchestrated the system using a central Application Manager.",
-      "solution": "A polished educational tool supporting multi-input gates, propagation delays, and binary file persistence.",
+      "subtitle": "Interactive GUI for digital circuit design \u2014 team of 4",
+      "overview": "A Windows desktop application in C++ using CMU Graphics library for designing and simulating digital logic circuits, developed as a 4-person team. Features include drag-and-drop gate placement, real-time simulation, truth table generation, save/load, undo/redo, copy/cut/paste, and switch toggling.",
+      "challenge": "Building a robust event-driven architecture separating input handling, application logic, and rendering while supporting complex interactions like multi-level undo/redo that don't corrupt circuit state.",
+      "approach": "Implemented the core getUserAction() for precise input handling across design/simulation modes, and ExecuteAction() in ApplicationManager as a central command dispatcher using the Strategy Pattern. Used file I/O for circuit persistence.",
+      "solution": "A polished educational tool supporting multi-input gates (AND, OR, NAND, NOR, XOR, XNOR, buffers), truth table generation, real-time simulation, and full binary file persistence.",
       "contributions": [
-        "Architected the central Application Manager and system state engine",
-        "Implemented the Command Pattern for 12 types of undo/redo actions",
-        "Built the event-driven engine for efficient gate simulation",
-        "Designed the custom binary serialization format for project saving"
+        "Implemented getUserAction() for precise input handling across design and simulation modes",
+        "Built ExecuteAction() in ApplicationManager as central command dispatcher using Strategy Pattern",
+        "Developed Save/Load classes with binary file I/O for full circuit persistence (components + connections)",
+        "Enhanced ChangeSwitch class with toggle logic and bounds checking",
+        "Contributed UI improvements including gate toolbar toggling and Exit class"
       ]
     },
     "osScheduler": {
       "title": "OS Process Scheduler",
-      "subtitle": "Low-level Linux kernel simulation",
-      "overview": "A C-based system modeling the internals of an Operating System's process scheduling and resource management.",
-      "challenge": "Simulating high-concurrency process flows and implementing multiple scheduling algorithms like Round Robin and Priority.",
-      "approach": "I implemented the core clock-driven simulation loop and memory management modules to handle process lifecycles.",
-      "solution": "A robust scheduler capable of calculating performance metrics across simulated process bursts with full architectural visibility.",
+      "subtitle": "OS simulation in C with Buddy Allocator memory management",
+      "overview": "A complete Operating System simulation in C modeling kernel-level process management, synchronization, and resource allocation using Linux system calls. Personally led the Process Generator and the Dynamic Memory Allocation system.",
+      "challenge": "Simulating high-concurrency process flows with real-time IPC communication while implementing a sound memory allocator that minimizes external fragmentation across multiple concurrent processes.",
+      "approach": "Built the Process Generator as the system's central controller: parsing process data, managing clock and scheduler via fork() and exec(), and coordinating process arrival via IPC Message Queues. Designed a Buddy Allocator managing a 1024-byte memory pool through recursive block splitting and buddy merging.",
+      "solution": "A robust OS simulator handling HPF, SRTN, and Round Robin scheduling algorithms with precise memory allocation, IPC coordination, and performance metrics output.",
       "contributions": [
-        "Developed the main clock-driven simulation loop in C",
-        "Implemented Round Robin and Priority-based scheduling logic",
-        "Built the process lifecycle and memory management modules",
-        "Designed the performance metric reporting (Turnaround/Wait time)"
+        "Implemented the Process Generator: process data parsing, fork()/exec() lifecycle management, IPC coordination",
+        "Designed and built the Buddy Allocator: allocate() and deallocate() with recursive 1024-byte pool management",
+        "Implemented buddy merging to minimize external fragmentation across concurrent process scenarios",
+        "Led the integration phase ensuring seamless communication between clock, scheduler, and generator modules",
+        "System supports HPF, SRTN, and Round Robin scheduling with turnaround/wait time performance metrics"
       ]
     },
     "searchEngine": {
-      "title": "Search Engine Architecture",
-      "subtitle": "Web crawler and TF-IDF ranker",
-      "overview": "A modular Java search engine featuring high-concurrency crawling and intelligent ranking for web pages.",
-      "challenge": "Managing thousands of concurrent network requests while ensuring the crawler follows robots.txt rules and avoids traps.",
-      "approach": "I solo-implemented the multi-threaded crawler using Java's ExecutorService with a persistent BFS frontier to disk.",
-      "solution": "A fault-tolerant crawler that successfully indexed 50,000+ pages with high throughput and reliable ranked retrieval.",
+      "title": "Search Engine \u2014 Web Crawler",
+      "subtitle": "Multithreaded Java web crawler module",
+      "overview": "Contributed the core Web Crawler backend module of a full Java search engine. The crawler serves as the entry point for the entire pipeline, feeding indexed pages to the ranking and retrieval layers.",
+      "challenge": "Managing thousands of concurrent network requests while ensuring ethical crawling (robots.txt compliance), URL deduplication, and fault-tolerant resumption across interruptions.",
+      "approach": "Designed a multithreaded crawler using Java's ExecutorService for parallel fetching. Implemented a disk-persistent BFS queue for fault tolerance, URL canonicalization for deduplication, and robots.txt parsing. Stored crawled data in MongoDB with page title, URL, compact string, and popularity metrics.",
+      "solution": "A fault-tolerant crawler supporting session resumption, unique content verification, and scalable BFS traversal up to the configured max count.",
       "contributions": [
-        "Implemented the multi-threaded crawler (2000+ lines of Java)",
-        "Built the robots.txt parser and URL canonicalization logic",
-        "Designed the disk-persistent BFS queue for fault tolerance",
-        "Co-developed the TF-IDF ranking and keyword highlighting logic"
+        "Designed and implemented the multithreaded web crawler using Java ExecutorService",
+        "Built disk-persistent BFS queue for fault-tolerant resumption of interrupted crawl sessions",
+        "Developed URL canonicalization to prevent duplicate processing and infinite redirect loops",
+        "Integrated robots.txt parser for ethical crawling compliance",
+        "Stored crawled pages in MongoDB with title, URL, compact string, and popularity tracking"
       ]
     },
     "goDfs": {
       "title": "Distributed File System",
-      "subtitle": "Fault-tolerant DFS with MP4 streaming",
-      "overview": "A distributed file system built in Go supporting file replication, fault tolerance, and MP4 video streaming across multiple nodes.",
-      "challenge": "Building a reliable file system that maintains data integrity during node failures and supports real-time media streaming.",
-      "approach": "Implemented TCP-based node communication with heartbeat monitoring, chunk-based file transfer, and custom replication protocols.",
-      "solution": "A high-concurrency distributed storage system that gracefully handles node failures and streams video content in real-time.",
+      "subtitle": "Fault-tolerant DFS with hybrid gRPC + TCP protocol",
+      "overview": "A high-performance, fault-tolerant distributed file system (Go-DFS) designed for large-scale video storage using a Master-Worker (Tracker-Keeper) architecture. Deliberately chose a hybrid protocol: gRPC for control-plane reliability and raw TCP for high-speed data transfers \u2014 demonstrating deliberate architectural thinking.",
+      "challenge": "Building a resilient distributed system that maintains data integrity during node failures, enforces replication across nodes, and supports high-throughput MP4 streaming without sacrificing management reliability.",
+      "approach": "Implemented the gRPC + Protocol Buffers control plane for heartbeat monitoring with timeout mechanisms, and raw TCP sockets for the high-speed data plane. Built the Master's auto-replication engine, Data Keeper self-scanning/registration, and the upload/download pipeline with multi-stage Master-Client handshake.",
+      "solution": "A concurrent, resilient distributed file system with auto failure detection, seamless data recovery, enforced replication factor of 3, and real-time MP4 video streaming.",
       "contributions": [
-        "Designed the distributed architecture with master/data node topology",
-        "Implemented TCP socket communication and heartbeat monitoring",
-        "Built chunk-based file transfer with configurable replication factor",
-        "Added MP4 streaming support for real-time video playback"
+        "Implemented gRPC + Protocol Buffers control plane for heartbeat monitoring with timeout-based failure detection",
+        "Built the Master's auto-replication engine enforcing a replication factor of 3 across the cluster",
+        "Developed Data Keeper self-scanning and registration for dynamic node discovery",
+        "Implemented upload/download pipelines with multi-stage Master-Client direct P2P transfer handshake",
+        "Deliberate hybrid protocol design: gRPC for reliability, TCP for maximum data-plane throughput"
       ]
     },
     "rsaChat": {
       "title": "RSA Encrypted Chat",
-      "subtitle": "End-to-end encrypted messaging",
-      "overview": "A secure messaging application implementing RSA encryption from scratch using Python sockets for truly private communication.",
-      "challenge": "Implementing RSA key generation, encryption, and decryption from mathematical primitives without relying on cryptography libraries.",
-      "approach": "Built the entire RSA pipeline from scratch: prime generation, modular exponentiation, key pair creation, and socket-based message exchange.",
+      "subtitle": "End-to-end encrypted messaging from scratch",
+      "overview": "A secure messaging application implementing RSA encryption from mathematical primitives using Python sockets for truly private communication.",
+      "challenge": "Implementing RSA key generation, encryption, and decryption from scratch without relying on cryptography libraries \u2014 using only prime generation and modular exponentiation.",
+      "approach": "Built the entire RSA pipeline: prime generation, modular exponentiation, key pair creation, and socket-based message exchange.",
       "solution": "A functional E2E encrypted chat system demonstrating deep understanding of public-key cryptography fundamentals.",
       "contributions": [
-        "Implemented RSA key generation with prime number testing",
-        "Built modular exponentiation for efficient encryption/decryption",
+        "Implemented RSA key generation with prime number testing from primitives",
+        "Built modular exponentiation for efficient encryption and decryption",
         "Designed the TCP socket-based message exchange protocol",
         "Created the full encrypt-transmit-decrypt pipeline"
       ]
     },
     "gamingo": {
       "title": "Gamingo Game Engine",
-      "subtitle": "Custom 3D game engine in C++",
-      "overview": "A custom-built 3D game engine implementing core graphics rendering, physics simulation, and entity management from scratch.",
-      "challenge": "Building a performant rendering pipeline and physics system that work together seamlessly for real-time 3D applications.",
-      "approach": "Designed modular engine components: renderer, physics engine, entity-component system, and input manager with clean separation of concerns.",
-      "solution": "A functional game engine capable of rendering 3D scenes with basic physics, collision detection, and entity management.",
+      "subtitle": "Custom 3D game engine in C++ & OpenGL",
+      "overview": "Core engine developer for Gamingo \u2014 a custom 3D game engine built from scratch using C++ and OpenGL, and its flagship title 'Drive Me Home'. Designed fundamental graphics pipeline components and implemented the game's visual and state logic.",
+      "challenge": "Building a performant OpenGL rendering pipeline, collision detection system, and complex game state machine that work cohesively for real-time 3D gameplay across Past, Present, and Future narrative levels.",
+      "approach": "Designed Shader, Texture, and Material classes with GLSL for custom programmable shading. Implemented TexStorage2D for efficient texture memory. Engineered AABB/Sphere collision detection and the state machine for Menu, Level-Up, and Game-Over transitions. Authored post-processing shaders (Sepia, Inversion, CRT, night-time filter).",
+      "solution": "A playable 3D game engine capable of rendering asset-heavy scenes at high frame rates, with cohesive team integration, visual post-processing per level, and robust game state management.",
       "contributions": [
-        "Built the core rendering pipeline with OpenGL",
-        "Implemented basic physics simulation and collision detection",
-        "Designed the entity-component system for game object management",
-        "Created the game loop with fixed timestep for consistent physics"
+        "Designed and implemented Shader, Texture, and Material pipeline classes with custom GLSL shading",
+        "Built TexStorage2D utility for efficient GPU texture memory allocation",
+        "Implemented AABB/Sphere collision detection system using GLM linear algebra",
+        "Engineered the Game State Manager handling non-linear Menu, Level-Up, and Game-Over transitions",
+        "Authored Sepia, Inversion, and CRT post-processing shaders plus dynamic night-time filter",
+        "Spearheaded final integration: level navigation, Finish component, and team asset merge-coordination"
       ]
     },
     "marsExploration": {
       "title": "Mars Exploration Simulation",
-      "subtitle": "Mission scheduling with advanced data structures",
-      "overview": "A complex simulation of Mars rover missions, optimizing resource allocation and mission scheduling using advanced data structures.",
-      "challenge": "Efficiently scheduling concurrent rover missions with varying priorities, resource constraints, and terrain obstacles.",
-      "approach": "Used priority queues, balanced BSTs, and custom scheduling algorithms to optimize mission throughput and resource utilization.",
-      "solution": "A simulation engine that efficiently manages multiple concurrent Mars missions with optimal resource allocation.",
+      "subtitle": "Event-driven mission scheduling with custom data structures",
+      "overview": "An event-driven simulation system in C++ optimizing mission scheduling and resource management for a Mars exploration station. Models complex interactions between Emergency, Mountainous, and Polar mission types and a fleet of rovers with distinct states.",
+      "challenge": "Efficiently scheduling concurrent rover missions with varying priorities while managing rover state transitions, maintenance cycles, and real-time event logging \u2014 without relying on STL containers.",
+      "approach": "Built generic LinkedQueue and PriorityQueue data structures from scratch for maximum memory control. Designed a multi-variable priority equation dynamically balancing mission urgency and formulation time. Authored the Rover class hierarchy with state-transition and post-mission deallocation logic.",
+      "solution": "A robust simulation engine handling multiple concurrent Mars missions with optimal resource allocation, real-time event dashboard, automated reporting, and verified edge-case handling.",
       "contributions": [
-        "Designed the mission scheduling algorithm with priority management",
-        "Implemented balanced BST for efficient mission lookup and insertion",
-        "Built terrain traversal cost calculation using graph algorithms",
-        "Created performance analytics for mission success metrics"
+        "Implemented generic LinkedQueue and PriorityQueue from scratch \u2014 no STL, full memory control",
+        "Designed the core mission priority equation: weighted multi-variable formula balancing urgency and formulation time",
+        "Authored complete Rover class hierarchy: availability, execution, and maintenance state transitions",
+        "Built the automated reporting system outputting mission statistics and completion metrics",
+        "Developed the interactive UI dashboard for real-time event logging and simulation monitoring",
+        "Spearheaded verification phase with rigorous test cases for mission cancellations and concurrent rover failures"
       ]
     },
     "mushafImad": {
       "title": "Mushaf-IMAD Flutter",
-      "subtitle": "Open-source Quran audio integration — Itqan Community",
+      "subtitle": "Open-source Quran audio integration \u2014 Itqan Community",
       "overview": "Contributed to an open-source Quran reader Flutter package by integrating the Quran.com API as a full audio source. The contribution spans OAuth 2.0 authentication, a reactive streaming sync system, a hybrid audio engine, and a comprehensive test suite of 80+ tests using Mocktail.",
-      "challenge": "The existing package had no cloud audio integration. The task required designing a seamless hybrid system that could dynamically fall back between local and cloud sources while maintaining zero-latency verse-to-audio sync.",
-      "approach": "Implemented OAuth 2.0 token management, built a reactive verse metadata injection pipeline using Stream Transformers, and created an in-memory caching layer that reduced API latency by 86%. All logic was driven by TDD with Mocktail for complex async repository testing.",
-      "solution": "A robust hybrid audio engine with single-trip optimizations, a RAM → Local → API timing hierarchy ensuring zero-latency playback sync, and architectural walkthroughs published for long-term community maintainability.",
+      "challenge": "The existing package had no cloud audio integration. Designing a seamless hybrid system that dynamically falls back between local and cloud sources while maintaining zero-latency verse-to-audio sync.",
+      "approach": "Implemented OAuth 2.0 token management, built a reactive verse metadata injection pipeline using Stream Transformers, and created an in-memory caching layer that reduced API latency by 86%. All logic was driven by TDD with Mocktail.",
+      "solution": "A robust hybrid audio engine with a RAM \u2192 Local \u2192 API timing hierarchy ensuring zero-latency playback sync, and architectural walkthroughs published for long-term community maintainability.",
       "contributions": [
         "Integrated Quran.com API via OAuth 2.0 with custom in-memory caching (86% latency reduction)",
         "Developed reactive sync system with Stream Transformers for real-time verse metadata injection",
         "Engineered a Hybrid Audio Engine with dynamic fallback between local and cloud sources",
-        "Authored 80+ unit and integration tests using Mocktail for async repository logic",
+        "Authored 80+ unit and integration tests using Mocktail for complex async repository logic",
         "Published architectural guides and walkthroughs for community maintainability"
       ]
     }

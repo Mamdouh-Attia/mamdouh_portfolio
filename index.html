@@ -728,6 +728,11 @@
         if (!coverImg && project.images && project.images.length > 0) {
           coverImg = project.images[0];
         }
+        
+        // Ensure image path works at the repository root
+        if(coverImg && coverImg.startsWith('../')) {
+            coverImg = coverImg.replace('../', './');
+        }
 
         const card = document.createElement('div');
         card.className = 'card trigger-aura'; // Add aura class

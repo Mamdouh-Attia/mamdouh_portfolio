@@ -350,3 +350,41 @@ img {
 }
 /* Mobile Overflow Fix */
 .mobile-overflow-fix, html, body { overflow-x: hidden !important; max-width: 100vw; width: 100%; }
+
+/* ==================== GLOBAL LOADER ==================== */
+html.i18n-loading body {
+    overflow: hidden !important;
+}
+html.i18n-loading body > *:not(#site-header-el) {
+    opacity: 0;
+    visibility: hidden;
+}
+html.i18n-loading body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--bg-primary);
+    z-index: 99999;
+    visibility: visible;
+    opacity: 1;
+}
+html.i18n-loading body::after {
+    content: '';
+    position: fixed;
+    top: 50%; left: 50%;
+    width: 80px; height: 80px;
+    margin-top: -40px; margin-left: -40px;
+    background-image: url('../assets/images/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 100000;
+    visibility: visible;
+    opacity: 1;
+    animation: loader-pulse 1.5s infinite ease-in-out;
+}
+@keyframes loader-pulse {
+    0% { transform: scale(0.85); opacity: 0.6; filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.4)); }
+    50% { transform: scale(1.1); opacity: 1; filter: drop-shadow(0 0 25px rgba(99, 102, 241, 0.9)); }
+    100% { transform: scale(0.85); opacity: 0.6; filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.4)); }
+}

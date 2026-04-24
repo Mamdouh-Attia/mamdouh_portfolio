@@ -29,8 +29,12 @@ class I18nManager {
         this.applyLanguage(this.currentLang);
         this.setupToggles();
 
-        // Signal that i18n is ready
+        // Signal that i18n is ready and fade out loader
         window.i18nReady = true;
+        setTimeout(() => {
+            document.documentElement.classList.remove('i18n-loading');
+        }, 100); // Slight delay ensures CSS rendering completes
+        
         document.dispatchEvent(new CustomEvent('i18nReady'));
     }
 
@@ -105,7 +109,7 @@ class I18nManager {
             const key = el.getAttribute('data-i18n');
             const translation = this.get(key);
             if (translation) {
-                el.textContent = translation;
+                el.innerHTML = translation;
             }
         });
 

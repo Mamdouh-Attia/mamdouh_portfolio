@@ -187,6 +187,38 @@
       "certifications": "Certifications",
       "issuers": "Issuers",
       "verifiable": "Verifiable"
+    },
+    "eyebrow": "Credentials",
+    "heroTitle": "Verified Technical<br><span class='g'>Mastery</span>",
+    "heroDesc": "Professional certifications and industry credentials that validate my technical precision, continuous learning, and commitment to engineering excellence.",
+    "sectionLabel": "Professional Certifications",
+    "github": {
+      "ribbon": "Professional Path",
+      "issuer": "GitHub · LinkedIn Learning",
+      "date": "2025 · Verified Path",
+      "name": "Career Essentials in GitHub Professional Certificate",
+      "desc": "4-course professional path covering GitHub's modern developer workflows — code search, Copilot AI assistance, project management & collaboration, and GitHub Actions for automation."
+    },
+    "ml": {
+      "ribbon": "Professional",
+      "issuer": "Coursera · Stanford Online · DeepLearning.AI",
+      "date": "2024 · Verifiable",
+      "name": "Machine Learning Specialization",
+      "desc": "Advanced certification covering supervised learning, neural networks, unsupervised learning, recommender systems, and reinforcement learning with real Python labs."
+    },
+    "hcia": {
+      "ribbon": "Certified",
+      "issuer": "Huawei Technologies",
+      "date": "2023 · Certified",
+      "name": "HCIA-AI Certification",
+      "desc": "Certified Professional Associate in Artificial Intelligence. Deep dive into AI foundations, computer vision, NLP, and deep learning model deployment within Huawei Cloud ecosystem."
+    },
+    "orange": {
+      "ribbon": "Industry",
+      "issuer": "Orange Digital Center Egypt",
+      "date": "2023 · Industry Certificate",
+      "name": "Flutter Developer Internship",
+      "desc": "Professional industry training in Flutter development, Bloc state management, MVVM architecture, and Agile project delivery within a real enterprise team."
     }
   },
   "about": {
@@ -283,8 +315,8 @@
   },
   "studentFeedback": {
     "title": "Student Feedback",
-    "subtitle": "What my students say about my teaching",
-    "viewAll": "View Full Feedback"
+    "subtitle": "What my students say about their learning experience",
+    "viewAll": "View All Feedback"
   },
   "services": {
     "label": "What I Offer",
@@ -747,5 +779,18 @@
         "Published architectural guides and walkthroughs for community maintainability"
       ]
     }
+  },
+  "cv": {
+    "selectTitle": "Choose CV Specialization",
+    "selectDesc": "Select the resume that best matches your interest.",
+    "sweTitle": "Software Engineer",
+    "sweDesc": "General CS & Backend",
+    "mobileTitle": "Mobile Software Engineer",
+    "mobileDesc": "Flutter & Architectures"
+  },
+  "knowledge": {
+    "label": "Knowledge & Growth",
+    "title": "Beyond the Code",
+    "subtitle": "Exploring the auxiliary pillars of my professional journey"
   }
 }

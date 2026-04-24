@@ -60,7 +60,7 @@ function buildHeader() {
     <header class="header" id="site-header-el">
         <div class="header-inner">
             <a href="${resolveRelativePath('index.html')}" class="logo">
-                <span class="logo-icon">M</span>
+                <img src="${resolveRelativePath('assets/images/logo.png')}" alt="Logo" class="nav-logo-img" style="height: 32px; width: auto; object-fit: contain; margin-right: 8px;">
                 <span>Mamdouh Attia</span>
             </a>
             <nav class="nav">

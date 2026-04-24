@@ -600,3 +600,25 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* Enhanced Service Icons Overlay */
+.service-svg-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.15);
+  transition: all var(--duration-normal) var(--ease-in-out);
+}
+.service-card:hover .service-svg-wrapper {
+  background: var(--color-primary);
+  color: var(--text-inverse);
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.4);
+  transform: translateY(-2px) scale(1.05);
+}

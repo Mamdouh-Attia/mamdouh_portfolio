@@ -20,7 +20,8 @@
             const THEME_KEY = 'portfolio-theme';
             const storedTheme = localStorage.getItem(THEME_KEY);
             const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', storedTheme || systemTheme);
+            document.documentElement.classList.add('i18n-loading');
+      document.documentElement.setAttribute('data-theme', storedTheme || systemTheme);
         })();
     </script>
 
@@ -31,7 +32,8 @@
     <link rel="stylesheet" href="../css/layouts.css">
     <link rel="stylesheet" href="../css/rtl.css">
 
-    <link rel="icon" type="image/png" href="../assets/images/logo.png"><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+    <link rel="icon" type="image/png" href="../assets/images/logo.png"><text y='.9em'
+        font-size='90'>👨‍💻</text></svg>">
 </head>
 
 <body>
@@ -52,11 +54,12 @@
                 <div class="contact-grid grid-2" style="align-items: start;">
                     <!-- Contact Form -->
                     <div class="contact-form-wrapper reveal">
-                        <form class="contact-form" id="contact-form" action="https://formsubmit.co/mamdouhattia31@gmail.com" method="POST">
+                        <form class="contact-form" id="contact-form"
+                            action="https://formsubmit.co/mamdouhattia31@gmail.com" method="POST">
                             <div class="form-group">
                                 <label for="name" class="form-label" data-i18n="contact.form.name">Your Name *</label>
                                 <input type="text" id="name" name="name" class="form-input" required
-                                    placeholder="John Doe" data-i18n-placeholder="contact.form.namePlaceholder">
+                                    placeholder="Ahmed Mohamed" data-i18n-placeholder="contact.form.namePlaceholder">
                                 <span class="form-error" data-i18n="contact.form.errors.name">Please enter your
                                     name</span>
                             </div>
@@ -65,7 +68,7 @@
                                 <label for="email" class="form-label" data-i18n="contact.form.email">Your Email
                                     *</label>
                                 <input type="email" id="email" name="email" class="form-input" required
-                                    placeholder="john@example.com"
+                                    placeholder="Ahmed@example.com"
                                     data-i18n-placeholder="contact.form.emailPlaceholder">
                                 <span class="form-error" data-i18n="contact.form.errors.email">Please enter a valid
                                     email</span>
@@ -231,21 +234,21 @@
                 body: formData,
                 headers: { "Accept": "application/json" }
             })
-            .then(response => {
-                if (response.ok) {
-                    // Show success
-                    form.style.display = 'none';
-                    successEl.classList.remove('hidden');
-                    showToast('Message sent successfully!', 'success');
-                } else {
-                    showToast('Failed to send. Please try again later.', 'error');
+                .then(response => {
+                    if (response.ok) {
+                        // Show success
+                        form.style.display = 'none';
+                        successEl.classList.remove('hidden');
+                        showToast('Message sent successfully!', 'success');
+                    } else {
+                        showToast('Failed to send. Please try again later.', 'error');
+                        resetForm();
+                    }
+                })
+                .catch(err => {
+                    showToast('Network error, please try again later.', 'error');
                     resetForm();
-                }
-            })
-            .catch(err => {
-                showToast('Network error, please try again later.', 'error');
-                resetForm();
-            });
+                });
         });
 
         function resetForm() {

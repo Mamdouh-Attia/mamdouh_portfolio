@@ -339,7 +339,7 @@
 
         <div class="text-center" style="margin-top: var(--space-12);">
           <a href="./pages/experience.html" class="btn btn-primary btn-lg magnetic">
-            <span>Explore Complete Career Dossier</span>
+            <span data-i18n="hero.cta.careerDossier">Explore Complete Career Dossier</span>
           </a>
         </div>
       </div>
@@ -611,8 +611,8 @@
       <div class="container">
         <div class="section-header reveal">
           <span class="section-label" data-i18n="knowledge.label">Knowledge & Growth</span>
-          <h2 class="section-title title-gradient-primary">Beyond the Code</h2>
-          <p class="section-subtitle">Exploring the auxiliary pillars of my professional journey</p>
+          <h2 class="section-title title-gradient-primary" data-i18n="knowledge.title">Beyond the Code</h2>
+          <p class="section-subtitle" data-i18n="knowledge.subtitle">Exploring the auxiliary pillars of my professional journey</p>
         </div>
 
         <div class="bento-grid stagger-children">
@@ -727,47 +727,6 @@
       </div>
     </section>
 
-    <!-- CV Selection Modal -->
-    <div class="cv-modal-overlay" id="cv-modal" onclick="this.classList.remove('active')">
-      <div class="cv-modal-content" onclick="event.stopPropagation()">
-        <button class="cv-modal-close" onclick="document.getElementById('cv-modal').classList.remove('active')"
-          aria-label="Close">?</button>
-        <h3 data-i18n="cv.selectTitle">Choose CV Specialization</h3>
-        <p data-i18n="cv.selectDesc" style="color: var(--text-secondary); margin-bottom: 24px;">Select the resume that
-          best matches your interest.</p>
-
-        <div class="cv-options">
-          <a href="./assets/CV/Mamdouh_Attia_Software_Engineer_CV.pdf" class="cv-option-card" download>
-            <span class="service-svg-wrapper" style="margin-bottom:0; width:48px; height:48px;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path
-                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
-                </path>
-              </svg>
-            </span>
-            <div class="cv-info">
-              <h4 data-i18n="cv.sweTitle">Software Engineer</h4>
-              <span data-i18n="cv.sweDesc" style="font-size: 13px; color: var(--text-muted);">General CS &
-                Backend</span>
-            </div>
-          </a>
-
-          <a href="./assets/CV/Mamdouh_Attia_Mobile_Software_Engineer.pdf" class="cv-option-card" download>
-            <span class="service-svg-wrapper" style="margin-bottom:0; width:48px; height:48px;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                <line x1="12" y1="18" x2="12.01" y2="18"></line>
-              </svg>
-            </span>
-            <div class="cv-info">
-              <h4 data-i18n="cv.mobileTitle">Mobile Software Engineer</h4>
-              <span data-i18n="cv.mobileDesc" style="font-size: 13px; color: var(--text-muted);">Flutter &
-                Architectures</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
   </main>
 
   <!-- Footer Anchor -->
@@ -856,6 +815,8 @@
     } else {
       document.addEventListener('i18nReady', renderFeaturedProjects);
     }
+    // Re-render when language changes
+    document.addEventListener('languageChanged', renderFeaturedProjects);
   </script>
 
   <style>

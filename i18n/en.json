@@ -226,9 +226,9 @@
     "title": "About Me",
     "subtitle": "Get to know me better",
     "bio": {
-      "intro": "I'm a Flutter Developer and Computer Engineer passionate about building scalable, high-performance mobile applications and crafting elegant system architectures. Currently, I bring 3+ years of experience to the table, transforming complex business requirements into seamless digital experiences.",
-      "journey": "I value consistency and continuous learning, dedicating myself to exploring new technologies, writing clean code, and sharing knowledge with the developer community through mentoring and technical training.",
-      "values": ""
+      "intro": "I'm a Flutter Developer and Computer Engineering graduate with hands-on experience building real-world mobile applications across academic projects, hackathons, freelancing, and technical instruction.",
+      "journey": "Throughout my journey, I worked on multiple end-to-end applications, from idea and system design to implementation, testing, and deployment. My background in software engineering fundamentals combined with exposure to AI and machine learning enables me to build mobile solutions that are both scalable and data-aware.",
+      "values": "I value consistency over perfection, continuous learning, and building software that solves real problems. I'm especially interested in mobile roles where clean architecture, product thinking, and long-term code quality matter."
     },
     "skills": {
       "title": "Skills & Expertise",

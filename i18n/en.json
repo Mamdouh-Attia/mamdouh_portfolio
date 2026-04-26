@@ -353,9 +353,9 @@
     "subtitle": "Let's discuss how I can help you build your next mobile application",
     "form": {
       "name": "Your Name *",
-      "namePlaceholder": "John Doe",
+      "namePlaceholder": "Ahmed Mohamed",
       "email": "Your Email *",
-      "emailPlaceholder": "john@example.com",
+      "emailPlaceholder": "ahmed@example.com",
       "subject": "Subject *",
       "subjectPlaceholder": "Project Inquiry",
       "message": "Your Message *",

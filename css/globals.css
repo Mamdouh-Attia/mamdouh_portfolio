@@ -388,3 +388,33 @@ html.i18n-loading body::after {
     50% { transform: scale(1.1); opacity: 1; filter: drop-shadow(0 0 25px rgba(99, 102, 241, 0.9)); }
     100% { transform: scale(0.85); opacity: 0.6; filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.4)); }
 }
+
+/* ==================== TEXT ALIGNMENT: GLOBAL FIX ==================== */
+/* Prevent any inherited text-align:justify on all paragraph/bullet content */
+p,
+.bullet,
+.t-bullet,
+.t-desc-text,
+.t-quote-text,
+.card-desc,
+.card-body p,
+.timeline-content p,
+.exp-hero-desc,
+.card-bullets .bullet,
+li {
+    text-align: left !important;
+}
+
+/* RTL: flip to right-align */
+[dir="rtl"] p,
+[dir="rtl"] .bullet,
+[dir="rtl"] .t-bullet,
+[dir="rtl"] .t-desc-text,
+[dir="rtl"] .t-quote-text,
+[dir="rtl"] .card-desc,
+[dir="rtl"] .card-body p,
+[dir="rtl"] .timeline-content p,
+[dir="rtl"] li {
+    text-align: right !important;
+}
+

@@ -306,7 +306,7 @@
     },
     "testimonials": {
       "title": "What My Clients Say",
-      "subtitle": "5.0 / 5.0 — All clients rated 5 out of 5"
+      "subtitle": "4.9 / 5.0 — Every project. Every delivery. Every client."
     }
   },
   "common": {
@@ -316,7 +316,7 @@
   },
   "studentFeedback": {
     "title": "Student Feedback",
-    "subtitle": "What my students say about their learning experience",
+    "subtitle": "Unfiltered words from the builders I helped shape",
     "viewAll": "View All Feedback"
   },
   "services": {
@@ -404,12 +404,12 @@
       "students": "Students Taught"
     },
     "sectionLabel": "Technical Background",
-    "homeTitle": "Architecting the Future",
-    "homeSubtitle": "A heritage of engineering excellence and digital precision",
+    "homeTitle": "Where Precision Meets Purpose",
+    "homeSubtitle": "Every line intentional. Every product built to outlast the hype.",
     "active": {
       "role": "Open Source Contributor",
       "company": "Itqan Community · Mushaf-IMAD",
-      "description": "Leading technical implementation for high-fidelity Quranic applications, focusing on architectural integrity and mobile performance."
+      "description": "Contributing to the architectural integrity and mobile performance of a high-fidelity Quranic audio experience."
     },
     "instructor": {
       "role": "Technical Instructor",

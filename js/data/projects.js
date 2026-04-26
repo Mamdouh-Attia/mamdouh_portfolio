@@ -38,6 +38,7 @@ export const projects = [
         date: "2024-01",
         i18nKey: "projectData.volunteen",
         color: "#00b4d8",
+        githubUrl: "https://github.com/Mamdouh-Attia/VolunTeen-App",
         demoUrl: "https://youtu.be/mfJJU8dV7c4",
         youtubeId: "mfJJU8dV7c4",
         media: [
@@ -74,6 +75,7 @@ export const projects = [
         date: "2023-12",
         i18nKey: "projectData.hypermate",
         color: "#e67e22",
+        githubUrl: "https://github.com/Mamdouh-Attia/HyperMate-App",
         demoUrl: "https://www.youtube.com/watch?v=I7HxB9zB4rE",
         youtubeId: "I7HxB9zB4rE",
         media: [
@@ -108,7 +110,11 @@ export const projects = [
         date: "2024-05",
         i18nKey: "projectData.checkit",
         color: "#2ecc71",
+        githubUrl: "https://github.com/Mamdouh-Attia/Check-It-App",
+        demoUrl: "https://youtu.be/GvD43h9e5v4",
+        youtubeId: "GvD43h9e5v4",
         media: [
+            { type: 'youtube', src: 'GvD43h9e5v4' },
             { type: 'image', src: '../assets/projects_media/check-it/CheckIt Cover.png' },
             { type: 'image', src: '../assets/projects_media/check-it/Home.jpg' },
             { type: 'image', src: '../assets/projects_media/check-it/Products grid.jpg' },
@@ -132,7 +138,7 @@ export const projects = [
         date: "2022-12",
         i18nKey: "projectData.redditClone",
         color: "#ff4500",
-        githubUrl: "https://github.com/Mamdouh-Attia/Reddit_Clone",
+        githubUrl: "https://github.com/Mamdouh-Attia/RedditX-Cross-Platform",
         youtubeUrl: "https://www.youtube.com/embed/-oIEAR0GJL8",
         youtubeIsShort: true,
         media: [
@@ -167,6 +173,7 @@ export const projects = [
         date: "2023-05",
         i18nKey: "projectData.tapcash",
         color: "#9b59b6",
+        githubUrl: "https://github.com/Mamdouh-Attia/tapcash-Cross-Platform",
         demoUrl: "https://docs.google.com/presentation/d/1IC-2Cvxh4LbfgxtxTxzCyrZzTY8DJjav/edit",
         media: [
             { type: 'image', src: '../assets/projects_media/tapcash/tapcash.jpg' },
@@ -192,7 +199,7 @@ export const projects = [
         status: "completed",
         date: "2024-05",
         i18nKey: "projectData.ecosort",
-        color: "#10b981"
+        color: "#10b981",
     },
 
     // ========== DATA & AI PROJECTS ==========
@@ -206,7 +213,8 @@ export const projects = [
         featured: true,
         status: "completed",
         date: "2024-01",
-        i18nKey: "projectData.usAccidents"
+        i18nKey: "projectData.usAccidents",
+        githubUrl: "https://github.com/Mamdouh-Attia/US-Accidents-Analysis"
     },
     {
         id: "vpredicto",
@@ -218,7 +226,12 @@ export const projects = [
         featured: true,
         status: "completed",
         date: "2024-07",
-        i18nKey: "projectData.vpredicto"
+        i18nKey: "projectData.vpredicto",
+        links: [
+            { label: "PyPI Package", url: "https://pypi.org/project/vpredicto/#description", icon: "package" },
+            { label: "Desktop Demo", url: "https://drive.google.com/file/d/1EEYjr21rZpsFAlzWHSHBuMunGJzSMN-r/view?usp=drive_link", icon: "video" },
+            { label: "API Demo", url: "https://drive.google.com/file/d/1cyGP0tKcciN8fYZiDGzzsDXjuRNgmTpb/view?usp=sharing", icon: "video" }
+        ]
     },
     {
         id: "phishing-detection",
@@ -230,7 +243,8 @@ export const projects = [
         featured: false,
         status: "completed",
         date: "2024-05",
-        i18nKey: "projectData.phishing"
+        i18nKey: "projectData.phishing",
+        githubUrl: "https://github.com/Mamdouh-Attia/Web-page-Phishing-Detection"
     },
 
     // ========== EMBEDDED & ROBOTICS PROJECTS ==========
@@ -244,7 +258,7 @@ export const projects = [
         featured: false,
         status: "completed",
         date: "2023-05",
-        i18nKey: "projectData.lineFollower"
+        i18nKey: "projectData.lineFollower",
     },
     {
         id: "mips-processor",
@@ -257,7 +271,7 @@ export const projects = [
         status: "completed",
         date: "2022-12",
         i18nKey: "projectData.mipsProcessor",
-        githubUrl: "https://github.com/Mamdouh-Attia/MIPS_Processor"
+        githubUrl: "https://github.com/Mamdouh-Attia/Project_Processor"
     },
 
     // ========== CS & ALGORITHMS PROJECTS ==========
@@ -271,7 +285,8 @@ export const projects = [
         featured: false,
         status: "completed",
         date: "2021-04",
-        i18nKey: "projectData.logicSimulator"
+        i18nKey: "projectData.logicSimulator",
+        githubUrl: "https://github.com/Mamdouh-Attia/Logic-Simulator"
     },
     {
         id: "os-scheduler",
@@ -283,7 +298,8 @@ export const projects = [
         featured: false,
         status: "completed",
         date: "2022-04",
-        i18nKey: "projectData.osScheduler"
+        i18nKey: "projectData.osScheduler",
+        githubUrl: "https://github.com/Mamdouh-Attia/OS-scheduler"
     },
     {
         id: "search-engine",
@@ -295,7 +311,8 @@ export const projects = [
         featured: false,
         status: "completed",
         date: "2022-04",
-        i18nKey: "projectData.searchEngine"
+        i18nKey: "projectData.searchEngine",
+        githubUrl: "https://github.com/Mamdouh-Attia/Search-Engine"
     },
     {
         id: "go-dfs",
@@ -321,7 +338,10 @@ export const projects = [
         status: "completed",
         date: "2023-02",
         i18nKey: "projectData.rsaChat",
-        githubUrl: "https://github.com/Mamdouh-Attia/RSA_E2E_encryption"
+        githubUrl: "https://github.com/Mamdouh-Attia/RSA_E2E_encryption",
+        links: [
+            { label: "Demo Video", url: "https://drive.google.com/file/u/1/d/1dUS068pTXS--25zpC78NCQex-6nGKri8/view?usp=drive_link", icon: "video" }
+        ]
     },
     {
         id: "gamingo",

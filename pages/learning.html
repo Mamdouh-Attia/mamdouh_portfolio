@@ -355,19 +355,23 @@
 
         <!-- ============ BOOKSHELF ============ -->
         <section class="l-section" style="padding-top: 0;">
-            <div class="l-section-label">📚 Bookshelf — Currently Reading &amp; Referenced</div>
+            <div class="l-section-label" data-i18n="bookshelf.label">Bookshelf — Currently Reading &amp; Referenced</div>
 
             <style>
                 /* ── Shelf ── */
-                .bs-shelf-wrap { perspective: 900px; margin-bottom: 40px; user-select: none; }
+                .bs-shelf-wrap { perspective: 1200px; margin-bottom: 40px; user-select: none; }
                 .bs-shelf {
-                    display: flex; align-items: flex-end; gap: 10px;
-                    padding: 28px 28px 0; min-height: 210px;
+                    display: flex; align-items: flex-end; gap: 8px;
+                    padding: 28px 20px 0; min-height: 220px;
                     background: linear-gradient(160deg, #1e1206 0%, #110b02 100%);
                     border-radius: 14px 14px 0 0;
                     border: 1px solid rgba(245,158,11,0.18);
                     border-bottom: none; position: relative;
+                    flex-wrap: nowrap; overflow-x: auto;
                 }
+                .bs-shelf::-webkit-scrollbar { height: 4px; }
+                .bs-shelf::-webkit-scrollbar-thumb { background: rgba(245,158,11,0.2); border-radius: 4px; }
+
                 .bs-plank {
                     height: 18px;
                     background: linear-gradient(to bottom, #4a2c0a, #2d1a05);
@@ -382,8 +386,16 @@
                     transform-style: preserve-3d;
                     transition: transform 0.45s cubic-bezier(0.34,1.56,0.64,1);
                     cursor: pointer; flex-shrink: 0;
+                    z-index: 1;
                 }
-                .bs-book:hover { transform: translateY(-28px) rotateY(-18deg) scale(1.04); }
+                .bs-book:hover { 
+                    transform: translateY(-28px) rotateY(-18deg) scale(1.04); 
+                    z-index: 50;
+                }
+                [dir="rtl"] .bs-book:hover { 
+                    transform: translateY(-28px) rotateY(18deg) scale(1.04); 
+                }
+
                 .bs-book-spine {
                     width: 44px; height: 100%;
                     display: flex; flex-direction: column;
@@ -391,15 +403,25 @@
                     padding: 14px 6px; border-radius: 4px 0 0 4px;
                     writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg);
                     box-shadow: 3px 0 10px rgba(0,0,0,0.5);
+                    position: relative; z-index: 2;
                 }
+                [dir="rtl"] .bs-book-spine { border-radius: 0 4px 4px 0; }
+
                 .bs-book-face {
                     position: absolute; top: 0; left: 44px;
-                    height: 100%; width: 130px;
+                    height: 100%; width: 140px;
                     border-radius: 0 6px 6px 0;
                     display: flex; flex-direction: column;
                     justify-content: center; padding: 14px 16px;
-                    opacity: 0; transform: rotateY(20deg);
+                    opacity: 0; transform: rotateY(25deg);
                     transition: opacity 0.35s 0.1s, transform 0.35s 0.1s;
+                    z-index: 1;
+                    pointer-events: none;
+                }
+                [dir="rtl"] .bs-book-face {
+                    left: auto; right: 44px;
+                    border-radius: 6px 0 0 6px;
+                    transform: rotateY(-25deg);
                 }
                 .bs-book:hover .bs-book-face { opacity: 1; transform: rotateY(0deg); }
 
@@ -412,12 +434,16 @@
                 /* Book colours */
                 .bs-book--hfdp .bs-book-spine { background: linear-gradient(160deg, #1d4ed8, #1e40af); }
                 .bs-book--hfdp .bs-book-face  { background: linear-gradient(160deg, #1e3a8a, #1d4ed8); }
-                .bs-book--ca  .bs-book-spine { background: linear-gradient(160deg, #1c1c1c, #3a3a3a); }
-                .bs-book--ca  .bs-book-face  { background: linear-gradient(160deg, #111, #2a2a2a); }
+                .bs-book--ca   .bs-book-spine { background: linear-gradient(160deg, #1c1c1c, #3a3a3a); }
+                .bs-book--ca   .bs-book-face  { background: linear-gradient(160deg, #111, #2a2a2a); }
+                .bs-book--cc   .bs-book-spine { background: linear-gradient(160deg, #059669, #047857); }
+                .bs-book--cc   .bs-book-face  { background: linear-gradient(160deg, #064e3b, #059669); }
+                .bs-book--gof  .bs-book-spine { background: linear-gradient(160deg, #7c3aed, #5b21b6); }
+                .bs-book--gof  .bs-book-face  { background: linear-gradient(160deg, #4c1d95, #7c3aed); }
 
                 /* Decorative fillers */
                 .bs-book--d1 { height: 150px; }
-                .bs-book--d1 .bs-book-spine { width: 28px; background: linear-gradient(160deg, #7c3aed, #5b21b6); border-radius: 4px; }
+                .bs-book--d1 .bs-book-spine { width: 28px; background: linear-gradient(160deg, #374151, #1f2937); border-radius: 4px; }
                 .bs-book--d2 { height: 160px; }
                 .bs-book--d2 .bs-book-spine { width: 20px; background: linear-gradient(160deg, #0f766e, #0d9488); border-radius: 4px; }
                 .bs-book--d3 { height: 140px; }
@@ -425,54 +451,98 @@
 
                 /* ── Detail Cards ── */
                 .bs-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 0; }
-                @media (max-width: 640px) { .bs-cards { grid-template-columns: 1fr; } }
+                @media (max-width: 900px) { .bs-cards { grid-template-columns: 1fr; } }
                 .bs-card {
                     background: rgba(255,255,255,0.03); border: 1px solid rgba(245,158,11,0.12);
                     border-radius: 16px; padding: 22px 24px;
                     display: flex; gap: 18px; align-items: flex-start;
                     transition: border-color 0.3s, background 0.3s, transform 0.3s;
                 }
+                [data-theme="light"] .bs-card {
+                    background: rgba(0,0,0,0.02);
+                    border: 1px solid rgba(0,0,0,0.1);
+                }
                 .bs-card:hover { border-color: rgba(245,158,11,0.35); background: rgba(245,158,11,0.03); transform: translateY(-3px); }
+                [data-theme="light"] .bs-card:hover { background: rgba(0,0,0,0.04); }
+
                 .bs-card-icon {
                     width: 54px; height: 72px; border-radius: 6px;
                     flex-shrink: 0; display: flex; align-items: center; justify-content: center;
                     font-size: 1.5rem; box-shadow: 3px 3px 12px rgba(0,0,0,0.4);
                 }
                 .bs-card-title { font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 3px; }
+                [data-theme="light"] .bs-card-title { color: #111; }
+
                 .bs-card-author { font-family: 'Inter', sans-serif; font-size: 0.73rem; color: rgba(255,255,255,0.4); margin-bottom: 10px; }
+                [data-theme="light"] .bs-card-author { color: #666; }
+
                 .bs-card-note { font-family: 'Inter', sans-serif; font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 10px; font-style: italic; }
+                [data-theme="light"] .bs-card-note { color: #444; }
+
+                .bs-status-badge {
+                    display: inline-block; padding: 2px 8px; border-radius: 4px;
+                    font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+                    margin-top: 8px; background: rgba(255,255,255,0.1); color: #fff;
+                }
+                .bs-status-badge.completed { background: #10b981; }
+                .bs-status-badge.reading { background: #f59e0b; }
             </style>
 
             <!-- Shelf Visual -->
             <div class="bs-shelf-wrap">
                 <div class="bs-shelf">
-                    <!-- Decorative books first -->
                     <div class="bs-book bs-book--d3"><div class="bs-book-spine"></div></div>
                     <div class="bs-book bs-book--d2"><div class="bs-book-spine"></div></div>
 
                     <!-- Head First Design Patterns -->
-                    <div class="bs-book bs-book--hfdp" title="Head First Design Patterns — hover to peek inside">
+                    <div class="bs-book bs-book--hfdp">
                         <div class="bs-book-spine">
-                            <span class="bs-spine-title">Head First Design Patterns</span>
-                            <span class="bs-spine-author">Freeman &amp; Robson</span>
+                            <span class="bs-spine-title" data-i18n="bookshelf.hfdp.title">Head First Design Patterns</span>
+                            <span class="bs-spine-author" data-i18n="bookshelf.hfdp.author">Freeman &amp; Robson</span>
                         </div>
                         <div class="bs-book-face">
-                            <div class="bs-face-title">Head First Design Patterns</div>
-                            <div class="bs-face-author">Eric Freeman &amp; Elisabeth Robson</div>
-                            <div class="bs-face-note">Patterns that outlive frameworks. Shaped how I think in OOP.</div>
+                            <div class="bs-face-title" data-i18n="bookshelf.hfdp.title">Head First Design Patterns</div>
+                            <div class="bs-face-author" data-i18n="bookshelf.hfdp.author">Eric Freeman &amp; Elisabeth Robson</div>
+                            <div class="bs-face-note" data-i18n="bookshelf.hfdp.note">Patterns that outlive frameworks. Shaped how I think in OOP.</div>
+                        </div>
+                    </div>
+
+                    <!-- Clean Code -->
+                    <div class="bs-book bs-book--cc">
+                        <div class="bs-book-spine">
+                            <span class="bs-spine-title" data-i18n="bookshelf.cc.title">Clean Code</span>
+                            <span class="bs-spine-author">Robert C. Martin</span>
+                        </div>
+                        <div class="bs-book-face">
+                            <div class="bs-face-title" data-i18n="bookshelf.cc.title">Clean Code</div>
+                            <div class="bs-face-author" data-i18n="bookshelf.cc.author">Robert C. Martin</div>
+                            <div class="bs-face-note" data-i18n="bookshelf.cc.note">The foundation of maintainable software.</div>
                         </div>
                     </div>
 
                     <!-- Clean Architecture -->
-                    <div class="bs-book bs-book--ca" title="Clean Architecture — hover to peek inside">
+                    <div class="bs-book bs-book--ca">
                         <div class="bs-book-spine">
-                            <span class="bs-spine-title">Clean Architecture</span>
+                            <span class="bs-spine-title" data-i18n="bookshelf.ca.title">Clean Architecture</span>
                             <span class="bs-spine-author">Uncle Bob</span>
                         </div>
                         <div class="bs-book-face">
-                            <div class="bs-face-title">Clean Architecture</div>
-                            <div class="bs-face-author">Robert C. Martin</div>
-                            <div class="bs-face-note">The philosophy behind every Flutter architecture I design.</div>
+                            <div class="bs-face-title" data-i18n="bookshelf.ca.title">Clean Architecture</div>
+                            <div class="bs-face-author" data-i18n="bookshelf.ca.author">Robert C. Martin</div>
+                            <div class="bs-face-note" data-i18n="bookshelf.ca.note">The philosophy behind every architecture I design.</div>
+                        </div>
+                    </div>
+
+                    <!-- Design Patterns (GoF) -->
+                    <div class="bs-book bs-book--gof">
+                        <div class="bs-book-spine">
+                            <span class="bs-spine-title" data-i18n="bookshelf.gof.title">Design Patterns (GoF)</span>
+                            <span class="bs-spine-author">Gamma et al.</span>
+                        </div>
+                        <div class="bs-book-face">
+                            <div class="bs-face-title" data-i18n="bookshelf.gof.title">Design Patterns (GoF)</div>
+                            <div class="bs-face-author" data-i18n="bookshelf.gof.author">Gamma, Helm, Johnson, Vlissides</div>
+                            <div class="bs-face-note" data-i18n="bookshelf.gof.note">The original source of the 23 design patterns.</div>
                         </div>
                     </div>
 
@@ -483,30 +553,44 @@
 
             <!-- Detail Cards -->
             <div class="bs-cards">
+                <!-- HFDP -->
                 <div class="bs-card">
                     <div class="bs-card-icon" style="background: linear-gradient(160deg,#1d4ed8,#1e40af);">📘</div>
                     <div>
-                        <div class="bs-card-title">Head First Design Patterns</div>
-                        <div class="bs-card-author">Eric Freeman &amp; Elisabeth Robson · O'Reilly Media</div>
-                        <p class="bs-card-note">"Make it work, then make it beautiful — then make it a pattern." Directly shaped how I apply Command, Observer, and Strategy in Flutter projects.</p>
-                        <div class="l-tags">
-                            <span class="l-chip blue">OOP</span>
-                            <span class="l-chip blue">Design Patterns</span>
-                            <span class="l-chip blue">SOLID</span>
-                        </div>
+                        <div class="bs-card-title" data-i18n="bookshelf.hfdp.title">Head First Design Patterns</div>
+                        <div class="bs-card-author" data-i18n="bookshelf.hfdp.author">Eric Freeman &amp; Elisabeth Robson · O'Reilly Media</div>
+                        <p class="bs-card-note" data-i18n="bookshelf.hfdp.detail">"Make it work, then make it beautiful — then make it a pattern." Directly shaped how I apply Command, Observer, and Strategy in Flutter projects.</p>
+                        <div class="bs-status-badge completed" data-i18n="bookshelf.hfdp.status">Completed</div>
                     </div>
                 </div>
+                <!-- Clean Code -->
+                <div class="bs-card">
+                    <div class="bs-card-icon" style="background: linear-gradient(160deg,#059669,#047857);">📖</div>
+                    <div>
+                        <div class="bs-card-title" data-i18n="bookshelf.cc.title">Clean Code</div>
+                        <div class="bs-card-author" data-i18n="bookshelf.cc.author">Robert C. Martin · Prentice Hall</div>
+                        <p class="bs-card-note" data-i18n="bookshelf.cc.detail">Learning to write code for humans, not just machines. A must-read for every professional developer.</p>
+                        <div class="bs-status-badge reading" data-i18n="bookshelf.cc.status">Reading</div>
+                    </div>
+                </div>
+                <!-- Clean Architecture -->
                 <div class="bs-card">
                     <div class="bs-card-icon" style="background: linear-gradient(160deg,#1c1c1c,#3a3a3a);">📗</div>
                     <div>
-                        <div class="bs-card-title">Clean Architecture</div>
-                        <div class="bs-card-author">Robert C. Martin (Uncle Bob) · Prentice Hall</div>
-                        <p class="bs-card-note">The philosophy behind every architecture decision I make. Boundaries, independence, and testability — this fundamentally changed how I structure Flutter apps.</p>
-                        <div class="l-tags">
-                            <span class="l-chip">Architecture</span>
-                            <span class="l-chip">Clean Code</span>
-                            <span class="l-chip">Testability</span>
-                        </div>
+                        <div class="bs-card-title" data-i18n="bookshelf.ca.title">Clean Architecture</div>
+                        <div class="bs-card-author" data-i18n="bookshelf.ca.author">Robert C. Martin (Uncle Bob) · Prentice Hall</div>
+                        <p class="bs-card-note" data-i18n="bookshelf.ca.detail">The philosophy behind every architecture decision I make. Boundaries, independence, and testability.</p>
+                        <div class="bs-status-badge completed" data-i18n="bookshelf.ca.status">Completed</div>
+                    </div>
+                </div>
+                <!-- GoF -->
+                <div class="bs-card">
+                    <div class="bs-card-icon" style="background: linear-gradient(160deg,#7c3aed,#5b21b6);">📕</div>
+                    <div>
+                        <div class="bs-card-title" data-i18n="bookshelf.gof.title">Design Patterns (GoF)</div>
+                        <div class="bs-card-author" data-i18n="bookshelf.gof.author">Gamma, Helm, Johnson, Vlissides · Addison-Wesley</div>
+                        <p class="bs-card-note" data-i18n="bookshelf.gof.detail">The original source of the 23 design patterns. Deep, academic, and timelessly relevant.</p>
+                        <div class="bs-status-badge" data-i18n="bookshelf.gof.status">Reference</div>
                     </div>
                 </div>
             </div>

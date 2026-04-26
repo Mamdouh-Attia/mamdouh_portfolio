@@ -793,5 +793,36 @@
     "label": "Knowledge & Growth",
     "title": "Beyond the Code",
     "subtitle": "Exploring the auxiliary pillars of my professional journey"
+  },
+  "bookshelf": {
+    "label": "Bookshelf — Currently Reading & Referenced",
+    "hfdp": {
+      "title": "Head First Design Patterns",
+      "author": "Eric Freeman & Elisabeth Robson",
+      "note": "Patterns that outlive frameworks. Shaped how I think in OOP.",
+      "detail": "\"Make it work, then make it beautiful — then make it a pattern.\" Directly shaped how I apply Command, Observer, and Strategy in Flutter projects.",
+      "status": "Completed"
+    },
+    "ca": {
+      "title": "Clean Architecture",
+      "author": "Robert C. Martin",
+      "note": "The philosophy behind every architecture I design.",
+      "detail": "The philosophy behind every architecture decision I make. Boundaries, independence, and testability.",
+      "status": "Completed"
+    },
+    "cc": {
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "note": "The foundation of maintainable software.",
+      "detail": "Learning to write code for humans, not just machines. A must-read for every professional developer.",
+      "status": "Reading"
+    },
+    "gof": {
+      "title": "Design Patterns (GoF)",
+      "author": "Gamma, Helm, Johnson, Vlissides",
+      "note": "The original source of the 23 design patterns.",
+      "detail": "The original source of the 23 design patterns. Deep, academic, and timelessly relevant.",
+      "status": "Reference"
+    }
   }
 }

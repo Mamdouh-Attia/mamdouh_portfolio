@@ -26,12 +26,14 @@
       "projects": "View Projects",
       "contact": "Contact Me",
       "cv": "Download CV",
-      "careerDossier": "Explore Complete Career Dossier"
+      "careerDossier": "Explore Complete Career Dossier",
+      "techStack": "View Full Tech Stack"
     },
     "stats": {
       "projects": "Projects",
       "techExp": "Yrs Tech Knowledge & Projects",
       "mobileExp": "Yrs Professional SWE Work",
+      "students": "Students Taught",
       "clients": "Happy Clients"
     }
   },

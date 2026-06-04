@@ -654,23 +654,12 @@
         }
 
         /* ====== PREMIUM TECH ECOSYSTEM (CATEGORIZED) ====== */
-        .skills-section {
-            padding: 0 24px;
-        }
-        @media (max-width: 768px) {
-            .skills-section {
-                padding: 0 16px;
-            }
-        }
         .tech-ecosystem-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            margin: 0 auto;
             margin-top: 48px;
-            max-width: min(100%, 1220px);
             perspective: 1000px;
-            justify-items: center;
         }
         @media (max-width: 1024px) {
             .tech-ecosystem-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -820,15 +809,12 @@
             font-weight: 700;
             color: #fff;
             margin-bottom: 8px;
-            text-align: center;
         }
 
         .skills-subtitle {
             font-size: 0.95rem;
             color: rgba(255, 255, 255, 0.45);
             margin-bottom: 40px;
-            text-align: center;
-            
         }
 
         .skills-grid {
@@ -1149,118 +1135,119 @@
 
         <section class="skills-section" id="skills">
             <h2 class="skills-title" data-i18n="experience.skills.title">Technical Ecosystem</h2>
-            <p class="skills-subtitle" data-i18n="experience.skills.subtitle">Comprehensive tech stack organized by domain</p>
+            <p class="skills-subtitle" data-i18n="experience.skills.subtitle">Organized by domain</p>
 
             <div class="tech-ecosystem-grid">
 
                 <!-- Mobile Development -->
                 <div class="tech-cat-block">
                     <div class="tech-cat-hdr">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="1" width="14" height="22" rx="3"/><circle cx="12" cy="18.5" r="1" fill="currentColor" stroke="none"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="1" width="14" height="22" rx="3"/><circle cx="12" cy="18.5" r="1" fill="currentColor" stroke="none"/></svg>
                         Mobile Development
                     </div>
                     <div class="tech-cat-chips">
                         <span class="tech-pill cyan"><svg viewBox="0 0 24 24" fill="#54C5F8"><path d="M14.314 0L2.3 12 6 15.7 21.684 0h-7.37zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z"/></svg>Flutter</span>
                         <span class="tech-pill cyan"><svg viewBox="0 0 24 24" fill="#00B4AB"><path d="M4.105 4.105S9.158 1.58 11.684.316l8.614-.006.003 8.745-10.38 10.38-6.534-.328L4.105 4.105zm-.011 15.544c.022.677.517 3.297 2.492 5.213.677.648 1.783 1.092 2.892 1.092H22.19c.52 0 1.004-.2 1.366-.556.363-.357.565-.84.565-1.362V13.13l-6.23 6.494-13.797.025z"/></svg>Dart</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 13l2 2 4-4" stroke="currentColor" stroke-width="2" fill="none"/></svg>Bloc / Cubit</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><line x1="12" y1="8" x2="12" y2="16" stroke="currentColor" stroke-width="2"/><line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="2"/></svg>Provider</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M4 4h6v6H4V4zm0 10h6v6H4v-6zm10-10h6v6h-6V4zm0 10h6v6h-6v-6z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>State Mgmt</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><rect x="2" y="3" width="20" height="18" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M6 9h12M6 15h12" stroke="currentColor" stroke-width="1.5"/></svg>Responsive UI</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><rect x="2" y="3" width="9" height="9" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="13" y="3" width="9" height="9" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="2" y="14" width="9" height="9" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="13" y="14" width="9" height="9" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>Flutter Web</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M12 2L4 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-8-5z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 14l2 2 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>Animations</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M3 13h6v6H3zm8-6h6v12h-6zm-8-2h6v4H3z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>Streams</span>
+                        <span class="tech-pill">Bloc / Cubit</span>
+                        <span class="tech-pill">Provider</span>
+                        <span class="tech-pill">Streams &amp; Transformers</span>
+                        <span class="tech-pill">State Management</span>
+                        <span class="tech-pill">Responsive &amp; Adaptive UI</span>
+                        <span class="tech-pill">Flutter Web &amp; Desktop</span>
+                        <span class="tech-pill">Custom Animations</span>
                     </div>
                 </div>
 
                 <!-- Programming Languages -->
                 <div class="tech-cat-block">
                     <div class="tech-cat-hdr">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                        Languages & Paradigms
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        Programming Languages
                     </div>
                     <div class="tech-cat-chips">
                         <span class="tech-pill cyan"><svg viewBox="0 0 24 24"><path d="M11.97 0C5.93 0 6.27 2.63 6.27 2.63L6.28 5.34H12.1V6.1H3.9S0 5.65 0 11.8c0 6.15 3.4 5.93 3.4 5.93H5.4v-2.85s-.1-3.4 3.35-3.4h5.73s3.24.05 3.24-3.13V3.13S18.23 0 11.97 0zm-3.19 1.81c.58 0 1.05.47 1.05 1.05s-.47 1.05-1.05 1.05-1.05-.47-1.05-1.05.47-1.05 1.05-1.05z" fill="#3776AB"/><path d="M12.03 24c6.04 0 5.7-2.63 5.7-2.63l-.01-2.71H11.9v-.76h8.2S24 18.35 24 12.2c0-6.15-3.4-5.93-3.4-5.93H18.6v2.85s.1 3.4-3.35 3.4H9.52S6.28 12.47 6.28 15.6v5.27S5.77 24 12.03 24zm3.19-1.81c-.58 0-1.05-.47-1.05-1.05s.47-1.05 1.05-1.05 1.05.47 1.05 1.05-.47 1.05-1.05 1.05z" fill="#FFD43B"/></svg>Python</span>
                         <span class="tech-pill cyan"><svg viewBox="0 0 24 24" fill="#007396"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm5.66 18.23s-1.83 2.1-4.88 2.1c-4.14 0-6.1-3.2-6.1-6.1 0-3.36 2.38-6.1 6.1-6.1 1.77 0 3.32.74 4.3 1.83l-1.77 1.77c-.66-.66-1.52-1.04-2.53-1.04-2.27 0-3.4 1.77-3.4 3.54 0 2.02 1.26 3.54 3.4 3.54.89 0 1.67-.34 2.27-.89v-1.27h-2.27v-2.27h4.88v6.43z"/></svg>Java</span>
                         <span class="tech-pill cyan"><svg viewBox="0 0 24 24" fill="#00599C"><path d="M22.56 12L12 1.44 1.44 12 12 22.56 22.56 12zM2.88 12L12 2.88 21.12 12 12 21.12 2.88 12zm8.8-4.8v3.2H8.48V7.2H11.68zM15.52 7.2v3.2h-3.2V7.2h3.2zm-3.84 5.6h3.2v3.2h-3.2v-3.2z"/></svg>C / C++</span>
                         <span class="tech-pill cyan"><svg viewBox="0 0 24 24" fill="#F7DF1E"><path d="M0 0h24v24H0V0zm20.06 17.52c-.87-.53-1.47-.9-1.97-1.39-.5-.49-.75-.98-.75-1.58 0-.46.17-.84.52-1.12.35-.28.82-.42 1.39-.42.61 0 1.11.2 1.5.6.39.4.58.94.58 1.62h2.51c0-1.27-.41-2.28-1.22-3.03-.81-.75-1.92-1.12-3.32-1.12-1.42 0-2.52.39-3.3 1.17-.78.78-1.17 1.83-1.17 3.16 0 1.34.42 2.37 1.25 3.1.83.73 2.05 1.25 3.65 1.57.8.16 1.4.38 1.81.66.41.28.62.68.62 1.2 0 .52-.22.92-.66 1.2-.44.28-1.04.42-1.8.42-.87 0-1.56-.25-2.07-.75-.51-.5-0.78-1.25-.82-2.25h-2.53c.04 1.73.57 3.03 1.6 3.9 1.03.87 2.47 1.3 4.32 1.3 1.6 0 2.87-.41 3.8-1.23.93-.82 1.4-1.94 1.4-3.36 0-1.41-.45-2.46-1.35-3.15zM7.11 12.01c0-1.19-.24-2.16-.72-2.91-.48-.75-1.18-1.12-2.1-1.12-.87 0-1.55.33-2.04 1-.49.67-.73 1.65-.73 2.94 0 1.23.23 2.19.68 2.88.45.69 1.13 1.04 2.04 1.04.89 0 1.56-.35 2.03-1.05.47-.7.71-1.7.71-2.99l.03-2.79h2.53V24H7.28v-2.31c-.51.81-1.32 1.22-2.43 1.22-1.48 0-2.61-.51-3.39-1.53-.78-1.02-1.17-2.47-1.17-4.35 0-1.89.41-3.35 1.22-4.39.81-1.04 1.95-1.56 3.42-1.56 1.16 0 1.98.43 2.47 1.28v-.67h.03z"/></svg>JavaScript</span>
-                        <span class="tech-pill cyan"><svg viewBox="0 0 24 24" fill="#E44D26"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.078 5.72H5.422l.27 3.01h11.966l-.32 3.51-5.36 1.45-5.34-1.45-.18-2.02h-3.02l.4 4.54 8.14 2.27 8.16-2.27.76-8.54.08-1.5z"/></svg>HTML5/CSS3</span>
+                        <span class="tech-pill cyan"><svg viewBox="0 0 24 24" fill="#E44D26"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.078 5.72H5.422l.27 3.01h11.966l-.32 3.51-5.36 1.45-5.34-1.45-.18-2.02h-3.02l.4 4.54 8.14 2.27 8.16-2.27.76-8.54.08-1.5z"/></svg>HTML5 / CSS3</span>
                         <span class="tech-pill cyan"><svg viewBox="0 0 24 24" fill="#003B57"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.27 15.34l-2.02.77c-.45.17-.93.26-1.42.26-2.07 0-3.38-1.53-3.38-3.53 0-2.01 1.34-3.52 3.41-3.52.56 0 1.09.11 1.57.34l1.83-.87c-.9-.45-2.01-.71-3.37-.71-3.32 0-5.71 2.37-5.71 5.76 0 3.37 2.33 5.76 5.67 5.76.99 0 1.94-.21 2.76-.58l.66-3.76z"/></svg>SQL</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)" stroke="currentColor" stroke-width="1.5"><path d="M8 2c-2.21 0-4 1.79-4 4v12c0 2.21 1.79 4 4 4h8c2.21 0 4-1.79 4-4V6c0-2.21-1.79-4-4-4H8z"/><line x1="12" y1="6" x2="12" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="11" x2="16" y2="11" stroke="currentColor" stroke-width="1.5"/></svg>Verilog HDL</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M3 17v2h4v-2H3Zm8 0v2h10v-2H11Zm-8-5v2h2V12H3Zm4 0v2h14v-2H7Zm-4-5v2h6V7H3Zm8 0v2h8V7h-8Z" stroke="currentColor" stroke-width="0.5"/></svg>Bash/Shell</span>
+                        <span class="tech-pill">Verilog HDL</span>
+                        <span class="tech-pill">Bash / Shell</span>
+                        <span class="tech-pill">Dart Language</span>
                     </div>
                 </div>
 
                 <!-- Backend & Databases -->
                 <div class="tech-cat-block">
                     <div class="tech-cat-hdr">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-                        Backend & Databases
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                        Backend &amp; Databases
                     </div>
                     <div class="tech-cat-chips">
                         <span class="tech-pill green"><svg viewBox="0 0 24 24" fill="#339933"><path d="M11.998.016a2.034 2.034 0 00-1.015.27L1.855 5.498A2.034 2.034 0 00.842 7.257v10.485c0 .742.394 1.428 1.035 1.8l9.108 5.275c.624.362 1.394.362 2.018 0l9.108-5.275c.64-.372 1.035-1.058 1.035-1.8V7.257a2.034 2.034 0 00-1.013-1.759L13.013.286a2.032 2.032 0 00-1.015-.27z"/></svg>Node.js</span>
                         <span class="tech-pill orange"><svg viewBox="0 0 24 24" fill="#FFCA28"><path d="M3.89 15.672L6.255.461A.542.542 0 017.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 00-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 001.588 0zM14.3 7.147l-1.356-2.559a.54.54 0 00-.978.069L6.255 15.672z"/></svg>Firebase</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(251,146,60,0.9)" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M12 6v6l4 2.4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>Supabase</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z" stroke="currentColor" stroke-width="0.5"/></svg>REST APIs</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><line x1="3" y1="3" x2="21" y2="21" stroke="currentColor" stroke-width="1.5"/><line x1="21" y1="3" x2="3" y2="21" stroke="currentColor" stroke-width="1.5"/></svg>gRPC</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M4 5h16v2H4V5Zm0 7h16v2H4v-2Zm0 7h16v2H4v-2Z" stroke="currentColor" stroke-width="0.5"/></svg>SQL DBs</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M8 12c0-2.21 1.79-4 4-4s4 1.79 4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>MongoDB</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" stroke="currentColor" stroke-width="0.5"/></svg>OAuth 2.0</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z" stroke="currentColor" stroke-width="0.5"/></svg>API Integration</span>
+                        <span class="tech-pill">Supabase</span>
+                        <span class="tech-pill">RESTful APIs</span>
+                        <span class="tech-pill">gRPC / Protobuf</span>
+                        <span class="tech-pill">SQL Databases</span>
+                        <span class="tech-pill">NoSQL / MongoDB</span>
+                        <span class="tech-pill">OAuth 2.0 Auth</span>
+                        <span class="tech-pill">API Integration</span>
                     </div>
                 </div>
 
                 <!-- Engineering & Architecture -->
                 <div class="tech-cat-block">
                     <div class="tech-cat-hdr">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                        Engineering & Patterns
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        Engineering &amp; Architecture
                     </div>
                     <div class="tech-cat-chips">
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" stroke="currentColor" stroke-width="0.5"/></svg>Clean Arch</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><rect x="3" y="3" width="9" height="9" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="12" y="3" width="9" height="9" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="3" y="12" width="9" height="9" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="12" y="12" width="9" height="9" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>MVVM Patterns</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>SOLID</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>Patterns</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M4 7h16v2H4V7Zm0 5h16v2H4v-2Zm0 5h16v2H4v-2Z" stroke="currentColor" stroke-width="0.5"/></svg>DSA</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M12 2L2 7v5c0 7 5 12 10 13.5 5-1.5 10-6.5 10-13.5V7l-10-5z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>System Design</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5" fill="currentColor"/></svg>DI Containers</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>Concurrency</span>
+                        <span class="tech-pill">Clean Architecture</span>
+                        <span class="tech-pill">MVC / MVVM Patterns</span>
+                        <span class="tech-pill">OOP &amp; SOLID Principles</span>
+                        <span class="tech-pill">Design Patterns</span>
+                        <span class="tech-pill">Data Structures &amp; Algorithms</span>
+                        <span class="tech-pill">SDLC / System Design</span>
+                        <span class="tech-pill">Dependency Injection</span>
+                        <span class="tech-pill">Async &amp; Concurrency</span>
                     </div>
                 </div>
 
                 <!-- AI & Data Science -->
                 <div class="tech-cat-block">
                     <div class="tech-cat-hdr">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-                        AI & Data Science
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                        AI &amp; Data Science
                     </div>
                     <div class="tech-cat-chips">
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M6 12a6 6 0 0 1 12 0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>ML</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" stroke="currentColor" stroke-width="0.5"/></svg>Deep Learning</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M3 9h18v2H3V9Zm0 4h18v2H3v-2Zm0 4h18v2H3v-2Z" stroke="currentColor" stroke-width="0.5"/></svg>PyTorch</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M4 6l8-4 8 4v12l-8 4-8-4V6z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>NumPy/Pandas</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><circle cx="6" cy="6" r="3" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="18" cy="6" r="3" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="12" cy="18" r="3" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="6" y1="9" x2="12" y2="15" stroke="currentColor" stroke-width="1.5"/><line x1="18" y1="9" x2="12" y2="15" stroke="currentColor" stroke-width="1.5"/></svg>CV/OpenCV</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M3 12h18M12 3v18M5.64 5.64l9.17 9.17M5.64 18.36L14.81 9.19" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>NLP</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><circle cx="8" cy="8" r="2" stroke="currentColor" stroke-width="1.5" fill="currentColor"/><circle cx="16" cy="8" r="2" stroke="currentColor" stroke-width="1.5" fill="currentColor"/><circle cx="12" cy="16" r="2" stroke="currentColor" stroke-width="1.5" fill="currentColor"/><path d="M8 10v4M16 10v4M12 10v6" stroke="currentColor" stroke-width="1.5"/></svg>GPT Integration</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M3 3h7v7H3V3Zm11 0h7v7h-7V3ZM3 14h7v7H3v-7Zm11 0h7v7h-7v-7Z" stroke="currentColor" stroke-width="0.5"/></svg>PySpark</span>
+                        <span class="tech-pill">Machine Learning</span>
+                        <span class="tech-pill">Deep Learning</span>
+                        <span class="tech-pill">PyTorch Framework</span>
+                        <span class="tech-pill">NumPy &amp; Pandas</span>
+                        <span class="tech-pill">Computer Vision (OpenCV)</span>
+                        <span class="tech-pill">Natural Language Processing</span>
+                        <span class="tech-pill">AI Agent Integration (GPT)</span>
+                        <span class="tech-pill">Big Data / PySpark</span>
                     </div>
                 </div>
 
                 <!-- DevOps, Tools & Systems -->
                 <div class="tech-cat-block">
                     <div class="tech-cat-hdr">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-                        DevOps & Tools
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+                        DevOps, Tools &amp; Systems
                     </div>
                     <div class="tech-cat-chips">
                         <span class="tech-pill orange"><svg viewBox="0 0 24 24" fill="#F05032"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.608-.406-.545-.545-.676-1.342-.396-2.009L7.636 3.69.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"/></svg>Git</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(255,255,255,0.9)"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>GitHub</span>
+                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(255,255,255,0.72)"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>GitHub</span>
                         <span class="tech-pill"><svg viewBox="0 0 24 24" fill="#FCC624"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm-.75 4.5v11.25h4.5V18h-8.25V4.5h3.75z"/></svg>Linux</span>
                         <span class="tech-pill"><svg viewBox="0 0 24 24"><path d="M5 1.5h4a3.5 3.5 0 010 7H5v-7z" fill="#F24E1E"/><path d="M9 1.5h4a3.5 3.5 0 010 7H9v-7z" fill="#FF7262"/><path d="M9 8.5h4a3.5 3.5 0 010 7H9v-7z" fill="#A259FF"/><path d="M5 8.5h4v7H5a3.5 3.5 0 010-7z" fill="#1ABCFE"/><ellipse cx="8.5" cy="19.5" rx="3.5" ry="3.5" fill="#0ACF83"/></svg>Figma</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" stroke="currentColor" stroke-width="0.5"/></svg>CI/CD</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M3 3h6v6H3V3Zm8 0h10v2H11V3Zm0 4h10v2H11V7Zm0 4h10v2H11v-2Zm0 4h10v2H11v-2ZM3 11h6v6H3v-6Z" stroke="currentColor" stroke-width="0.5"/></svg>Agile/Scrum</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M12 1C6.48 1 2 5.48 2 11s4.48 10 10 10 10-4.48 10-10S17.52 1 12 1zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" stroke="currentColor" stroke-width="0.5"/></svg>ModelSim</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><rect x="4" y="5" width="16" height="14" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>IoT/ESP8266</span>
-                        <span class="tech-pill"><svg viewBox="0 0 24 24" fill="rgba(124,58,237,0.9)"><path d="M13 2v2h6v2h-6v2h-2V2h2Zm0 10v2h8v2h-8v2h-2v-6h2ZM3 14h2v-2H3v2Z" stroke="currentColor" stroke-width="0.5"/></svg>Arduino</span>
+                        <span class="tech-pill">GitHub Actions (CI/CD)</span>
+                        <span class="tech-pill">Agile &amp; Scrum</span>
+                        <span class="tech-pill">ModelSim Simulation</span>
+                        <span class="tech-pill">ESP8266 / ESP32 IoT</span>
+                        <span class="tech-pill">Arduino Firmware</span>
                     </div>
                 </div>
 

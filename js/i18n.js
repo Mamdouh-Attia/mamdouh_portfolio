@@ -56,7 +56,7 @@ class I18nManager {
         try {
             // Try relative path first (works with file:// protocol)
             const basePath = window.location.pathname.includes('/pages/') ? '../' : './';
-            const response = await fetch(`${basePath}i18n/${lang}.json`);
+            const response = await fetch(`${basePath}i18n/${lang}.json?v=1.0.3`);
             if (!response.ok) throw new Error('Failed to load translations');
             this.translations = await response.json();
             return this.translations;

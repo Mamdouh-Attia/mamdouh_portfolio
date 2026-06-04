@@ -341,3 +341,18 @@
 [dir="rtl"] .icon-mail {
     transform: none;
 }
+
+/* Bookshelf RTL Fixes */
+[dir="rtl"] .bs-book {
+    transform-origin: center right;
+}
+
+[dir="rtl"] .bs-book-spine {
+    writing-mode: vertical-lr;
+    transform: rotate(0deg);
+}
+
+[dir="rtl"] .bs-spine-title,
+[dir="rtl"] .bs-spine-author {
+    transform: rotate(0deg);
+}

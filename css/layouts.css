@@ -301,6 +301,18 @@
     transform: translateY(-2px);
 }
 
+[data-theme="light"] .social-link {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .social-link:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+}
+
 .footer-bottom {
     padding-top: var(--space-8);
     border-top: 1px solid var(--border-color);

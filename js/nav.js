@@ -179,10 +179,6 @@ function buildFooter() {
             </div>
             <div class="footer-bottom">
                 <p class="footer-copyright" data-i18n="footer.copyright">&copy; 2026 Mamdouh Ahmed Attia. All rights reserved.</p>
-                <div class="viewer-counter">
-                    <span class="viewer-counter-dot"></span>
-                    <span><span class="viewer-count">0</span> views</span>
-                </div>
             </div>
         </div>
     </footer>
@@ -240,29 +236,7 @@ export function initSharedNav() {
     }
     if (footerSlot) {
         footerSlot.outerHTML = buildFooter();
-        initViewCounter();
     }
-}
-
-async function initViewCounter() {
-    const el = document.querySelector('.viewer-count');
-    if (!el) return;
-    try {
-        const r = await fetch('https://api.counterapi.dev/v1/mamdouh-attia-portfolio/views/hit');
-        const d = await r.json();
-        if (d && typeof d.count === 'number') {
-            const target = d.count;
-            const duration = 1200;
-            const start = performance.now();
-            const tick = (now) => {
-                const p = Math.min((now - start) / duration, 1);
-                el.textContent = Math.floor(p * target).toLocaleString();
-                if (p < 1) requestAnimationFrame(tick);
-                else el.textContent = target.toLocaleString();
-            };
-            requestAnimationFrame(tick);
-        }
-    } catch (_) { /* fail silently in dev */ }
 }
 
 function initMobileMenu() {

@@ -30,7 +30,8 @@
     },
     "stats": {
       "projects": "Projects",
-      "experience": "Years Exp.",
+      "techExp": "Yrs Tech Knowledge & Projects",
+      "mobileExp": "Yrs Professional SWE Work",
       "clients": "Happy Clients"
     }
   },
@@ -396,7 +397,7 @@
   "experience": {
     "eyebrow": "Career Journey",
     "heroTitle": "Building Things That Actually Matter",
-    "heroDesc": "3+ years of delivering real mobile apps — from hackathons to freelance clients and open-source contributions.",
+    "heroDesc": "4 years of technical knowledge, academic study, and projects — alongside 1.5 years of actual professional Mobile SWE experience on the ground.",
     "stats": {
       "mobile": "Years Mobile",
       "apps": "Apps Delivered",
@@ -424,6 +425,14 @@
     "title": "Experience",
     "subtitle": "A summary of my professional journey",
     "viewFull": "View Full Experience",
+    "careerHighlights": {
+      "latencyCut": "Latency Cut",
+      "testsWritten": "Tests Written",
+      "appsBuilt": "Apps Built",
+      "clientRating": "Client Rating",
+      "studentsTaught": "Students Taught",
+      "hoursInstructed": "Hours Instructed"
+    },
     "timeline": {
       "title": "Professional Experience",
       "teachingDivider": "Academic & Teaching Roles",
@@ -435,20 +444,20 @@
         "role": "Open Source Contributor",
         "org": "Itqan Community · mushaf-imad-flutter · Remote",
         "bullets": [
-          "Integrated <strong>Quran.com API</strong> via <strong>OAuth 2.0</strong>, reducing audio latency by <strong>86%</strong> using custom in-memory caching.",
-          "Developed a reactive sync system with <strong>Stream Transformers</strong> for real-time verse metadata injection.",
-          "Engineered a <strong>Hybrid Audio Engine</strong> supporting dynamic fallback between local and cloud sources.",
-          "Authored <strong>80+ unit & integration tests</strong> with Mocktail covering complex async repository logic."
+          "Integrated Quran.com API via OAuth 2.0, reducing audio latency by 86% using custom in-memory caching.",
+          "Developed a reactive sync system with Stream Transformers for real-time verse metadata injection.",
+          "Engineered a Hybrid Audio Engine supporting dynamic fallback between local and cloud sources.",
+          "Authored 80+ unit & integration tests with Mocktail covering complex async repository logic."
         ]
       },
       "freelance": {
         "role": "Flutter Developer — Freelance",
         "org": "Self-Employed · Remote & Local Clients",
         "bullets": [
-          "Built a stress-monitoring app (HyperMate) connecting to an <strong>ESP8266 microcontroller</strong> via Wi-Fi with real-time GSR sensor readings and a smart chatbot.",
-          "Enhanced EcoSort — a recycling IoT client app — adding Firebase auth, push notifications, QR scanning, and <strong>Blync API</strong> integration for hardware sensors.",
-          "Delivered VolunTeen, a volunteering social platform for a real client with <strong>30–40 responsive screens</strong>, AI chatbot (GPT-3), and WhatsApp integration.",
-          "Employed <strong>MVC Architecture</strong> with Provider state management across all freelance projects."
+          "Built a stress-monitoring app (HyperMate) connecting to an ESP8266 microcontroller via Wi-Fi with real-time GSR sensor readings and a smart chatbot.",
+          "Enhanced EcoSort — a recycling IoT client app — adding Firebase auth, push notifications, QR scanning, and Blync API integration for hardware sensors.",
+          "Delivered VolunTeen, a volunteering social platform for a real client with 30–40 responsive screens, AI chatbot (GPT-3), and WhatsApp integration.",
+          "Employed MVC Architecture with Provider state management across all freelance projects."
         ]
       },
       "primalab": {
@@ -457,16 +466,16 @@
         "bullets": [
           "Developed 2 client Flutter applications (VolunTeen & Check-It), managing the complete SDLC from requirements to delivery.",
           "Implemented barcode scanning, real-time price comparison, and e-commerce style product database in Check-It.",
-          "Integrated <strong>Firebase services</strong>, GPT-3 API, in-app video player, and third-party packages.",
-          "Delivered <strong>50+ hours</strong> of hands-on Flutter training covering Dart, OOP, UI, layout, and navigation."
+          "Integrated Firebase services, GPT-3 API, in-app video player, and third-party packages.",
+          "Delivered 50+ hours of hands-on Flutter training covering Dart, OOP, UI, layout, and navigation."
         ]
       },
       "orange": {
         "role": "Flutter Developer Intern",
         "org": "Orange Digital Center Egypt · Cairo (Hybrid)",
         "bullets": [
-          "Worked in agile teams on <strong>2 internal mobile apps</strong> and a hackathon E-wallet app, meeting tight sprint deadlines.",
-          "Translated Figma designs into pixel-perfect Flutter UI using <strong>MVVM architecture</strong> and Bloc Cubit state management.",
+          "Worked in agile teams on 2 internal mobile apps and a hackathon E-wallet app, meeting tight sprint deadlines.",
+          "Translated Figma designs into pixel-perfect Flutter UI using MVVM architecture and Bloc Cubit state management.",
           "Led community creation module for the Reddit Clone project — 6-member cross-functional team with Scrum methodology."
         ]
       },

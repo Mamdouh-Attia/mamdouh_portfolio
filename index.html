@@ -114,11 +114,11 @@
             </div>
             <div class="hero-stat">
               <span class="hero-stat-value counter" data-target="4">0</span>
-              <span class="hero-stat-label">Yrs Tech Exp.</span>
+              <span class="hero-stat-label" data-i18n="hero.stats.techExp">Yrs Tech Exp.</span>
             </div>
             <div class="hero-stat">
               <span class="hero-stat-value">1.5</span>
-              <span class="hero-stat-label">Yrs Mobile SWE</span>
+              <span class="hero-stat-label" data-i18n="hero.stats.mobileExp">Yrs Mobile SWE</span>
             </div>
             <div class="hero-stat">
               <span class="hero-stat-value counter" data-target="7">0</span>
@@ -146,6 +146,42 @@
         </div>
       </div>
     </section>
+
+    <!-- Infinite Scrolling Key Tech Glimpse -->
+    <div class="tech-marquee-container">
+      <div class="tech-marquee-track">
+        <div class="tech-marquee-group">
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#54C5F8"><path d="M14.314 0L2.3 12 6 15.7 21.684 0h-7.37zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z"/></svg>Flutter</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#00B4AB"><path d="M4.105 4.105S9.158 1.58 11.684.316l8.614-.006.003 8.745-10.38 10.38-6.534-.328L4.105 4.105zm-.011 15.544c.022.677.517 3.297 2.492 5.213.677.648 1.783 1.092 2.892 1.092H22.19c.52 0 1.004-.2 1.366-.556.363-.357.565-.84.565-1.362V13.13l-6.23 6.494-13.797.025z"/></svg>Dart</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#FFCA28"><path d="M3.89 15.672L6.255.461A.542.542 0 017.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 00-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 001.588 0zM14.3 7.147l-1.356-2.559a.54.54 0 00-.978.069L6.255 15.672z"/></svg>Firebase</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#3776AB"><path d="M11.97 0C5.93 0 6.27 2.63 6.27 2.63L6.28 5.34H12.1V6.1H3.9S0 5.65 0 11.8c0 6.15 3.4 5.93 3.4 5.93H5.4v-2.85s-.1-3.4 3.35-3.4h5.73s3.24.05 3.24-3.13V3.13S18.23 0 11.97 0zm-3.19 1.81c.58 0 1.05.47 1.05 1.05s-.47 1.05-1.05 1.05-1.05-.47-1.05-1.05.47-1.05 1.05-1.05z"/><path d="M12.03 24c6.04 0 5.7-2.63 5.7-2.63l-.01-2.71H11.9v-.76h8.2S24 18.35 24 12.2c0-6.15-3.4-5.93-3.4-5.93H18.6v2.85s.1 3.4-3.35 3.4H9.52S6.28 12.47 6.28 15.6v5.27S5.77 24 12.03 24zm3.19-1.81c-.58 0-1.05-.47-1.05-1.05s.47-1.05 1.05-1.05 1.05.47 1.05 1.05-.47 1.05-1.05 1.05z" fill="#FFD43B"/></svg>Python</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#F05032"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.608-.406-.545-.545-.676-1.342-.396-2.009L7.636 3.69.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"/></svg>Git</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#007ACC"><path d="M24 22.525H0V1.475h24V22.525zM2.222 20.303h19.556V3.697H2.222v16.606zM6.57 6.47h6.722v1.885H8.784v1.942h3.916v1.885H8.784v2.54h4.634v1.886H6.57V6.47zm8.397 5.75c0-1.127.35-1.99 1.05-2.59.7-.598 1.636-.897 2.809-.897.666 0 1.258.103 1.776.31v1.84a4.11 4.11 0 00-1.638-.34c-.604 0-1.077.166-1.42.498-.342.332-.513.84-.513 1.524v1.171c0 .717.17 1.253.513 1.606.343.353.82.53 1.431.53.553 0 1.082-.122 1.586-.368v1.885a5.52 5.52 0 01-1.92.332c-1.156 0-2.066-.312-2.73-.935-.664-.622-.996-1.5-.996-2.632v-1.936z"/></svg>Clean Architecture</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#E44D26"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.078 5.72H5.422l.27 3.01h11.966l-.32 3.51-5.36 1.45-5.34-1.45-.18-2.02h-3.02l.4 4.54 8.14 2.27 8.16-2.27.76-8.54.08-1.5z"/></svg>HTML5</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#1572B6"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.042 5.72H5.458l.225 2.53h11.133l-.225 2.53H5.908l.225 2.53h10.908c-.45 5.063-5.063 5.625-5.063 5.625v.022s-4.613-.562-5.063-5.625H3.883l.427 4.815 7.667 2.183 7.667-2.183.9-10.125.08-1.5z"/></svg>CSS3</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#F7DF1E"><path d="M0 0h24v24H0V0zm20.06 17.52c-.87-.53-1.47-.9-1.97-1.39-.5-.49-.75-.98-.75-1.58 0-.46.17-.84.52-1.12.35-.28.82-.42 1.39-.42.61 0 1.11.2 1.5.6.39.4.58.94.58 1.62h2.51c0-1.27-.41-2.28-1.22-3.03-.81-.75-1.92-1.12-3.32-1.12-1.42 0-2.52.39-3.3 1.17-.78.78-1.17 1.83-1.17 3.16 0 1.34.42 2.37 1.25 3.1.83.73 2.05 1.25 3.65 1.57.8.16 1.4.38 1.81.66.41.28.62.68.62 1.2 0 .52-.22.92-.66 1.2-.44.28-1.04.42-1.8.42-.87 0-1.56-.25-2.07-.75-.51-.5-0.78-1.25-.82-2.25h-2.53c.04 1.73.57 3.03 1.6 3.9 1.03.87 2.47 1.3 4.32 1.3 1.6 0 2.87-.41 3.8-1.23.93-.82 1.4-1.94 1.4-3.36 0-1.41-.45-2.46-1.35-3.15zM7.11 12.01c0-1.19-.24-2.16-.72-2.91-.48-.75-1.18-1.12-2.1-1.12-.87 0-1.55.33-2.04 1-.49.67-.73 1.65-.73 2.94 0 1.23.23 2.19.68 2.88.45.69 1.13 1.04 2.04 1.04.89 0 1.56-.35 2.03-1.05.47-.7.71-1.7.71-2.99l.03-2.79h2.53V24H7.28v-2.31c-.51.81-1.32 1.22-2.43 1.22-1.48 0-2.61-.51-3.39-1.53-.78-1.02-1.17-2.47-1.17-4.35 0-1.89.41-3.35 1.22-4.39.81-1.04 1.95-1.56 3.42-1.56 1.16 0 1.98.43 2.47 1.28v-.67h.03z"/></svg>JavaScript</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#00599C"><path d="M22.56 12L12 1.44 1.44 12 12 22.56 22.56 12zM2.88 12L12 2.88 21.12 12 12 21.12 2.88 12zm8.8-4.8v3.2H8.48V7.2H11.68zM15.52 7.2v3.2h-3.2V7.2h3.2zm-3.84 5.6h3.2v3.2h-3.2v-3.2z"/></svg>C / C++</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#007396"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm5.66 18.23s-1.83 2.1-4.88 2.1c-4.14 0-6.1-3.2-6.1-6.1 0-3.36 2.38-6.1 6.1-6.1 1.77 0 3.32.74 4.3 1.83l-1.77 1.77c-.66-.66-1.52-1.04-2.53-1.04-2.27 0-3.4 1.77-3.4 3.54 0 2.02 1.26 3.54 3.4 3.54.89 0 1.67-.34 2.27-.89v-1.27h-2.27v-2.27h4.88v6.43z"/></svg>Java</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#003B57"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.27 15.34l-2.02.77c-.45.17-.93.26-1.42.26-2.07 0-3.38-1.53-3.38-3.53 0-2.01 1.34-3.52 3.41-3.52.56 0 1.09.11 1.57.34l1.83-.87c-.9-.45-2.01-.71-3.37-.71-3.32 0-5.71 2.37-5.71 5.76 0 3.37 2.33 5.76 5.67 5.76.99 0 1.94-.21 2.76-.58l.66-3.76z"/></svg>SQL</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#FCC624"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm-.75 4.5v11.25h4.5V18h-8.25V4.5h3.75z"/></svg>Linux</span>
+        </div>
+        <div class="tech-marquee-group" aria-hidden="true">
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#54C5F8"><path d="M14.314 0L2.3 12 6 15.7 21.684 0h-7.37zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z"/></svg>Flutter</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#00B4AB"><path d="M4.105 4.105S9.158 1.58 11.684.316l8.614-.006.003 8.745-10.38 10.38-6.534-.328L4.105 4.105zm-.011 15.544c.022.677.517 3.297 2.492 5.213.677.648 1.783 1.092 2.892 1.092H22.19c.52 0 1.004-.2 1.366-.556.363-.357.565-.84.565-1.362V13.13l-6.23 6.494-13.797.025z"/></svg>Dart</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#FFCA28"><path d="M3.89 15.672L6.255.461A.542.542 0 017.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 00-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 001.588 0zM14.3 7.147l-1.356-2.559a.54.54 0 00-.978.069L6.255 15.672z"/></svg>Firebase</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#3776AB"><path d="M11.97 0C5.93 0 6.27 2.63 6.27 2.63L6.28 5.34H12.1V6.1H3.9S0 5.65 0 11.8c0 6.15 3.4 5.93 3.4 5.93H5.4v-2.85s-.1-3.4 3.35-3.4h5.73s3.24.05 3.24-3.13V3.13S18.23 0 11.97 0zm-3.19 1.81c.58 0 1.05.47 1.05 1.05s-.47 1.05-1.05 1.05-1.05-.47-1.05-1.05.47-1.05 1.05-1.05z"/><path d="M12.03 24c6.04 0 5.7-2.63 5.7-2.63l-.01-2.71H11.9v-.76h8.2S24 18.35 24 12.2c0-6.15-3.4-5.93-3.4-5.93H18.6v2.85s.1 3.4-3.35 3.4H9.52S6.28 12.47 6.28 15.6v5.27S5.77 24 12.03 24zm3.19-1.81c-.58 0-1.05-.47-1.05-1.05s.47-1.05 1.05-1.05 1.05.47 1.05 1.05-.47 1.05-1.05 1.05z" fill="#FFD43B"/></svg>Python</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#F05032"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.608-.406-.545-.545-.676-1.342-.396-2.009L7.636 3.69.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"/></svg>Git</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#007ACC"><path d="M24 22.525H0V1.475h24V22.525zM2.222 20.303h19.556V3.697H2.222v16.606zM6.57 6.47h6.722v1.885H8.784v1.942h3.916v1.885H8.784v2.54h4.634v1.886H6.57V6.47zm8.397 5.75c0-1.127.35-1.99 1.05-2.59.7-.598 1.636-.897 2.809-.897.666 0 1.258.103 1.776.31v1.84a4.11 4.11 0 00-1.638-.34c-.604 0-1.077.166-1.42.498-.342.332-.513.84-.513 1.524v1.171c0 .717.17 1.253.513 1.606.343.353.82.53 1.431.53.553 0 1.082-.122 1.586-.368v1.885a5.52 5.52 0 01-1.92.332c-1.156 0-2.066-.312-2.73-.935-.664-.622-.996-1.5-.996-2.632v-1.936z"/></svg>Clean Architecture</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#E44D26"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.078 5.72H5.422l.27 3.01h11.966l-.32 3.51-5.36 1.45-5.34-1.45-.18-2.02h-3.02l.4 4.54 8.14 2.27 8.16-2.27.76-8.54.08-1.5z"/></svg>HTML5</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#1572B6"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.042 5.72H5.458l.225 2.53h11.133l-.225 2.53H5.908l.225 2.53h10.908c-.45 5.063-5.063 5.625-5.063 5.625v.022s-4.613-.562-5.063-5.625H3.883l.427 4.815 7.667 2.183 7.667-2.183.9-10.125.08-1.5z"/></svg>CSS3</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#F7DF1E"><path d="M0 0h24v24H0V0zm20.06 17.52c-.87-.53-1.47-.9-1.97-1.39-.5-.49-.75-.98-.75-1.58 0-.46.17-.84.52-1.12.35-.28.82-.42 1.39-.42.61 0 1.11.2 1.5.6.39.4.58.94.58 1.62h2.51c0-1.27-.41-2.28-1.22-3.03-.81-.75-1.92-1.12-3.32-1.12-1.42 0-2.52.39-3.3 1.17-.78.78-1.17 1.83-1.17 3.16 0 1.34.42 2.37 1.25 3.1.83.73 2.05 1.25 3.65 1.57.8.16 1.4.38 1.81.66.41.28.62.68.62 1.2 0 .52-.22.92-.66 1.2-.44.28-1.04.42-1.8.42-.87 0-1.56-.25-2.07-.75-.51-.5-0.78-1.25-.82-2.25h-2.53c.04 1.73.57 3.03 1.6 3.9 1.03.87 2.47 1.3 4.32 1.3 1.6 0 2.87-.41 3.8-1.23.93-.82 1.4-1.94 1.4-3.36 0-1.41-.45-2.46-1.35-3.15zM7.11 12.01c0-1.19-.24-2.16-.72-2.91-.48-.75-1.18-1.12-2.1-1.12-.87 0-1.55.33-2.04 1-.49.67-.73 1.65-.73 2.94 0 1.23.23 2.19.68 2.88.45.69 1.13 1.04 2.04 1.04.89 0 1.56-.35 2.03-1.05.47-.7.71-1.7.71-2.99l.03-2.79h2.53V24H7.28v-2.31c-.51.81-1.32 1.22-2.43 1.22-1.48 0-2.61-.51-3.39-1.53-.78-1.02-1.17-2.47-1.17-4.35 0-1.89.41-3.35 1.22-4.39.81-1.04 1.95-1.56 3.42-1.56 1.16 0 1.98.43 2.47 1.28v-.67h.03z"/></svg>JavaScript</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#00599C"><path d="M22.56 12L12 1.44 1.44 12 12 22.56 22.56 12zM2.88 12L12 2.88 21.12 12 12 21.12 2.88 12zm8.8-4.8v3.2H8.48V7.2H11.68zM15.52 7.2v3.2h-3.2V7.2h3.2zm-3.84 5.6h3.2v3.2h-3.2v-3.2z"/></svg>C / C++</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#007396"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm5.66 18.23s-1.83 2.1-4.88 2.1c-4.14 0-6.1-3.2-6.1-6.1 0-3.36 2.38-6.1 6.1-6.1 1.77 0 3.32.74 4.3 1.83l-1.77 1.77c-.66-.66-1.52-1.04-2.53-1.04-2.27 0-3.4 1.77-3.4 3.54 0 2.02 1.26 3.54 3.4 3.54.89 0 1.67-.34 2.27-.89v-1.27h-2.27v-2.27h4.88v6.43z"/></svg>Java</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#003B57"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.27 15.34l-2.02.77c-.45.17-.93.26-1.42.26-2.07 0-3.38-1.53-3.38-3.53 0-2.01 1.34-3.52 3.41-3.52.56 0 1.09.11 1.57.34l1.83-.87c-.9-.45-2.01-.71-3.37-.71-3.32 0-5.71 2.37-5.71 5.76 0 3.37 2.33 5.76 5.67 5.76.99 0 1.94-.21 2.76-.58l.66-3.76z"/></svg>SQL</span>
+          <span class="marquee-item"><svg viewBox="0 0 24 24" class="marquee-icon" fill="#FCC624"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm-.75 4.5v11.25h4.5V18h-8.25V4.5h3.75z"/></svg>Linux</span>
+        </div>
+      </div>
+    </div>
 
     <!-- Smooth section separator -->
     <div class="section-fade-divider"></div>
@@ -179,47 +215,83 @@
 
         <div class="career-highlights-grid">
 
-          <!-- Featured Active Role -->
-          <div class="career-hl-card career-hl-featured reveal">
-            <div class="career-hl-bar"></div>
+          <!-- Featured Active Role (Open Source) -->
+          <div class="career-hl-card career-hl-featured purple reveal">
+            <div class="career-hl-bar" style="background: linear-gradient(90deg, #a78bfa, #7c3aed);"></div>
             <div class="career-hl-top">
-              <span class="career-hl-active-badge">&#9679; ACTIVE</span>
-              <span class="career-hl-date">2026 &mdash; Present</span>
+              <div class="career-hl-icon-wrap purple">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+              </div>
+              <div class="career-hl-meta">
+                <span class="career-hl-active-badge" data-i18n="experience.timeline.badges.active">Active</span>
+                <span class="career-hl-date">2026 &mdash; Present</span>
+              </div>
             </div>
             <h3 class="career-hl-role" data-i18n="experience.active.role">Open Source Contributor</h3>
             <p class="career-hl-org" data-i18n="experience.active.company">Itqan Community &middot; Mushaf-IMAD</p>
-            <p class="career-hl-achievement">Reduced audio latency by <span class="career-hl-metric">86%</span> via custom in-memory caching &amp; hybrid audio engine architecture</p>
-            <div class="career-hl-chips">
-              <span>Flutter</span><span>OAuth 2.0</span><span>TDD</span><span>Streams</span>
+            <p class="career-hl-description" data-i18n="experience.active.description">Contributing to the architectural integrity and mobile performance of a high-fidelity Quranic audio experience.</p>
+            <div class="career-hl-stats">
+              <div class="career-hl-stat">
+                <span class="career-hl-stat-num">86%</span>
+                <span class="career-hl-stat-lbl" data-i18n="experience.careerHighlights.latencyCut">Latency Cut</span>
+              </div>
+              <div class="career-hl-stat">
+                <span class="career-hl-stat-num">80+</span>
+                <span class="career-hl-stat-lbl" data-i18n="experience.careerHighlights.testsWritten">Tests Written</span>
+              </div>
             </div>
           </div>
 
           <!-- Freelance -->
-          <div class="career-hl-card reveal" style="transition-delay: 0.1s;">
-            <div class="career-hl-bar" style="background: linear-gradient(135deg, #22d3ee, #3b82f6);"></div>
+          <div class="career-hl-card cyan reveal" style="transition-delay: 0.1s;">
+            <div class="career-hl-bar" style="background: linear-gradient(90deg, #22d3ee, #0891b2);"></div>
             <div class="career-hl-top">
-              <span class="career-hl-active-badge">&#9679; ACTIVE</span>
-              <span class="career-hl-date">2023 &mdash; Present</span>
+              <div class="career-hl-icon-wrap cyan">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              </div>
+              <div class="career-hl-meta">
+                <span class="career-hl-active-badge" data-i18n="experience.timeline.badges.active">Active</span>
+                <span class="career-hl-date">2023 &mdash; Present</span>
+              </div>
             </div>
-            <h3 class="career-hl-role" data-i18n="experience.freelance.role">Mobile App Developer &middot; Freelance</h3>
-            <p class="career-hl-org" data-i18n="experience.freelance.company">HyperMate &middot; EcoSort &middot; VolunTeen</p>
+            <h3 class="career-hl-role" data-i18n="experience.freelance.role">Mobile App Developer · Freelance</h3>
+            <p class="career-hl-org" data-i18n="experience.freelance.company">HyperMate · EcoSort · VolunTeen</p>
+            <p class="career-hl-description" data-i18n="experience.freelance.description">Delivering high-performance mobile solutions for diverse clients, specializing in complex state management and IoT integration.</p>
             <div class="career-hl-stats">
-              <div class="career-hl-stat"><span class="career-hl-stat-num">5+</span><span class="career-hl-stat-lbl">Deliveries</span></div>
-              <div class="career-hl-stat"><span class="career-hl-stat-num">5/5</span><span class="career-hl-stat-lbl">Rating</span></div>
+              <div class="career-hl-stat">
+                <span class="career-hl-stat-num">5+</span>
+                <span class="career-hl-stat-lbl" data-i18n="experience.careerHighlights.appsBuilt">Apps Built</span>
+              </div>
+              <div class="career-hl-stat">
+                <span class="career-hl-stat-num">5/5</span>
+                <span class="career-hl-stat-lbl" data-i18n="experience.careerHighlights.clientRating">Client Rating</span>
+              </div>
             </div>
           </div>
 
           <!-- Instructor -->
-          <div class="career-hl-card reveal" style="transition-delay: 0.2s;">
-            <div class="career-hl-bar" style="background: linear-gradient(135deg, #a855f7, #7c3aed);"></div>
+          <div class="career-hl-card green reveal" style="transition-delay: 0.2s;">
+            <div class="career-hl-bar" style="background: linear-gradient(90deg, #10b981, #059669);"></div>
             <div class="career-hl-top">
-              <span class="career-hl-date">2023 &mdash; 2025</span>
+              <div class="career-hl-icon-wrap green">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+              </div>
+              <div class="career-hl-meta">
+                <span class="career-hl-date">2023 &mdash; 2025</span>
+              </div>
             </div>
             <h3 class="career-hl-role" data-i18n="experience.instructor.role">Technical Instructor</h3>
-            <p class="career-hl-org" data-i18n="experience.instructor.company">PrimaLab &middot; DEPI &middot; Maspero</p>
+            <p class="career-hl-org" data-i18n="experience.instructor.company">PrimaLab · DEPI · Maspero</p>
+            <p class="career-hl-description" data-i18n="experience.instructor.description">Empowering students through mobile development, Python programming, and Machine Learning workshops.</p>
             <div class="career-hl-stats">
-              <div class="career-hl-stat"><span class="career-hl-stat-num">35+</span><span class="career-hl-stat-lbl">Students</span></div>
-              <div class="career-hl-stat"><span class="career-hl-stat-num">200+</span><span class="career-hl-stat-lbl">Hrs Taught</span></div>
+              <div class="career-hl-stat">
+                <span class="career-hl-stat-num">35+</span>
+                <span class="career-hl-stat-lbl" data-i18n="experience.careerHighlights.studentsTaught">Students Taught</span>
+              </div>
+              <div class="career-hl-stat">
+                <span class="career-hl-stat-num">200+</span>
+                <span class="career-hl-stat-lbl" data-i18n="experience.careerHighlights.hoursInstructed">Hours Instructed</span>
+              </div>
             </div>
           </div>
 
@@ -919,26 +991,44 @@
       font-weight: 500;
     }
 
-    .career-hl-achievement {
+    .career-hl-icon-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+    }
+    .career-hl-icon-wrap.purple {
+      background: rgba(167, 139, 250, 0.1);
+      border: 1px solid rgba(167, 139, 250, 0.25);
+      color: #a78bfa;
+      box-shadow: 0 0 15px rgba(167, 139, 250, 0.05);
+    }
+    .career-hl-icon-wrap.cyan {
+      background: rgba(34, 211, 238, 0.1);
+      border: 1px solid rgba(34, 211, 238, 0.25);
+      color: #22d3ee;
+      box-shadow: 0 0 15px rgba(34, 211, 238, 0.05);
+    }
+    .career-hl-icon-wrap.green {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      color: #10b981;
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.05);
+    }
+
+    .career-hl-description {
       font-size: 0.88rem;
       color: rgba(255, 255, 255, 0.58);
-      line-height: 1.65;
-      margin-bottom: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      min-height: 48px;
     }
 
-    .career-hl-metric { color: #a78bfa; font-weight: 700; }
-
-    .career-hl-chips { display: flex; flex-wrap: wrap; gap: 7px; }
-
-    .career-hl-chips span {
-      font-size: 0.7rem;
-      font-weight: 600;
-      padding: 3px 11px;
-      background: rgba(124, 58, 237, 0.1);
-      border: 1px solid rgba(124, 58, 237, 0.22);
-      border-radius: 100px;
-      color: #a78bfa;
-    }
+    .career-hl-card.purple:hover { border-color: rgba(167, 139, 250, 0.4); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3), 0 0 30px rgba(167, 139, 250, 0.15); }
+    .career-hl-card.cyan:hover { border-color: rgba(34, 211, 238, 0.4); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3), 0 0 30px rgba(34, 211, 238, 0.15); }
+    .career-hl-card.green:hover { border-color: rgba(16, 185, 129, 0.4); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3), 0 0 30px rgba(16, 185, 129, 0.15); }
 
     .career-hl-stats { display: flex; gap: 28px; margin-top: 20px; }
     .career-hl-stat { display: flex; flex-direction: column; gap: 2px; }
@@ -968,15 +1058,19 @@
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
     }
     [data-theme="light"] .career-hl-card:hover {
-      border-color: rgba(124, 58, 237, 0.2);
-      box-shadow: 0 16px 48px rgba(124, 58, 237, 0.09);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
     }
+    [data-theme="light"] .career-hl-card.purple:hover { border-color: rgba(124, 58, 237, 0.35); }
+    [data-theme="light"] .career-hl-card.cyan:hover { border-color: rgba(8, 145, 178, 0.35); }
+    [data-theme="light"] .career-hl-card.green:hover { border-color: rgba(5, 150, 105, 0.35); }
     [data-theme="light"] .career-hl-role { color: #111; }
-    [data-theme="light"] .career-hl-achievement { color: rgba(0, 0, 0, 0.58); }
+    [data-theme="light"] .career-hl-description { color: rgba(0, 0, 0, 0.6); }
     [data-theme="light"] .career-hl-org { color: #0891b2; }
     [data-theme="light"] .career-hl-date { color: rgba(0, 0, 0, 0.4); background: rgba(0, 0, 0, 0.05); }
-    [data-theme="light"] .career-hl-chips span { background: rgba(124, 58, 237, 0.06); color: #7c3aed; }
     [data-theme="light"] .career-hl-stat-lbl { color: rgba(0, 0, 0, 0.45); }
+    [data-theme="light"] .career-hl-icon-wrap.purple { background: rgba(124, 58, 237, 0.08); border-color: rgba(124, 58, 237, 0.2); color: #7c3aed; }
+    [data-theme="light"] .career-hl-icon-wrap.cyan { background: rgba(8, 145, 178, 0.08); border-color: rgba(8, 145, 178, 0.2); color: #0891b2; }
+    [data-theme="light"] .career-hl-icon-wrap.green { background: rgba(5, 150, 105, 0.08); border-color: rgba(5, 150, 105, 0.2); color: #059669; }
 
     /* ==================== CLICKABLE PROJECT CARDS ==================== */
     a.card {
@@ -994,14 +1088,20 @@
       font-family: var(--font-heading);
       font-size: var(--text-xs);
       font-weight: var(--font-semibold);
-      color: var(--color-primary);
+      color: var(--color-secondary);
       transition: color var(--duration-fast) var(--ease-in-out), transform var(--duration-fast) var(--ease-in-out);
       display: inline-flex;
       align-items: center;
     }
     a.card:hover .card-view-more {
-      color: var(--color-primary-light);
+      color: var(--color-secondary-light);
       transform: translateX(3px);
+    }
+    [data-theme="light"] .card-view-more {
+      color: var(--color-primary);
+    }
+    [data-theme="light"] a.card:hover .card-view-more {
+      color: var(--color-primary-dark);
     }
 
     /* ==================== HERO STATS WRAP FOR 4 ITEMS ==================== */

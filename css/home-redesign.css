@@ -733,6 +733,20 @@
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 20px 40px rgba(0,0,0,0.2);
 }
 
+/* Pull the marquee slightly upward on large screens so it's visible on initial load */
+@media (min-width: 1024px) {
+    .tech-marquee-container {
+        margin-top: -56px; /* reduce the pull-up so hero content has breathing room */
+    }
+}
+
+/* Extra pull for very large screens */
+@media (min-width: 1440px) {
+    .tech-marquee-container {
+        margin-top: -72px;
+    }
+}
+
 [data-theme="light"] .tech-marquee-container {
     background: linear-gradient(135deg, rgba(124,58,237,0.03) 0%, rgba(34,211,238,0.02) 100%);
     border-top-color: rgba(124,58,237,0.12);

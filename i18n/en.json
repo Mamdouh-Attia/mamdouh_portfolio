@@ -151,6 +151,20 @@
         "python": "A Python Programming Graduate"
       }
     },
+    "eyouth": {
+      "role": "Software Programming Instructor [DECI]",
+      "org": "EYouth · Contract · Dumyat, Egypt (On-site)",
+      "desc": "Delivering professional on-site interactive Computer Science sessions for +100 primary & secondary school students of Digital Egypt Cups initiative (DECI) under the supervision of Ministry of Communication and Information Technology (MCIT).",
+      "b1": "Sessions cover a wide range of topics from computer and internet fundamentals to block programming, Python programming, AI, Data Science, and Web Development.",
+      "b2": "Managing interactive activities held during the sessions and breaking down complex concepts into simpler and smaller ones for the students to understand and learn with passion."
+    },
+    "mindsetAI": {
+      "role": "Computer Science Instructor",
+      "org": "Mindset Training · Freelance · Remote",
+      "desc": "Instructed two comprehensive computer science courses: Artificial Intelligence & Embedded Systems, covering advanced concepts from search algorithms to low-level hardware interface.",
+      "b1": "AI Modules: Problem solving Agents, Uninformed search (BFS, DFS, UCS), Informed search (Greedy, A*), and Local search.",
+      "b2": "Embedded Systems Modules: Microcontroller elements, ROM/RAM hierarchy, communication protocols (I2C, SPI, 1-Wire), firmware design (Super loop vs. OS), and translation processes (mixing C/Assembly)."
+    },
     "maspero": {
       "role": "Python Programming Instructor",
       "org": "Maspero Academy · Radio & Television Institute, Egypt",
@@ -166,6 +180,12 @@
       "b1": "Covered Statistics, Linear Algebra, NumPy/Pandas, and model training with custom labs",
       "b2": "Designed a 1-month phased capstone project framework, monitored teams to product-defense seminar",
       "b3": "Integrated personalized feedback loops and motivation throughout the track"
+    },
+    "mindsetSP": {
+      "role": "Computer Science Instructor",
+      "org": "Mindset Training · Freelance · Remote",
+      "desc": "Delivered a comprehensive systems programming course covering low-level concepts including assemblers, compilers, linkers, and debuggers.",
+      "b1": "Covered assembler architecture (one/two-pass, symbol tables), macro processors, linker/loader mechanisms (static vs. dynamic), compiler phases, and debugger tools."
     },
     "primaLab": {
       "role": "Flutter Development Diploma — Level 1",
@@ -487,12 +507,38 @@
           "Delivered Python programming fundamentals to CS students, creating hands-on exercises covering data types, control flow, OOP, and problem-solving patterns."
         ]
       },
+      "eyouth": {
+        "role": "Software Programming Instructor [DECI]",
+        "org": "EYouth · Contract · Dumyat, Egypt (On-site)",
+        "bullets": [
+          "Delivering professional on-site interactive Computer Science sessions for +100 primary & secondary school students of Digital Egypt Cups initiative (DECI) under the supervision of Ministry of Communication and Information Technology (MCIT).",
+          "Sessions cover a wide range of topics from computer and internet fundamentals to block programming, Python programming, AI, Data Science, and Web Development.",
+          "Managing interactive activities held during the sessions and breaking down complex concepts into simpler, digestible components for students to learn with passion."
+        ]
+      },
+      "mindsetAI": {
+        "role": "Computer Science Instructor",
+        "org": "Mindset Training · Freelance · Remote",
+        "bullets": [
+          "Instructed two core computer science courses: Artificial Intelligence & Embedded Systems.",
+          "AI Curriculum: Problem-solving agents (Tree vs. Graph search), Uninformed search (BFS, DFS, UCS), Informed search (Greedy, A* & heuristic functions), and Local search techniques.",
+          "Embedded Systems Curriculum: Architecture elements, ROM/RAM memory hierarchy, communication protocols (I2C, SPI, 1-Wire), firmware design (Super loop vs. OS), and translation processes (mixing C/Assembly)."
+        ]
+      },
       "ml": {
         "role": "ML Engineer Instructor",
         "org": "DEPI Initiative · Ministry of Communications & IT",
         "bullets": [
           "Designed and delivered a comprehensive ML engineering curriculum — math foundations, Python ecosystem (NumPy/Pandas), and model training from scratch.",
           "Led a 4-phase end-to-end capstone project lifecycle, culminating in a \"sell your product\" defense seminar."
+        ]
+      },
+      "mindsetSP": {
+        "role": "Computer Science Instructor — Systems Programming",
+        "org": "Mindset Training · Freelance · Remote",
+        "bullets": [
+          "Delivered a comprehensive systems programming course covering low-level concepts including one/two-pass assemblers, symbol tables, and macro processors (conditional & recursive).",
+          "Introduced compilers architecture (lexical, syntax, semantic phases, code generation/optimization), linkers (static vs. dynamic), loaders, debuggers, and code editing processes."
         ]
       },
       "primalabInstructor": {
@@ -522,20 +568,20 @@
         "Integrated GPT-3 API for the intelligent volunteering assistant",
         "Added awareness channels: Articles, Videos, and AI Assistant",
         "Real people's support contacts and a community screen",
-        "Certification system, announcements, helping categories, and donation flow"
+        "Proposed (Possible future work placeholder) Certification system, announcements, helping categories, and donation flow"
       ]
     },
     "checkit": {
       "title": "Check-It",
       "subtitle": "Consumer Rights & Product Verification Prototype",
-      "overview": "A specialized mobile prototype designed to empower consumers by providing instant product verification and a reporting mechanism for over-priced goods.",
-      "challenge": "Creating a seamless bridge between physical barcodes and consumer protection databases while keeping the flow simple enough for the general public.",
-      "approach": "Implemented a high-speed barcode scanning module and built a multi-step complaint wizard enabling users to file a complaint with product details, location, and receipt evidence.",
-      "solution": "A production-ready utility prototype that facilitates consumer reporting and helps track illicit market pricing activity effectively.",
+      "overview": "A specialized mobile prototype designed and proposed to empower consumers by providing instant product verification and a reporting mechanism for over-priced goods.",
+      "challenge": "Creating a seamless bridge between physical barcodes and consumer protection databases (simulation) while keeping the flow simple enough for the general public.",
+      "approach": "Implemented a high-speed barcode scanning module and built a multi-step complaint wizard enabling users to file a complaint with product details, location, and receipt evidence, all fields with form validation.",
+      "solution": "A near production-ready utility prototype app that facilitates consumer reporting and helps track illicit market pricing activity effectively.",
       "contributions": [
         "Implemented high-performance barcode scanning using Flutter packages",
         "Developed a state-driven multi-step reporting wizard with complaint tracking",
-        "Built local storage history and sync logic",
+        "Built local storage history (shared prefs) and sync logic (provider state management)",
         "Designed the UI/UX following clean material guidelines"
       ]
     },

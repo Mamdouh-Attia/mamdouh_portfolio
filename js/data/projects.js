@@ -227,9 +227,9 @@ export const projects = [
         status: "completed",
         date: "2024-07",
         i18nKey: "projectData.vpredicto",
+        demoUrl: "https://drive.google.com/file/d/1EEYjr21rZpsFAlzWHSHBuMunGJzSMN-r/view?usp=drive_link",        
         links: [
             { label: "PyPI Package", url: "https://pypi.org/project/vpredicto/#description", icon: "package" },
-            { label: "Desktop Demo", url: "https://drive.google.com/file/d/1EEYjr21rZpsFAlzWHSHBuMunGJzSMN-r/view?usp=drive_link", icon: "video" },
             { label: "API Demo", url: "https://drive.google.com/file/d/1cyGP0tKcciN8fYZiDGzzsDXjuRNgmTpb/view?usp=sharing", icon: "video" }
         ]
     },

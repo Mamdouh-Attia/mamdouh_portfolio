@@ -881,5 +881,55 @@
       "detail": "The original source of the 23 design patterns. Deep, academic, and timelessly relevant.",
       "status": "Reference"
     }
+  },
+  "about": {
+    "experience": {
+      "title": "Career Snapshot"
+    },
+    "snapshot": {
+      "eyebrow": "Professional Journey",
+      "sub": "Key milestones across engineering, instruction, and open-source — <a href=\"./experience.html\" class=\"snapshot-link\">view the full dossier →</a>",
+      "cta": "Explore Full Career Dossier",
+      "eyouth": {
+        "role": "Software Programming Instructor [DECI]",
+        "org": "EYouth · Contract · Dumyat, Egypt (On-site)",
+        "desc": "Delivering on-site CS sessions for 100+ primary & secondary school students under the Digital Egypt Cups initiative (DECI), supervised by MCIT. Topics range from how computers work to Python, AI, Data Science, and Web Development."
+      },
+      "os": {
+        "role": "Open Source Contributor",
+        "org": "Itqan Community · mushaf-imad-flutter · Remote",
+        "desc": "Integrated Quran.com API via OAuth 2.0, reducing audio latency by 86% with custom in-memory caching. Engineered a Hybrid Audio Engine and authored 80+ Mocktail unit tests."
+      },
+      "freelance": {
+        "role": "Flutter Developer — Freelance",
+        "org": "Self-Employed · Remote & Local Clients",
+        "desc": "Built 5+ end-to-end Flutter apps for real clients — IoT health monitoring (HyperMate), smart recycling (EcoSort), and social volunteering (VolunTeen). Full SDLC ownership from requirements to delivery."
+      },
+      "depi": {
+        "role": "ML Engineer Instructor",
+        "org": "DEPI Initiative · Ministry of Communications & IT",
+        "desc": "Designed and delivered a comprehensive ML engineering curriculum — math foundations, Python ecosystem (NumPy/Pandas), and model training. Led a 4-phase capstone lifecycle ending in a \"sell your product\" defense seminar."
+      },
+      "orange": {
+        "role": "Flutter Developer Intern",
+        "org": "Orange Digital Center Egypt · Cairo (Hybrid)",
+        "desc": "Worked in Agile teams on 2 internal apps and a hackathon E-wallet. Translated Figma into pixel-perfect MVVM + Bloc UIs. Led the community module of a 6-member Reddit Clone team using Scrum."
+      }
+    },
+    "timeline": {
+      "orange": {
+        "link": "View Internship Certificate"
+      }
+    },
+    "testimonials": {
+      "title": "What My Clients Say",
+      "subtitle": "5.0 / 5.0 — All clients rated 5 out of 5"
+    },
+    "education": {
+      "title": "Education",
+      "university": "Bachelor of Engineering",
+      "school": "Cairo University",
+      "grade": "Very Good with Honors"
+    }
   }
 }

@@ -21,7 +21,7 @@
             const storedTheme = localStorage.getItem(THEME_KEY);
             const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
             document.documentElement.classList.add('i18n-loading');
-      document.documentElement.setAttribute('data-theme', storedTheme || systemTheme);
+            document.documentElement.setAttribute('data-theme', storedTheme || systemTheme);
         })();
     </script>
 
@@ -86,7 +86,8 @@
                         </p>
 
                         <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
-                            <a href="#" class="btn btn-primary" onclick="document.getElementById('cv-modal').classList.add('active'); return false;">
+                            <a href="#" class="btn btn-primary"
+                                onclick="document.getElementById('cv-modal').classList.add('active'); return false;">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
@@ -175,10 +176,11 @@
 
                 <!-- Career Snapshot -->
                 <section class="about-snapshot reveal" id="experience" style="margin-bottom: var(--space-16);">
-                    <div class="snapshot-header">
-                        <p class="snapshot-eyebrow" data-i18n="about.snapshot.eyebrow">Professional Journey</p>
+                    <div class="section-header">
+                        <p class="section-label" data-i18n="about.snapshot.eyebrow">Professional Journey</p>
                         <h2 class="section-title" data-i18n="about.experience.title">Career Snapshot</h2>
-                        <p class="snapshot-sub" data-i18n="about.snapshot.sub">Key milestones across engineering, instruction, and open-source — <a href="./experience.html" class="snapshot-link">view the full dossier →</a></p>
+                        <p class="section-subtitle" data-i18n="about.snapshot.sub">Key milestones — <a href="./experience.html" class="snapshot-link">view the
+                                full dossier →</a></p>
                     </div>
 
                     <div class="snapshot-grid">
@@ -188,16 +190,24 @@
                             <div class="snap-card-glow"></div>
                             <div class="snap-top">
                                 <div class="snap-icon-wrap snap-icon-cyan">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="16 18 22 12 16 6" />
+                                        <polyline points="8 6 2 12 8 18" />
+                                    </svg>
                                 </div>
                                 <div class="snap-meta">
                                     <span class="snap-date">May 2026 – Present</span>
                                     <span class="snap-badge-active"><span class="snap-pulse"></span>Active</span>
                                 </div>
                             </div>
-                            <h3 class="snap-role" data-i18n="about.snapshot.eyouth.role">Software Programming Instructor</h3>
-                            <p class="snap-org" data-i18n="about.snapshot.eyouth.org">EYouth · DECI Initiative · On-site, Dumyat</p>
-                            <p class="snap-desc" data-i18n="about.snapshot.eyouth.desc">Delivering on-site CS sessions for 100+ school students under the Digital Egypt Cups initiative, covering fundamentals through AI and Web Development.</p>
+                            <h3 class="snap-role" data-i18n="about.snapshot.eyouth.role">Software Programming Instructor
+                            </h3>
+                            <p class="snap-org" data-i18n="about.snapshot.eyouth.org">EYouth · DECI Initiative ·
+                                On-site, Dumyat</p>
+                            <p class="snap-desc" data-i18n="about.snapshot.eyouth.desc">Delivering on-site CS sessions
+                                for 100+ school students under the Digital Egypt Cups initiative, covering fundamentals
+                                through AI and Web Development.</p>
                             <div class="snap-tags">
                                 <span class="snap-tag">CS Education</span>
                                 <span class="snap-tag">Python</span>
@@ -210,7 +220,11 @@
                         <div class="snap-card" style="--snap-delay: 0.08s;">
                             <div class="snap-top">
                                 <div class="snap-icon-wrap snap-icon-purple">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                    </svg>
                                 </div>
                                 <div class="snap-meta">
                                     <span class="snap-date">Feb 2026 – Mar 2026</span>
@@ -218,15 +232,19 @@
                                 </div>
                             </div>
                             <h3 class="snap-role" data-i18n="about.snapshot.os.role">Open Source Contributor</h3>
-                            <p class="snap-org" data-i18n="about.snapshot.os.org">Itqan Community · mushaf-imad-flutter · Remote</p>
-                            <p class="snap-desc" data-i18n="about.snapshot.os.desc">Integrated Quran.com API via OAuth 2.0, reducing audio latency by 86% with custom in-memory caching. Engineered a Hybrid Audio Engine and authored 80+ Mocktail unit tests.</p>
+                            <p class="snap-org" data-i18n="about.snapshot.os.org">Itqan Community · mushaf-imad-flutter
+                                · Remote</p>
+                            <p class="snap-desc" data-i18n="about.snapshot.os.desc">Integrated Quran.com API via OAuth
+                                2.0, reducing audio latency by 86% with custom in-memory caching. Engineered a Hybrid
+                                Audio Engine and authored 80+ Mocktail unit tests.</p>
                             <div class="snap-tags">
                                 <span class="snap-tag">Flutter</span>
                                 <span class="snap-tag">OAuth 2.0</span>
                                 <span class="snap-tag">Streams</span>
                                 <span class="snap-tag">TDD</span>
                             </div>
-                            <a href="https://github.com/Itqan-community/mushaf-imad-flutter/pull/27" target="_blank" class="snap-link-btn">View PR #27 on GitHub →</a>
+                            <a href="https://github.com/Itqan-community/mushaf-imad-flutter/pull/27" target="_blank"
+                                class="snap-link-btn">View PR #27 on GitHub →</a>
                         </div>
 
                         <!-- 3: Freelance Flutter Developer — Active -->
@@ -234,16 +252,26 @@
                             <div class="snap-card-glow"></div>
                             <div class="snap-top">
                                 <div class="snap-icon-wrap snap-icon-purple">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                        <line x1="8" y1="21" x2="16" y2="21" />
+                                        <line x1="12" y1="17" x2="12" y2="21" />
+                                    </svg>
                                 </div>
                                 <div class="snap-meta">
                                     <span class="snap-date">Sep 2023 – Present</span>
                                     <span class="snap-badge-active"><span class="snap-pulse"></span>Active</span>
                                 </div>
                             </div>
-                            <h3 class="snap-role" data-i18n="about.snapshot.freelance.role">Flutter Developer — Freelance</h3>
-                            <p class="snap-org" data-i18n="about.snapshot.freelance.org">Self-Employed · Remote &amp; Local Clients</p>
-                            <p class="snap-desc" data-i18n="about.snapshot.freelance.desc">Built 5+ end-to-end Flutter apps for real clients — IoT health monitoring (HyperMate), smart recycling (EcoSort), and social volunteering (VolunTeen). Full SDLC ownership from requirements to delivery.</p>
+                            <h3 class="snap-role" data-i18n="about.snapshot.freelance.role">Flutter Developer —
+                                Freelance</h3>
+                            <p class="snap-org" data-i18n="about.snapshot.freelance.org">Self-Employed · Remote &amp;
+                                Local Clients</p>
+                            <p class="snap-desc" data-i18n="about.snapshot.freelance.desc">Built 5+ end-to-end Flutter
+                                apps for real clients — IoT health monitoring (HyperMate), smart recycling (EcoSort),
+                                and social volunteering (VolunTeen). Full SDLC ownership from requirements to delivery.
+                            </p>
                             <div class="snap-tags">
                                 <span class="snap-tag">Flutter</span>
                                 <span class="snap-tag">Firebase</span>
@@ -257,15 +285,24 @@
                         <div class="snap-card" style="--snap-delay: 0.24s;">
                             <div class="snap-top">
                                 <div class="snap-icon-wrap snap-icon-cyan">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="3" />
+                                        <path
+                                            d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                                    </svg>
                                 </div>
                                 <div class="snap-meta">
                                     <span class="snap-date">Aug 2024 – Oct 2024</span>
                                 </div>
                             </div>
                             <h3 class="snap-role" data-i18n="about.snapshot.depi.role">ML Engineer Instructor</h3>
-                            <p class="snap-org" data-i18n="about.snapshot.depi.org">DEPI Initiative · Ministry of Communications &amp; IT</p>
-                            <p class="snap-desc" data-i18n="about.snapshot.depi.desc">Designed and delivered a comprehensive ML engineering curriculum — math foundations, Python ecosystem (NumPy/Pandas), and model training. Led a 4-phase capstone lifecycle ending in a "sell your product" defense seminar.</p>
+                            <p class="snap-org" data-i18n="about.snapshot.depi.org">DEPI Initiative · Ministry of
+                                Communications &amp; IT</p>
+                            <p class="snap-desc" data-i18n="about.snapshot.depi.desc">Designed and delivered a
+                                comprehensive ML engineering curriculum — math foundations, Python ecosystem
+                                (NumPy/Pandas), and model training. Led a 4-phase capstone lifecycle ending in a "sell
+                                your product" defense seminar.</p>
                             <div class="snap-tags">
                                 <span class="snap-tag">Python</span>
                                 <span class="snap-tag">Machine Learning</span>
@@ -278,22 +315,33 @@
                         <div class="snap-card" style="--snap-delay: 0.32s;">
                             <div class="snap-top">
                                 <div class="snap-icon-wrap snap-icon-purple">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                        <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                                        <line x1="12" y1="22.08" x2="12" y2="12" />
+                                    </svg>
                                 </div>
                                 <div class="snap-meta">
                                     <span class="snap-date">Jun 2023 – Sep 2023</span>
                                 </div>
                             </div>
                             <h3 class="snap-role" data-i18n="about.snapshot.orange.role">Flutter Developer Intern</h3>
-                            <p class="snap-org" data-i18n="about.snapshot.orange.org">Orange Digital Center Egypt · Cairo (Hybrid)</p>
-                            <p class="snap-desc" data-i18n="about.snapshot.orange.desc">Worked in Agile teams on 2 internal apps and a hackathon E-wallet. Translated Figma into pixel-perfect MVVM + Bloc UIs. Led the community module of a 6-member Reddit Clone team using Scrum.</p>
+                            <p class="snap-org" data-i18n="about.snapshot.orange.org">Orange Digital Center Egypt ·
+                                Cairo (Hybrid)</p>
+                            <p class="snap-desc" data-i18n="about.snapshot.orange.desc">Worked in Agile teams on 2
+                                internal apps and a hackathon E-wallet. Translated Figma into pixel-perfect MVVM + Bloc
+                                UIs. Led the community module of a 6-member Reddit Clone team using Scrum.</p>
                             <div class="snap-tags">
                                 <span class="snap-tag">Flutter</span>
                                 <span class="snap-tag">Bloc / Cubit</span>
                                 <span class="snap-tag">MVVM</span>
                                 <span class="snap-tag">Agile / Scrum</span>
                             </div>
-                            <a href="https://drive.google.com/file/d/1dN2UPmg3Sql1kX3vJuBlea1_P1D4l6dk/view" target="_blank" class="snap-link-btn" data-i18n="about.timeline.orange.link">View Internship Certificate →</a>
+                            <a href="https://drive.google.com/file/d/1dN2UPmg3Sql1kX3vJuBlea1_P1D4l6dk/view"
+                                target="_blank" class="snap-link-btn" data-i18n="about.timeline.orange.link">View
+                                Internship Certificate →</a>
                         </div>
 
                     </div>
@@ -301,7 +349,14 @@
                     <!-- View Full Experience CTA -->
                     <div class="snapshot-cta">
                         <a href="./experience.html" class="btn btn-primary snapshot-cta-btn">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                                <line x1="16" y1="13" x2="8" y2="13" />
+                                <line x1="16" y1="17" x2="8" y2="17" />
+                                <polyline points="10 9 9 9 8 9" />
+                            </svg>
                             <span data-i18n="about.snapshot.cta">Explore Full Career Dossier</span>
                         </a>
                     </div>
@@ -309,16 +364,21 @@
 
                 <!-- Client Testimonials -->
                 <section class="about-testimonials reveal" id="testimonials" style="margin-bottom: var(--space-16);">
-                    <h2 class="section-title text-center" style="margin-bottom: var(--space-4);" data-i18n="about.testimonials.title">What My Clients Say</h2>
+                    <h2 class="section-title text-center" style="margin-bottom: var(--space-4);"
+                        data-i18n="about.testimonials.title">What My Clients Say</h2>
                     <p class="section-subtitle text-center" style="margin-bottom: var(--space-10);">
-                        <span class="star-rating"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></span>
-                        &nbsp;<span data-i18n="about.testimonials.subtitle">5.0 / 5.0 — All clients rated 5 out of 5</span>
+                        <span class="star-rating"><span class="star">★</span><span class="star">★</span><span
+                                class="star">★</span><span class="star">★</span><span class="star">★</span></span>
+                        &nbsp;<span data-i18n="about.testimonials.subtitle">5.0 / 5.0 — All clients rated 5 out of
+                            5</span>
                     </p>
 
                     <div class="client-testimonials-grid">
 
                         <div class="ct-card">
-                            <div class="ct-quote">"I liked how practical and focused you are, and how working with you always felt organized and goal-oriented. Your organization, clarity, and support really make working together easy and enjoyable."</div>
+                            <div class="ct-quote">"I liked how practical and focused you are, and how working with you
+                                always felt organized and goal-oriented. Your organization, clarity, and support really
+                                make working together easy and enjoyable."</div>
                             <div class="ct-footer">
                                 <div class="ct-info">
                                     <span class="ct-name">Sama Wahba</span>
@@ -329,7 +389,9 @@
                         </div>
 
                         <div class="ct-card">
-                            <div class="ct-quote">"The application was delivered with a highly professional finish. Through our discussions, he helped us identify some useful features to add such as the AI bot included in HyperMate."</div>
+                            <div class="ct-quote">"The application was delivered with a highly professional finish.
+                                Through our discussions, he helped us identify some useful features to add such as the
+                                AI bot included in HyperMate."</div>
                             <div class="ct-footer">
                                 <div class="ct-info">
                                     <span class="ct-name">Sandra Samir</span>
@@ -351,7 +413,9 @@
                         </div>
 
                         <div class="ct-card">
-                            <div class="ct-quote">"Yes. He's professional, dependable, and delivers solid work. I liked how easy you are to work with and how clearly you communicate. Everything was good overall."</div>
+                            <div class="ct-quote">"Yes. He's professional, dependable, and delivers solid work. I liked
+                                how easy you are to work with and how clearly you communicate. Everything was good
+                                overall."</div>
                             <div class="ct-footer">
                                 <div class="ct-info">
                                     <span class="ct-name">Aya Hesham</span>
@@ -362,7 +426,9 @@
                         </div>
 
                         <div class="ct-card">
-                            <div class="ct-quote">"He is highly professional, well-organized, and very committed to deadlines. His attention to detail and strong time management made the whole process smooth and efficient, and the quality of his work was excellent."</div>
+                            <div class="ct-quote">"He is highly professional, well-organized, and very committed to
+                                deadlines. His attention to detail and strong time management made the whole process
+                                smooth and efficient, and the quality of his work was excellent."</div>
                             <div class="ct-footer">
                                 <div class="ct-info">
                                     <span class="ct-name">A Satisfied Client</span>
@@ -373,7 +439,10 @@
                         </div>
 
                         <div class="ct-card">
-                            <div class="ct-quote">"He takes his work seriously, providing clear communication to understand the client's needs and expectations. He is willing to make changes and edits according to the client's preferences while making sure that everything in the development process is outstanding."</div>
+                            <div class="ct-quote">"He takes his work seriously, providing clear communication to
+                                understand the client's needs and expectations. He is willing to make changes and edits
+                                according to the client's preferences while making sure that everything in the
+                                development process is outstanding."</div>
                             <div class="ct-footer">
                                 <div class="ct-info">
                                     <span class="ct-name">Mariam Abdelhamid</span>
@@ -482,7 +551,10 @@
             text-decoration: none;
             transition: color var(--duration-fast);
         }
-        .snapshot-link:hover { color: var(--color-secondary); }
+
+        .snapshot-link:hover {
+            color: var(--color-secondary);
+        }
 
         /* Grid */
         .snapshot-grid {
@@ -494,14 +566,24 @@
         }
 
         @media (min-width: 640px) {
-            .snapshot-grid { grid-template-columns: repeat(2, 1fr); }
+            .snapshot-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (min-width: 1024px) {
-            .snapshot-grid { grid-template-columns: repeat(3, 1fr); }
+            .snapshot-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
             /* 5-card layout: first row 3, second row 2 centered */
-            .snap-card:nth-child(4) { grid-column: 1; }
-            .snap-card:nth-child(5) { grid-column: 2; }
+            .snap-card:nth-child(4) {
+                grid-column: 1;
+            }
+
+            .snap-card:nth-child(5) {
+                grid-column: 2;
+            }
         }
 
         /* Card base */
@@ -516,8 +598,8 @@
             gap: var(--space-3);
             overflow: hidden;
             transition: transform 0.35s var(--ease-out),
-                        border-color 0.35s,
-                        box-shadow 0.35s;
+                border-color 0.35s,
+                box-shadow 0.35s;
             /* stagger animation */
             opacity: 0;
             transform: translateY(24px);
@@ -526,14 +608,17 @@
         }
 
         @keyframes snapReveal {
-            to { opacity: 1; transform: translateY(0); }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .snap-card:hover {
             transform: translateY(-6px);
             border-color: rgba(var(--color-primary-rgb), 0.35);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.35),
-                        0 0 30px rgba(var(--color-primary-rgb), 0.12);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35),
+                0 0 30px rgba(var(--color-primary-rgb), 0.12);
         }
 
         /* Top accent line on hover */
@@ -551,11 +636,14 @@
             transition: opacity 0.35s;
             pointer-events: none;
         }
-        .snap-card:hover::after { opacity: 1; }
+
+        .snap-card:hover::after {
+            opacity: 1;
+        }
 
         /* Active card extra glow */
         .snap-active {
-            border-color: rgba(var(--color-secondary-rgb, 34,211,238), 0.2);
+            border-color: rgba(var(--color-secondary-rgb, 34, 211, 238), 0.2);
         }
 
         .snap-card-glow {
@@ -563,12 +651,15 @@
             inset: -1px;
             border-radius: var(--radius-xl);
             background: radial-gradient(ellipse at top left,
-                rgba(34,211,238,0.06) 0%,
-                transparent 65%);
+                    rgba(34, 211, 238, 0.06) 0%,
+                    transparent 65%);
             pointer-events: none;
             transition: opacity 0.35s;
         }
-        .snap-active:hover .snap-card-glow { opacity: 1.5; }
+
+        .snap-active:hover .snap-card-glow {
+            opacity: 1.5;
+        }
 
         /* Top row: icon + meta */
         .snap-top {
@@ -639,8 +730,19 @@
         }
 
         @keyframes pulse-dot {
-            0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(34,211,238,0.5); }
-            50% { opacity: 0.7; transform: scale(1.1); box-shadow: 0 0 0 5px rgba(34,211,238,0); }
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.5);
+            }
+
+            50% {
+                opacity: 0.7;
+                transform: scale(1.1);
+                box-shadow: 0 0 0 5px rgba(34, 211, 238, 0);
+            }
         }
 
         /* Accomplishment badge (golden) */
@@ -695,7 +797,7 @@
             font-size: 0.68rem;
             font-weight: var(--font-medium);
             color: var(--text-secondary);
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--border-color);
             border-radius: var(--radius-full);
             padding: 2px 10px;
@@ -718,7 +820,10 @@
             font-weight: var(--font-medium);
             transition: color var(--duration-fast);
         }
-        .snap-link-btn:hover { color: var(--color-secondary); }
+
+        .snap-link-btn:hover {
+            color: var(--color-secondary);
+        }
 
         /* CTA */
         .snapshot-cta {
@@ -736,9 +841,17 @@
         }
 
         /* RTL */
-        [dir="rtl"] .snap-top { flex-direction: row-reverse; }
-        [dir="rtl"] .snap-meta { align-items: flex-end; }
-        [dir="rtl"] .snap-tags { direction: rtl; }
+        [dir="rtl"] .snap-top {
+            flex-direction: row-reverse;
+        }
+
+        [dir="rtl"] .snap-meta {
+            align-items: flex-end;
+        }
+
+        [dir="rtl"] .snap-tags {
+            direction: rtl;
+        }
 
         @media (min-width: 768px) {
             .about-image {
@@ -754,11 +867,15 @@
         }
 
         @media (min-width: 640px) {
-            .client-testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+            .client-testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (min-width: 1024px) {
-            .client-testimonials-grid { grid-template-columns: repeat(3, 1fr); }
+            .client-testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         .ct-card {

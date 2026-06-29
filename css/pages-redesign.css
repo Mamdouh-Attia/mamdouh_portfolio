@@ -28,6 +28,12 @@
     color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    width: 80ch;
+
 }
 
 /* ==================== COMPONENTS ==================== */
